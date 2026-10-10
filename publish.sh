@@ -9,7 +9,6 @@ REPO=richardgist/ue-digest
 git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$REPO.git"
 git config user.name  >/dev/null || git config user.name  "richardgist"
 git config user.email >/dev/null || git config user.email "richardgist@users.noreply.github.com"
-python3 build.py >/dev/null
 git add -A
 if git diff --cached --quiet; then
   echo "没有改动,无需发布。"
