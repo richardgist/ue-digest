@@ -1,0 +1,83 @@
+{
+  "_说明": "外部 RSS/Atom 订阅源。按主题分组;name 会作为来源显示名,url 是订阅地址。可选字段:max_per_feed(每次最多收录条数,默认 20)、keep_days(该源保留天数,默认用顶层 keep_days)。改完运行 ./refresh_feeds.sh。",
+  "keep_days": 30,
+  "max_per_feed": 15,
+  "groups": [
+    {
+      "topic": "图形渲染",
+      "feeds": [
+        {
+          "name": "Unreal Engine 官方",
+          "url": "https://www.unrealengine.com/rss",
+          "max_per_feed": 10,
+          "keep_days": 60
+        },
+        {
+          "name": "NVIDIA Technical Blog",
+          "url": "https://developer.nvidia.com/blog/feed/",
+          "max_per_feed": 12
+        },
+        {
+          "name": "AMD GPUOpen",
+          "url": "https://gpuopen.com/feed/",
+          "keep_days": 60
+        },
+        {
+          "name": "Jendrik Illner(Graphics Programming Weekly)",
+          "url": "https://www.jendrikillner.com/index.xml",
+          "keep_days": 60
+        },
+        {
+          "name": "Aras Pranckevičius",
+          "url": "https://aras-p.info/atom.xml",
+          "keep_days": 60
+        },
+        {
+          "name": "Tom Looman(UE 性能与渲染)",
+          "url": "https://tomlooman.com/feed.xml",
+          "keep_days": 90
+        }
+      ]
+    },
+    {
+      "topic": "游戏开发",
+      "feeds": [
+        {
+          "name": "Unity Blog",
+          "url": "https://unity.com/blog/rss",
+          "max_per_feed": 10
+        },
+        {
+          "name": "Game Developer",
+          "url": "https://www.gamedeveloper.com/rss.xml",
+          "max_per_feed": 12
+        },
+        {
+          "name": "Godot Engine",
+          "url": "https://godotengine.org/rss.xml",
+          "keep_days": 60
+        }
+      ]
+    },
+    {
+      "topic": "AI 工具",
+      "feeds": [
+        {
+          "name": "Simon Willison",
+          "url": "https://simonwillison.net/atom/everything/",
+          "max_per_feed": 15
+        },
+        {
+          "name": "Hacker News 首页(250 分以上)",
+          "url": "https://hnrss.org/frontpage?points=250",
+          "max_per_feed": 15
+        },
+        {
+          "name": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/feed.xml",
+          "max_per_feed": 8
+        }
+      ]
+    }
+  ]
+}
