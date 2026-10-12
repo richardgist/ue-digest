@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "title": "[UE 5.8.3][Lumen] Broad interior light leakage in a sealed stock-cube room with Screen Probe Gather",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-3-lumen-broad-interior-light-leakage-in-a-sealed-stock-cube-room-with-screen-probe-gather/2839515",
+      "source": "Epic 开发者社区论坛(Bug 报告)",
+      "published": "2026-10-11",
+      "ue_version": "UE 5.8.3",
+      "summary": "用户在全新空白项目里用 6 块引擎自带 Cube 拼成完全封闭的 20×20×5 米房间,只放一盏室外平行光,Lumen 默认的 Screen Probe Gather 下室内墙面出现大面积“漏光”发亮;同机位同曝光的 Path Tracing 是全黑,把 r.Lumen.FinalGatherMethod 从 1 改成 0(Irradiance Field Gather)后发亮消失、改回 1 又出现。帖子给出了完整的板块坐标、光源参数和基线 CVar,可完整复现;2×2×2 米的小房间则基本不漏光。",
+      "try_points": [
+        "室内场景出现不该有的整面泛光时,先切到 Path Tracing 做参考,再临时用 r.Lumen.FinalGatherMethod 0/1 对比,确认是不是 Screen Probe Gather 造成的",
+        "照帖子里的坐标和参数在自己的 5.8.3 环境复现一遍,判断项目里的漏光是否同一类问题,再决定是改墙体厚度/结构还是等官方修复",
+        "注意帖子只在 Windows / DX12 / SM6、开启硬件光追和 Substrate 的配置下测试过,其他配置是否复现需自己验证"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8: Landscape HLOD Generation Shows Incorrect Generated Normals",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-landscape-hlod-generation-shows-incorrect-generated-normals/2835498",
+      "source": "Epic 开发者社区论坛(Bug 报告)",
+      "published": "2026-09-29",
+      "ue_version": "UE 5.8(作者对比 5.7 正常)",
+      "summary": "在 World Partition 关卡里给使用法线贴图的地形材质构建 Landscape HLOD 后,5.8 生成的 HLOD 代理网格法线烘焙错误,远处地形丢失法线细节,近处真实地形和远处 HLOD 之间有明显分界;作者附了 5.7 正常、5.8 异常的对比截图和复现步骤(作者测试时关闭了 Nanite,不确定是否为必要条件)。截至抓取时帖子尚无官方回复或解决方案。",
+      "try_points": [
+        "升级到 5.8 的项目,构建 HLOD 后用 Buffer Visualization → World Normals 对比近处地形与远处 HLOD,检查是否有同样的法线断层",
+        "如果受影响且有 5.7 的 HLOD 资产,先评估是否保留旧版本生成的 Landscape HLOD 或暂缓重建,等待修复",
+        "可结合上期收录的 5.7.2 Landscape HLOD 问题一起排查地形 HLOD 管线"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "What is the best way to optimize Nanite assets for large open-world environments?",
+      "url": "https://forums.unrealengine.com/t/what-is-the-best-way-to-optimize-nanite-assets-for-large-open-world-environments/2838460",
+      "source": "Epic 开发者社区论坛(问答帖)",
+      "published": "2026-10-08",
+      "ue_version": "原文未标注",
+      "summary": "社区回答整理了一份大世界 Nanite 资产的检查清单:用 World Partition + One File Per Actor 控制加载范围;重复网格优先用 ISM/HISM、PCG 或植被实例化以减少剔除条目;Masked 和 World Position Offset 材质在 Nanite 上更贵,尽量用不透明材质并设置 WPO Disable Distance;合理设置 Fallback 三角形比例;远处内容用剔除距离或 HLOD;并控制虚拟阴影贴图开销。这是社区成员的经验回答,不是官方文档。",
+      "try_points": [
+        "先用 stat GPU、stat Nanite、r.Nanite.Visualize Overdraw 和 Nanite 可视化模式(Triangles / Overdraw / Clusters)判断开销在剔除、光栅化还是材质着色,再动手优化",
+        "盘点场景里 Masked 和带 WPO 的 Nanite 材质,给远处物体设置 WPO Disable Distance,对比优化前后的 GPU 时间",
+        "把大量重复摆放的独立 Actor 改成实例化或 PCG 生成,并检查远景是否已由 HLOD 接管"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "Inside Unreal 预告:UE 5.8 移动端工作流专题直播(10 月 15 日)",
+      "url": "https://x.com/UnrealEngine/status/2108196054764294256",
+      "source": "Unreal Engine 官方 X 账号",
+      "published": "2026-10-08",
+      "ue_version": "UE 5.8",
+      "summary": "官方宣布下一期 Inside Unreal 完全聚焦移动端,由三位 Epic 专家(@flassari、@arvindsabaneel、@paulgeorgesepic)深入讲解 UE 5.8 的移动端工作流,以及可在移动端运行的新一代 UE 工具和系统。时间为美东 10 月 15 日下午 2 点,即北京时间 10 月 16 日凌晨 2 点。目前只有预告,具体内容以直播为准。",
+      "try_points": [
+        "直播后看回放,重点关注 5.8 移动端的性能分析与设备适配做法,对照自己项目的移动端管线",
+        "提前整理团队在移动端遇到的具体问题(例如帧率、发热、内存),直播时或在官方论坛帖下提问",
+        "预习可以先看 Epic 论坛上基于 GDC 2026 Arm Summit 分享整理的《Performance Tuning for Unreal Engine Mobile Development》教程"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    }
+  ]
+}
