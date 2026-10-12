@@ -4,14 +4,38 @@
 界面简体中文,自适应手机,明暗主题可切换(默认跟随系统)。
 已发布在 GitHub Pages:<https://richardgist.github.io/ue-digest/>(仓库 `richardgist/ue-digest`)。
 
-三个栏目 + 一个全站搜索页,顶部导航互通(导航上带未读角标):
+## 版式与页面结构(杂志风)
 
-| 栏目 | 入口 | 内容 | 数据 | RSS |
-|---|---|---|---|---|
-| **UE 日报** | `/` | UE 渲染 / HLOD / 移动端优化资料,每条带适用版本、值得试的点 | `data/issues/` | `/feed.xml` |
-| **每日精选** | `/picks/` | 效率方法、好用的工具、前沿信息 | `data/picks/` | `/picks/feed.xml` |
-| **订阅源** | `/feeds/` | 外部 RSS/Atom 聚合(图形渲染 / 游戏开发 / AI 工具),时间线 | `data/feeds/entries.json`(由 `feeds.json` 配置) | `/feeds/feed.xml` |
-| **搜索 / 收藏** | `/search.html` | 三个栏目全部内容的统一搜索,以及跨栏目的“未读 / 已收藏”视图 | `search-index.json`(构建时生成) | — |
+整站采用暖白纸张底 + 深绿强调 + 中文衬线标题的“每日一期”杂志版式(参考用户给的“每日信号”截图的**视觉风格**,站名是我们自己的,在 `config.json` 的 `brand_name` / `brand_sub` 改)。
+字体只用系统字体栈(Noto Serif SC / 思源宋体 / 宋体 / Georgia 兜底),无外部 CDN。
+
+页头:圆形 logo + 站名 + 日期 + “往期”;大标题“这一天,值得关注”;标签栏 **本期精选 / 图形渲染 / 游戏开发 / AI 工具 / 订阅源 / 搜索 / 往期**。
+
+| 页面 | 入口 | 内容 |
+|---|---|---|
+| **本期精选(首页)** | `/` | 最新一期:当天**每日精选 + UE 日报合刊**,精选与 UE 日报交替排序。第 1 条是头条(大图 + “阅读全文”),接着 3 条进右侧“还有这三件事”,再 2 条双栏,其余及上一期的补位条目进“继续阅读”。 |
+| **往期合刊** | `/editions/YYYY-MM-DD.html` | 同样的版式,某一天的合刊,带上一期 / 下一期 |
+| **方向页** | `/direction/rendering.html`、`game.html`、`ai.html` | 某方向跨期的精选(最多 24 条,杂志版式)+ 该方向的订阅源最新 9 条 |
+| **往期** | `/archive.html` | 按日期列出每一期(封面、前几条标题、方向、当天两个栏目的完整列表链接) |
+| **每日精选归档** | `/picks/`、`/picks/DATE.html` | 原来的列表视图:筛选 / 展开 / 搜索 / 已读 / 收藏 |
+| **UE 日报归档** | `/issues/`、`/issues/DATE.html` | 同上(原先在 `/`,现在移到 `/issues/`) |
+| **订阅源** | `/feeds/` | 外部 RSS/Atom 聚合,时间线 |
+| **搜索 / 收藏** | `/search.html` | 三个栏目全部内容的统一搜索,新增“方向”筛选(`?dir=图形渲染`) |
+
+- **方向(图形渲染 / 游戏开发 / AI 工具)**:每条内容自动判定,不改数据格式。规则:UE 日报按 topics(渲染 / HLOD → 图形渲染,否则 → 游戏开发);其余按标题(权重 3)和摘要里的关键词打分(见 `build.py` 里的 `_KW`),效率 / 工具类稍偏 AI 工具,都判不出来时归 AI 工具;订阅源直接用它所属的主题。
+  想手动指定:在每日精选的某条里加可选字段 `"direction": "图形渲染"`(或 `游戏开发` / `AI 工具`);UE 日报的条目同样可以加这个可选字段。
+- **插图**:我们没有文章配图,所以每条内容用**程序生成的装饰插图**(`build.py` 的 `cover_svg`,按标题哈希确定性生成 SVG,同一标题永远同一张;图形渲染 = 等轴方块,游戏开发 = 瓦片地图,AI 工具 = 节点网络)。图下标注“装饰插图 · 程序生成”,不冒充截图;暗色模式自动换配色。
+- **页内详情面板**:首页 / 往期合刊 / 方向页上点标题、“阅读全文”或“了解详情”,会弹出详情面板(完整摘要、为什么有用、值得试、阅读原文、收藏、已读、上一篇 / 下一篇;`Esc` 关闭)。没有 JS 时链接会跳到对应日页面里的那一条(`#a-<id>`)。
+- 杂志页上的“导出 / 导入”在页面底部“阅读数据”折叠面板里;列表页(归档、订阅源、搜索)的位置不变。
+
+## 栏目与数据
+
+| 栏目 | 数据 | RSS |
+|---|---|---|
+| **UE 日报** | `data/issues/` | `/feed.xml` |
+| **每日精选** | `data/picks/` | `/picks/feed.xml` |
+| **订阅源** | `data/feeds/entries.json`(由 `feeds.json` 配置) | `/feeds/feed.xml` |
+| **搜索 / 收藏** | `search-index.json`(构建时生成) | — |
 
 ## 目录
 
@@ -27,9 +51,9 @@
 | `add_issue.py` | 校验并加入新一期 UE 日报,然后自动重建 |
 | `add_pick.py` | 校验并加入一天的每日精选(URL 与往日重复会拒绝),然后自动重建 |
 | `publish.sh` | 提交并推送到 GitHub Pages(令牌从环境变量 `GITHUB_PAGES_TOKEN` 读取,不落盘) |
-| `config.json` | 站名、简介、`base_url`(RSS 用的绝对地址)、每日精选栏目名和简介 |
+| `config.json` | 站名(`brand_name` / `brand_sub`)、UE 日报标题与简介、`base_url`(RSS 用的绝对地址)、每日精选栏目名和简介 |
 | `assets/style.css`, `assets/app.js` | 样式;所有页面共用的前端逻辑(见“阅读功能”) |
-| `index.html`, `issues/`, `feed.xml`, `picks/`, `feeds/`, `search.html`, `search-index.json`, `ids.json` | 生成产物,不要手改 |
+| `index.html`, `editions/`, `direction/`, `archive.html`, `issues/`, `feed.xml`, `picks/`, `feeds/`, `search.html`, `search-index.json`, `ids.json` | 生成产物,不要手改 |
 
 ## UE 日报:新增一期
 
