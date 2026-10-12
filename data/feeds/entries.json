@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T12:09+08:00",
+ "updated": "2026-10-12T14:58+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-12T12:09+08:00",
-   "last_new": 0
+   "checked": "2026-10-12T14:58+08:00",
+   "last_new": 2
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,16 +107,38 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-12T12:09+08:00",
+   "checked": "2026-10-12T14:58+08:00",
    "last_new": 0
   }
  },
  "entries": [
   {
+   "id": "20b5cf206455",
+   "title": "Fingerprints are the new cookies",
+   "link": "https://royfish.dev/fingerprints-are-the-new-cookies",
+   "summary": "Hacker News 热度:269 分,128 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50048642",
+   "date": "2026-10-12T06:33+08:00",
+   "first_seen": "2026-10-12T14:58+08:00"
+  },
+  {
+   "id": "d1b540f32c3d",
+   "title": "Google is illegaly cutting forest to build data centers",
+   "link": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+   "summary": "Hacker News 热度:369 分,98 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50048638",
+   "date": "2026-10-12T06:33+08:00",
+   "first_seen": "2026-10-12T14:58+08:00"
+  },
+  {
    "id": "63f49a0c0f8b",
    "title": "Passkeys are a trap",
    "link": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-   "summary": "Hacker News 热度:381 分,212 条评论",
+   "summary": "Hacker News 热度:498 分,273 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50048312",
@@ -127,7 +149,7 @@
    "id": "94f18cf931b3",
    "title": "The gap in shared understanding of LLM capability is widening",
    "link": "https://twitter.com/karpathy/status/2109361546505966046",
-   "summary": "Hacker News 热度:308 分,490 条评论",
+   "summary": "Hacker News 热度:401 分,560 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50047422",
@@ -138,7 +160,7 @@
    "id": "8f88c22ed110",
    "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
    "link": "https://theonion.com/archivehunt/",
-   "summary": "Hacker News 热度:274 分,38 条评论",
+   "summary": "Hacker News 热度:302 分,46 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50047055",
@@ -149,7 +171,7 @@
    "id": "c9481cd1d48a",
    "title": "Total Annihilation, rebuilt for modern computers",
    "link": "https://nanolathe.gg",
-   "summary": "Hacker News 热度:413 分,177 条评论",
+   "summary": "Hacker News 热度:452 分,188 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50045984",
@@ -160,7 +182,7 @@
    "id": "fe94b0c16dbc",
    "title": "NYC's \"Click to Cancel\" rule is now in effect",
    "link": "https://www.nyc.gov/main/click-to-cancel",
-   "summary": "Hacker News 热度:394 分,192 条评论",
+   "summary": "Hacker News 热度:432 分,208 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50045946",
@@ -171,7 +193,7 @@
    "id": "e6ce3a3dfca5",
    "title": "Terence Tao: Math 2.0 [pdf]",
    "link": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-   "summary": "Hacker News 热度:346 分,394 条评论",
+   "summary": "Hacker News 热度:378 分,410 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50043026",
