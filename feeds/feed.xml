@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>订阅源</title><link>https://richardgist.github.io/ue-digest/feeds/</link>
 <description>聚合图形渲染 / 游戏开发 / AI 工具方向的外部 RSS/Atom 订阅源,按时间线排列</description><language>en</language>
-<lastBuildDate>Mon, 12 Oct 2026 12:36:22 +0800</lastBuildDate>
+<lastBuildDate>Mon, 12 Oct 2026 14:20:46 +0800</lastBuildDate>
 <atom:link href="https://richardgist.github.io/ue-digest/feeds/feed.xml" rel="self" type="application/rss+xml"/>
 <item><title>Passkeys are a trap</title><link>https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them</link><guid isPermaLink="true">https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them</guid><pubDate>Mon, 12 Oct 2026 05:59:00 +0800</pubDate><category>AI 工具</category><source url="https://richardgist.github.io/ue-digest/feeds/feed.xml">Hacker News 首页(250 分以上)</source><description>Hacker News 热度:381 分,212 条评论</description></item>
 <item><title>The gap in shared understanding of LLM capability is widening</title><link>https://twitter.com/karpathy/status/2109361546505966046</link><guid isPermaLink="true">https://twitter.com/karpathy/status/2109361546505966046</guid><pubDate>Mon, 12 Oct 2026 04:20:00 +0800</pubDate><category>AI 工具</category><source url="https://richardgist.github.io/ue-digest/feeds/feed.xml">Hacker News 首页(250 分以上)</source><description>Hacker News 热度:308 分,490 条评论</description></item>
