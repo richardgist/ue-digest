@@ -34,3 +34,7 @@ nav a{margin-right:14px;font-size:14px}
 .crumb{margin:16px 0 0;font-size:14px}.empty{text-align:center;color:var(--mute);padding:40px 0}
 .foot{color:var(--mute);font-size:13px;padding:32px 16px;text-align:center}
 @media(max-width:520px){.title{font-size:22px}.item{padding:12px}}
+nav a.cur{font-weight:700;color:var(--fg);border-bottom:2px solid var(--accent);padding-bottom:2px}
+.why{background:var(--try);border-radius:8px;padding:8px 14px;margin:10px 0}
+.why h4,.try p{margin:4px 0}.why h4{font-size:14px}.why p{margin:4px 0}
+@media(max-width:520px){nav a{margin-right:9px}.brand{font-size:15px}}

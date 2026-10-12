@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "title": "Many Agents, One Clone",
+      "url": "https://blog.michaelschilling.com/blog/many-agents-one-clone/",
+      "source": "Michael Schilling 的博客",
+      "published": "2026-10-06",
+      "category": "效率",
+      "summary": "作者同时开多个 AI 编码代理会话,共用同一个 git 检出,三个月里出了不少事故:有会话中途切走分支,导致另一个会话 push 时只显示 Everything up-to-date、实际什么都没推送;有代理为了“清理”执行 git reset --hard origin/main,丢掉 7 个未提交的文件。他的解法是每个会话单独用一个 git worktree,并明确从 origin/main 切出分支。文章也讲了新坑:git push origin HEAD:main 会把整个分支一起推上去,绕过了 PR 评审。这是个人经验总结,不是对照实验。",
+      "why_useful": "同时开多个 AI 代理或并行处理多个任务时,一个任务一个 worktree,能从结构上避免互相覆盖未提交的改动。",
+      "try_it": "git fetch origin && git worktree add /tmp/wt-任务名 -b session/任务名 origin/main;推送到 main 前先运行 git log --oneline origin/main..HEAD,确认只有你要推的提交。"
+    },
+    {
+      "title": "Introducing Candle(面向本地开发的进程管理器 1.0)",
+      "url": "https://andyfischer.dev/blog/introducing-candle/",
+      "source": "Andy Fischer 的博客",
+      "published": "2026-10-03",
+      "category": "工具",
+      "summary": "Candle 是给本地开发用的进程管理器,定位类似 pm2、Foreman,但不面向生产环境,也不依赖 Docker。服务在后台运行,多个终端会话可以共享并查看同一批进程;进程按项目目录隔离,所以不同 git worktree 各有一套独立的进程列表。candle logs 会立即返回,而会持续输出的 candle watch 在被代理调用时会被拦截并提示改用 logs。支持 Mac 和 Linux(原文没提 Windows)。作者明确说 1.0 不处理端口分配,多个 worktree 需要自己用 .env 给每个目录分配不同端口。",
+      "why_useful": "想让 AI 代理或多个终端共用本地服务和日志、又不想上容器时,这是个轻量选择,也正好配合上一条的 worktree 用法。",
+      "try_it": "Mac 上 brew install facetlayer/tap/candle(Mac 和 Linux 也可用官方 install.sh),然后试 candle start、candle ps、candle logs。我没有实际安装测试,以作者文章为准。"
+    },
+    {
+      "title": "3D Gaussian Splatting for Game Developers in 2026: What Ships, What Doesn't, and Where It Fits",
+      "url": "https://aigamingdev.com/blog/gaussian-splatting-game-developers-2026/",
+      "source": "AI Gaming Dev",
+      "published": "2026-10-09",
+      "category": "前沿",
+      "summary": "一篇面向游戏开发者的 3DGS 现状综述,作者说内容来自官方文档、论文和厂商页面,自己没有实测。核心结论:3DGS 适合静态、照片级的场景背景和不需要交互的道具,不能替代网格。格式上建议用 PLY 做母版,用 SOG 或 SPZ 做压缩交付(文中引用厂商文档,称比 PLY 小约 10 到 20 倍)。Unreal 5 没有 Epic 官方的 splat 类型,常见做法是第三方 Luma AI 插件经 Niagara 渲染,文中列出的限制包括粒子数上限约 200 万、不支持阴影、不支持与光追配合。需要碰撞或绑定时,可用 SuGaR 提取网格。",
+      "why_useful": "想把手机扫描的真实场景放进 UE 或其他引擎时,这篇能帮你先判断哪些内容适合、哪些不行,少走弯路。",
+      "try_it": "先用 SuperSplat(PlayCanvas 的浏览器编辑器)清理并压缩一份扫描数据,再在 UE 里用 Luma 插件做小原型,验证规模、接缝和阴影限制后再决定要不要用于关卡。"
+    },
+    {
+      "title": "AI Coding Agents in October 2026: What Actually Changed",
+      "url": "https://autocoder.dev/blog/ai-coding-agents-october-2026-what-changed",
+      "source": "AutoCoder.dev",
+      "published": "2026-10-11",
+      "category": "前沿",
+      "summary": "汇总 10 月前十天 Claude Code(v2.1.296)、OpenAI Codex(0.162.x)和 Cursor CLI(2026.10.08)的更新,主线是省上下文(Claude Code 可一次读取超大文件、子代理更早自动压缩)、隔离(Codex 加入托管 git worktree)和安全(Cursor 对递归、强制、通配删除要求确认)。文中还引用 GuardFall 研究,称 11 个开源编码代理中有 10 个的命令安全过滤可被 shell 引号和变量展开绕过。注意:作者自己就是一家编码代理产品的厂商,文末有推广;文中 Cursor 被提示注入攻破七家公司等说法,作者自己标注为未证实,我也没有独立核实。",
+      "why_useful": "一次看清本月主流 AI 编码代理的演进方向,并提醒你给能执行 shell 的代理加上防护。",
+      "try_it": "检查你在用的代理:是否默认禁止联网、删除类操作是否需要人工确认;再对照各家的 changelog 看有没有省上下文的新选项。"
+    }
+  ]
+}

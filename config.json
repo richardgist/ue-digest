@@ -1,6 +1,8 @@
 {
-  "site_title": "UE 周报阅读站",
-  "site_description": "每周精选 Unreal Engine 渲染 / HLOD / 移动端优化资料",
+  "site_title": "UE 日报阅读站",
+  "site_description": "每日筛选 Unreal Engine 渲染 / HLOD / 移动端优化资料",
   "base_url": "https://richardgist.github.io/ue-digest/",
-  "language": "zh-CN"
+  "language": "zh-CN",
+  "picks_title": "每日精选",
+  "picks_description": "每天一批有用的输入:效率方法、好用的工具、前沿信息(科技 / AI / 游戏开发 / 图形 / 编程)"
 }
