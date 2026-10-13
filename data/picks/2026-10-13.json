@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-13",
+  "items": [
+    {
+      "title": "AI coding agents generate more code, but not more software",
+      "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+      "source": "Ars Technica",
+      "published": "2026-10-09",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "报道哈佛研究者 Fiona Chen 与 James Stratton 的研究:用 Jellyfish 的工程数据(700 多家公司、70 万以上员工、2021 年至 2026 年 3 月)做双重差分分析。引入 AI 编码 Agent 后,代码行数平均增加约 30%、提交数增加约 20%、PR 数增加约 23%,但 Jira 里 Issue/Epic 的完成率没有统计显著变化;PR 从提交到合并的评审时间平均拉长 49%,需要修改的 PR 比例接近翻倍,每个 PR 的评论数增加 35%。研究数据截止 2026 年 3 月,文章也提到之后 Agent 已有不少更新;这是对研究的报道,我们没有读论文原文。",
+      "why_useful": "用 AI 写代码时,真正的瓶颈常常转移到评审环节,这能帮你判断团队该先优化哪一段流程。",
+      "try_it": "回看自己最近一个月的 PR:AI 生成的改动平均评审时长和返工次数是否比手写的高?如果是,试着把 Agent 的任务拆得更小、要求附带测试再提交。"
+    },
+    {
+      "title": "CLI: make daemon_auto_start opt-in(Codex CLI 默认常驻后台守护进程)",
+      "url": "https://github.com/openai/codex/issues/48195",
+      "source": "GitHub · openai/codex",
+      "published": "2026-09-25",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "这是一位用户提交、仍处于 open 状态的 Issue,10 月 12 日在 Hacker News 上引发热议。报告称自 Codex CLI 0.157.0 起,打开交互会话就会启动一个常驻的后台守护进程(关掉窗口也不退出),把约 374 MB 的平台包复制到 ~/.codex/packages/app-server-daemon/,并启动每小时检查更新、可自行重启后端的更新进程;守护进程还会沿用第一个启动它的会话的环境变量(如代理、GH_TOKEN 等)。评论里有人在 Windows 上确认,也有人报告旧版本堆积到 2.8 GB。这些是用户报告,OpenAI 官方尚未在该 Issue 中回应,我们也没有自己复现。",
+      "why_useful": "如果你在用 Codex CLI,它可能在后台多跑了进程、占磁盘,还可能拿错环境变量,值得检查一下。",
+      "try_it": "按 Issue 作者给的办法关闭:codex features disable daemon_auto_start,然后 codex app-server daemon stop;作者还提到更新进程不会随之停止,需要手动 pkill -f 'app-server daemon pid-update-loop'。也可在 config.toml 里设 daemon_auto_start = false。"
+    },
+    {
+      "title": "SteadySplats: Resampling of Low-Variance Gaussians for High-Fidelity Stochastic Rendering",
+      "url": "https://arxiv.org/abs/2610.05576",
+      "source": "arXiv(格拉茨工大 / NVIDIA / Google DeepMind / 哥本哈根大学)",
+      "published": "约 2026-10",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "论文针对 3D 高斯泼溅的随机顺序无关透明(Stochastic OIT)渲染噪点大的问题,提出三部分:训练时加颜色方差正则,让落在同一像素的高斯颜色趋同;推理时基于历史样本的空间重采样(类似 ReSTIR 思路,用最近 K 个样本近似遮挡);以及可写成指数滑动平均的时序重采样加软历史拒绝,配合时空蓝噪声。作者报告在 Mip-NeRF 360 上 1 spp 时比以往随机方法 PSNR 高约 13 dB,在 RTX 5090 上的 Vulkan 实现中 K<14 时帧率高于排序的确定性 alpha 混合。代价是收敛后峰值画质略降、空间重用不再严格无偏。以上均为论文自报结果。",
+      "why_useful": "免排序的高斯泼溅渲染一直卡在噪点上,这篇给了可落地的去噪组合,也能借鉴到其他需要深度排序的半透明图元。",
+      "try_it": "重点读第 4 节和附录里的伪代码(算法 2、3),对照自己项目里的 TAA 历史拒绝做法,看软拒绝(按距离降低历史权重而非裁剪颜色)是否适用。"
+    },
+    {
+      "title": "Nsight Graphics 2026.3 Release Notes",
+      "url": "https://developer.nvidia.com/nsight-graphics/getting-started/release-note-v2026.3",
+      "source": "NVIDIA Developer",
+      "published": "原文未标注",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 官方发布说明。主要更新:可以直接对 Graphics Capture 的实时回放做 GPU Trace,在 Graphics Debugger 里改着色器后重新 trace 对比性能;时间线新增按着色器拆分的 SM warp 占用率;内存工具可按堆和内存类型查看预算与用量,并新增内存树图;Crash Dump Inspector 新增缺页相关的资源时间线(R615 及以上驱动信息更详细),并能读取嵌在崩溃转储里的着色器调试信息;GPU Trace 可一次显示所有 D3D12 fence / Vulkan semaphore 的 Wait/Signal 配对。旧版 OpenGL Frame Debugger 的 Shader Profiler 将在 2026.4 弃用。页面未写发布日期。",
+      "why_useful": "做渲染性能分析时,抓帧后不用离开调试器就能改 shader 再测,能明显缩短调优循环。",
+      "try_it": "抓一帧有性能问题的画面,在 Graphics Debugger 里对回放做 GPU Trace,打开 Shader Warp Occupancy 页签看哪个着色器占用率最低。"
+    },
+    {
+      "title": "Hot Reload Live — free & open source C# hot reload for Godot 4 (.NET)",
+      "url": "https://forum.godotengine.org/t/released-hot-reload-live-free-open-source-c-hot-reload-for-godot-4-net/145180",
+      "source": "Godot Forum",
+      "published": "2026-10-09",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "社区开发者发布的 MIT 开源工具,面向 Godot 4.7+ 的 .NET 版本。它监视 C# 源文件,在独立的 AssemblyLoadContext 里编译,并用 Harmony 打补丁替换方法体,保存后下一帧就运行新代码、不必重启游戏;支持静态/实例/泛型方法以及 async 和迭代器。字段布局变化、新增字段或方法、改签名时会检测到并跳过,仍需重启;只在编辑器内生效,不进入发布版本;需要 .NET 8 SDK,不支持 GDScript。这是作者自己的介绍,我们没有实际试用。",
+      "why_useful": "用 C# 写 Godot 时改一行就要停下重编译,这个工具能让调参和改逻辑的循环接近 GDScript 的即改即见。",
+      "try_it": "在一个非关键项目里装上,改某个 _Process 里的移动速度计算并保存,看运行中的游戏是否立刻生效;正式项目先做好版本控制。"
+    }
+  ]
+}
