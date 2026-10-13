@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-13",
+  "items": [
+    {
+      "title": "为移动端、VR 和低端 PC 优化 UE 场景的实战清单",
+      "url": "https://toziagency.com/blog/optimize-unreal-engine-environments-mobile-vr/",
+      "source": "Tozi 工作室博客",
+      "published": "2026-10-01",
+      "ue_version": "原文未标注",
+      "summary": "外包工作室根据移动端体育场、僵尸射击和 VR 项目经验总结:移动端和 VR 往往先卡在 Draw Call 上,建议提前定好帧率、内存和 Draw Call 预算,用共享材质、实例化、合并静态网格和远处分组 HLOD 来降低调用数,并配合烘焙光照和真机 profiling。这是工作室的经验之谈,不是官方文档。",
+      "try_points": [
+        "立项时就写下目标帧率、内存、三角面和 Draw Call 预算,资产按预算制作,而不是做完再砍",
+        "用 trim sheet 或纹理图集统一材质,再配合实例化和 HLOD,用 stat scenerendering 对比 Draw Call 变化(先确认 Draw Call 确实是瓶颈)"
+      ],
+      "topics": [
+        "移动端",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "Arm:用 MegaLights 在移动端渲染数百个动态光源",
+      "url": "https://developer.arm.com/community/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/lighting-at-scale-bringing-hundreds-of-dynamic-lights-to-mobile-with-unreal-megalights",
+      "source": "Arm Community",
+      "published": "2026-06-10",
+      "ue_version": "UE 5.7 分支(需改引擎源码,非官方移动端支持)",
+      "summary": "Arm 改引擎让 MegaLights 跑在支持 Vulkan SM5 和硬件光追的 Mali-G1 上,约 195 个投影点光源的场景中,MegaLights(每像素 2 采样、降采样 2)约 41 FPS,传统延迟着色约 8 FPS;文中给出所需源码修改、CVar 和调优经验。",
+      "try_points": [
+        "先读懂光线数估算公式 W×H×N/(F×F),用 r.MegaLights.NumSamplesPerPixel 和 r.MegaLights.DownsampleFactor 在噪点和开销之间取舍",
+        "PC 上用 MegaLights 时也可参考:主方向光保留 CSM、非 Nanite 网格时试 r.MegaLights.ScreenTraces=0、纯硬件光追项目关掉 Generate Mesh Distance Fields"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "HLOD 构建耗时过长:Epic 员工给出的提速建议",
+      "url": "https://forums.unrealengine.com/t/hlod-cook-time-and-setup/2709561",
+      "source": "Epic 开发者论坛",
+      "published": "2026-02-11",
+      "ue_version": "UE 5.7(文中提到 5.7 起可按区域构建)",
+      "summary": "有团队单层 HLOD 构建长达 12 小时;Epic 回复称 City Sample HLOD 从零构建用 10 台机器约 6 小时,建议能用实例化 HLOD 就用(Fortnite 的树就是这样)、分多层、尽量排除不需要的 actor/组件,并利用按区域构建来迭代设置。",
+      "try_points": [
+        "植被这类简化效果差的内容单独放一层 Instanced HLOD,构建快且远看更稳",
+        "在 World Partition 小地图上框选区域只构建该区域 HLOD,或对单个 HLOD actor 点 Build HLOD,先在小范围试好参数再全量构建"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    }
+  ]
+}
