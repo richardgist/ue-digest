@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T11:04+08:00",
+ "updated": "2026-10-14T14:24+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-14T11:04+08:00",
-   "last_new": 1
+   "checked": "2026-10-14T14:24+08:00",
+   "last_new": 2
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-14T11:04+08:00",
+   "checked": "2026-10-14T14:24+08:00",
    "last_new": 0
   }
  },
@@ -149,7 +149,7 @@
    "id": "cf35197a5e72",
    "title": "OpenAI engineer arrested in bugging of executive conference room",
    "link": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-   "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132 Comments URL: https://news.ycombinator.com/item?id=50078141 Points: 441 # Comments: 389",
+   "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132 Comments URL: https://news.ycombinator.com/item?id=50078141 Points: 512 # Comments: 436",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50078141",
@@ -182,7 +182,7 @@
    "id": "b4606c998906",
    "title": "Gemini 4 Argon",
    "link": "https://deepmind.google/models/gemini/",
-   "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869 Comments URL: https://news.ycombinator.com/item?id=50073879 Points: 1059 # Comments: 787",
+   "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869 Comments URL: https://news.ycombinator.com/item?id=50073879 Points: 1179 # Comments: 838",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50073879",
@@ -193,7 +193,7 @@
    "id": "c8aa0926c12a",
    "title": "Redesigning source control at Anthropic",
    "link": "https://www.anthropic.com/engineering/redesigning-source-control",
-   "summary": "Hacker News 热度:580 分,552 条评论",
+   "summary": "Hacker News 热度:683 分,652 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50073633",
@@ -204,7 +204,7 @@
    "id": "e71c2afb8299",
    "title": "I posted to HN, and then my website was flooded with AI bot traffic",
    "link": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
-   "summary": "Hacker News 热度:271 分,152 条评论",
+   "summary": "Hacker News 热度:310 分,165 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50073221",
@@ -212,10 +212,21 @@
    "first_seen": "2026-10-14T11:04+08:00"
   },
   {
+   "id": "5d622d479f9c",
+   "title": "The United Kingdom generates less electricity per person than in the 1970s",
+   "link": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+   "summary": "Hacker News 热度:268 分,367 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50072994",
+   "date": "2026-10-13T23:12+08:00",
+   "first_seen": "2026-10-14T14:24+08:00"
+  },
+  {
    "id": "1208903a46a9",
    "title": "Thunderbird for iOS",
    "link": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
-   "summary": "Hacker News 热度:359 分,161 条评论",
+   "summary": "Hacker News 热度:407 分,176 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50072913",
@@ -270,7 +281,7 @@
    "id": "75739da64d13",
    "title": "Apple HomeView",
    "link": "https://www.apple.com/apple-homeview/",
-   "summary": "Hacker News 热度:684 分,797 条评论",
+   "summary": "Hacker News 热度:709 分,838 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50071017",
@@ -303,7 +314,7 @@
    "id": "dd1208e65bb1",
    "title": "11 year old unsoundness bugs found in Rust borrow checker",
    "link": "https://github.com/rust-lang/rust/issues/164250",
-   "summary": "Hacker News 热度:675 分,375 条评论",
+   "summary": "Hacker News 热度:706 分,390 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50069499",
@@ -320,6 +331,17 @@
    "comments": "https://news.ycombinator.com/item?id=50068036",
    "date": "2026-10-13T15:28+08:00",
    "first_seen": "2026-10-14T07:45+08:00"
+  },
+  {
+   "id": "197f139f3605",
+   "title": "Hittite royal archive found in Turkey",
+   "link": "https://www.thehistoryblog.com/archives/77107",
+   "summary": "Hacker News 热度:355 分,85 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50067414",
+   "date": "2026-10-13T14:02+08:00",
+   "first_seen": "2026-10-14T14:24+08:00"
   },
   {
    "id": "976cf275ce41",
@@ -501,7 +523,7 @@
    "id": "8c7d58477385",
    "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
    "link": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-   "summary": "https://www.heise.de/en/news/Crypto-thieves-sell-hardware-wa... https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wa... https://www.youtube.com/watch?v=8JnHdr30v4g https://www.youtube.com/watch?v=Nf4FEFlgv3Q https://www.tibane.net/research/ledger-nano-x-implant Comments URL: https://news.ycombinator.com/item?id=50054092 Points: 481 # Comments: 357",
+   "summary": "https://www.heise.de/en/news/Crypto-thieves-sell-hardware-wa... https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wa... https://www.youtube.com/watch?v=8JnHdr30v4g https://www.youtube.com/watch?v=Nf4FEFlgv3Q https://www.tibane.net/research/ledger-nano-x-implant Comments URL: https://news.ycombinator.com/item?id=50054092 Points: 599 # Comments: 394",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50054092",
