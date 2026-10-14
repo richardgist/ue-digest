@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T07:45+08:00",
+ "updated": "2026-10-14T09:01+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 1
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 2
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-14T07:45+08:00",
+   "checked": "2026-10-14T09:01+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-14T07:45+08:00",
+   "checked": "2026-10-14T09:01+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-14T07:45+08:00",
+   "checked": "2026-10-14T09:01+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-14T07:45+08:00",
+   "checked": "2026-10-14T09:01+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 1
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 1
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-14T07:45+08:00",
+   "checked": "2026-10-14T09:01+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 6
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 11
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-14T07:45+08:00",
-   "last_new": 1
+   "checked": "2026-10-14T09:01+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -149,7 +149,7 @@
    "id": "cf35197a5e72",
    "title": "OpenAI engineer arrested in bugging of executive conference room",
    "link": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-   "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132 Comments URL: https://news.ycombinator.com/item?id=50078141 Points: 332 # Comments: 283",
+   "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132 Comments URL: https://news.ycombinator.com/item?id=50078141 Points: 384 # Comments: 347",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50078141",
@@ -171,7 +171,7 @@
    "id": "b4606c998906",
    "title": "Gemini 4 Argon",
    "link": "https://deepmind.google/models/gemini/",
-   "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869 Comments URL: https://news.ycombinator.com/item?id=50073879 Points: 890 # Comments: 698",
+   "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869 Comments URL: https://news.ycombinator.com/item?id=50073879 Points: 966 # Comments: 736",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50073879",
@@ -182,7 +182,7 @@
    "id": "c8aa0926c12a",
    "title": "Redesigning source control at Anthropic",
    "link": "https://www.anthropic.com/engineering/redesigning-source-control",
-   "summary": "Hacker News 热度:466 分,464 条评论",
+   "summary": "Hacker News 热度:515 分,512 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50073633",
@@ -193,7 +193,7 @@
    "id": "1208903a46a9",
    "title": "Thunderbird for iOS",
    "link": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
-   "summary": "Hacker News 热度:302 分,123 条评论",
+   "summary": "Hacker News 热度:329 分,143 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50072913",
@@ -226,7 +226,7 @@
    "id": "d2abe60c1c48",
    "title": "New Apple TV 4K",
    "link": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
-   "summary": "Hacker News 热度:268 分,511 条评论",
+   "summary": "Hacker News 热度:282 分,535 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50071310",
@@ -248,7 +248,7 @@
    "id": "75739da64d13",
    "title": "Apple HomeView",
    "link": "https://www.apple.com/apple-homeview/",
-   "summary": "Hacker News 热度:628 分,756 条评论",
+   "summary": "Hacker News 热度:650 分,771 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50071017",
@@ -259,7 +259,7 @@
    "id": "8913ce292e66",
    "title": "Firefox Enterprise",
    "link": "https://www.firefox.com/en-US/enterprise/",
-   "summary": "Hacker News 热度:604 分,252 条评论",
+   "summary": "Hacker News 热度:637 分,259 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50070302",
@@ -270,7 +270,7 @@
    "id": "36af00926e86",
    "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
    "link": "https://eg2.haku.sh/",
-   "summary": "Hacker News 热度:378 分,85 条评论",
+   "summary": "Hacker News 热度:392 分,85 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50069971",
@@ -281,7 +281,7 @@
    "id": "dd1208e65bb1",
    "title": "11 year old unsoundness bugs found in Rust borrow checker",
    "link": "https://github.com/rust-lang/rust/issues/164250",
-   "summary": "Hacker News 热度:650 分,362 条评论",
+   "summary": "Hacker News 热度:669 分,373 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50069499",
@@ -292,7 +292,7 @@
    "id": "a7c4f3fe4f90",
    "title": "Character.ai has initiated voluntary Chapter 11 bankruptcy",
    "link": "https://blog.character.ai/an-update-on-character-ai/",
-   "summary": "https://www.theverge.com/ai-artificial-intelligence/1009802/... https://techcrunch.com/2026/10/13/just-5-years-in-interactiv... https://www.reuters.com/legal/litigation/characterai-files-b... https://variety.com/2026/biz/news/disney-bids-on-character-a... Comments URL: https://news.ycombinator.com/item?id=50068036 Points: 269 # Comments: 260",
+   "summary": "https://www.theverge.com/ai-artificial-intelligence/1009802/... https://techcrunch.com/2026/10/13/just-5-years-in-interactiv... https://www.reuters.com/legal/litigation/characterai-files-b... https://variety.com/2026/biz/news/disney-bids-on-character-a... Comments URL: https://news.ycombinator.com/item?id=50068036 Points: 284 # Comments: 266",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50068036",
@@ -479,7 +479,7 @@
    "id": "8c7d58477385",
    "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
    "link": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-   "summary": "https://www.heise.de/en/news/Crypto-thieves-sell-hardware-wa... https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wa... https://www.youtube.com/watch?v=8JnHdr30v4g https://www.youtube.com/watch?v=Nf4FEFlgv3Q https://www.tibane.net/research/ledger-nano-x-implant Comments URL: https://news.ycombinator.com/item?id=50054092 Points: 357 # Comments: 290",
+   "summary": "https://www.heise.de/en/news/Crypto-thieves-sell-hardware-wa... https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wa... https://www.youtube.com/watch?v=8JnHdr30v4g https://www.youtube.com/watch?v=Nf4FEFlgv3Q https://www.tibane.net/research/ledger-nano-x-implant Comments URL: https://news.ycombinator.com/item?id=50054092 Points: 416 # Comments: 314",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50054092",

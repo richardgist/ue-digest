@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-14",
+  "items": [
+    {
+      "title": "打包后 Lumen 失效：常见原因与排查步骤",
+      "url": "https://bugnet.io/blog/fix-unreal-lumen-not-working-in-packaged-build",
+      "source": "Bugnet Blog",
+      "published": "2026-10-07",
+      "ue_version": "原文未标注（适用于启用 Lumen 的 UE5 项目）",
+      "summary": "文章归纳打包后 Lumen 常“消失”的五类原因：可伸缩性低于 High、Post Process Volume 未加载、项目未设为默认 Lumen、跑在 DX11 等不同 RHI、以及仅存在于编辑器的配置；并给出 Development 包内用 console 逐项核对的流程。",
+      "try_points": [
+        "Development 包里先跑 scalability，再查 sg.GlobalIlluminationQuality / sg.ReflectionQuality（需 2=High 或 3=Epic）以及 r.DynamicGlobalIlluminationMethod / r.ReflectionMethod（1=Lumen）",
+        "若靠 Post Process Volume 开 Lumen，在 World Partition 下取消 Is Spatially Loaded 或放进 always-loaded Data Layer；更稳妥是在 Project Settings / DefaultEngine.ini 设全局方法并生成 Mesh Distance Fields",
+        "把编辑器控制台里临时敲过的 CVar 迁入 DefaultEngine.ini 或 Device Profile，避免只在编辑器生效"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Nanite 与 Lumen 把显存打满时怎么拆因",
+      "url": "https://vfxrendering.com/nanite-and-lumen-are-maxing-out-my-gpu-and-vram-what-do-i-do/",
+      "source": "VFXRendering",
+      "published": "2026-10-07",
+      "ue_version": "原文未标注",
+      "summary": "文中区分 Nanite（几何流式池）与 Lumen（加速结构与光照缓存，高分辨率分块还会每 tile 加开销）的显存占用机制，给出按症状对照表，并强调在交付分辨率、最重帧上用 stat 测量后再改设置。",
+      "try_points": [
+        "在交付分辨率下用 stat RHI / stat streaming / Nanite streaming 统计看峰值；临时关一次 Lumen 对比差值，判断是谁占大头",
+        "草稿用较低 Lumen 质量、远处换成代理网格、按距离降纹理上限；有余量再调 r.Streaming.PoolSize，卡满时不要盲目加大池",
+        "纹理先糊再崩多半是流式池不够：先查 streaming 统计，再决定加池还是砍远景纹理"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE5 开放世界：从地形到 World Partition 与 HLOD 的实战清单",
+      "url": "https://toziagency.com/blog/unreal-engine-5-open-world-world-partition-pcg/",
+      "source": "Tozi 工作室博客",
+      "published": "2026-10-01",
+      "ue_version": "原文未标注（UE5 World Partition / PCG / HLOD）",
+      "summary": "Tozi 总结其 20×20 km 雪林场景流水线：Landscape 与分层材质、Biome/PCG 布置、实例化植被与 LOD/ impostor、World Partition 流送，以及用 HLOD 替换远处网格、用 Data Layer 做性能档；并强调在低端机上持续飞行 profiling。这是工作室经验之谈，非官方文档。",
+      "try_points": [
+        "大世界先搭 World Partition 流送，再用 HLOD 合并远处网格，Data Layer 做季节/剧情/性能档切换",
+        "植被用 ISM + LOD/ impostor 与 cull distance，复杂英雄资产手摆，PCG 管大面积",
+        "低端目标上把 LOD、裁剪距离、植被密度、Landscape 材质一起压，并在整图飞行路径上 profiling，而不是只盯一个机位"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "UE5 移动端性能深潜：渲染路径、分档预算与真机 profiling",
+      "url": "https://getperfguard.com/tutorials/mobile-performance",
+      "source": "PerfGuard",
+      "published": "原文未标注",
+      "ue_version": "文中主要针对 UE 5.5/5.6 移动路径（Forward / Deferred）",
+      "summary": "教程梳理移动 Forward（默认）、Deferred（需 Vulkan/Metal + MobileHDR）与高端机桌面路径的取舍，给出按机型档的 Draw Call/三角面预算、纹理流式池比例、灯光与特效现实约束，并强调用 Snapdragon Profiler / Arm Performance Studio / Metal Capture 在真机上验证。",
+      "try_points": [
+        "在 DefaultEngine.ini 固定 r.Mobile.ShadingPath 与 r.Mobile.SupportGPUScene=1（后者只读，运行时改无效）；Deferred 需同时开 MobileHDR 且仅 Vulkan/Metal",
+        "按低/中/旗舰档设 Device Profile（参考文中 ~250 / ~450 / ~700 Draw Call 与分辨率倍数），纹理池约占总可用显存的 30–40%",
+        "打包后在真机用厂商 profiler + Unreal Insights；Android 上 Niagara 优先 CPU 模拟，并注意文中提到的 UE 5.6 Mali Vulkan 崩溃回归"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
