@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-15",
+  "items": [
+    {
+      "title": "Fuse Games uses UE5 to make a fast and authentic Star Wars racing game",
+      "url": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
+      "source": "Unreal Engine · Developer Interviews",
+      "published": "2026-10-13",
+      "category": "效率",
+      "direction": "图形渲染",
+      "summary": "Epic 访谈 Fuse Games（Star Wars: Galactic Racer）。团队选用 UE5 主要因 Nanite、Lumen、World Partition 可组合使用，少自建核心渲染/流送技术。实践要点：赛车物理按全帧率独立跑；关卡同时维护渲染网格（多为 Nanite）、碰撞层与 Lumen 场景（含 far-field），并按可感知度裁剪进 Lumen 的几何；用校验工具把规格写成 250+ 条入库规则（含按尺寸/曲率算 Nanite 三角形密度）；自动化跑关打点配合 Unreal Insights；流送半径随车速变化。硬件侧早期就做 PS/Xbox/PC 同屏对比与每日自动构建性能图。文中关于「从 LOD 到 Nanite 迭代更快」等为访谈方自述，非独立基准测试。",
+      "why_useful": "做开放世界或高速载具关卡时，可对照他们如何拆 Nanite/碰撞/Lumen 层、用规则+自动化守帧率，而不是只堆画质。",
+      "try_it": "在现有 UE5 关卡列出「渲染 / 碰撞 / Lumen」三层预算；给 Nanite 资产加密度检查；用 Insights 或自动化跑圈日志看峰值段再调 World Partition / HLOD 距离。"
+    },
+    {
+      "title": "AMD's Jack Huynh: FSR 4 Is Coming to Handhelds via a New Lightweight Model",
+      "url": "https://www.digitalfoundry.net/news/2026/10/amds-jack-huynh-fsr-4-is-coming-to-handhelds-via-a-new-lightweight-model",
+      "source": "Digital Foundry",
+      "published": "2026-10-08",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Digital Foundry 报道：AMD 计算与图形业务高级副总裁 Jack Huynh 对韩国媒体（含 TheElec）表示，将把基于机器学习的 FSR 4 从独显扩展到整条产品线，包括 APU、游戏本与掌机，目标年底前；新产品线也会带 FSR 4。现有 APU 将用「专为 APU 环境做的轻量模型」，强调画质与低延迟。文中背景：FSR 4 原为 Radeon 9000 专属，7 月已到 RX 7000，RX 6000 官方支持计划到明年。轻量模型与完整 FSR 4 的画质/性能对比、是否覆盖 Steam Deck 等，原文均为推断或读者讨论，尚无官方实测表。",
+      "why_useful": "做掌机/APU 或跨平台画质档时，可提前规划「轻量 ML 超分」档位，并跟进年底驱动/SDK 落地范围。",
+      "try_it": "记下目标机型是 RDNA 几代；等官方轻量 FSR 4 到驱动后，在同场景对比 FSR 3 / 社区移植全量 FSR 4 / 官方轻量版的耗时与稳定性。"
+    },
+    {
+      "title": "Introducing Playground: Create and play custom games",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "source": "Google Blog",
+      "published": "2026-10-07",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Google 发布实验性平台 Playground（playground.google）：用对话/文本提示在浏览器里创建、试玩、分享游戏，无需写代码；可改物理、规则、角色与环境并即时测试。支持私有、分享链接或发到 Explore 画廊；部分类型有排行榜与多人。已发布内容会做安全筛查并可用举报。后续计划接入 Unity Spark（更高保真 3D / Unity runtime）；Unity Spark 仍在测试、封闭测试即将开放。首发面向美国 18+ 用户，创作额度按 Google AI 订阅分层。以上为官方说明，实际生成质量与可用性需自行试用。",
+      "why_useful": "适合快速验证玩法原型，或观察「提示词 → 可玩网页游戏 → 再接到 Unity Spark」这条非传统引擎入门路径。",
+      "try_it": "若在美国且符合年龄：打开 playground.google 用一段玩法描述生成可玩草稿，再试改规则/物理；关注 Unity Spark 封闭测试名单。"
+    },
+    {
+      "title": "AI is mass decompiling games. That's both awesome and scary.",
+      "url": "https://popcar.bearblog.dev/ai-is-mass-decompiling-games-thats-both-awesome-and-scary/",
+      "source": "Popcar's Blog",
+      "published": "2026-10-14",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "独立开发者 Popcar 的观察文：新模型/工作流可在数天内把游戏反编译到可改可重编译的源码级结果（代码往往不如手工干净，但不少端口已能跑）。举例包括原版 Flash《Binding of Isaac》的 IsaacRecomp（自称自动做成原生分辨率与高帧率）、以及多款老游戏移植；并提到 AnyPS5 等兼容层方向与浏览器可玩的老游戏 demo。作者同时强调风险：任意软件都可能被反编译后滥用、竞品抄袭与 DRM 加码等。文中案例多为作者见闻与社区项目，法律结论（如「完全合法」「无法证明抄袭」）是作者观点，不是法院裁定。",
+      "why_useful": "做游戏保护、模组或怀旧移植时，需要正视「AI 反编译变快」带来的保存红利与侵权/DRM 压力。",
+      "try_it": "只读：对照自家客户端保护与资源打包策略；若做保存向移植，先查清目标游戏授权与 DMCA 风险再动手。"
+    },
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "source": "Anthropic Engineering",
+      "published": "2026-10-13",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Anthropic 工程博文：代理写码使合并量从 2026 年 5 月约 2500/日升至 9 月逾 30000/日，git 镜像与种子仓成为瓶颈后，五个月内自研并迁到 Scion（配套 Antique 评审、代码搜索与 IAM 等）。设计假设客户端几乎总在线、服务端做历史/blame/提交与合并、工作副本默认可稀疏/按需；称基础设施 CPU/内存相对原 git 镜像方案约小 200×，CI/研究任务检出从分钟级到秒级，仅 CI 约省 25% CPU。文中强调 Scion 不适合替代一般用途的 git，且难对外产品化；文内性能数字与「七人团队」等均为 Anthropic 自述，未独立复现。",
+      "why_useful": "本地或多代理并行改同一大仓时，可对照他们如何把「检出/blame/合并」收成服务端 API，而不是无限加 git 镜像。",
+      "try_it": "先审计自己的 CI 每天完整 clone/fetch 次数与耗时；能改成稀疏检出、blob 缓存或「只问 diff/ancestry」的 API 就先改这些，不必一上来换 VCS。"
+    }
+  ]
+}
