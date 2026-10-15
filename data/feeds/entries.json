@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T14:24+08:00",
+ "updated": "2026-10-15T08:53+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 1
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 2
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-14T14:24+08:00",
+   "checked": "2026-10-15T08:53+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 2
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,176 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-14T14:24+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T08:53+08:00",
+   "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "f5fb7379ce8c",
+   "title": "Ubisoft to close Trials studio RedLynx, downsize Ubisoft Singapore",
+   "link": "https://www.gamedeveloper.com/business/ubisoft-to-close-trials-studio-redlynx-downsize-ubisoft-singapore",
+   "summary": "The decisions will ultimately impact over 120 jobs between the two studios as part of Ubisoft's ongoing restructuring efforts.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-15T06:08+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "22ee0a608ca6",
+   "title": "Tree Appreciator",
+   "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
+   "summary": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode) where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated trees and the game mechanics is about appreciating the differences between them. Think hard about how to make sure it is both fun and beautiful. Somewhat embarrassingly given my recent talk , I've found that telling Opus 5.5…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T05:23+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "577b8ed15ecf",
+   "title": "OpenCode 2.0",
+   "link": "https://anoma.ly/notes/opencode-2-0/",
+   "summary": "Hacker News 热度:258 分,97 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50094994",
+   "date": "2026-10-15T04:48+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "cd7e5bc940b4",
+   "title": "No more hand-written code? Epic's Disney project reportedly shifts to 'AI-First' development",
+   "link": "https://www.gamedeveloper.com/programming/no-more-hand-written-code-epic-s-disney-project-reportedly-shifts-to-ai-first-development",
+   "summary": "Developers working on the upcoming Star Wars and Marvel shooter have been reportedly instructed to lean heavily on AI, especially during the creation of code and art.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-15T04:24+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "9b862234026a",
+   "title": "Things to know when you get cancer – 2026 Edition",
+   "link": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+   "summary": "Hacker News 热度:691 分,179 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50093568",
+   "date": "2026-10-15T03:26+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "cfae3cbf95e1",
+   "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
+   "link": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
+   "summary": "Hacker News 热度:272 分,199 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50092730",
+   "date": "2026-10-15T02:37+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "89afa2cf8a13",
+   "title": "Banks are now trying to offload the AI data center debt they just underwrote",
+   "link": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
+   "summary": "Hacker News 热度:264 分,207 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50092664",
+   "date": "2026-10-15T02:32+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "3ef98b9b51a3",
+   "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+   "link": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+   "summary": "Hacker News 热度:821 分,442 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50091788",
+   "date": "2026-10-15T01:45+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "cf2263059249",
+   "title": "Google is silently linking your phone number across all signed-in accounts",
+   "link": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+   "summary": "Hacker News 热度:361 分,96 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50090349",
+   "date": "2026-10-15T00:28+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "8f4e222dccc1",
+   "title": "AI is mass decompiling games. That's both awesome and scary.",
+   "link": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
+   "summary": "AI is mass decompiling games. That's both awesome and scary. Indie game developer Popcar talks about the recent wave of AI-powered decompilation of existing games, enabling weird mashups between existing games, and producing a boom in game preservation projects to get old games working on new hardware (often in a browser using WebAssembly). I like how this piece captures both the positives and the negatives of this new development: Most people already realized the scary part by now. If AI can…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T00:26+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "5ea4c0c66169",
+   "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+   "link": "https://huggingface.co/blog/allenai/hiro-acev2",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T00:12+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "c6738337af08",
+   "title": "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym",
+   "link": "https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/",
+   "summary": "AI agents offer remarkable productivity gains in complex chip design workflows, but their tendency to generate plausible yet incorrect artifacts makes...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-15T00:10+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "1e167671ecbc",
+   "title": "Passkeys are not a trap",
+   "link": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
+   "summary": "Hacker News 热度:453 分,624 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50088935",
+   "date": "2026-10-14T23:15+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "ecd2c08918b6",
+   "title": "How Amazon pushes up prices all across the Internet",
+   "link": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
+   "summary": "Hacker News 热度:701 分,590 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50084757",
+   "date": "2026-10-14T17:28+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "e0683cb7efe8",
+   "title": "UEFN Professional Bootcamp: Prepare for Unreal Engine 6",
+   "link": "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6",
+   "summary": "With Epic’s roadmap bringing together Unreal Engine and UEFN in UE6, build your UEFN skills with our free UEFN Professional Bootcamp for games industry pros. Register today to create and publish a playable Fortnite island and strengthen your portfolio.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-14T08:00+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
+  },
   {
    "id": "b1f7fd9522e7",
    "title": "Redesigning source control at Anthropic",
@@ -551,6 +716,17 @@
    "comments": null,
    "date": "2026-10-12T12:57+08:00",
    "first_seen": "2026-10-13T07:54+08:00"
+  },
+  {
+   "id": "ab5510580859",
+   "title": "Do dentists know what they're doing?",
+   "link": "https://mapwriting.substack.com/p/dentists",
+   "summary": "Hacker News 热度:375 分,294 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50050553",
+   "date": "2026-10-12T10:21+08:00",
+   "first_seen": "2026-10-15T08:53+08:00"
   },
   {
    "id": "20b5cf206455",
@@ -1661,17 +1837,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-16T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "f4956bc8275b",
-   "title": "Submissions open for Godot 2026 showreel",
-   "link": "https://godotengine.org/article/submissions-open-godot-2026-showreel/",
-   "summary": "Showcase your Godot creations in 2026! We're inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don't miss this chance to be a part of it!",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-08-15T21:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-15",
+  "items": [
+    {
+      "title": "Last Week in Unreal：LumenWorldCache、Nanite 新剔除与 5.8.4 热修候选（10/5–10/11）",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-oct-5-11-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-10-12",
+      "ue_version": "ue6-main / 公开 5.8 分支（5.8.4 热修候选）",
+      "summary": "周报梳理 10 月 5–11 日主线变更：Lumen 新增运行时表面缓存 LumenWorldCache（可选，替代基于 mesh card 的旧缓存，文中给出室内约慢 0.35ms、室外约快 0.4ms 的测量），并删除七个按子系统拆分的 Lumen HWRT CVar，只保留 r.Lumen.HardwareRayTracing；Nanite 换成新的多 pass 剔除路径（旧 persistent culling 已移除）；公开 5.8 分支已出现 5.8.4 版本号与大量 cherry-pick，但尚无正式 release tag。",
+      "try_points": [
+        "在工程与 Device Profile 里搜索已删除的七个 r.Lumen.*.HardwareRayTracing CVar，统一改用 r.Lumen.HardwareRayTracing",
+        "若跟踪 ue6-main：用 r.Lumen.WorldCache.Supported / Allowed 试 LumenWorldCache，并对照文中列出的缺失能力",
+        "Nanite 帧时变化时，用 r.Nanite.Culling.Classification 与 AdaptiveFanoutThreadBudget 做二分排查"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 访谈：Fuse Games 用 Nanite / Lumen / World Partition（含 HLOD）做《Star Wars: Galactic Racer》",
+      "url": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
+      "source": "Unreal Engine（官方 Developer Interview）",
+      "published": "2026-10-13",
+      "ue_version": "原文未标注",
+      "summary": "Fuse 技术负责人介绍赛车项目如何同时维护 Nanite 渲染网格、独立碰撞层与 Lumen 场景（含 far-field），并用 World Partition 分辨率对照 HLOD 过渡距离调流送；实现了按车速变化的 variable streaming radii，车越快越提前加载前方赛道。文中还提到用 250+ 条资产规则与自动化跑测压 Nanite 三角密度，并在 Series S / 低端 PC 上做跨机对比与可扩展性取舍。",
+      "try_points": [
+        "开放世界或高速关卡：把 World Partition cell / loading range 与 HLOD 过渡距离放在一起看，而不是只调其中一项",
+        "尝试按速度或相机速度放大 streaming radius，减少高速时前方空洞与卡顿",
+        "对 Nanite 资产设按尺寸/曲率的密度规则，并接入提交检查，避免“单资产还好、堆起来翻车”"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 在 AMD RX 6000 上编辑器内 Lumen HWRT 角暗与反射异常（打包正常）",
+      "url": "https://forums.unrealengine.com/t/ue5-8-lumen-hardware-ray-tracing-shows-abnormal-lighting-and-reflection-results-when-running-in-the-editor-on-amd-6000-series-gpus-images-attached-is-there-a-way-to-fix-this-issue/2837923",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-06",
+      "ue_version": "UE 5.8",
+      "summary": "报告者在 RX 6750 XT 的编辑器视口开启 Hardware Ray Tracing 后出现场景角落明显变暗、反射异常，同工程在 NVIDIA 上正常，且打包构建渲染正常。10 月 14 日回复指出这更像编辑器视口与 cooked 游戏走不同 RT/hit-lighting 路径，而非内容 Distance Field 坏了；建议对比 r.Lumen.HardwareRayTracing、Reflections HWRT，以及把 r.Lumen.HardwareRayTracing.LightingMode 从 hit lighting(1) 改为 surface cache(0) 验证，必要时仅在 Editor 覆盖里关 HWRT。",
+      "try_points": [
+        "AMD 机器上先把 r.Lumen.HardwareRayTracing.LightingMode 设为 0（surface cache）看角落与反射是否恢复",
+        "用 DX11 + 软件 Lumen 对照，确认是否隔离到 HWRT 着色路径",
+        "若只要编辑器可视化正确：在 DefaultEditor.ini / 该 GPU 的 Device Profile 覆盖 r.Lumen.HardwareRayTracing=0，游戏包仍可保持开启"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Arm：Mori 演示上把 Nanite 跑到移动端——WPO/Masked、MaxPixelsPerEdge 与实测帧率",
+      "url": "https://developer.arm.com/community/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/mori-to-nanite-billions-of-triangles-on-mobile",
+      "source": "Arm Community（Mobile Graphics and Gaming）",
+      "published": "2026-06-16",
+      "ue_version": "基于 UE 5.5.2 修改版（桌面渲染器 + Vulkan SM5，真机 Mali-G925）",
+      "summary": "Arm 在 Vivo X200 Pro（Mali-G925）上评估 Nanite：未优化约 15 FPS；关掉 WPO 约 25 FPS，再限制 Masked 材料可到近 40 FPS。高模树从非 Nanite 约 5 FPS 提升到 Nanite 约 38 FPS。文中给出 r.Nanite.MaxPixelsPerEdge、MinPixelsPerEdgeHW 调参表，以及用 Packed Level Actor 再省约 1–2 ms 的做法，并强调移动端尽量避免 WPO 与 Masked。",
+      "try_points": [
+        "先用 Nanite 可视化与 r.Nanite.ShowMeshDrawEvents 找出 WPO / Pixel Programmable 热点，再决定关 WPO 或加 Disable Distance",
+        "在目标真机上扫 MaxPixelsPerEdge（文中从 1→10 帧率明显上升，但过大有伪影）",
+        "大量重复静态物试 Packed Level Actor / ISM，观察是否再省 1–2 ms"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
