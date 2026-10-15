@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T09:34+08:00",
+ "updated": "2026-10-15T11:48+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-15T09:34+08:00",
-   "last_new": 0
+   "checked": "2026-10-15T11:48+08:00",
+   "last_new": 1
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-15T09:34+08:00",
-   "last_new": 1
+   "checked": "2026-10-15T11:48+08:00",
+   "last_new": 2
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-15T09:34+08:00",
+   "checked": "2026-10-15T11:48+08:00",
    "last_new": 0
   }
  },
@@ -138,12 +138,23 @@
    "id": "577b8ed15ecf",
    "title": "OpenCode 2.0",
    "link": "https://anoma.ly/notes/opencode-2-0/",
-   "summary": "Hacker News 热度:283 分,118 条评论",
+   "summary": "Hacker News 热度:376 分,160 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50094994",
    "date": "2026-10-15T04:48+08:00",
    "first_seen": "2026-10-15T08:53+08:00"
+  },
+  {
+   "id": "c2ac821d2fe0",
+   "title": "Anthropic's Scion is heavily inspired by Mononoke",
+   "link": "https://sunshowers.io/posts/anthropic-mononoke/",
+   "summary": "Hacker News 热度:284 分,117 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50094694",
+   "date": "2026-10-15T04:30+08:00",
+   "first_seen": "2026-10-15T11:48+08:00"
   },
   {
    "id": "cd7e5bc940b4",
@@ -158,9 +169,9 @@
   },
   {
    "id": "9b862234026a",
-   "title": "Things to know when you get cancer – 2026 Edition",
+   "title": "Things to know when you get cancer",
    "link": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
-   "summary": "Hacker News 热度:748 分,197 条评论",
+   "summary": "Hacker News 热度:927 分,229 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50093568",
@@ -171,7 +182,7 @@
    "id": "db3068f40d10",
    "title": "Suicide rates highest ever among middle-aged men",
    "link": "https://www.telegraph.co.uk/news/2026/10/13/suicide-rates-highest-ever-among-middle-aged-men/",
-   "summary": "Hacker News 热度:252 分,328 条评论",
+   "summary": "Hacker News 热度:321 分,413 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50093180",
@@ -182,7 +193,7 @@
    "id": "cfae3cbf95e1",
    "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
    "link": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
-   "summary": "Hacker News 热度:281 分,200 条评论",
+   "summary": "Hacker News 热度:310 分,207 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50092730",
@@ -193,7 +204,7 @@
    "id": "89afa2cf8a13",
    "title": "Banks are now trying to offload the AI data center debt they just underwrote",
    "link": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
-   "summary": "Hacker News 热度:277 分,211 条评论",
+   "summary": "Hacker News 热度:325 分,232 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50092664",
@@ -204,7 +215,7 @@
    "id": "3ef98b9b51a3",
    "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
    "link": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
-   "summary": "Hacker News 热度:834 分,444 条评论",
+   "summary": "Hacker News 热度:848 分,466 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50091788",
@@ -215,7 +226,7 @@
    "id": "cf2263059249",
    "title": "Google is silently linking your phone number across all signed-in accounts",
    "link": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
-   "summary": "Hacker News 热度:377 分,97 条评论",
+   "summary": "Hacker News 热度:419 分,106 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50090349",
@@ -256,10 +267,21 @@
    "first_seen": "2026-10-15T08:53+08:00"
   },
   {
+   "id": "e415360fbda0",
+   "title": "Americans' social activity has steeply declined in the past 30 years",
+   "link": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
+   "summary": "Hacker News 热度:276 分,282 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50089921",
+   "date": "2026-10-15T00:09+08:00",
+   "first_seen": "2026-10-15T11:48+08:00"
+  },
+  {
    "id": "1e167671ecbc",
    "title": "Passkeys are not a trap",
    "link": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
-   "summary": "Hacker News 热度:471 分,641 条评论",
+   "summary": "Hacker News 热度:517 分,680 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50088935",
@@ -270,7 +292,7 @@
    "id": "ecd2c08918b6",
    "title": "How Amazon pushes up prices all across the Internet",
    "link": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
-   "summary": "Hacker News 热度:710 分,591 条评论",
+   "summary": "Hacker News 热度:749 分,602 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50084757",
@@ -732,7 +754,7 @@
    "id": "ab5510580859",
    "title": "Do dentists know what they're doing?",
    "link": "https://mapwriting.substack.com/p/dentists",
-   "summary": "Hacker News 热度:396 分,311 条评论",
+   "summary": "Hacker News 热度:489 分,360 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50050553",
@@ -837,6 +859,17 @@
    "comments": "https://news.ycombinator.com/item?id=50043026",
    "date": "2026-10-11T21:16+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
+  },
+  {
+   "id": "bc48e39f8975",
+   "title": "Graphics Programming weekly - Issue 458 - October 11th, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-458/",
+   "summary": "Special cased quaternion log and exp presents specialized SIMD-friendly log and exp functions for unit quaternions achieves error bounds comparable to standard-library implementations while avoiding full-turn angle ambiguity wayback-archive Stochastic Graph Compression for Constant-Memory Differentiable Light Tracing introduces Reservoir Light Replay Backpropagation (ResLRB) for reverse-mode differentiable light tracing compresses the adjoint graph during the primal pass with a streaming…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-11T12:00+08:00",
+   "first_seen": "2026-10-15T11:48+08:00"
   },
   {
    "id": "7bf90c5622a7",
