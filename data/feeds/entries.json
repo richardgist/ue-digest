@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T09:33+08:00",
+ "updated": "2026-10-16T14:27+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-16T09:33+08:00",
+   "checked": "2026-10-16T14:27+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-16T09:33+08:00",
-   "last_new": 1
+   "checked": "2026-10-16T14:27+08:00",
+   "last_new": 3
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,22 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-16T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T14:27+08:00",
+   "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "af14d0aa7e59",
+   "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+   "link": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-16T09:44+08:00",
+   "first_seen": "2026-10-16T14:27+08:00"
+  },
   {
    "id": "7ac30e8d183c",
    "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
@@ -125,9 +136,9 @@
   },
   {
    "id": "8ce976bc500a",
-   "title": "What I Self-Host",
+   "title": "What I self-host",
    "link": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
-   "summary": "Hacker News 热度:256 分,153 条评论",
+   "summary": "Hacker News 热度:396 分,247 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50109715",
@@ -144,6 +155,17 @@
    "comments": null,
    "date": "2026-10-16T03:47+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "9d5b14376ed1",
+   "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+   "link": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+   "summary": "Hacker News 热度:297 分,137 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50108872",
+   "date": "2026-10-16T03:21+08:00",
+   "first_seen": "2026-10-16T14:27+08:00"
   },
   {
    "id": "d25df66cdec6",
@@ -171,7 +193,7 @@
    "id": "0149b73b0a22",
    "title": "Muse Spark Open",
    "link": "https://research.meta.ai/blog/muse-spark-open",
-   "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope... https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-... Comments URL: https://news.ycombinator.com/item?id=50107379 Points: 607 # Comments: 351",
+   "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope... https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-... Comments URL: https://news.ycombinator.com/item?id=50107379 Points: 746 # Comments: 385",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50107379",
@@ -182,7 +204,7 @@
    "id": "ea3cd4d29a33",
    "title": "Jev meets the Trolley Problem",
    "link": "https://zachlandes.com/trolley-problem/",
-   "summary": "Hacker News 热度:301 分,144 条评论",
+   "summary": "Hacker News 热度:397 分,173 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50106023",
@@ -193,12 +215,23 @@
    "id": "f93431ea6078",
    "title": "Neural networks are clean",
    "link": "https://already-clean.goodfire.com/",
-   "summary": "https://twitter.com/nickcammarata/status/2110757819427574056 Comments URL: https://news.ycombinator.com/item?id=50105647 Points: 497 # Comments: 190",
+   "summary": "https://twitter.com/nickcammarata/status/2110757819427574056 Comments URL: https://news.ycombinator.com/item?id=50105647 Points: 615 # Comments: 227",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50105647",
    "date": "2026-10-16T00:04+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "e1d964211838",
+   "title": "Krea 3 – An image model built for editing at scale",
+   "link": "https://www.krea.ai/krea-3",
+   "summary": "Hacker News 热度:289 分,90 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50105648",
+   "date": "2026-10-16T00:04+08:00",
+   "first_seen": "2026-10-16T14:27+08:00"
   },
   {
    "id": "8daebafc7d3c",
@@ -210,6 +243,17 @@
    "comments": "https://news.ycombinator.com/item?id=50105635",
    "date": "2026-10-16T00:03+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "41ff4a7be6a2",
+   "title": "Celebrating 70 Years of Fortran",
+   "link": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
+   "summary": "Hacker News 热度:256 分,107 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50104726",
+   "date": "2026-10-15T23:03+08:00",
+   "first_seen": "2026-10-16T14:27+08:00"
   },
   {
    "id": "07b45b1b8d74",
@@ -237,7 +281,7 @@
    "id": "0c29239b4cf4",
    "title": "Wayland desktop for Linux with skeuomorphic design",
    "link": "https://github.com/fyzugx/DEsk",
-   "summary": "Hacker News 热度:495 分,199 条评论",
+   "summary": "Hacker News 热度:569 分,227 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50103338",
@@ -259,7 +303,7 @@
    "id": "4cb672cd326f",
    "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
    "link": "https://libreboot.org/news/libreboot2610.html",
-   "summary": "Hacker News 热度:252 分,153 条评论",
+   "summary": "Hacker News 热度:274 分,165 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50102923",
@@ -281,7 +325,7 @@
    "id": "c1251d11ff93",
    "title": "Show HN: Unfenced – Land for sale that borders public land",
    "link": "https://unfenced.land/",
-   "summary": "Hacker News 热度:256 分,183 条评论",
+   "summary": "Hacker News 热度:291 分,191 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50102247",
@@ -292,7 +336,7 @@
    "id": "7f9b279c29bc",
    "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
    "link": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-   "summary": "https://www.theguardian.com/technology/2026/oct/15/israeli-f... https://www.theverge.com/tech/1011956/discover-tech-zero-cli... Comments URL: https://news.ycombinator.com/item?id=50101813 Points: 388 # Comments: 554",
+   "summary": "https://www.theguardian.com/technology/2026/oct/15/israeli-f... https://www.theverge.com/tech/1011956/discover-tech-zero-cli... Comments URL: https://news.ycombinator.com/item?id=50101813 Points: 440 # Comments: 590",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50101813",
