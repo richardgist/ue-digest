@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T11:48+08:00",
+ "updated": "2026-10-16T09:01+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-15T11:48+08:00",
+   "checked": "2026-10-16T09:01+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 1
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 0
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-15T11:48+08:00",
+   "checked": "2026-10-16T09:01+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-15T11:48+08:00",
+   "checked": "2026-10-16T09:01+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-15T11:48+08:00",
+   "checked": "2026-10-16T09:01+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 1
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 2
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 10
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,220 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-15T11:48+08:00",
-   "last_new": 0
+   "checked": "2026-10-16T09:01+08:00",
+   "last_new": 3
   }
  },
  "entries": [
+  {
+   "id": "7ac30e8d183c",
+   "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+   "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-16T04:34+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "4196cbff913c",
+   "title": "Chirp Pong",
+   "link": "https://simonwillison.net/2026/Oct/15/chirp-pong/",
+   "summary": "Tool: Chirp Pong Another game experiment - I wanted to see if it was feasible to have a two player game on two separate phones running in static HTML where the networking code uses chirps sent via the microphone. It seems to work! Build a two player competitive pong like game where two players use their phones close to each other and the game state is sent via audio noises which the web microphone API can interpret - but add graphical and gameplay twists to make it a lot more fun and intertwine…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-16T03:47+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "d25df66cdec6",
+   "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+   "link": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+   "summary": "Always-on agents are taking on longer, more complex enterprise workflows. A single request can involve reading a document, checking information across sources,...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-16T02:01+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "51728fcd84ed",
+   "title": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72",
+   "link": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+   "summary": "Meta launches Muse Spark Open, a coding-optimized 816B mixture-of-experts (MoE) model with 42B active parameters and a 1M token context window. Trained on...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-16T02:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "0149b73b0a22",
+   "title": "Muse Spark Open",
+   "link": "https://research.meta.ai/blog/muse-spark-open",
+   "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope... https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-... Comments URL: https://news.ycombinator.com/item?id=50107379 Points: 591 # Comments: 333",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50107379",
+   "date": "2026-10-16T01:47+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "ea3cd4d29a33",
+   "title": "Jev meets the Trolley Problem",
+   "link": "https://zachlandes.com/trolley-problem/",
+   "summary": "Hacker News 热度:285 分,135 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50106023",
+   "date": "2026-10-16T00:24+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "f93431ea6078",
+   "title": "Neural networks are clean",
+   "link": "https://already-clean.goodfire.com/",
+   "summary": "https://twitter.com/nickcammarata/status/2110757819427574056 Comments URL: https://news.ycombinator.com/item?id=50105647 Points: 483 # Comments: 187",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50105647",
+   "date": "2026-10-16T00:04+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "8daebafc7d3c",
+   "title": "Steam Client is now faster than Epic's new vibe coded launcher",
+   "link": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
+   "summary": "Hacker News 热度:277 分,275 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50105635",
+   "date": "2026-10-16T00:03+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "07b45b1b8d74",
+   "title": "Caves of Qud: Diaspora breaks new ground by being the first early access DLC release on Steam",
+   "link": "https://www.gamedeveloper.com/pc/caves-of-qud-diaspora-breaks-new-ground-by-being-the-first-early-access-dlc-release-on-steam",
+   "summary": "The roguelike RPG is no longer in Steam Early Access, but its upcoming DLC Diaspora will be, marking untrodden ground for the in-development program.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-15T22:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "3e45210742df",
+   "title": "I know why the mathematicians weep",
+   "link": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+   "summary": "Hacker News 热度:342 分,560 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50103630",
+   "date": "2026-10-15T21:44+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "0c29239b4cf4",
+   "title": "Wayland desktop for Linux with skeuomorphic design",
+   "link": "https://github.com/fyzugx/DEsk",
+   "summary": "Hacker News 热度:482 分,195 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50103338",
+   "date": "2026-10-15T21:23+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "8b3cd85dbde5",
+   "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
+   "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+   "summary": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO The phrase \"told investors\" appears four times in this FT article, which reports on Anthropic's day of hosting investors on Wednesday. Lots of details in here from \" people with knowledge of the matter \". Key things I learned from the article: Q1 revenue (Jan/Feb/Mar) was \"about $4.8bn\" Q2 (Apr/May/Jun) was $11.5bn Q3 (Jul/Aug/Sep) was $16.8bn In Q3: $1.70 in revenue for every $1 spent on \"computing power\"…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T21:04+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "4cb672cd326f",
+   "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+   "link": "https://libreboot.org/news/libreboot2610.html",
+   "summary": "Hacker News 热度:250 分,152 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50102923",
+   "date": "2026-10-15T20:52+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "21dbe13f7991",
+   "title": "Dev snapshot: Godot 4.8 beta 1",
+   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
+   "summary": "Godot 4.8 enters beta!",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-15T20:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "c1251d11ff93",
+   "title": "Show HN: Unfenced – Land for sale that borders public land",
+   "link": "https://unfenced.land/",
+   "summary": "Hacker News 热度:253 分,180 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50102247",
+   "date": "2026-10-15T19:38+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "7f9b279c29bc",
+   "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+   "link": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+   "summary": "https://www.theguardian.com/technology/2026/oct/15/israeli-f... https://www.theverge.com/tech/1011956/discover-tech-zero-cli... Comments URL: https://news.ycombinator.com/item?id=50101813 Points: 379 # Comments: 548",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50101813",
+   "date": "2026-10-15T18:43+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "4e25e9a8ba87",
+   "title": "SILENT HILL: Townfall delivers haunting psychological horror at its very best with UE5",
+   "link": "https://www.unrealengine.com/developer-interviews/silent-hill-townfall-delivers-haunting-psychological-horror-at-its-very-best-with-ue5",
+   "summary": "Discover how UE5 tools including Lumen, Nanite, and MetaHuman helped Screen Burn Interactive craft complex, beautifully rendered scenes and compelling characters for chilling, slow-burn survival horror SILENT HILL: Townfall .",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-15T08:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "dde8b65065e5",
+   "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+   "link": "https://huggingface.co/blog/meta-muse-spark-open",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T08:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "9cb368175a72",
+   "title": "Welcome FLUX.3 Image Klein in Diffusers",
+   "link": "https://huggingface.co/blog/flux-3",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T08:00+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
+  },
   {
    "id": "f5fb7379ce8c",
    "title": "Ubisoft to close Trials studio RedLynx, downsize Ubisoft Singapore",
@@ -127,7 +336,7 @@
    "id": "22ee0a608ca6",
    "title": "Tree Appreciator",
    "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
-   "summary": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode) where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated trees and the game mechanics is about appreciating the differences between them. Think hard about how to make sure it is both fun and beautiful. Somewhat embarrassingly given my recent talk , I've found that telling Opus 5.5…",
+   "summary": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode), where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated trees and the game mechanics is about appreciating the differences between them. Think hard about how to make sure it is both fun and beautiful. Somewhat embarrassingly given my recent talk , I've found that telling Opus 5.5…",
    "source": "Simon Willison",
    "topic": "AI 工具",
    "comments": null,
@@ -485,6 +694,17 @@
    "comments": "https://news.ycombinator.com/item?id=50071017",
    "date": "2026-10-13T21:02+08:00",
    "first_seen": "2026-10-14T07:45+08:00"
+  },
+  {
+   "id": "3a734e05e29e",
+   "title": "Wanted to download an ISO, ended up writing a kernel exploit",
+   "link": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
+   "summary": "Author here. Does anyone know what to do with the rest of the drivers? I found at least 13 in-tree drivers with the same bug class. The nasty part is they work fine on x86 and silently corrupt data on arm and other non-coherent archs, and I don't have the hardware to test them. I'd guess that's what the DMA API is for and drivers shouldn't be doing cache maintenance by hand, but I'm not a kernel dev, so maybe I'm missing something. Comments URL: https://news.ycombinator.com/item?id=50070625…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50070625",
+   "date": "2026-10-13T20:30+08:00",
+   "first_seen": "2026-10-16T09:01+08:00"
   },
   {
    "id": "8913ce292e66",
@@ -1870,17 +2090,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-18T18:35+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "c3da3f81f450",
-   "title": "Graphics Programming weekly - Issue 451 - August 16th, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-451/",
-   "summary": "Variable rate ray tracing in call of duty: modern warfare 4 presents a system for reallocating rays more efficiently built around supersampling where temporal history is missing, undersampling with temporal reconstruction in stable areas, and a load balancer to keep a fixed ray budget provides a discussion of the basics discusses implementation details such as reprojecting the random-sequence index, per-texel rejection weights, and bucket-based load balancing wayback-archive Adaptive…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-16T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
