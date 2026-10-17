@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T14:27+08:00",
+ "updated": "2026-10-17T08:13+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 1
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 1
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 1
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-16T14:27+08:00",
-   "last_new": 3
+   "checked": "2026-10-17T08:13+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,77 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-16T14:27+08:00",
+   "checked": "2026-10-17T08:13+08:00",
    "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "a6d7ca69b8b2",
+   "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+   "link": "https://simonwillison.net/2026/Oct/16/code-review/",
+   "summary": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-17T06:06+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "7b164eab9a3d",
+   "title": "Claude reveals ECDSA curve origins",
+   "link": "https://www.anthropic.com/research/ecdsa-curve-origins",
+   "summary": "https://words.filippo.io/seeds-solved/ Comments URL: https://news.ycombinator.com/item?id=50122800 Points: 604 # Comments: 251",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50122800",
+   "date": "2026-10-17T02:55+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "cb48f5d3cd53",
+   "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+   "link": "https://www.mercor.com/research/labor-index/benchmark-map/",
+   "summary": "Hacker News 热度:374 分,322 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50121179",
+   "date": "2026-10-17T01:08+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "daad64bb68f9",
+   "title": "Code, Test, and Deploy on One Machine with NVIDIA RTX Spark",
+   "link": "https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark/",
+   "summary": "AI agents are changing how software gets built. Developers have gone from writing every line of code by hand to directing agents that write most of the code. As...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-17T01:00+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "7887ad53cbca",
+   "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+   "link": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+   "summary": "Hacker News 热度:254 分,114 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50118320",
+   "date": "2026-10-16T21:43+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "80673d9d19ef",
+   "title": "I Love Software Rendering",
+   "link": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+   "summary": "Hacker News 热度:279 分,186 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50117746",
+   "date": "2026-10-16T20:52+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
   {
    "id": "af14d0aa7e59",
    "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
@@ -122,6 +188,50 @@
    "comments": null,
    "date": "2026-10-16T09:44+08:00",
    "first_seen": "2026-10-16T14:27+08:00"
+  },
+  {
+   "id": "fafce3fa440a",
+   "title": "Tesla Roadster",
+   "link": "https://www.tesla.com/roadster",
+   "summary": "https://www.youtube.com/watch?v=7p5LxFdc-Qg https://twitter.com/Tesla/status/2110788059008819215 Comments URL: https://news.ycombinator.com/item?id=50112657 Points: 1116 # Comments: 2026",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50112657",
+   "date": "2026-10-16T09:32+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "95139692e8c9",
+   "title": "Check out the top Fortnite islands from the UEFN Student Bootcamp",
+   "link": "https://www.unrealengine.com/learning/check-out-the-top-fortnite-islands-from-the-uefn-student-bootcamp",
+   "summary": "The UEFN Student Bootcamp has wrapped! Watch this sizzle reel of some of the best Fortnite islands created during this intensive three-week course, which was completed by over 300 students.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-16T08:00+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "c964e1de9b26",
+   "title": "How Soft Crunch Games built Foxy Dumplings for every platform",
+   "link": "https://unity.com/blog/foxy-dumplings-cross-platform-development",
+   "summary": "See how the team behind Foxy Dumplings built one Unity project for PC, console, and mobile, covering platform abstraction, input, profiling, and Cloud Save.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-16T08:00+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "e0cc4bc86ef7",
+   "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+   "link": "https://huggingface.co/blog/reflection-beam",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-16T08:00+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
   },
   {
    "id": "7ac30e8d183c",
@@ -342,6 +452,17 @@
    "comments": "https://news.ycombinator.com/item?id=50101813",
    "date": "2026-10-15T18:43+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "ffa5b2377d15",
+   "title": "LaTeX renderer",
+   "link": "https://simonwillison.net/2026/Oct/15/latex/",
+   "summary": "Tool: LaTeX renderer Inspired by Paul Ford and Aboard Foundary's new web app Tiny Little Office , which provides a suite of web app content editors (a Word Processor, Outliner, Presentation Builder, Spreadsheet, Calculator, Drawing Tool, Diagram Maker, Animator, Calendar, and Trip Planner). Tiny Little Office's signature trick is to store all of the document data in the #fragment section of the URL, so every document created using it becomes a bookmarkable and shareable link. It also has an…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T10:07+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
   },
   {
    "id": "4e25e9a8ba87",
@@ -1200,6 +1321,17 @@
    "comments": null,
    "date": "2026-10-10T06:48+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
+  },
+  {
+   "id": "b3e53a671e8f",
+   "title": "Busting myths in game writing ft. Bruno Dias, Aysha Farah, & Andrea Saravia Perez",
+   "link": "https://www.gamedeveloper.com/design/busting-myths-in-game-writing-ft-bruno-dias-aysha-farah-andrea-saravia-perez",
+   "summary": "Telling truths about how to tell great stories in video games.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-10T03:46+08:00",
+   "first_seen": "2026-10-17T08:13+08:00"
   },
   {
    "id": "f88b057f5d39",
