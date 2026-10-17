@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-17",
+  "items": [
+    {
+      "title": "Tokyo DevDays 26'：面向多平台的图形可扩展性策略（Epic Games Japan）",
+      "url": "https://image.docswell.com/s/EpicGamesJapan/ZDM79W-DevDays26-Scalability",
+      "source": "Epic Games Japan / Docswell",
+      "published": "2026-08-31",
+      "ue_version": "UE 5.8",
+      "summary": "2026年8月26日 Tokyo DevDays 演讲幻灯片。覆盖 Scalability / Device Profile 基础、Lumen→Lumen Lite（Irradiance Field Gather，约 2× 加速）及 Lite 仍贵时的 DFAO / Sky Light 体积 / Stationary 烘焙混用三条退路、Nanite Fallback 与 Mesh Streaming、MegaLights 平台未覆盖时的自定义切换、TSR vs TAAU、Substrate Blendable/Adaptive GBuffer，以及 UE5.8 默认 Mobile Multipass Deferred、r.Mobile.DiffuseFromCapture 与 Runtime Reflection Capture 等移动端路径。反复强调：先在目标机实测，不要用「同级 PC」冒充实机。",
+      "try_points": [
+        "Medium GI（sg.GlobalIlluminationQuality=1）验证是否已切到 Lumen Lite（r.Lumen.FinalGatherMethod=0）",
+        "跨 PC/主机/移动时优先用 Device Profile 统一档位，少做逐资产 Platform Override",
+        "移动或 Performance Mode 可试 UE5.8 Multipass Deferred；需要时用 r.Mobile.DiffuseFromCapture=1 + Runtime Reflection Capture 做廉价间接光"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "Tokyo DevDays 26'：MegaLights 入门——机制与优化（Epic Games Japan）",
+      "url": "https://www.docswell.com/s/EpicGamesJapan/Z27EW1-DayDays26-MegaLights",
+      "source": "Epic Games Japan / Docswell",
+      "published": "2026-08-31",
+      "ue_version": "UE 5.8",
+      "summary": "同一场 DevDays 的 MegaLights 专题。用残像、Masked 剪影、薄几何缺口等四类伪影讲清 Screen Trace / HWRT / VSM 的分工；给出 GenerateSamples→Trace→Shade→Denoise 路径与关键 CVar（DownsampleMode、NumSamplesPerPixel、ScreenTraces、LightAttenuationFalloff）。实测示例：约 900 盏带影子点光从约 134ms 降到约 13ms（RTX 3080，场景相关）。优化优先序：先用 Light Complexity 收紧灯光半径，再用 Shadow Caster Quality 修 Fallback / RT Proxy。",
+      "try_points": [
+        "开 r.MegaLights.Visualize.LightComplexity，对高候选区收 Attenuation Radius",
+        "伪影先关/开 r.MegaLights.ScreenTraces 对照，再查 Ray Tracing Fallback Mesh",
+        "用 r.MegaLights.Debug 1 看单像素采样；Shadow Quality 档位里已有默认 samples/downsample"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：Lumen Performance Guide（UE 5.8）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/lumen-performance-guide-for-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "官方可扩展性说明：Epic≈主机 30fps、High≈主机 60fps、Medium≈Switch 2 / 中端 PC（Lumen Lite / Irradiance Final Gather）。写明 Medium 反射走 SSR、HWRT 需控制 TLAS 实例（目标常 <10 万）、Far Field 与粗糙度阈值、用 SSR 替换 Lumen Reflections、Radiance Cache / Screen Probe 预算 CVar，以及 ProfileGPU 前先关 Async Compute 的测法。",
+      "try_points": [
+        "主机 60fps：Device Profile 设 sg.GlobalIlluminationQuality=2 与 sg.ReflectionQuality=2",
+        "省反射：r.Lumen.Reflections.Allow=0，保留 Lumen GI 的粗糙镜面近似",
+        "Stat SceneRendering 看 Ray tracing active instances，配合 r.RayTracing.Culling.*"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：MegaLights（含 Far Field 依赖 HLOD1）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/megalights-in-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "生产可用的随机直接光路径文档。明确不支持 Mobile / Switch / 上代主机；默认用 Ray Tracing 影子，VSM 按灯另计成本。Far Field 用 HLOD1 简化合并网格延长影子射线，须 World Partition HLOD 构建且 r.MegaLights.HardwareRayTracing.FarField 开启——把 MegaLights 与 HLOD 工作流绑在一起。另有 Light Complexity 可视化、方向光默认关闭、Niagara 粒子灯开关等。",
+      "try_points": [
+        "开放世界要远距影子：先 Build HLOD1，再开 Far Field",
+        "强平行光建议留在 Deferred+VSM，弱月光等再进 MegaLights（r.MegaLights.DirectionalLights）",
+        "平台/档位用 r.MegaLights.Allow 0；调试用 Light Complexity 与 r.MegaLights.Debug 1"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "Unreal Fest Chicago 2026：Optimizing Next-Gen Mobile Features（真机演示）",
+      "url": "https://www.youtube.com/watch?v=TnRvkxf6tZY",
+      "source": "Unreal Engine / YouTube",
+      "published": "约 2026（Fest 演讲）",
+      "ue_version": "UE 5.8",
+      "summary": "Epic 解决方案架构师现场从空白关卡做到可在 Samsung S23 上约 60fps 跑的 Boss 战切片。要点：Landscape 的 Use Scalable LOD Settings 按平台抬高 LOD0 Screen Size；默认 Mobile Deferred；用 IsSky 球体替代昂贵 Sky Atmosphere；Directional 关 Distance Field Shadows 改 Cascaded Shadow Maps；Substrate 在移动端落回 Blendable GBuffer，Landscape Layer Weight 需导出烘焙纹理 + Feature Level Switch；PCG Hierarchical Generation + Instance End Cull Distance；MetaHuman 用 UE Optimized/Medium 装配。",
+      "try_points": [
+        "Landscape 勾选 Use Scalable LOD Settings，中端预览把 LOD0 Screen Size 抬到「几乎永不触发 LOD0」",
+        "Mobile Deferred 下 Directional 改 CSM，关 Skylight Real Time Capture 改指定 Cubemap",
+        "Substrate 地貌：PC 用 Layer Weight 绘制，移动用导出 PNG + Feature Level Switch 读烘焙权重图"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
