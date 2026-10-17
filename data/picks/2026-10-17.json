@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-17",
+  "items": [
+    {
+      "title": "Budgeted-GS: Real-Time Large-Scale Gaussian Splatting via Factoring LOD",
+      "url": "https://arxiv.org/abs/2610.03162",
+      "source": "arXiv",
+      "published": "2026-10-02",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "论文提出对已训练 3DGS 做后处理「factoring tree」与单参数像素 footprint 调度（Factoring LOD），以及按容量地板直接训练的 Budget-Centered Training。作者称在消费级 GPU 上可对城市场景做原生 1920×1080、全 SH 实时渲染（文中举例 RTX 4080 SUPER 上约 71 fps）；性能数字为论文报告，尚未经第三方复核。",
+      "why_useful": "把城市场景 3DGS 的内存–质量权衡做成可部署的单参数 LOD，和游戏里 Nanite/分层流送同一类问题。",
+      "try_it": "读 abstract 与 §5–§6.6：先看 factoring tree / 像素 footprint 调度，再对照文中 MatrixCity / Block_all 实验数字。"
+    },
+    {
+      "title": "Introducing the Cesium ion MCP Server",
+      "url": "https://cesium.com/blog/2026/10/12/introducing-the-cesium-ion-mcp-server/",
+      "source": "Cesium",
+      "published": "2026-10-12",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Cesium 托管发布 ion MCP Server：Claude Code、Codex、Cursor、Copilot 等可通过 OAuth 直接操作 ion 账户（查找资产、查 tiling 状态、查询 BIM/CAD tiler 的 Asset Element 等），无需手写 REST。首发是 API 子集；支持写操作（上传/tiling），并要求 agent 在改数据前征求许可；官方称不会用用户数据训练模型。",
+      "why_useful": "把 3D Tiles/地球级资产接到日常 coding agent，适合做 CesiumJS 查看器、仿真或开放世界地理内容时少切浏览器。",
+      "try_it": "按文档把 https://mcp.ion.cesium.com 加进 Cursor/Claude Code MCP，用 ion 账号 OAuth 后试一句「查某资产是否 tiling 完成并写进 viewer」。"
+    },
+    {
+      "title": "Origin App Marketplace",
+      "url": "https://cursor.com/changelog/origin-app-marketplace",
+      "source": "Cursor",
+      "published": "2026-10-13",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Cursor Origin 上线应用市场，首发集成 20+ 部署/CI/评审/安全/监控/项目管理应用（如 Vercel、Cloudflare、Buildkite、CodeRabbit、Semgrep、Sentry、Linear 等），并开放公开提交：团队可对 Origin API 开发应用（JWT + installation token、webhook、写回 check run/PR 评论），提交后经 Cursor 审核上架。",
+      "why_useful": "若团队已用或在试 Origin 托管，可把 CI/评审/安全装进同一代码宿主，少在 GitHub 与 IDE 之间来回跳。",
+      "try_it": "在 Origin 市场装一个 CI 或 Code Review 应用；若自建工具，按 publishing guide 对 Origin API 起草稿应用。"
+    },
+    {
+      "title": "Codex CLI 0.163.0：回复中可即时纠偏、只读工具可并行",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+      "source": "GitHub openai/codex",
+      "published": "2026-10-15",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "OpenAI Codex CLI 0.163.0（2026-10-15）新增：回复进行中可发 follow-up 立即纠偏（打断也会停掉 Code Mode 单元）；独立只读工具可并行（含 skill/memory/历史查找）；`/config` 可跨分类搜索偏好并即时生效；`/keymap` 可配 leader key（默认 Ctrl+X）；`/daemon` 可重启托管后台服务。另：符合条件账户默认启用 Daybreak。",
+      "why_useful": "长任务不必等整轮结束再改方向，只读查找并行也能少等几拍，直接改日常 agent 节奏。",
+      "try_it": "升级到 0.163.0 后开一轮长改动，中途发一句纠偏看是否立刻转向；再试 `/config` 搜一项设置。"
+    },
+    {
+      "title": "Claude Code v2.1.302：Idle compaction 可关、fork 子 agent 默认开",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+      "source": "GitHub anthropics/claude-code",
+      "published": "2026-10-16",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Claude Code v2.1.302（2026-10-16）新增 `CLAUDE_CODE_AUTO_MODE_MODEL`（仅客户端 auto mode 分类器模型）、`/config` 里 Idle compaction 开关；将 `subagent_type: \"fork\"` 在 `claude -p`、Agent SDK、桌面与 VS Code 默认打开（可用环境变量关掉）；桌面/VS Code 主对话子 agent 改为始终后台跑。另有大量 MCP/压缩/插件相关修复，以及多插件时启动加速。",
+      "why_useful": "长会话空闲压缩可按需关掉避免「醒来被压掉上下文」；fork 默认开让多子 agent 工作流少配一步。",
+      "try_it": "`claude --version` 升到 2.1.302 后打开 `/config` 看 Idle compaction；需要时用 `CLAUDE_CODE_FORK_SUBAGENT=0` 关掉默认 fork。"
+    }
+  ]
+}
