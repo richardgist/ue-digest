@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T09:34+08:00",
+ "updated": "2026-10-18T08:59+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-17T09:34+08:00",
-   "last_new": 0
+   "checked": "2026-10-18T08:59+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,55 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-17T09:34+08:00",
+   "checked": "2026-10-18T08:59+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "d699ad56160c",
+   "title": "OpenCode Hacked: User credentials leaked",
+   "link": "https://twitter.com/opencode/status/2111516673953935833",
+   "summary": "Hacker News 热度:737 分,125 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50133401",
+   "date": "2026-10-18T02:01+08:00",
+   "first_seen": "2026-10-18T08:59+08:00"
+  },
+  {
+   "id": "38f8921b3ab7",
+   "title": "Solar surpasses nuclear power globally for first time",
+   "link": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+   "summary": "Hacker News 热度:469 分,304 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50131256",
+   "date": "2026-10-17T22:01+08:00",
+   "first_seen": "2026-10-18T08:59+08:00"
+  },
+  {
+   "id": "b7685fa3b33e",
+   "title": "DeepSeek-v4.1-Flash-1017",
+   "link": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "summary": "https://api-docs.deepseek.com/news/news261017/ https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017 Comments URL: https://news.ycombinator.com/item?id=50129045 Points: 688 # Comments: 579",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50129045",
+   "date": "2026-10-17T16:21+08:00",
+   "first_seen": "2026-10-18T08:59+08:00"
+  },
+  {
+   "id": "bd6939bb09a3",
+   "title": "Bleached corals thrive within days when touching healthy neighbour",
+   "link": "https://www.nature.com/articles/d41586-026-03266-x",
+   "summary": "https://archive.ph/zIPG4 Comments URL: https://news.ycombinator.com/item?id=50126253 Points: 297 # Comments: 65",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50126253",
+   "date": "2026-10-17T07:38+08:00",
+   "first_seen": "2026-10-18T08:59+08:00"
+  },
   {
    "id": "a6d7ca69b8b2",
    "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
@@ -122,6 +166,17 @@
    "comments": null,
    "date": "2026-10-17T06:06+08:00",
    "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "90b929133cf8",
+   "title": "You could have invented transformers from memory",
+   "link": "https://alexwang.ai/posts/associative-memory/",
+   "summary": "https://twitter.com/heyyalexwang/status/2111158818730397932 Comments URL: https://news.ycombinator.com/item?id=50122878 Points: 496 # Comments: 117",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50122878",
+   "date": "2026-10-17T03:01+08:00",
+   "first_seen": "2026-10-18T08:59+08:00"
   },
   {
    "id": "7b164eab9a3d",
@@ -2266,28 +2321,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-21T02:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "19e953a40a96",
-   "title": "Maintenance release: Godot 4.7.2",
-   "link": "https://godotengine.org/article/maintenance-release-godot-4-7-2/",
-   "summary": "The second 4.7 maintenance release has arrived!",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-08-18T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "01a373965c89",
-   "title": "More Blender VSE tidbits",
-   "link": "https://aras-p.info/blog/2026/08/18/More-Blender-VSE-tidbits/",
-   "summary": "Here’s a bunch of random things that happened in Blender Video Sequence Editor (VSE) since the previous blog post. For the full picture check out VSE related release notes of Blender 5.1, 5.2 and upcoming 5.3. Below I’m mentioning only the things that I have done, or was somewhat adjacent to the things being done. Compositor ❤️ VSE Blender 5.0 added compositor based strip modifiers: in addition to a handful of existing modifiers for visual strips (mostly various color adjustments), you can now…",
-   "source": "Aras Pranckevičius",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-18T18:35+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

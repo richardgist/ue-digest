@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-18",
+  "items": [
+    {
+      "title": "World Partition + HLOD 搭建指南：分层类型、Static 与常见踩坑（3dsınıfı）",
+      "url": "https://3dsinifi.com/en/news/unreal-engine-world-partition-and-hlod-a-setup-guide-for-large-scenes",
+      "source": "3dsınıfı",
+      "published": "2026-10-17",
+      "ue_version": "原文未标注",
+      "summary": "基于官方文档整理的 WP/HLOD 实操指南（2026-10-17）。要点：Open World 模板默认开 WP；HLOD Layer 选 Instancing / Merged / Simplified；Actor 必须挂到 Layer 且 Mobility=Static 后再 Build HLODs 或跑 WorldPartitionHLODsBuilder；Always Loaded 与 Cell Size/Loading Range 互斥。常见错误：以为 HLOD 会自动生成、不按内容选 Layer 类型、Simplified 的 Merge Distance 会糊掉门窗。",
+      "try_points": [
+        "先在小区域试三种 Layer 类型，再全图铺开",
+        "生成前确认 Actor 已赋 HLOD Layer 且 Mobility=Static",
+        "Simplified Mesh 时在不同距离检查门窗开口与材质合并结果"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "官方文档：在移动端使用 Lumen GI（实验性，UE 5.8）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/using-lumen-global-illumination-on-mobile-in-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.4+ 在高端 Android Vulkan SM5 + Desktop Renderer 上的实验性 Lumen 说明。兼容设备画像含 Android_Vulkan_SM5 / Adreno_Vulkan_SM5 / Mali_Vulkan_SM5 / Xclipse_Vulkan_SM5（示例外举 Samsung Xclipse 9xx、Adreno 7xx、Mali G7xx）；明确不支持 iOS/tvOS/iPadOS。启用步骤：先开移动端 Desktop Renderer 与 SM5，再按桌面方式开 Lumen。文档强调 Desktop Renderer + Lumen 成本显著高于 Mobile Forward/Deferred，不建议以此方案出货，欢迎反馈。",
+      "try_points": [
+        "仅在 Vulkan SM5 真机上验证；先确认 Device Profile 命中 Android_*_Vulkan_SM5",
+        "新设备可在 DeviceProfiles.ini 用 MatchProfile 挂到已有 SM5 画像",
+        "测性能时与 Mobile Deferred/Forward 对照，勿默认按桌面 Lumen 预算套到手机"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "官方文档：Working with Nanite-Enabled Content（植被 Preserve Area、Overdraw、WPO）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/working-with-naniteenabled-content",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "面向 Nanite 内容的实战页：Aggregate Geometry（叶/草/毛发）会削弱 LOD 简化与遮挡剔除；紧密叠面导致 Overdraw（用 Nanite Overdraw 可视化找亮区）；硬边/faceted 法线推高顶点比。植被建议开 Preserve Area 减轻远距变稀，并倾向几何叶而非 Masked 卡片。另有 Max World Position Offset Displacement、实验性 Static Displacement / Tessellation，以及 Spline 的 Max Edge Length Factor。",
+      "try_points": [
+        "树木/草叶勾选 Preserve Area，用 Cluster 可视化对比远距面积",
+        "Viewport → Nanite Overdraw 排查近距叠面 kitbash",
+        "有 WPO 的植被设 Max World Position Offset Displacement，并配合距离关掉变形"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：Virtual Shadow Maps（缓存失效、静态/动态分层与调试）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/virtual-shadow-maps-in-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.8 VSM 文档：16k 虚拟分辨率 + 按页分配；Cached Page 可视化（绿=缓存/红=失效）；Shadow Cache Invalidation Behavior（Auto/Always/Rigid/Static）可压制 WPO 或变换引起的失效。强调非 Nanite 写入 VSM 更贵、大阴影投射物尽量 Nanite；方向光远距可用 Distance Field Shadows 接管非 Nanite。调试：r.Shadow.Virtual.Cache 0、r.Shadow.Virtual.Stats 1、Cached Page / ShadowCasters 视图。",
+      "try_points": [
+        "开 Cached Page 视图，静态相机下红页应接近 0",
+        "轻微摆动的草用 Rigid/Static Invalidation + WPO Disable Distance",
+        "Stat：r.ShaderPrintEnable 1 后 r.Shadow.Virtual.Stats 1，盯 Invalidated Static Pages"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：移动端渲染优化实践（Draw Call、法线、打包与开机）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/optimization-and-development-best-practices-for-mobile-projects-in-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "Mobile HDR 场景下的优化指南。四指点屏开开发者控制台（仅 Development）；Stat Unit / UnitGraph / TextureGroup 看瓶颈。强调 Draw Call 仍是主要拖累（文中举例 Galaxy Tab S6 优化场景目标约 700，更低端 <500）；合并网格、减 Material ID、顶点色遮罩代替多材质；移动端高模往往优于高精度法线贴图。另有 ZLib 压缩与开机时间权衡、Size Map / Memreport 查包体。",
+      "try_points": [
+        "真机 Development 包用 Stat RHI / Stat Unit 对表 Draw Call 与线程时间",
+        "复杂道具尽量合并到少 Material ID；用顶点色分区代替多层半透明",
+        "排查贴图体积：真机跑 Memreport -full，搜 Listing all textures"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    }
+  ]
+}
