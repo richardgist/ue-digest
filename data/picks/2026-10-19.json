@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-19",
+  "items": [
+    {
+      "title": "MegaLights in Unreal Engine 5.8: how hundreds of shadowed lights work",
+      "url": "https://colonized.work/blog/megalights-unreal-engine-5-explained/",
+      "source": "COLONIZED / colonized.work",
+      "published": "2026-10-14",
+      "category": "效率",
+      "summary": "作者依据 Epic UE 5.8 文档梳理 MegaLights：它是面向大量动态带阴影面光源的直接光照路径，按固定每像素射线数做重要性采样再去噪，成本大致不随灯数线性增长；5.8 起标为 production-ready，推荐硬件光追，不支持移动端/Switch/上代主机与前向渲染。文中明确它与 Lumen 分工不同（直接光 vs 间接光/反射），并列出不支持水面/云/部分体积等限制，以及收紧衰减范围、合并小灯等调参建议。作者自家 COLONIZED 开发构建暂未启用 MegaLights（以太阳+VSM+Lumen 为主），属项目选择而非性能断言。",
+      "why_useful": "比官方发布稿更短、更偏「能开不能开 / 和 Lumen 怎么配」的实务对照，适合准备在 UE 5.8 试 MegaLights 的灯光与渲染同学。",
+      "try_it": "Project Settings → Rendering → Direct Lighting 开启 MegaLights 并接受硬件光追；太阳光仍优先用 VSM，本地灯交给 MegaLights；用文档里的 light finder / ray visualiser 看采样是否打在几何内部。",
+      "direction": "图形渲染"
+    },
+    {
+      "title": "InfiniSplat v2: Analyzing and Improving Feed-Forward 3DGS from Any Views",
+      "url": "https://arxiv.org/abs/2610.20341",
+      "source": "arXiv",
+      "published": "2026-10-14",
+      "category": "前沿",
+      "summary": "浙大等提出 feed-forward 3DGS 重建方法 InfiniSplat v2：冻结几何分支、可训练属性分支学习高斯属性，训练时用尺度对齐的 GT 相机构造点云，并偏向大视角目标视图监督。论文报告同一训练模型在六数据集的有位姿/无位姿设定下，平均 LPIPS、DISTS 优于所评方法；有位姿时相对最强基线平均 LPIPS/DISTS 分别约降 25.8%/32.9%（均为论文表格数字，非本文复现）。另观察到仅靠图像重建监督学到的 opacity 会更倾向抑制跨视图几何不一致点。项目页：https://zju3dv.github.io/InfiniSplat2。",
+      "why_useful": "若你跟 3DGS/神经渲染，这篇把「几何先验 + 可渲染高斯属性」拆开写清楚，并给出可核对的多数据集指标。",
+      "try_it": "先读摘要与 Table 1；需要细节再打开 HTML 版或项目页对照定性结果。未自行训练或复现，指标以论文为准。",
+      "direction": "图形渲染"
+    },
+    {
+      "title": "Finding 1.4-second stalls by replaying play",
+      "url": "https://trilithon.games/devlog/stalls-found-by-replay/",
+      "source": "Trilithon Games",
+      "published": "2026-10-07",
+      "category": "效率",
+      "summary": "团队用「环形缓冲记最近约 34 秒逐帧开销 + 标记按键 + 无窗口回放已记录对局」定位大城市爆炸后 0.2–1.4 秒卡顿。回放把最差物理步复现到约 836 ms，再逐项修：渲染移除钩子全表扫描、地形顶点哈希碰撞、爆炸范围查询、网格压缩等，并给出前后毫秒数；用世界状态 digest 确认修的是时间而非玩法。也记录了五条无效尝试，以及最终用更快冻结碎块（约 1.4 s）而不是减碎片数量的取舍。文末说明草稿由 Claude Code 据 changelog 起草、作者复核数字。",
+      "why_useful": "可复现卡顿的工作流（标记→回放→单项改→digest 校验）比「再开一次 Profiler」更可迁移到自研引擎或破坏物理项目。",
+      "try_it": "若项目有 deterministic/log 回放，优先把「超预算帧」自动落盘；没有的话可先做短环形缓冲 + 手动标记，再做成离线重放。",
+      "direction": "游戏开发"
+    },
+    {
+      "title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "source": "claude.dev Blog",
+      "published": "2026-10-15",
+      "category": "效率",
+      "summary": "Claude Code 团队写其在代理大量写码后的评审流程：把「人是否读完全 diff」换成「哪类问题该由哪一层检查接住」。链路含开 PR 前的可运行验证与子 agent 复审、每 PR 的 Claude 评审与安全评审（线程须处理）、CI、按风险分级的人工批准、合并队列与灰度，以及快速回滚。文中给出 6–9 月合并量翻倍以上、回滚占比降超 40% 等内部数字；并谈评审轮次收敛（如约三轮后要求作者退后想方案）、把事故做成每日 eval、以及人仍负责方向/高风险路径/结果归属。含可照抄的 CLAUDE.md / REVIEW.md 与风险分层表。",
+      "why_useful": "把「AI 写码后怎么审」落成可度量流程，对自建 agent 流水线或 Code Review 产品落地有直接参考。",
+      "try_it": "先写短 CLAUDE.md + 路径级 REVIEW.md，PR 模板加 Testing/Risk/How to revert；本地跑 /code-review，再按风险定「几个人批准」。文中部分指标来自 Anthropic 内部，未独立核实。",
+      "direction": "AI 工具"
+    },
+    {
+      "title": "AI Gateway logs now show session affinity",
+      "url": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity",
+      "source": "Vercel Changelog",
+      "published": "2026-10-18",
+      "category": "工具",
+      "summary": "Vercel 于 2026-10-18 更新：AI Gateway 日志新增 Sessions 视图，把请求按会话聚合，展示编码 agent/应用（如 Claude Code、Codex、Cursor）、费用、模型、提供方与跨轮缓存命中等。打开会话可见时长、路径（每轮模型与耗时）以及会话亲和如何把后续轮次留在同一提供方以吃 prompt cache。可用 turns/client/model/provider/auth/cost 过滤；也可显式传相同 sessionId（providerOptions.gateway）或 x-session-id。文本与 chat 请求默认开启会话亲和。",
+      "why_useful": "若经 AI Gateway 跑多 agent，终于能按「一整次对话」看成本和路由，而不是只看离散请求墙。",
+      "try_it": "在 Gateway Logs 打开 Sessions；跨请求固定 sessionId。需要细节见 changelog 链出的 session affinity 文档。",
+      "direction": "AI 工具"
+    }
+  ]
+}
