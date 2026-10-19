@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T09:32+08:00",
+ "updated": "2026-10-19T08:58+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-18T09:32+08:00",
-   "last_new": 0
+   "checked": "2026-10-19T08:58+08:00",
+   "last_new": 4
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-18T09:32+08:00",
-   "last_new": 3
+   "checked": "2026-10-19T08:58+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,99 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-18T09:32+08:00",
+   "checked": "2026-10-19T08:58+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "577e846b6ef0",
+   "title": "llm-tools-datasette 0.1.1",
+   "link": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/",
+   "summary": "Release: llm-tools-datasette 0.1.1 When I switched LLM over to httpx2 in LLM 0.33 I forget that this would break any plugins which used httpx without directly depending on it. llm-tools-datasette was one of those plugins, now fixed. Tags: datasette , llm",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-19T07:43+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "4737f8f70a48",
+   "title": "llm-echo 0.5",
+   "link": "https://simonwillison.net/2026/Oct/18/llm-echo/",
+   "summary": "Release: llm-echo 0.5 I'm working towards a new LLM release, and testing PRs caused me to revisit the llm-echo debug plugin. This plugin provides a \"model\" which doesn't involve an LLM at all - it just repeats back the prompts that have been fed to it. The new release now updates the simulated token usage counts to take tool calls, system prompts, and reasoning tokens into account. Example usage: uvx --with llm-echo llm -m echo 'hi there' -o thinking 1 --usage Outputs: First I consider the…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-19T07:16+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "2f00ac2b92cb",
+   "title": "Namecheap just seized and disabled all my domains",
+   "link": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
+   "summary": "Hacker News 热度:412 分,194 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50142866",
+   "date": "2026-10-19T00:56+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "2463a958df89",
+   "title": "Someone behind the software",
+   "link": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+   "summary": "Hacker News 热度:300 分,121 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50142573",
+   "date": "2026-10-19T00:32+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "42b39f3fa07f",
+   "title": "RepRapMicron",
+   "link": "https://github.com/VikOlliver/RepRapMicron/wiki",
+   "summary": "Hacker News 热度:325 分,54 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50141076",
+   "date": "2026-10-18T21:48+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "012e3e7e58f2",
+   "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+   "link": "https://api-docs.deepseek.com/guides/search/",
+   "summary": "Hacker News 热度:543 分,257 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50138531",
+   "date": "2026-10-18T14:50+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "31aa4c0b8bad",
+   "title": "The Elizabeth Holmes documentary “You Can See Everything” is deceiving",
+   "link": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
+   "summary": "Hacker News 热度:362 分,511 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50137620",
+   "date": "2026-10-18T11:19+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "59dc5cbded2c",
+   "title": "Inline rendering with document​.currentScript",
+   "link": "https://simonwillison.net/2026/Oct/17/document-currentscript/",
+   "summary": "Inline rendering with document​.currentScript Lean Rada describes a neat trick that takes advantage of the document.currentScript property. You can use that to drop in a tiny inline element that replaces itself when the page loads: The year is document.currentScript.replaceWith( new Date().getFullYear()) If you define a shortcut function like this: $=(...n)=>document.currentScript.replaceWith(...n) You get a tiny template language: The year is $(new Date().getFullYear()) Tags: javascript",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-18T05:11+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
+  },
   {
    "id": "d699ad56160c",
    "title": "OpenCode Hacked: User credentials leaked",
@@ -144,6 +232,17 @@
    "comments": "https://news.ycombinator.com/item?id=50131213",
    "date": "2026-10-17T21:55+08:00",
    "first_seen": "2026-10-18T09:32+08:00"
+  },
+  {
+   "id": "2ed67115e326",
+   "title": "web-edit 0.1a2",
+   "link": "https://simonwillison.net/2026/Oct/17/web-edit/",
+   "summary": "Release: web-edit 0.1a2 web-edit ( previously ) is my tiny web app for browsing and editing files in a folder. I mainly built it for editing files on different machines via Tailscale. I added a \"copy to clipboard\" option for both text and image data. I needed this because I was running pelican prompts on a laptop from my phone (here's DeepSeek 4.1 Flash 1017 ) and I wanted an easy way to copy the resulting logs into a Gist. Tags: projects , pelican-riding-a-bicycle , deepseek",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-17T21:16+08:00",
+   "first_seen": "2026-10-19T08:58+08:00"
   },
   {
    "id": "b7685fa3b33e",

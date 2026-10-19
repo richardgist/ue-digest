@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-19",
+  "items": [
+    {
+      "title": "论坛：UE 5.8 MegaLights + GI Medium 导致 Skeletal Mesh 丢阴影（可复现修复）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-skeletal-meshes-lose-shadows-with-megalights-at-gi-medium-fix/2840756",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-15",
+      "ue_version": "UE 5.8",
+      "summary": "作者发现 5.8 在 Global Illumination Scalability=Medium（Lumen Lite 档）时，BaseScalability 默认把 r.RayTracing.Geometry.SkeletalMeshes 与 r.MeshCardRepresentation.SkeletalMesh 设为 0，Skeletal Mesh 不再进入 GI/RT 表示；叠上 MegaLights 后角色几乎不投阴影。临时可用控制台把两 CVar 拨回 1；永久则改 Engine/Config/BaseScalability.ini 的 [GlobalIlluminationQuality@1]。文中提醒这是 Epic 为 Medium 档性能加的开关，打开会抬高 CPU/GPU 成本。",
+      "try_points": [
+        "先复现：开 MegaLights + sg.GlobalIlluminationQuality 1，对比角色阴影",
+        "会话内试 r.RayTracing.Geometry.SkeletalMeshes 1 与 r.MeshCardRepresentation.SkeletalMesh 1",
+        "若要永久保留，改 BaseScalability.ini 的 [GlobalIlluminationQuality@1] 并重启，再用 Stat GPU 量成本"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 非 Nanite 项目上 HISM 的 Lumen 反射/Scene 发黑（ISM 正常）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-is-hierachical-instance-meshes-not-supported-for-lumen/2841638",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-16",
+      "ue_version": "UE 5.8",
+      "summary": "2026-10-16 起帖：非 Nanite 场景里 Hierarchical Instanced Static Mesh（HISM）在 Lumen Scene / Reflections 中呈黑，同网格的 ISM 正常；空项目复现仍如此。社区回复建议先对齐 HISM/ISM 的 Lighting/Rendering、提高 PPV「Lumen Scene Detail」、对照空项目。作者后续确认：换成 Nanite 网格后 HISM 表现正常——更像非 Nanite + HISM 的 Surface Cache/表示路径问题，而非单纯距离剔除。",
+      "try_points": [
+        "用同一网格分别做 ISM 与 HISM，开 Lumen Scene 视图对比",
+        "非 Nanite 植被优先试 ISM，或给关键实例开 Nanite 再测 HISM",
+        "PPV 提高 Lumen Scene Detail（约 2–3）排除被过度剔除"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 知识库：World Building Guide（HLOD 实践、Landscape、FastGeo 流送）",
+      "url": "https://dev.epicgames.com/community/learning/knowledge-base/r6wl/unreal-engine-world-building-guide",
+      "source": "Epic Developer Community Knowledge Base",
+      "published": "约 2025-06（含 UE 5.5/5.6 更新）",
+      "ue_version": "UE 5.4–5.6（实践仍适用后续）",
+      "summary": "Jean-Sebastien Guay（Staff）维护的 World Partition 总览：HLOD 定义与层级、按内容分 Layer（建筑 Simplified / 植被 Instancing）、远距评估、频繁重建与 wp.Editor.HLOD.DumpStats。附 Fortnite / City Sample 量级参考（如 FN 建筑 HLOD0/1 单元与 Loading Range、City Sample Nanite Instanced HLOD0）。5.6 段详述 FastGeo Streaming（不可变静态几何更快注册到图形/物理场景，且与 HLOD/Data Layers 同步）、异步物理与统一流送时间预算等可开关实验项。",
+      "try_points": [
+        "按资产类型拆 HLOD Layer，远距目视验收后再全图 Build",
+        "跑 wp.Editor.HLOD.DumpStats，对比纹理/三角/包体 CSV",
+        "密静态城市场景可评估 FastGeo + Cell Transformer，并用 show ActorColoration FastGeo 看哪些被转换"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：Mobile Deferred Shading Mode（何时用、限制与设备差异）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/using-the-mobile-deferred-shading-mode-in-unreal-engine",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8",
+      "summary": "移动端延迟着色把几何与光照拆成 GBuffer + Lighting Pass，并尽量把 GBuffer 放在 Tile Memory（支持 LAZILY_ALLOCATED 时更省系统内存）。适合 Tile-based GPU、动态光为主、需要 Light Functions / IES / Lit Decals 等 Forward 难做的特性；预计算光照项目更建议 Forward。限制：MSAA 不可用；半透明仍走 Forward（Lighting Mode=Surface ForwardShading）；预计算光下仅 DefaultLit/Unlit；Mali Vulkan 默认沿用 128-bit/4 input attachment 限制，可用 MobileUsesExtendedGBuffer 放宽。",
+      "try_points": [
+        "Project Settings → Mobile Shading = Deferred Shading，重启后对比同材质指令数",
+        "动态光开放世界优先 Deferred；以 Lightmass 为主则保持 Forward",
+        "半透明水/玻璃设 Surface ForwardShading；Mali 真机先按默认 GBuffer 限制测，再决定是否 Extended"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：Nanite Foliage（实验性——Assemblies / Voxels / Skinning）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/nanite-foliage",
+      "source": "Epic Developer Community Docs",
+      "published": "原文未标注",
+      "ue_version": "UE 5.8（Experimental）",
+      "summary": "面向稠密植被的实验管线：用 Nanite Assemblies 做高复用「零件」实例（示例树磁盘从约 3.5GB 降到约 29MB）、近像素 Voxel 在远距保留体积感并避开 Masked/过度 WPO、Nanite Skinning + Dynamic Wind 插件替代材质 WPO 以拿到更紧的剔除包围盒。启用需 Project Settings → Nanite Foliage 并重启。性能提示：VSM 下远距应关动画；Instanced Skinned Mesh 用 Animation Min Screen Size（或 r.Skinning.DefaultAnimationMinScreenSize）按屏占比停蒙皮。",
+      "try_points": [
+        "仅实验项目开启 Nanite Foliage；先做一棵 Assembly 树测磁盘与流送内存",
+        "远距植被设 Animation Min Screen Size，避免 VSM 被远距骨骼动画打满",
+        "Static Mesh → Nanite → Shape Preservation = Voxelize，拉远看三角形到体素的过渡"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
