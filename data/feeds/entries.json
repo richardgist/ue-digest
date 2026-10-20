@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T09:35+08:00",
+ "updated": "2026-10-20T09:30+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-19T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-10-20T09:30+08:00",
+   "last_new": 1
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-19T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-10-20T09:30+08:00",
+   "last_new": 2
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-19T09:35+08:00",
+   "checked": "2026-10-20T09:30+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-19T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-10-20T09:30+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-19T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-10-20T09:30+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,154 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-19T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-10-20T09:30+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "d73b7cb855e2",
+   "title": "My obituary for programming",
+   "link": "https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/",
+   "summary": "My obituary for programming Jeremy Scheff poignantly captures the key loss caused by coding agents for career programmers who enjoyed the puzzle of developing code: Programming turned into one of the greatest jobs you could imagine. You got paid to work on tricky little logic puzzles. The trickier the puzzle, the more you got paid. But even pretty simple puzzles were worth a lot of money because regular people just couldn't do it! No, they needed us. They would give us a problem and we would…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-20T07:58+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "c2d5330fe279",
+   "title": "RocketWerkz' C# framework 'BRUTAL' is now available to all developers",
+   "link": "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
+   "summary": "Developers who want to complete control over their game's code have a new framework to lean on.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-20T04:57+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "1a3f48cd8586",
+   "title": "Moonlighter developer delays public playtest of next game over concerns of AI cloning",
+   "link": "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning",
+   "summary": "Digital Sun Games is narrowing its early testing of ReVamp to its Discord community following fears of generative AI-enabled cloning.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-20T01:08+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "01b8dd4c6990",
+   "title": "Accelerating Mamba-2 with High-Performance Forward Pass Kernels in NVIDIA CUDA Tile",
+   "link": "https://developer.nvidia.com/blog/accelerating-mamba-2-with-high-performance-forward-pass-kernels-in-nvidia-cuda-tile/",
+   "summary": "NVIDIA CUDA Tile (cuTile) is a Python-based DSL and parallel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-20T01:00+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "aa9b6861b415",
+   "title": "Android apps running native on macOS",
+   "link": "https://github.com/kksimp/Mac.apk",
+   "summary": "Hacker News 热度:258 分,132 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50154624",
+   "date": "2026-10-20T00:45+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "8fb4b1ec4d69",
+   "title": "MiniMax M3.1 Flash",
+   "link": "https://www.minimax.io/blog/minimax-m31f",
+   "summary": "Hacker News 热度:379 分,163 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50154540",
+   "date": "2026-10-20T00:39+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "91775c37320b",
+   "title": "Wine ported to OpenBSD",
+   "link": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+   "summary": "Hacker News 热度:498 分,168 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50152307",
+   "date": "2026-10-19T21:35+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "a0f34cc81675",
+   "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+   "link": "https://news.ycombinator.com/item?id=50151036",
+   "summary": "I saw this LinkedIn post from a Meta engineer and it resonated with me: https://www.linkedin.com/posts/ali-hamie_im-an-engineer-at-m... > I'm an engineer at Meta and I never felt this uncomfortable doing my job. I'm writing code these days and it all feels like a black box. This new standard of shipping with AI is moving so fast that if we're going to spend our time checking each line of code, it's going to take forever. That means you can end up with systems you've built where you don't truly…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50151036",
+   "date": "2026-10-19T19:24+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "1b447235ac86",
+   "title": "Alternatives to animal testing are finally taking off",
+   "link": "https://spectrum.ieee.org/alternatives-to-animal-testing",
+   "summary": "Hacker News 热度:318 分,94 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50150927",
+   "date": "2026-10-19T19:10+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "4fadeb9d2d91",
+   "title": "Timestral: Mistral's time-series foundation models",
+   "link": "https://mistral.ai/news/timestral/",
+   "summary": "Hacker News 热度:544 分,104 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50150434",
+   "date": "2026-10-19T17:59+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "4c238f3afce7",
+   "title": "I built a drone with only one motor [video]",
+   "link": "https://www.youtube.com/watch?v=Ndftcft6XhU",
+   "summary": "Hacker News 热度:381 分,80 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50150089",
+   "date": "2026-10-19T17:05+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "7c005898d775",
+   "title": "Starcraft: Ashfall",
+   "link": "https://starcraft-shooter-2026.pages.dev/",
+   "summary": "Hacker News 热度:313 分,106 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50147233",
+   "date": "2026-10-19T09:18+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
+  {
+   "id": "15a29b00da92",
+   "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
+   "link": "https://huggingface.co/blog/hf-torchneuron",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-19T08:00+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
+  },
   {
    "id": "577e846b6ef0",
    "title": "llm-tools-datasette 0.1.1",
@@ -199,6 +342,17 @@
    "comments": null,
    "date": "2026-10-18T05:11+08:00",
    "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "4f71c8aa2627",
+   "title": "It's still ok to enjoy programming",
+   "link": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
+   "summary": "Hacker News 热度:436 分,410 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50134472",
+   "date": "2026-10-18T03:53+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
   },
   {
    "id": "d699ad56160c",
@@ -639,6 +793,17 @@
    "comments": "https://news.ycombinator.com/item?id=50101813",
    "date": "2026-10-15T18:43+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
+  },
+  {
+   "id": "f2c18060258b",
+   "title": "Apertus 1.5 Release Notes",
+   "link": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-15T17:08+08:00",
+   "first_seen": "2026-10-20T09:30+08:00"
   },
   {
    "id": "af0bd42138e9",
@@ -2442,17 +2607,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-08-22T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "a7a4f09205ce",
-   "title": "Lightweight attention-based indirect illumination",
-   "link": "https://gpuopen.com/learn/lightweight-attention-based-indirect-illumination/",
-   "summary": "Introducing a lightweight, attention-based neural GI model that reconstructs off-screen indirect illumination using reflective shadow maps, generalizing to scenes not seen during training.",
-   "source": "AMD GPUOpen",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-21T02:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

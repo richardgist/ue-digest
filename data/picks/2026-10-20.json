@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-20",
+  "items": [
+    {
+      "title": "Claude Code v2.1.304：/auto-mode-setup、只读工具标记与用量提醒",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "source": "GitHub · anthropics/claude-code",
+      "published": "2026-10-19",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "10 月 19 日发布的 v2.1.304 增加 /auto-mode-setup：会读项目与近期会话，引导配置 auto mode，并扩展到 Bedrock、Vertex、Foundry、Claude apps gateway 以及关闭遥测的会话。mod 的 tool.check 新增 e.isReadOnly（只读调用）与 decider: \"person\"（只能由权限对话框或宿主回调批准）。Pro/Max 在恢复闲置会话前会提示该次恢复可能占用可观的 5 小时用量额度。另有 /claude-api managed-agents-secure，对照 Anthropic 公开安全指南检查 Managed Agents 设置但不改动任何内容。本人未在本机实测这些命令。",
+      "why_useful": "日常用 Claude Code 写游戏/渲染相关脚本时，可先跑 /auto-mode-setup，并留意恢复旧会话时的用量提示，少踩权限与额度坑。",
+      "try_it": "升级到 v2.1.304 后执行 /auto-mode-setup；若常用闲置会话恢复，留意 Pro/Max 的用量警告再决定是否继续。"
+    },
+    {
+      "title": "ComfyUI：NVIDIA RTX 视频超分 / 插帧 / SDR→HDR 本地节点",
+      "url": "https://blog.comfy.org/p/nvidia-vfx-nodes-for-video-upscaling",
+      "source": "ComfyUI Blog",
+      "published": "2026-10-13",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "官方博文写明：NVIDIA RTX 视频效果以自定义节点进 ComfyUI，模型随节点分发，在本机 RTX GPU 上跑。RTX Video Super Resolution 最高约 4× 或目标分辨率至 8192px，也可只去噪/去模糊不改分辨率；Frame Generation 支持 2×–16× 或指定 timestep，会自动检测镜头切换；HDR 节点把 SDR 转成 BT.2020，可选 HLG/PQ，峰值亮度约 400–2000 nits，默认开去色带。建议链路为超分→插帧→HDR。另改进半浮点/全浮点 EXR 读写与色域转换。插帧节点需 RTX 40 系或更新；本人未在本机安装验证。",
+      "why_useful": "做预告片、录屏或 splat/引擎截图后处理时，可在本机 Comfy 里串一条超分+插帧+HDR，少绕云端。",
+      "try_it": "更新 ComfyUI → Manager 安装 Nvidia VFX Nodes → 从 example_workflows 加载单节点或完整 VFX 管线试一条短片。"
+    },
+    {
+      "title": "Volinga Suite 0.5.0 + Plugin 0.11.0：高斯溅射到 UE 的训练与渲染控制",
+      "url": "https://www.volinga.ai/insights/volinga-suite-0-5-and-plugin-0-11-0-release/",
+      "source": "Volinga",
+      "published": "约 2026-10",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "厂商发布说明：Suite 0.5 增加 IGS+ 训练、PBR 通道与嵌入材质训练、4DGS 的 16-bit HDR、自动/自定义人像与天空蒙版、多视频训练等。Plugin 0.11 面向 Unreal：在线许可改绑账户而非机器硬件哈希；Proxy Mesh 与法线改为按 Volinga Mesh Actor 独立配置，并支持 Proxy 上挂材质；支持带嵌入法线的 NVOL；PLY 色域可选 S-Log3 / ACES2065-1 / ACEScg / sRGB；异步 NVOL 加载、完整 DLSS/TAA、nDisplay 与 UE 5.8 稳定性修复。以上为厂商自述，本人未在工程中实测性能数字。",
+      "why_useful": "若已在 UE 里接高斯溅射资产，这次按 Actor 配 Proxy/法线与色域，比全局一刀切更适合多场景拼装。",
+      "try_it": "升级 Plugin 0.11 后，对单个 Volinga Mesh 开关 Proxy Mesh、选 PLY Color Space，并确认 NVOL 异步加载是否减轻编辑器卡顿。"
+    },
+    {
+      "title": "Maxon Redshift 2027.0：原生毛发程序、ACES 2 与内存管理改写",
+      "url": "https://www.cgchannel.com/2026/10/maxon-releases-redshift-2027-0/",
+      "source": "CG Channel",
+      "published": "2026-10-18",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "CG Channel 报道（基于 Maxon 发布说明）：Redshift 2027.0 新增 Fur Object（渲染时毛发/草程序，含 Density、Gravity、Curl、Taper 等，当前可用于 3ds Max、Cinema 4D、Houdini、Maya）；默认支持 ACES 2（C4D 默认用 ACES 2 OCIO，Houdini/Maya 可手配）；内存管理改写，发布材料中建筑场景示例称到首像素时间约降 15%（厂商示例，非独立基准）。Redshift Live 增加光线追踪景深、透射折射弯曲与 light spread，仍不支持体积、毛发与点云。另支持 ArchiCAD，并提到 RTX Spark。订阅约 $49/月或 $289/年。",
+      "why_useful": "离线渲染管线若卡在毛发或色管，可对照 Fur Object 与 ACES 2 默认配置评估是否升级。",
+      "try_it": "有 Redshift 订阅时在支持的 DCC 里建 Fur Object 试一小块草/毛，并确认 OCIO 是否已切到 ACES 2。"
+    },
+    {
+      "title": "Helix World：实时可探索的音视频世界模型（单图起步）",
+      "url": "https://noiz.ai/lp/blog/meet-helix-world",
+      "source": "Noiz AI",
+      "published": "2026-10-12",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Noiz AI 与港科大发布说明：从单张图（可选文本提示）生成可 WASD/方向键探索的场景，同步输出约 24fps 视频与 48kHz 相机对齐立体声；论文称在单块 NVIDIA H800 上稳态 RTF 约 0.77（含编解码），分辨率 768×512。WBench navigation 均分 79.9；自建 HelixBench 空间声学一致性 41.8（对比 EchoWM 约 12.7）。代码开源、预览权重在 Hugging Face，演示站 helixworld.org。局限：公开为 preview；实时性能数字针对 H800，文中未报消费级 GPU；纯画质略低于部分无声世界模型。本人未跑通本地推理。",
+      "why_useful": "做关卡概念或交互原型时，可先用演示站从概念图走进场景听空间声，再决定是否值得接进正式管线。",
+      "try_it": "打开 helixworld.org 上传一张场景图，用 WASD/方向键走几步，听声场是否随转头变化；需要本地再看 GitHub NoizAI/HelixWorld。"
+    }
+  ]
+}
