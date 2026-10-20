@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-20",
+  "items": [
+    {
+      "title": "Last Week in Unreal：ue6-main 要求 Inline Ray Tracing，Lumen 间接光遮罩行为变更（10/12–10/18）",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-oct-12-18-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-10-19",
+      "ue_version": "ue6-main（文中另述 5.8 热修候选未变）",
+      "summary": "周报梳理 10/12–10/18 的渲染相关提交：光追启用检查现需 RHISupportsInlineRayTracing；Lumen 间接射线改为尊重 AffectDynamicIndirectLighting / AffectIndirectLightingWhileHidden，原先关掉间接光的物体仍会挡住反射/间接射线的问题被修正；另有 LumenWorldCache 小幅 GPU 耗时优化与 Vulkan 池化分配默认开启等。公开 5.8 分支本周无提交，5.8.4 仍无正式 tag。",
+      "try_points": [
+        "依赖 HWRT Lumen 的项目：同步 ue6-main 后重点回归曾关闭 AffectDynamicIndirectLighting 的网格，确认间接光与反射是否变亮或穿帮",
+        "确认目标 RHI/硬件具备 inline ray tracing；不支持时光追会直接关掉而非走旧路径",
+        "在 5.8 上先对照文中「For teams shipping on 5.8」节，不要把 ue6-main 的 Nanite/光追改动当热修直接合入"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "社区教程：UE5 World Partition HLOD 实战 Tips（构建失败、植被分层、Approximate 材质）",
+      "url": "https://dev.epicgames.com/community/learning/tutorials/z050/unreal-engine-5-world-partition-hlods-tips-tricks",
+      "source": "Epic Developer Community",
+      "published": "约 2024-04（文内标注基于 UE 5.3.2，最后更新约 2024-07）",
+      "ue_version": "原文针对 UE 5.3.2（部分经验可迁移，新版本需自行验证）",
+      "summary": "作者在大地图上踩坑后整理的 HLOD 清单：构建前先提交/还原上一轮 HLOD 以免源控锁死；建议把虚拟内存提到很大以扛 bake；用独立 Runtime Grid 把植被与建筑分开；植被用 Instanced + Impostor 并 Disallow Nanite，建筑走 Instancing→Merged/Simplified 或 Approximate；小物件关掉 Include in HLOD；Landscape 常建议不进 HLOD 并关掉 Is Spatially Loaded，改用 Nanite Landscape。",
+      "try_points": [
+        "HLOD bake 报源控错误时：先提交或完整 revert 上一轮生成物再重建",
+        "植被与建筑分两个 Runtime Grid / HLOD Layer，并核对 Loading Range 与 Parent Layer 关系",
+        "Approximate HLOD 建完后检查材质 Roughness/Metallic/Specular（作者称 Layer 设置常被忽略），必要时 Roughness=1 去掉远景发亮"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "UE 5.8：World Partition 调试分层与 Builder Commandlet（含 WorldStreaming Insights）",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/debugging-builders/",
+      "source": "Game Development Constitution",
+      "published": "原文未标注具体日（面向 UE 5.8）",
+      "ue_version": "UE 5.8",
+      "summary": "把 WP 问题拆成 Source→Cell→Policy→Content→Representation(HLOD)→Budget 六层排查，并列出 wp.Runtime.ToggleDrawRuntimeHash2D/3D、wp.Runtime.HLOD 0 等命令。文中强调 UE 5.8 的 Unreal Insights 可用 -trace=WorldStreaming（及可选 Priority/Dependencies 通道）做 per-cell 分析。附上 WorldPartitionHLODsBuilder 等 commandlet 模板与验收清单（二次空跑稳定、cook/加载、HLOD 与导航表现）。",
+      "try_points": [
+        "远景异常时先 wp.Runtime.HLOD 0 确认是否 HLOD 代理问题，再决定是否重建",
+        "在 5.8 上启用 WorldStreamingInsights，用 -trace=WorldStreaming 录一条冷启动遍历再对照单元格状态",
+        "HLOD 用 commandlet：-Builder=WorldPartitionHLODsBuilder，需要渲染时再加 -AllowCommandletRendering"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "PerfGuard：UE5 升采样调优（TSR / DLSS / FSR / XeSS）与运动矢量卫生",
+      "url": "https://getperfguard.com/tutorials/upscalers",
+      "source": "PerfGuard",
+      "published": "原文未标注（教程站；与站内既有 mobile/world-partition 教程同系列）",
+      "ue_version": "原文未标注（内容覆盖 UE5 / TSR 5.4+ 特性，插件版本因发行方而异）",
+      "summary": "从 r.ScreenPercentage 成本账讲起，对比 TAAU/TSR/DLSS/FSR3/XeSS 的配置与平台选择矩阵；强调 Lumen/Nanite/VSM 场景实质上依赖升采样。重点列出运动矢量失效导致的鬼影/脱遮罩/高光闪：WPO 要开 Output Velocities、Niagara 要写速度、程序动画材质打 Has Pixel Animation，并用 r.TSR.Visualize 1 看 rejection mask。移动端建议优先 TAAU 或关闭升采样，因 TSR 计算开销可能压过收益。",
+      "try_points": [
+        "鬼影/闪烁时先开 r.TSR.Visualize 1，静态区域若持续 rejection 就查速度缓冲而非盲目降质量档",
+        "核对 WPO 网格 Output Velocities From WPO，以及带程序动画的材质 Has Pixel Animation",
+        "移动端基线先试 TAAU（r.AntiAliasingMethod 2 + TemporalAA.Upsampling），再决定是否上 TSR"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "官方文档：在移动端使用 Desktop Renderer（iOS Beta / Android Vulkan Experimental）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/using-the-desktop-renderer-on-mobile-in-unreal-engine",
+      "source": "Epic Games 官方文档",
+      "published": "原文未标注（UE 5.8 文档）",
+      "ue_version": "UE 5.8",
+      "summary": "说明移动端可走与 PC/主机相同的 Desktop Forward/Deferred 路径：iOS 在 Platforms > iOS > Rendering 勾选 Metal Desktop Renderer（Beta）；Android 勾选 Support Vulkan Desktop（Experimental），并设 r.Android.DisableVulkanSM5Support=0 以允许 SM5。仅 SM5 级设备可用；相对 Mobile Forward/Deferred 资源开销明显更高，文档明确不建议作为出货默认，欢迎实验反馈。",
+      "try_points": [
+        "仅在目标真机确认 SM5/桌面渲染器可用后再开，改完设置必须重启编辑器",
+        "Android：Support Vulkan Desktop + r.Android.DisableVulkanSM5Support=0，再在同机对比 Mobile Deferred 的帧时与发热",
+        "若只为试 Lumen on Mobile，先读配套「Using Lumen GI on Mobile」限制（实验性、主要 Android Vulkan SM5），不要默认开给全机型"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
