@@ -40,6 +40,17 @@
       "summary": "汇总 10 月前十天 Claude Code(v2.1.296)、OpenAI Codex(0.162.x)和 Cursor CLI(2026.10.08)的更新,主线是省上下文(Claude Code 可一次读取超大文件、子代理更早自动压缩)、隔离(Codex 加入托管 git worktree)和安全(Cursor 对递归、强制、通配删除要求确认)。文中还引用 GuardFall 研究,称 11 个开源编码代理中有 10 个的命令安全过滤可被 shell 引号和变量展开绕过。注意:作者自己就是一家编码代理产品的厂商,文末有推广;文中 Cursor 被提示注入攻破七家公司等说法,作者自己标注为未证实,我也没有独立核实。",
       "why_useful": "一次看清本月主流 AI 编码代理的演进方向,并提醒你给能执行 shell 的代理加上防护。",
       "try_it": "检查你在用的代理:是否默认禁止联网、删除类操作是否需要人工确认;再对照各家的 changelog 看有没有省上下文的新选项。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 8：全局额度硬重置",
+      "url": "https://didcodexreset.com/oct28/day8.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-12",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Day 8：全局重置日。Tibo 确认重置已完成（「It’s done.」）；逐账号到账时分未公开。挑战进行到第 8/28 天。",
+      "why_useful": "重置日可先核对用量再开重任务，避免在旧额度耗尽状态下误判模型变差。",
+      "try_it": "刷新用量页；日历与统计见 https://codexradar.com/。"
     }
   ]
 }

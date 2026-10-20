@@ -55,6 +55,17 @@
       "why_useful": "若经 AI Gateway 跑多 agent，终于能按「一整次对话」看成本和路由，而不是只看离散请求墙。",
       "try_it": "在 Gateway Logs 打开 Sessions；跨请求固定 sessionId。需要细节见 changelog 链出的 session affinity 文档。",
       "direction": "AI 工具"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 15：COOKED 实践演示 + 随后硬重置",
+      "url": "https://didcodexreset.com/oct28/day15.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-19",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Day 15 先有「We're cooked」：Tibo 转引 OpenAI Developers 的 Codex 烹饪主题节目 COOKED Ep.1 作为当日改进指向（实践演示/节目，原帖未量化性能）。随后又发帖「Nevermind, we're still cooking... and reset. Enjoy.」，落地全局硬重置。中文跟踪页 [Codex雷达站](https://codexradar.com/) 主记 COOKED；重置以 Tibo 第二帖与社区确认轨为准。",
+      "why_useful": "既想看官方怎么讲 Codex 实践，又关心额度时：先看 COOKED 回放，再核对本账户是否已重置。",
+      "try_it": "打开 COOKED / Codex 相关回放；刷新用量页确认重置。"
     }
   ]
 }

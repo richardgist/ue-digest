@@ -55,6 +55,17 @@
       "summary": "NVIDIA Omniverse 仓库发布 v1.0.0(Release 说明日期 2026-10-08,标签时间显示为 10 月 9 日)。首个公开版提供基于 NURBS 的边界表示(BRep)实体建模库,带 C++ 与 Python API,以及与 OpenUSD 的导入导出。许可证为 Apache 2.0。文档站点说明可用 pip install usd-brep(CPython 3.12,Windows/Linux),wheel 自带对应 OpenUSD 运行时。DEVELOP3D 10 月 13 日报道指出其内核源自 NVIDIA 2022 年收购的 Solid Modeling Solutions 的 SMLib,并讨论对 AI-to-CAD 工作流的潜在帮助;那是媒体解读,不是发布说明原文。我们未编译或跑通示例。",
       "why_useful": "需要精确曲面/布尔而不是三角网格时,终于有一份可 pip 安装、能进出 OpenUSD 的开源 BRep 内核可试。",
       "try_it": "在干净的 Python 3.12 环境 pip install usd-brep,按文档先 import usd_brep 再打开 USD stage;用一小段脚本做布尔或圆角后 export 看结果。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 10：全局额度硬重置",
+      "url": "https://didcodexreset.com/oct28/day10.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-14",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Day 10：Tibo 预告约两小时内落地的全局重置，随后确认完成（「Done and dusted.」）。属挑战中的硬重置日，不是发放重置卡。",
+      "why_useful": "可把重置日当作开大任务窗口；具体到账以账户显示为准。",
+      "try_it": "用量页确认已回满后再排长跑任务。"
     }
   ]
 }

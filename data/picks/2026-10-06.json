@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-06",
+  "items": [
+    {
+      "title": "Tibo 28 天挑战 Day 2：Auto-review 免费 + 多项更新 + 全局重置",
+      "url": "https://didcodexreset.com/oct28/day2.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-06",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 2 同时有产品改进与全局重置：Auto-review 向所有 ChatGPT 登录用户免费开放且不占套餐用量；另有面向构建者的简化 API、会议笔记整合、Decisions API 公测等（以 Tibo 当日汇总为准）。同日社区投票后落地完整额度重置。挑战规则仍是：每天改进或重置。",
+      "why_useful": "长任务可先开 Auto-review 减轻逐条批准；若额度吃紧可核对当天是否已到账重置。",
+      "try_it": "Settings → Permissions 启用 Auto-review；在账户用量页确认是否已重置。"
+    }
+  ]
+}

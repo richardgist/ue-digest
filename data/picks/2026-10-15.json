@@ -55,6 +55,17 @@
       "summary": "Anthropic 工程博文：代理写码使合并量从 2026 年 5 月约 2500/日升至 9 月逾 30000/日，git 镜像与种子仓成为瓶颈后，五个月内自研并迁到 Scion（配套 Antique 评审、代码搜索与 IAM 等）。设计假设客户端几乎总在线、服务端做历史/blame/提交与合并、工作副本默认可稀疏/按需；称基础设施 CPU/内存相对原 git 镜像方案约小 200×，CI/研究任务检出从分钟级到秒级，仅 CI 约省 25% CPU。文中强调 Scion 不适合替代一般用途的 git，且难对外产品化；文内性能数字与「七人团队」等均为 Anthropic 自述，未独立复现。",
       "why_useful": "本地或多代理并行改同一大仓时，可对照他们如何把「检出/blame/合并」收成服务端 API，而不是无限加 git 镜像。",
       "try_it": "先审计自己的 CI 每天完整 clone/fetch 次数与耗时；能改成稀疏检出、blob 缓存或「只问 diff/ancestry」的 API 就先改这些，不必一上来换 VCS。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 11：减少模型满负载报错",
+      "url": "https://didcodexreset.com/oct28/day11.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-15",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 11：官方称已加算力并改动路径，显著减少「所选模型已满负载」类报错；仍遇到时应能等待后自动继续，而不是一直卡住。这不是额度重置，也不代表报错已绝迹。",
+      "why_useful": "高峰时段任务可观察是否少卡在 capacity；残留问题按官方渠道反馈。",
+      "try_it": "高峰时段开一个会触发满负载的任务，看是否自动恢复。"
     }
   ]
 }

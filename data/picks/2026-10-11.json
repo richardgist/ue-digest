@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-11",
+  "items": [
+    {
+      "title": "Tibo 28 天挑战 Day 7：Sol 默认上下文增至 500k",
+      "url": "https://didcodexreset.com/oct28/day7.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-11",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 7：GPT-6.1 Sol 在 Codex 与 Work 的默认上下文从约 272k 提到 500k（仍可调，最大约 1M），以减少压缩、保留长任务细节。订阅侧长上下文是否另计倍率以账户说明为准。",
+      "why_useful": "长会话/多智能体任务可少触发压缩；仍建议按阶段整理上下文，避免无意义堆历史。",
+      "try_it": "新开 Sol 会话看默认上下文是否显示约 500k；超长任务再手动调高。"
+    }
+  ]
+}

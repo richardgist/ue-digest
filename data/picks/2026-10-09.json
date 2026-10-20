@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "items": [
+    {
+      "title": "Tibo 28 天挑战 Day 5：桌面输入预测（Pro 不耗用量）",
+      "url": "https://didcodexreset.com/oct28/day5.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-09",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 5：ChatGPT/Codex 桌面 App 的 Composer 输入预测向 Pro 开放测试；官方称预测不消耗套餐用量，发送消息仍按正常规则计费。另有 Dots 可委派 Codex、ChatGPT 套餐可连 Devin 等并列更新（以当日帖为准）。",
+      "why_useful": "少打字、启发下一步时可用；若界面没有预测，先查设置里的 Composer → Show predictions。",
+      "try_it": "桌面端打开 Settings → General → Composer → Show predictions，写一句目标看 Tab 建议。"
+    }
+  ]
+}

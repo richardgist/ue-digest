@@ -2,6 +2,17 @@
   "date": "2026-10-20",
   "items": [
     {
+      "title": "Tibo 28 天挑战跟踪：Codex/Work 每天改进或全量重置（已进行 Day 15/28）",
+      "url": "https://codexradar.com/",
+      "source": "Codex雷达站 · Tibo @thsottiaux",
+      "published": "2026-10-20",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Codex 负责人 Tibo（@thsottiaux）承诺：2026-10-05 至 11-01（美西）连续 28 天，每天要么发布一项对多数 Codex/Work 用户有用的明显改进，要么做一次完整额度重置。中文跟踪页 Codex雷达站汇总日历与统计（截图时约：产品改进 15 / 已发重置卡 1 / 硬重置 5；Day 15 主记 COOKED 实践演示，随后另有硬重置帖）。往期要点：Day1 默认速度约快 50%；Day2 Auto-review 免费+重置；Day3 GPT-6+重置卡；Day4 即时 steering / Sol Ultrafast；Day5 输入预测；Day6/8/10/13 硬重置；Day7 Sol 默认 500k；Day9 桌面存储优化；Day11 减满负载报错；Day12 缓存提有效用量；Day14 可编辑历史消息。本站每日精选已按日补录 Day 1–15。官方社区串：[Cooking with Codex](https://community.openai.com/t/cooking-with-codex-day-15-of-28-days-of-quality-of-life-improvements-and-or-a-full-reset/1403525)。",
+      "why_useful": "用 Codex/Work 时可把该页当「今天是改进还是重置」的仪表盘，少刷 X；往期改进也已按日落进本站精选归档。",
+      "try_it": "打开 https://codexradar.com/ 看日历与最新进展；需要英文逐日票数可对照 https://didcodexreset.com/oct28.html。"
+    },
+    {
       "title": "Claude Code v2.1.304：/auto-mode-setup、只读工具标记与用量提醒",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "source": "GitHub · anthropics/claude-code",

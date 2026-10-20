@@ -55,6 +55,17 @@
       "summary": "Claude Code v2.1.302（2026-10-16）新增 `CLAUDE_CODE_AUTO_MODE_MODEL`（仅客户端 auto mode 分类器模型）、`/config` 里 Idle compaction 开关；将 `subagent_type: \"fork\"` 在 `claude -p`、Agent SDK、桌面与 VS Code 默认打开（可用环境变量关掉）；桌面/VS Code 主对话子 agent 改为始终后台跑。另有大量 MCP/压缩/插件相关修复，以及多插件时启动加速。",
       "why_useful": "长会话空闲压缩可按需关掉避免「醒来被压掉上下文」；fork 默认开让多子 agent 工作流少配一步。",
       "try_it": "`claude --version` 升到 2.1.302 后打开 `/config` 看 Idle compaction；需要时用 `CLAUDE_CODE_FORK_SUBAGENT=0` 关掉默认 fork。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 13：全局额度硬重置",
+      "url": "https://didcodexreset.com/oct28/day13.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-17",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Day 13：全局硬重置。Tibo 发帖「Done.」；社区跟踪站随后确认重置完成。挑战过半，重置日与改进日交替出现。",
+      "why_useful": "重置后适合开重任务或补测新模型档位。",
+      "try_it": "确认用量回满；总览见 https://codexradar.com/。"
     }
   ]
 }

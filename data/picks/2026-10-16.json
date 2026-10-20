@@ -55,6 +55,17 @@
       "summary": "第三方周报梳理 2026-10-05–11 的 UE 提交：公共 5.8 分支已有「Update version for 5.8.4」与约 108 条 cherry-pick（含 UBT 外链未重链、Horde 路径穿越、Vulkan CpuWaitForFence 默认等），尚无 5.8.4 正式 tag。ue6-main 上 D3D12 驻留管理新 tracker 由可选取认（可用 D3D12.ResidencyManagement=1 回退）；Lumen 增 LumenWorldCache 可选项，并删除七个按子系统的 HWRT CVar，仅留 r.Lumen.HardwareRayTracing；平台 I/O dispatcher 对 game/client 默认开启；编辑器 MCP 服务器改为按用户设置默认自启。文中数字与 SHA 来自作者对 EpicGames/UnrealEngine 分支的统计，非 Epic 官方周报。",
       "why_useful": "跟 ue6-main 或准备吃 5.8.4 hotfix 的团队，可按清单先搜已删 Lumen CVar、驻留默认与 MCP 自启，避免默认同步后行为突变。",
       "try_it": "在设备配置/ini 中搜索已删的七个 Lumen.*HardwareRayTracing；同步 ue6-main 后若 D3D12 卡顿先试 ResidencyManagement=1；构建机编辑器检查 MCP auto-start 是否要关。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 12：上下文复用与缓存，提高有效用量",
+      "url": "https://didcodexreset.com/oct28/day12.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-16",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 12：Tibo 称通过子代理间复用上下文、延长缓存保留、优化请求路由提高缓存命中，从而让 Codex/Work 有效用量更经用；未公布具体比例。同日另有 GPT-6 Astra Pro、Space 幻灯片、Dots 主屏等并列更新（以社区汇总为准）。",
+      "why_useful": "多智能体/长会话用户可对照同额度能多跑多少轮，判断是否真有体感增益。",
+      "try_it": "用相近规模的多智能体任务对比 Day 12 前后的额度消耗节奏（主观对照即可）。"
     }
   ]
 }

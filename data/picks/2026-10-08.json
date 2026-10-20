@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-08",
+  "items": [
+    {
+      "title": "Tibo 28 天挑战 Day 4：即时 steering + Sol Ultrafast",
+      "url": "https://didcodexreset.com/oct28/day4.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-08",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 4：模型对用户纠偏改为近即时响应（instant steering），可实时改方向、少做无效功；GPT-6.1 Sol Ultrafast 在 API、Codex、ChatGPT Work 推出。官方称两者搭配效果好；未给出独立帧率/吞吐第三方实测。",
+      "why_useful": "长任务中途改需求时可直接纠偏试手感；需要极限出字速度时再开 Ultrafast，并留意额度消耗。",
+      "try_it": "在 Codex/Work 会话中途改指令看是否更快跟进；有 Ultrafast 档位时与 Standard 对比额度与速度。"
+    }
+  ]
+}

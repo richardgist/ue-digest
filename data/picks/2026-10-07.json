@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-07",
+  "items": [
+    {
+      "title": "Tibo 28 天挑战 Day 3：GPT-6 进 Chat + 发放重置卡",
+      "url": "https://didcodexreset.com/oct28/day3.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-07",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Day 3：GPT-6 与 Intelligent UI 向 ChatGPT 用户推出；为庆祝约 4000 万 Codex/Work 活跃用户，向付费账户发放可储备的重置卡（banked reset，可稍后自行使用，不等于当即硬重置）。同日还有 Codex Cloud 经 Tailscale 连接等改进。",
+      "why_useful": "区分「硬重置」与「重置卡」：卡要自己兑换才回血；跟额度节奏的人值得对照账户里是否出现可存重置。",
+      "try_it": "在 ChatGPT/Codex 账户用量或权益页查看是否收到可储备重置卡。"
+    }
+  ]
+}

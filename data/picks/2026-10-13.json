@@ -55,6 +55,17 @@
       "summary": "社区开发者发布的 MIT 开源工具,面向 Godot 4.7+ 的 .NET 版本。它监视 C# 源文件,在独立的 AssemblyLoadContext 里编译,并用 Harmony 打补丁替换方法体,保存后下一帧就运行新代码、不必重启游戏;支持静态/实例/泛型方法以及 async 和迭代器。字段布局变化、新增字段或方法、改签名时会检测到并跳过,仍需重启;只在编辑器内生效,不进入发布版本;需要 .NET 8 SDK,不支持 GDScript。这是作者自己的介绍,我们没有实际试用。",
       "why_useful": "用 C# 写 Godot 时改一行就要停下重编译,这个工具能让调参和改逻辑的循环接近 GDScript 的即改即见。",
       "try_it": "在一个非关键项目里装上,改某个 _Process 里的移动速度计算并保存,看运行中的游戏是否立刻生效;正式项目先做好版本控制。"
+    },
+    {
+      "title": "Tibo 28 天挑战 Day 9：桌面 App 状态存储约减 60%",
+      "url": "https://didcodexreset.com/oct28/day9.html",
+      "source": "Tibo @thsottiaux · Codex雷达站",
+      "published": "2026-10-13",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Day 9：ChatGPT 与 Codex 桌面 App 做磁盘状态存储优化，官方预计状态数据占用可降约 60%（指本地状态存储，不是整机磁盘或内存的实测）。面向重度用户磁盘吃紧的反馈。",
+      "why_useful": "桌面端占盘大的用户可更新后看 App 数据目录体积是否下降。",
+      "try_it": "更新桌面 App 后对比更新前后状态目录大小（以本机路径为准）。"
     }
   ]
 }
