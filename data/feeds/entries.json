@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T09:30+08:00",
+ "updated": "2026-10-21T09:00+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-20T09:30+08:00",
-   "last_new": 1
+   "checked": "2026-10-21T09:00+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-20T09:30+08:00",
-   "last_new": 2
+   "checked": "2026-10-21T09:00+08:00",
+   "last_new": 3
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-20T09:30+08:00",
+   "checked": "2026-10-21T09:00+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-20T09:30+08:00",
-   "last_new": 1
+   "checked": "2026-10-21T09:00+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-20T09:30+08:00",
-   "last_new": 9
+   "checked": "2026-10-21T09:00+08:00",
+   "last_new": 11
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,253 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-20T09:30+08:00",
-   "last_new": 2
+   "checked": "2026-10-21T09:00+08:00",
+   "last_new": 6
   }
  },
  "entries": [
+  {
+   "id": "67479244caca",
+   "title": "eMudhra Intermediate CA Compromise",
+   "link": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
+   "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any software that bundles a list of trusted certificates needs to be updated. This site is tracking software updates via this GitHub repository - Linux distros need to update their ca-certificates packages. In Python world uv…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-21T07:50+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "3f45ff5bf487",
+   "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
+   "link": "https://simonwillison.net/2026/Oct/20/battledrones/",
+   "summary": "My latest vibe coded game experiment is a Command & Conquer style RTS (Real Time Strategy) game called Battle Drones ( play it here ). Unlike my previous experiments , this one is actually fun to play . I'm somewhat embarrassed to admit that I got there by telling Claude to \"Make it a LOT more fun\". It also supports multiplayer between nearby devices using audio to synchronize game state! Here's what I've built so far, and some of the things I learned along the way. Battle Drones How I built…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-21T03:34+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "5e7f2848f402",
+   "title": "Fuse Games CEO breaks down codev framework for Star Wars: Galactic Racer",
+   "link": "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer",
+   "summary": "A model for making the most of distributed development.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-21T02:39+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "ba1f87629d94",
+   "title": "SimCity, but with Permits",
+   "link": "https://permit.petercai.com/",
+   "summary": "Hacker News 热度:516 分,275 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50170593",
+   "date": "2026-10-21T02:29+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "24909601d2df",
+   "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+   "link": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-21T02:17+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "9543205b20d4",
+   "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+   "link": "https://github.com/google-pytorch/torch_tpu",
+   "summary": "Hacker News 热度:252 分,58 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50169053",
+   "date": "2026-10-21T00:40+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "f1aea4a6bb2d",
+   "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+   "link": "https://huggingface.co/blog/allenai/fairstress",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-21T00:09+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "e267c7cec9c0",
+   "title": "Voxtral 3",
+   "link": "https://mistral.ai/news/voxtral-3/",
+   "summary": "Hacker News 热度:509 分,138 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50168396",
+   "date": "2026-10-21T00:02+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "50ceffb028a3",
+   "title": "Innersloth co-founder warns devs: 'there are some very bad deals out there'",
+   "link": "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
+   "summary": "'There are some truly abysmal deals for games that do not deserve that.'",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-21T00:01+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "d8dbefc9c5b8",
+   "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+   "link": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-20T23:19+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "242d7e434921",
+   "title": "Griffin Gaming Partners, Entertainment 360 jointly unveil production company Hitpoint Entertainment",
+   "link": "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
+   "summary": "A prominent game industry fund and Hollywood talent agency are teaming up to adapt games for TV and film.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-20T23:10+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "6adf7728c3b8",
+   "title": "Facebook Pages require paid subscription to post more than two links per month",
+   "link": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+   "summary": "Hacker News 热度:409 分,374 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50167536",
+   "date": "2026-10-20T23:06+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "bab1f618a561",
+   "title": "Ofcom concedes defeat in 4chan case",
+   "link": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
+   "summary": "Hacker News 热度:323 分,237 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50167028",
+   "date": "2026-10-20T22:30+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "18ed2e81a08b",
+   "title": "EMudhra Intermediate CA Compromise",
+   "link": "https://emudhra.we-have-a-problem.com/",
+   "summary": "Hacker News 热度:601 分,326 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50166579",
+   "date": "2026-10-20T21:58+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "3a33f8858484",
+   "title": "How I got over 300 Tor exit nodes removed",
+   "link": "https://kaba.cx/posts/20261020_Tor/",
+   "summary": "Hacker News 热度:311 分,75 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50166257",
+   "date": "2026-10-20T21:39+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "78126453b331",
+   "title": "Tsrs: A Port of TypeScript to Rust",
+   "link": "https://blog.cloudflare.com/typescript-rust-port/",
+   "summary": "Hacker News 热度:338 分,160 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50165953",
+   "date": "2026-10-20T21:18+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "005e1d297d6a",
+   "title": "Apple broke an essential presentation feature of iPads",
+   "link": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+   "summary": "Hacker News 热度:479 分,246 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50165208",
+   "date": "2026-10-20T20:17+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "c3ba43471c5e",
+   "title": "Google Cloud outage affects almost all banking and other operations in Europe",
+   "link": "https://www.neowin.net/news/google-cloud-outage-takes-down-hsbc-revolut-bank-of-scotland-llyods-equifax-more/",
+   "summary": "Hacker News 热度:325 分,166 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50163961",
+   "date": "2026-10-20T18:26+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "064def2e4bc3",
+   "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+   "link": "https://github.com/deepseek-ai/DeepInfer",
+   "summary": "Hacker News 热度:2112 分,825 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50163277",
+   "date": "2026-10-20T17:08+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "12716f82e903",
+   "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+   "link": "https://huggingface.co/blog/hf-torchtpu",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-20T08:00+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "b8ae1e84bd6c",
+   "title": "AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms",
+   "link": "https://huggingface.co/blog/anylanguagemodel-1-0",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-20T08:00+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
+  {
+   "id": "00624af5a69a",
+   "title": "MPS in PyTorch 2.15",
+   "link": "https://huggingface.co/blog/mps-pytorch-2-15",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-20T08:00+08:00",
+   "first_seen": "2026-10-21T09:00+08:00"
+  },
   {
    "id": "d73b7cb855e2",
    "title": "My obituary for programming",

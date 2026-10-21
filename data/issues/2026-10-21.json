@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-21",
+  "items": [
+    {
+      "title": "UE 5.8.4 Hotfix：Lumen SceneCapture 回归修复与渲染/iOS 相关修复",
+      "url": "https://forums.unrealengine.com/t/5-8-4-hotfix-released/2842775",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-20",
+      "ue_version": "UE 5.8.4",
+      "summary": "Epic 于 10/20 发布 5.8.4 热修。渲染侧含：修复 SceneCapture2D 渲染时 Lumen 间接光 atlas 被每帧误清空的回归；Static Mesh UV density 累积越界断言；材质 Usage Flags 程序化修改后 CachedExpressionData 未更新导致的 ShaderMap assert。移动平台侧含 iOS 默认改用 UIScene lifecycle、扩充新机型 base profile，以及 macOS 27 下 iOS .app finalize “Bad file descriptor” 修复。",
+      "try_points": [
+        "项目里用 SceneCapture2D + Lumen 间接光：升级 5.8.4 后重点回归 Capture 画面是否仍整帧闪黑/间接光丢失",
+        "若编辑器里出现 MaterialShader ShaderMapId.ContainsShaderType assert，优先验证是否程序化 SetMaterialUsage 路径触发；热修后应随 CachedExpressionData 更新而消失",
+        "出 iOS 包前核对 UIScene lifecycle 默认变更与新机型 profile，并在 macOS 27 上复测 finalize"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "Nanite / Lumen / VSM / MegaLights / TSR：UE5.8 原理、预算与行星场景踩坑",
+      "url": "https://colonized.work/blog/nanite-lumen-unreal-engine-5-explained/",
+      "source": "COLONIZED / colonized.work",
+      "published": "2026-10-13",
+      "ue_version": "UE 5.8",
+      "summary": "用 Epic 文档数据梳理五套系统：Nanite 实例/材质/光追限制；Lumen 约 4ms@1080p/60 的主机预算与 Lumen Lite；VSM 缓存失效点；MegaLights 近似恒定成本与质量回落；TSR 收敛延迟。作者在行星场景中指出：GPU 动态生成、无 SDF 的地形对软件 Lumen「不可见」；过密小网格会生成海量 Surface Cache cards 导致起飞时 GPU timeout，提高生成 card 的最小网格尺寸后超时消失且关键反弹光仍在。",
+      "try_points": [
+        "软件 Lumen 场景若有程序化/动态地形黑斑：检查是否缺少 Mesh Distance Field，或改测 HWRT 路径",
+        "荒漠类碎石场景若 Lumen 导致 GPU timeout：提高进入 Surface Cache 的最小网格尺寸，再对比远景反弹光是否可接受",
+        "对照文中预算表设定 GI/Reflection Scalability，不要把「Nanite=无限面数」当出货假设"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 渲染性能笔记：用 Medium GI 选 Lumen Lite，并独立压测 GI/反射",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/lumen-and-reflections/",
+      "source": "Game Development Constitution",
+      "published": "原文未标注（面向 UE 5.8）",
+      "ue_version": "UE 5.8（文中标注 Lumen Lite 为 Beta）",
+      "summary": "实操向 Lumen 选型：高画质 Lumen 给有余量的目标；UE 5.8 的 Lumen Lite 为 Beta，Medium GI（sg.GlobalIlluminationQuality 1）会走 Irradiance Field Final Gather（r.Lumen.FinalGatherMethod 0）换更快、更低质量的 GI。Medium 反射质量会关 Lumen Reflections、光滑面改 SSR，粗糙高光仍可来自 Lumen GI。强调从 BaseScalability/设备档起步，用 profilegpu 确认 Lumen pass 后再分别 A/B GI 与反射档，并注意 async compute 重叠会让单 pass 计时失真。",
+      "try_points": [
+        "要试 Lumen Lite：先把 sg.GlobalIlluminationQuality 设为 1，确认 r.Lumen.FinalGatherMethod 为 0，再量 GPU 帧时",
+        "反射与 GI 分档 A/B（sg.ReflectionQuality 与 sg.GlobalIlluminationQuality 分开扫），不要一次改完所有 Scalability",
+        "压测时临时关 Lumen async compute 只为隔离；结论要以恢复重叠后的整帧时间为准"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "2026 年用 UE5 做手游是否现实：路径选择、档位与上架约束",
+      "url": "https://dev.to/aplusgamesstudio/unreal-engine-5-for-mobile-games-in-2026-realistic-381d",
+      "source": "DEV Community（A Plus Games Studio，2026-10-20）",
+      "published": "2026-10-20",
+      "ue_version": "原文未标注具体小版本（讨论 UE5 移动路径；文中提及 5.7 对 Android target SDK 的建议）",
+      "summary": "面向中重度手游的选型文：常规手机应走 Mobile Forward/Deferred，Lumen/Nanite 面向更高端硬件而非典型机型；需按市场数据定低/中/高档并真机验证（热节流仿真器看不出）。提醒 Unreal 包体偏大要用 PAD/ODR；Google Play 自 2026-08-31 起新应用/更新需 target Android 16（API 36，可延期至 11/1）。性能习惯：控 Draw Call、简化材质、慎用后处理、按档压缩纹理与必要时锁帧降温。",
+      "try_points": [
+        "立项先定最低真机档，核心循环在最低档真机原型，而不是只看编辑器数字",
+        "默认不要把典型 Android/iOS 机型的灯光/几何方案建立在 Lumen/Nanite 上；高端机再单独升档",
+        "出货前核对当前引擎工具链能否满足 Google Play API 36，并尽早规划 PAD/按需资源拆包"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    },
+    {
+      "title": "官方文档：Android Device Profile 匹配规则与 Scalability 覆盖",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/customizing-device-profiles-and-scalability-in-unreal-engine-projects-for-android",
+      "source": "Epic Games 官方文档",
+      "published": "原文未标注（UE 5.8 文档）",
+      "ue_version": "UE 5.8",
+      "summary": "说明 Android 上 Device Profile 与 Scalability 如何按硬件定制渲染：配置读取优先级（Engine/Project × Base/Android）；标准 Android_Low/Mid/High 与按 GPU 族细分的 profile；启动时按 MatchProfile 规则（机型/厂商/GPU/Android/Vulkan 等比较）选档。VulkanAvailable 同时看打包是否启用与设备是否满足工程要求的 Vulkan；文档建议 Android 9+ 再开 Vulkan。可用项目内 AndroidScalability.ini / AndroidDeviceProfiles.ini 覆盖，设备档用 sg.* 引用 Scalability 组。",
+      "try_points": [
+        "在 Project/Config/Android/ 覆盖 AndroidDeviceProfiles.ini 与 AndroidScalability.ini，避免直接改 Engine 安装目录",
+        "新增 MatchProfile 时按同 GPU 族从低到高插入，防止被更宽泛规则抢先命中",
+        "预览移动画质时优先改 Scalability 组，再在 profile 里用 sg.ShadowQuality 等引用，以便编辑器 Preview Rendering Level 一致"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    }
+  ]
+}
