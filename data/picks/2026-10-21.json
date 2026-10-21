@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-21",
+  "items": [
+    {
+      "title": "RLSplat：按高斯预算线性缩放推理成本的前馈 3DGS",
+      "url": "https://arxiv.org/abs/2610.27712",
+      "source": "arXiv",
+      "published": "2026-10-20",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "论文提出 RLSplat：前馈 3D Gaussian Splatting 在给定高斯数量预算 B 时，不只压缩输出规模，还让推理延迟与峰值显存大致随 B 线性下降。做法是用策略优化学「把预算分到各局部锚点区域」的分配，再经资源线性解码器（层次近邻 + 局部交叉注意力）只生成这 B 个高斯，而不是先稠密预测再剪枝。零样本 ACID 评测写明：各预算下优于 EcoSplat / F⁴Splat；在较低预算时相对 F⁴Splat 约最高 4.1× 更快、约 9.6× 更低峰值显存，且质量更好。正文还称代码在 github.com/mlvlab/RLSplat；本人打开该仓库地址时返回 404，是否已公开未核实。",
+      "why_useful": "做实时重建或移动端高斯渲染时，若关心「预算调小后推理本身也要变便宜」，这篇把分配策略与线性解码写清楚了。",
+      "try_it": "读摘要与 Fig.1/Table 1；需要复现时再查作者仓库是否已上线。"
+    },
+    {
+      "title": "Nanite 与 Lumen 怎么画世界：UE5.8 预算与坑（附星球级实践）",
+      "url": "https://colonized.work/blog/nanite-lumen-unreal-engine-5-explained/",
+      "source": "COLONIZED · colonized.work",
+      "published": "2026-10-13",
+      "category": "效率",
+      "direction": "图形渲染",
+      "summary": "开发者文基于 Epic 文档梳理 Nanite、Lumen、Virtual Shadow Maps、MegaLights、TSR 在 UE 5.8 的分工与代价：Nanite 是虚拟化几何（不透明/遮罩、实例上限等）；Lumen 约按主机 1080p 60fps 约 4ms 预算；MegaLights 在 5.8 已生产可用但质量随光照复杂度下降。作者在 COLONIZED 星球地形上补充两点实践：动态地形块若无 SDF，软件 Lumen 会当地面不存在；地表碎石过多会让 Lumen surface cache 为小网格建大量 card，起飞时 GPU 超时，提高「最小建 card 网格尺寸」可缓解。文中数字多引自 Epic 文档，本人未在引擎内复测。",
+      "why_useful": "上 5.8 或调开放世界光照时，可当「官方数字 + 真实项目坑」速查，避免把营销表述当成无限预算。",
+      "try_it": "对照文中五技术表与「五大误区」；若用软件 Lumen，先确认动态地形是否生成距离场。"
+    },
+    {
+      "title": "Claude Code v2.1.305：网关无 ToolSearch 不再整批失败 + Linux 沙箱嵌套命名空间",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+      "source": "GitHub · anthropics/claude-code",
+      "published": "2026-10-20",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "10 月 20 日发布的 v2.1.305 修复 2.1.304 回归：Vertex/Bedrock 等或网关拒绝/未暴露 ToolSearch 时，会重试且不再整批请求失败。新增 sandbox.allowNestedUserNamespaces，方便沙箱内跑 Chromium、rootless podman。另有用量重试看门狗可配置重查间隔、磁盘满错误文案、worktree/MCP 同名覆盖、云会话压缩与 Code Review 等多项修复。本人未在本机升级实测。",
+      "why_useful": "若昨天刚升到 2.1.304 后在企业网关或云提供商上工具调用整批挂掉，应优先升到 2.1.305。",
+      "try_it": "升级后若走 Bedrock/Vertex/自定义网关，确认 ToolSearch 被拒时会话仍能继续；Linux 沙箱跑浏览器/podman 可查 allowNestedUserNamespaces。"
+    },
+    {
+      "title": "Unity 6000.6.6f1：URP 回缓冲 MSAA 省带宽等补丁",
+      "url": "https://unity.com/releases/editor/whats-new/6000.6.6f1",
+      "source": "Unity Releases",
+      "published": "2026-10-15",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 于 2026-10-15 发布 6000.6.6f1 补丁。URP 相关说明：在含多重采样回缓冲的平台（含 Android、iOS、Metal）上，若本帧没有相机直接往回缓冲画 MSAA（例如从中间纹理 resolve），回缓冲可保持单采样，从而减少显存与带宽，且声称不影响 MSAA 结果。另有 2D Renderer、Render Graph 异步计算纹理争用、GI BVH 空图元崩溃、多处 UI Toolkit 等修复，并列出若干 Known Issues。本人未在本机安装该版本验证。",
+      "why_useful": "移动端或 Metal 上用 URP 且关心回缓冲带宽时，可对照这条决定是否升补丁。",
+      "try_it": "在发布说明里搜 UUM-134600；升到 6000.6.6f1 后用 Profiler 对比回缓冲相关内存。"
+    },
+    {
+      "title": "World2HOSI：用多专家编排在 3DGS 场景里生成长程人–物–景交互",
+      "url": "https://arxiv.org/abs/2610.27725",
+      "source": "arXiv",
+      "published": "2026-10-20",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "论文提出 World2HOSI：面向动画/游戏/具身智能的长程 Human-Object-Scene Interaction（HOSI）数据合成。核心不是再训一个统一运动模型，而是用 Interactive Scene Package 维护可更新场景状态，用 LLM 把自然语言拆成阶段脚本，再按能力调度导航、动态 HOI、静态 HSI 等专家，并把物体位姿写回以条件化后续阶段；可选残差物理优化改善接触。评测与用户研究写明在共享任务上任务完成度与交互质量优于 InfBaGel、HOSIG 等。项目页 https://nintreesssss.github.io/World2HOSI/ 可访问；本人未复现管线。",
+      "why_useful": "若要在重建的 3DGS 室内场景里批量造「搬椅子再坐下」这类跨阶段交互数据，可参考其状态闭环与专家编排思路。",
+      "try_it": "先看项目页与 Fig.1；再读 §3 的 ISP / Task Compiler / 专家对接。"
+    }
+  ]
+}
