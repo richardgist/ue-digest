@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T11:27+08:00",
+ "updated": "2026-10-22T09:27+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 5
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 1
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 1
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-21T11:27+08:00",
+   "checked": "2026-10-22T09:27+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 3
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 8
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,242 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-21T11:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-22T09:27+08:00",
+   "last_new": 4
   }
  },
  "entries": [
+  {
+   "id": "54b2d3624112",
+   "title": "Railway Security Disclosure",
+   "link": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+   "summary": "Hacker News 热度:296 分,141 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50188228",
+   "date": "2026-10-22T05:58+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "b6b7083a4edc",
+   "title": "Claude Duet",
+   "link": "https://claude.com/product/claude-duet",
+   "summary": "Hacker News 热度:312 分,270 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50186037",
+   "date": "2026-10-22T03:14+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "0545bc85c7bb",
+   "title": "EA closes Mass Effect, Dragon Age creator BioWare after 30 years of game development",
+   "link": "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development",
+   "summary": "EA is reportedly laying off 400 employees, 50 of whom were the remaining staffers at BioWare.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-22T02:57+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "d356a993bca7",
+   "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+   "link": "https://simonwillison.net/2026/Oct/21/php-security-release/",
+   "summary": "Today's PHP Security Release, and How We're Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night, thanks to a leak in the coordinated disclosure process. This post from the PHP Foundation explain what went so wrong: On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T02:41+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "83abfc8ab2ee",
+   "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+   "link": "https://huggingface.co/blog/nvidia/kumo-relational",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T02:26+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "9b87a6877c10",
+   "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+   "link": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+   "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of... Comments URL: https://news.ycombinator.com/item?id=50184820 Points: 365 # Comments: 221",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50184820",
+   "date": "2026-10-22T01:45+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "200c8b2b86cf",
+   "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+   "link": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T01:35+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "601e8d84a471",
+   "title": "EA is shutting down BioWare",
+   "link": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+   "summary": "Hacker News 热度:515 分,312 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50184586",
+   "date": "2026-10-22T01:29+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "829408463039",
+   "title": "Panache — RTS Belle Époque pour mobile",
+   "link": "https://simonwillison.net/2026/Oct/21/panache/",
+   "summary": "Panache — RTS Belle Époque pour mobile Well this is delightful: I released Battle Drones yesterday under an Apache 2.0 License and there's already a French language fork which reskins the game to take place in steampunk 1900s France and adds an animated intro! Panache est un jeu de stratégie en temps réel pour mobile et navigateur, dans la France de la Belle Époque (vers 1900) : dirigeables, Fardiers à vapeur, Creusot cuirassés, automates en képi, Gargantua la forteresse marchante — et beaucoup…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T00:25+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "bffc50ba1c84",
+   "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+   "link": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T00:04+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "4f8ce75be8be",
+   "title": "Today's PHP security release, and how we're strengthening security",
+   "link": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+   "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873 (links to more at https://news.ycombinator.com/item?id=50184935 ) Comments URL: https://news.ycombinator.com/item?id=50182987 Points: 677 # Comments: 334",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50182987",
+   "date": "2026-10-21T23:48+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "306ae3469f9d",
+   "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+   "link": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-21T22:58+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "c569e552211e",
+   "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+   "link": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+   "summary": "Hacker News 热度:359 分,45 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50181136",
+   "date": "2026-10-21T22:01+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "6eb8fed2215f",
+   "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+   "link": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+   "summary": "Hacker News 热度:434 分,139 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50181114",
+   "date": "2026-10-21T22:00+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "7eed83d368f6",
+   "title": "PHP 8.2.35",
+   "link": "https://github.com/php/php-src/releases/tag/php-8.2.35",
+   "summary": "Related ongoing thread: Today's PHP security release, and how we're strengthening security - https://news.ycombinator.com/item?id=50182987 Comments URL: https://news.ycombinator.com/item?id=50180873 Points: 969 # Comments: 533",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50180873",
+   "date": "2026-10-21T21:45+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "6649c02dda9a",
+   "title": "Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search",
+   "link": "https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search/",
+   "summary": "Protein design is a search problem. Choose amino acids for an eight-residue protein sequence and more than 25 billion combinations are possible. Choose amino...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-21T20:30+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "3bad9f77f384",
+   "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+   "link": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+   "summary": "An AI agent can complete its assignment and still cross a security boundary. Recent incidents show that agents can circumvent security controls while using...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-21T17:52+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "211ed57d9a49",
+   "title": "How NVIDIA OpenShell Reference Architecture Secures and Governs AI Agent Workloads at Scale",
+   "link": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/",
+   "summary": "Autonomous agents can work for hours on complex tasks, accessing files, tools, the internet, and spawning other agents to collaborate with. Executing complex...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-21T17:50+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "f887aba99227",
+   "title": "Developing an AI Factory Digital Twin with an Agent-Assisted Workflow",
+   "link": "https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow/",
+   "summary": "Building an AI factory digital twin requires developers to bring site plans, equipment assets, and engineering requirements into a consistent model that teams...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-21T17:38+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "45a07969155a",
+   "title": "Achieve Productive AI Capacity Faster and More Predictably with NVIDIA DSX POD",
+   "link": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/",
+   "summary": "AI factories turn energy into intelligence. But before an AI workload can produce its first token, operators must bring an interconnected system of compute,...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-21T17:35+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "a92261b1c869",
+   "title": "Rethinking the funnel: where mobile gaming really fits in the marketing mix",
+   "link": "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers",
+   "summary": "Discover why industry leaders are rethinking the marketing funnel. Learn how mobile gaming ads deliver full-funnel results from brand awareness to conversion.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-21T08:00+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
+  },
   {
    "id": "67479244caca",
    "title": "eMudhra Intermediate CA Compromise",
@@ -771,6 +1002,17 @@
    "comments": "https://news.ycombinator.com/item?id=50117746",
    "date": "2026-10-16T20:52+08:00",
    "first_seen": "2026-10-17T08:13+08:00"
+  },
+  {
+   "id": "132c46351ffd",
+   "title": "sparqlite: SPARQL 1.1 inside SQLite, written in Rust",
+   "link": "https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/",
+   "summary": "Research: sparqlite: SPARQL 1.1 inside SQLite, written in Rust This research task is really an experiment in running Claude Code for web in \"Ultracode\" mode, as described in Orchestrate subagents at scale with dynamic workflows in the Claude Code documentation. With Ultracode turned on, Claude Code makes aggressive use of dynamic workflows - it generates JavaScript that defines and coordinates a network of subagents to take on complex problems. My initial prompt was this - I meant \"hit the rows…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-16T09:58+08:00",
+   "first_seen": "2026-10-22T09:27+08:00"
   },
   {
    "id": "af14d0aa7e59",
@@ -2849,17 +3091,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-23T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "2b0d50e0202d",
-   "title": "Maintenance release: Godot 3.6.3",
-   "link": "https://godotengine.org/article/maintenance-release-godot-3-6-3/",
-   "summary": "Godot 3.6.2 has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-08-22T20:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
