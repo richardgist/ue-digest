@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-23",
+  "items": [
+    {
+      "title": "PerfGuard：Nanite 性能深潜——簇剔除、软/硬光栅与 Masked/WPO 成本",
+      "url": "https://getperfguard.com/tutorials/nanite-performance",
+      "source": "PerfGuard",
+      "published": "原文未标注（锚定 UE 5.5/5.6，原理适用于现行 Nanite）",
+      "ue_version": "原文未标注（文中以 UE 5.5/5.6 变更与测量为主；可对照 5.8 验证）",
+      "summary": "把 Nanite 当成独立光栅器而非“自动 LOD”：128 三角形簇经 DAG + 双遍 HZB 剔除后写入 VisBuffer，再走 NaniteRaster / BasePass / Shading。软件光栅负责约亚像素三角形（默认约 32 像素边长以下），硬件光栅吃大三角形；可用 r.Nanite.MinPixelsPerEdgeHW 与 MaxPixelsPerEdge 调交叉点。Masked、WPO、PDO、双面与顶点动画会把簇踢进可编程光栅箱，固定开销高；缓解包括改成不透明几何、设 WPO Disable Distance、限制 VSM 材质位置失效范围、ShadowCacheInvalidationBehavior=Static。还覆盖与 VSM 的耦合、5.6 Ray Tracing Proxy、流送池与 NaniteVisualize 调试清单。",
+      "try_points": [
+        "先 NaniteVisualize RasterBins / RasterMode：若大量彩色可编程箱，优先清 Masked 与 WPO，而不是盲目砍三角形",
+        "凡带 WPO 的静态网格设 WPO Disable Distance；密林再试 r.Shadow.Virtual.Cache.MaxMaterialPositionInvalidationRange 与 ShadowCacheInvalidationBehavior=Static",
+        "对照场景调 r.Nanite.MaxPixelsPerEdge（低端可试 2）与 MinPixelsPerEdgeHW；用 NaniteStats 与 ShowMeshDrawEvents=1 把开销钉到具体材质"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE5.8 实战：HLOD 与 Nanite 的距离带分工（远景代理 / 中景簇 / 近景兜底）",
+      "url": "https://ixueyouxi.com/2026/07/15/ue58-hlod-nanite/",
+      "source": "和平哥的学习笔记 / ixueyouxi.com",
+      "published": "2026-07-15",
+      "ue_version": "UE 5.8",
+      "summary": "以 8km 级开放世界 demo 为例，强调远近不能同一套策略：超远/远景用 World Partition HLOD 合并代理降 Draw Call；中远到中近由 Nanite 按屏幕误差选簇；骨骼门、布料等变形体仍走传统 LOD。指出 Nanite 源网格直接进 HLOD 会把高模合并进去、代理过重，生成前应抽非 Nanite LOD0 或用引擎的 Nanite 处理选项；Masked 进贴图集易放大锯齿，需排除或接受远景实心化。给出按地貌分参数、颜色视图查边界/孤岛，以及 stat Nanite / SceneRendering / Memory 的调参纪律（一次只动一个参数、同路线三次取中位）。",
+      "try_points": [
+        "先画距离带：明确 HLOD 切换距离与 Nanite 剔除距离的重叠缓冲，避免边界跳变",
+        "HLOD 构建前处理 Nanite 资产：用非 Nanite LOD 或生成器的 Nanite 选项作合并输入，并单独排查 Exclude from HLOD 造成的“孤岛”",
+        "调参一次只改一项，固定跑图路线用 Hierarchical LOD Coloration + stat Nanite/SceneRendering 看 Draw Call 与实例数是否按距离桶下降"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "官方文档：移动端 Mesh Auto-Instancing（GPU Scene，含 Mali 纹理路径）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/using-mesh-auto-instancing-on-mobile-devices-in-unreal-engine",
+      "source": "Epic Games 官方文档",
+      "published": "原文未标注（UE 5.8 文档；功能标注为 Beta）",
+      "ue_version": "UE 5.8（Beta）",
+      "summary": "移动端可开启网格自动实例化以合并 Draw Call：在 DefaultEngine.ini 设 r.Mobile.SupportGPUScene=1，并用 r.Mobile.UseGPUSceneTexture=1 把 GPU Scene 数据存进纹理而非 buffer，从而让仅支持约 64KB buffer 的 Mali 也能用。开启会触发移动端着色器重编。文档强调主要利好偏 CPU 瓶颈的项目；GPU 瓶颈收益可能不明显；若极吃内存可关 UseGPUSceneTexture 改回 buffer（但 Mali 会失去该特性）。要求结合真机 profiling 判断是否值得上线，并提醒除通用 Mesh Drawing 限制外还有移动端特有约束。",
+      "try_points": [
+        "CPU 侧 Draw Call 偏高时：加 SupportGPUScene=1 与 UseGPUSceneTexture=1，接受一次移动 Shader 重编后再真机对比",
+        "出包前用目标机（含 Mali）跑同一关：看 Draw Call / Game Thread 是否下降，以及内存是否可接受",
+        "若内存比 Draw Call 更紧：可试关掉 UseGPUSceneTexture，并接受 Mali 不走该路径的设备覆盖缺口"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    },
+    {
+      "title": "官方文档：移动端性能分级指南（LDR / 基础光照与内容约束）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/performance-guidelines-for-mobile-devices-in-unreal-engine",
+      "source": "Epic Games 官方文档",
+      "published": "原文未标注（UE 5.8 文档）",
+      "ue_version": "UE 5.8",
+      "summary": "按目标机把移动光照能力分成可用档位：LDR（关 Mobile HDR）追求最低开销，场景色在 gamma、半透明需按 gamma 空间重做，无后期，材质宜 Unlit 并尽量把计算放进 Vertex/Customized UV；基础光照档开 Mobile HDR，用静态光照与 Fully Rough 材质换取更广设备覆盖，可关 Lightmap Directionality 进一步省性能，并限制部分后期。文档要求按目标机列表选档，而不是默认堆桌面级动态光。",
+      "try_points": [
+        "先按最低目标机定档：不需要动态光/后期就关 Mobile HDR 走 LDR，并统一 Unlit + 半透明贴图按 gamma 重做",
+        "要静态 GI 但要覆盖中低端：开 Mobile HDR，材质勾 Fully Rough，场景只用 Static 灯，再按需关 Lightmap Directionality",
+        "用真机与 Device Profile/Scalability 把档位写进配置，避免编辑器预览档与上架机不一致"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    },
+    {
+      "title": "PerfGuard：PSO Precaching 深潜——运行时预缓存、捆绑缓存与驱动驱逐陷阱",
+      "url": "https://getperfguard.com/tutorials/pso-precaching",
+      "source": "PerfGuard",
+      "published": "原文未标注（文中以 UE 5.2+ 预缓存与 5.5/5.6 实践为主）",
+      "ue_version": "原文未标注（面向 UE 5.2+ PSO 预缓存；可在 5.8 工程验证）",
+      "summary": "指出 UE5 玩家可见卡顿的头号来源常是首遇 PSO 编译（尤其 D3D12/Vulkan，且 Lumen/Niagara 等放大排列数）。给出三层模型：运行时预缓存（r.PSOPrecaching=1，建议配合 ProxyCreationWhenPSOReady）、随包捆绑的 .spc/.upipelinecache（用实机游玩录制补长尾）、以及厂商驱动缓存。强调驱动会驱逐条目导致“昨天还顺、今天首登又卡”；开放世界组合爆炸、贴花/全局 PSO 等覆盖盲区要用录制与 stat psoprecache / Insights 校验，并把覆盖率放进 CI。",
+      "try_points": [
+        "工程默认打开 r.PSOPrecaching=1 与 r.PSOPrecache.ProxyCreationWhenPSOReady=1，用 stat psoprecache 看未命中",
+        "发版前用代表性关卡/设备录一份捆绑 PSO 缓存打进包，覆盖运行时预缓存看不到的全局与组合路径",
+        "复现首登卡顿时先清驱动着色器缓存再测；开放世界按区域分批录制，避免单次录制组合爆炸漏网"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
