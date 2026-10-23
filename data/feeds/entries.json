@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T09:31+08:00",
+ "updated": "2026-10-23T15:11+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 1
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-23T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-10-23T15:11+08:00",
+   "last_new": 6
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,33 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-23T09:31+08:00",
+   "checked": "2026-10-23T15:11+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "0d6cfc3f69d0",
+   "title": "Docker is weird",
+   "link": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+   "summary": "Hacker News 热度:369 分,184 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50202681",
+   "date": "2026-10-23T07:45+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
+  },
+  {
+   "id": "ca664c9883d6",
+   "title": "LLMs are making formal software verification feasible at a much larger scale",
+   "link": "https://www.anthropic.com/research/formal-verification",
+   "summary": "Hacker News 热度:292 分,160 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50202217",
+   "date": "2026-10-23T06:54+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
+  },
   {
    "id": "1b261e3caa9e",
    "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
@@ -160,7 +182,7 @@
    "id": "7cdc17c19251",
    "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
    "link": "https://github.com/NVIDIA/OpenShell",
-   "summary": "Hacker News 热度:291 分,152 条评论",
+   "summary": "Hacker News 热度:371 分,187 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50198675",
@@ -179,6 +201,17 @@
    "first_seen": "2026-10-23T08:03+08:00"
   },
   {
+   "id": "75f21848268d",
+   "title": "Getting ready to operate GNU Taler in Germany",
+   "link": "https://www.taler.net/en/news/2026-13.html",
+   "summary": "Hacker News 热度:261 分,105 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50197404",
+   "date": "2026-10-23T00:14+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
+  },
+  {
    "id": "d357653ad528",
    "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
    "link": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
@@ -188,6 +221,17 @@
    "comments": null,
    "date": "2026-10-23T00:11+08:00",
    "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "ab26d40a7dbf",
+   "title": "Every AI model has the same \"controversial\" take on humans",
+   "link": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+   "summary": "Hacker News 热度:355 分,384 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50197313",
+   "date": "2026-10-23T00:08+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
   },
   {
    "id": "98a2e8dc330c",
@@ -215,7 +259,7 @@
    "id": "751ea67e39b3",
    "title": "Run full iOS 16.5 firmware on Android Devices",
    "link": "https://github.com/oosexgang/hackios-xnu-kernel",
-   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 320 # Comments: 123",
+   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 399 # Comments: 137",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50196718",
@@ -224,9 +268,9 @@
   },
   {
    "id": "c39c9039abab",
-   "title": "Quad9 (DNS Resolver) to Exit France",
+   "title": "Quad9 to exit France",
    "link": "https://quad9.net/news/blog/au-revoir-france/",
-   "summary": "Hacker News 热度:989 分,358 条评论",
+   "summary": "Hacker News 热度:1135 分,391 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50195959",
@@ -248,7 +292,7 @@
    "id": "d2039dacc238",
    "title": "eMudhra to exit global SSL/TLS certificate business",
    "link": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
-   "summary": "Hacker News 热度:924 分,625 条评论",
+   "summary": "Hacker News 热度:1015 分,671 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50195110",
@@ -265,6 +309,17 @@
    "comments": "https://news.ycombinator.com/item?id=50194833",
    "date": "2026-10-22T21:11+08:00",
    "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "1e5acfae400c",
+   "title": "Xbox wants you to pay 24 to 40 cents per hour to stream games you bought",
+   "link": "https://arstechnica.com/gaming/2026/10/xbox-wants-you-to-pay-24-to-40-cents-per-hour-to-stream-games-you-already-bought/",
+   "summary": "Hacker News 热度:280 分,243 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50194009",
+   "date": "2026-10-22T19:42+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
   },
   {
    "id": "cf2457bd3ac7",
@@ -298,6 +353,17 @@
    "comments": null,
    "date": "2026-10-22T15:51+08:00",
    "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "7dbfe4927012",
+   "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+   "link": "https://simedw.com/2026/10/21/world-model-terminal/",
+   "summary": "Hacker News 热度:526 分,164 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50190363",
+   "date": "2026-10-22T10:18+08:00",
+   "first_seen": "2026-10-23T15:11+08:00"
   },
   {
    "id": "a4fb6ae9fb25",
