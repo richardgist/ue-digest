@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T09:01+08:00",
+ "updated": "2026-10-23T09:31+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 1
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-23T09:01+08:00",
-   "last_new": 1
+   "checked": "2026-10-23T09:31+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-23T09:01+08:00",
+   "checked": "2026-10-23T09:31+08:00",
    "last_new": 0
   }
  },
@@ -160,7 +160,7 @@
    "id": "7cdc17c19251",
    "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
    "link": "https://github.com/NVIDIA/OpenShell",
-   "summary": "Hacker News 热度:288 分,150 条评论",
+   "summary": "Hacker News 热度:291 分,152 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50198675",
@@ -215,7 +215,7 @@
    "id": "751ea67e39b3",
    "title": "Run full iOS 16.5 firmware on Android Devices",
    "link": "https://github.com/oosexgang/hackios-xnu-kernel",
-   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 318 # Comments: 121",
+   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 320 # Comments: 123",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50196718",
@@ -226,7 +226,7 @@
    "id": "c39c9039abab",
    "title": "Quad9 (DNS Resolver) to Exit France",
    "link": "https://quad9.net/news/blog/au-revoir-france/",
-   "summary": "Hacker News 热度:981 分,352 条评论",
+   "summary": "Hacker News 热度:989 分,358 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50195959",
@@ -237,7 +237,7 @@
    "id": "63d52acec1ea",
    "title": "What’s getting pwned right now",
    "link": "https://pwn.watch/",
-   "summary": "Hacker News 热度:337 分,159 条评论",
+   "summary": "Hacker News 热度:340 分,159 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50195543",
@@ -248,7 +248,7 @@
    "id": "d2039dacc238",
    "title": "eMudhra to exit global SSL/TLS certificate business",
    "link": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
-   "summary": "Hacker News 热度:916 分,623 条评论",
+   "summary": "Hacker News 热度:924 分,625 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50195110",
@@ -259,7 +259,7 @@
    "id": "ac50d075fd00",
    "title": "Woman faces six years in prison over Cash App account she never opened",
    "link": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
-   "summary": "Hacker News 热度:476 分,488 条评论",
+   "summary": "Hacker News 热度:488 分,499 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50194833",
@@ -281,7 +281,7 @@
    "id": "b69ed433fdeb",
    "title": "Jailbreaking the Switch 2",
    "link": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
-   "summary": "Hacker News 热度:708 分,246 条评论",
+   "summary": "Hacker News 热度:714 分,250 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50192536",
@@ -930,7 +930,7 @@
    "id": "ea8663b0b1d6",
    "title": "What Is Gridifcation",
    "link": "https://musicalform.substack.com/p/what-is-gridifcation",
-   "summary": "Hacker News 热度:397 分,198 条评论",
+   "summary": "Hacker News 热度:401 分,200 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50150163",
