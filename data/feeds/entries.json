@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T09:27+08:00",
+ "updated": "2026-10-23T08:03+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 5
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 0
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 1
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,16 +62,16 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 1
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
    "topic": "游戏开发",
-   "ok": true,
-   "error": null,
+   "ok": false,
+   "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 1
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-22T09:27+08:00",
+   "checked": "2026-10-23T08:03+08:00",
    "last_new": 3
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 8
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,220 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-22T09:27+08:00",
-   "last_new": 4
+   "checked": "2026-10-23T08:03+08:00",
+   "last_new": 3
   }
  },
  "entries": [
+  {
+   "id": "1b261e3caa9e",
+   "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+   "link": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-23T06:24+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "462941766bf8",
+   "title": "DE STAAT - FREEDOM (Official Music Video)",
+   "link": "https://simonwillison.net/2026/Oct/22/de-staat-freedom/",
+   "summary": "DE STAAT - FREEDOM (Official Music Video) OK well this is a first for me... at 00:44 in this new music video by Dutch alternative rock band De Staat : The visual effects are credited to Matties Grooten of Fake it or Leave it . Via flir on Hacker News Tags: music , ai , generative-ai , pelican-riding-a-bicycle",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-23T03:42+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "5107c05a5a62",
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "link": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+   "summary": "Donating Agent Skills to the Agentic AI Foundation News today from Anthropic: We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, which we co-founded with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP). I'm pleased to note I called this one last December , when Anthropic first declared skills to be an \"open standard\": I…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-23T02:09+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "7cdc17c19251",
+   "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+   "link": "https://github.com/NVIDIA/OpenShell",
+   "summary": "Hacker News 热度:271 分,139 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50198675",
+   "date": "2026-10-23T01:44+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "4a1ad0a6f5a8",
+   "title": "How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage",
+   "link": "https://developer.nvidia.com/blog/how-to-read-data-into-gpu-memory-in-python-with-nvidia-gpudirect-storage/",
+   "summary": "GPU applications are processing ever-growing datasets with increasingly powerful accelerators. According to the 2025 Stanford AI Index, compute for notable AI...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-23T00:39+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "d357653ad528",
+   "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+   "link": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-23T00:11+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "98a2e8dc330c",
+   "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
+   "link": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/",
+   "summary": "AI developers aren’t just running a single model anymore—they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-23T00:00+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "5a7ee4c219c4",
+   "title": "Quoting Armin Ronacher",
+   "link": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
+   "summary": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins. — Armin Ronacher Tags: security , generative-ai , armin-ronacher , ai , ai-security-research , llms",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T23:34+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "751ea67e39b3",
+   "title": "Run full iOS 16.5 firmware on Android Devices",
+   "link": "https://github.com/oosexgang/hackios-xnu-kernel",
+   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 302 # Comments: 117",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50196718",
+   "date": "2026-10-22T23:26+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "c39c9039abab",
+   "title": "Quad9 (DNS Resolver) to Exit France",
+   "link": "https://quad9.net/news/blog/au-revoir-france/",
+   "summary": "Hacker News 热度:945 分,343 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50195959",
+   "date": "2026-10-22T22:32+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "63d52acec1ea",
+   "title": "What’s getting pwned right now",
+   "link": "https://pwn.watch/",
+   "summary": "Hacker News 热度:328 分,152 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50195543",
+   "date": "2026-10-22T22:08+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "d2039dacc238",
+   "title": "eMudhra to exit global SSL/TLS certificate business",
+   "link": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+   "summary": "Hacker News 热度:905 分,617 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50195110",
+   "date": "2026-10-22T21:33+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "ac50d075fd00",
+   "title": "Woman faces six years in prison over Cash App account she never opened",
+   "link": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+   "summary": "Hacker News 热度:432 分,430 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50194833",
+   "date": "2026-10-22T21:11+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "cf2457bd3ac7",
+   "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
+   "link": "https://news.ycombinator.com/item?id=50193416",
+   "summary": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 & CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload. I am truly sorry. I take full responsibility for my actions. It was not remotely my intention to cause any of the subsequent side effects. At the time of posting, I didn't know about any embargo. My contact had told me there was no embargo, and her contact had told her…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50193416",
+   "date": "2026-10-22T18:11+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "b69ed433fdeb",
+   "title": "Jailbreaking the Switch 2",
+   "link": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+   "summary": "Hacker News 热度:691 分,241 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50192536",
+   "date": "2026-10-22T16:01+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "b600f6ebddd7",
+   "title": "Ensemble forecasting with IBM Granite time-series models",
+   "link": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-22T15:51+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "a4fb6ae9fb25",
+   "title": "Vibe your way to $50k: the 2026 Epic AI MegaJam is coming",
+   "link": "https://www.unrealengine.com/news/2026-epic-ai-megajam",
+   "summary": "The 2026 Epic AI MegaJam runs November 12–15. Team up with up to four other humans and as many AI agents as you want to build a playable game in Unreal Engine or UEFN, and compete for cash prizes.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-22T08:00+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "85db1723e1d4",
+   "title": "Meeting you where you work: Inside 200M+ Unity CLI events",
+   "link": "https://unity.com/blog/unity-cli-usage-data-ai-coding-agents",
+   "summary": "Unity CLI usage data from 200 million events: 98% of runs come from AI coding agents and automation. See the top commands, agents, and where it’s used.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-22T08:00+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
+   "id": "2a872d852bb6",
+   "title": "Skipping domain reload: faster iteration using the MethodReload feature",
+   "link": "https://unity.com/blog/skipping-domain-reload-faster-iteration-using-the-methodreload-feature",
+   "summary": "Stop waiting on domain reloads! Learn how MethodReload speeds up Unity iteration time, explore its limitations, and compare it to existing hot reload tools.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-22T08:00+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
   {
    "id": "54b2d3624112",
    "title": "Railway Security Disclosure",
@@ -707,6 +916,17 @@
    "first_seen": "2026-10-20T09:30+08:00"
   },
   {
+   "id": "ea8663b0b1d6",
+   "title": "What Is Gridifcation",
+   "link": "https://musicalform.substack.com/p/what-is-gridifcation",
+   "summary": "Hacker News 热度:384 分,189 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50150163",
+   "date": "2026-10-19T17:13+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
+  },
+  {
    "id": "4c238f3afce7",
    "title": "I built a drone with only one motor [video]",
    "link": "https://www.youtube.com/watch?v=Ndftcft6XhU",
@@ -804,6 +1024,17 @@
    "comments": "https://news.ycombinator.com/item?id=50138531",
    "date": "2026-10-18T14:50+08:00",
    "first_seen": "2026-10-19T08:58+08:00"
+  },
+  {
+   "id": "e143b14d2f3e",
+   "title": "Graphics Programming weekly - Issue 459 - October 18th, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-459/",
+   "summary": "Fast blur with animated radius presents Smol Gaussian, a GPU blur that allows for a smoothly animated radius while staying close to a true Gaussian based on downsample-blur-upsampling with variance-aware kernel sizing, cubic B-spline reconstruction, and bilinear weight pairing compares it against other blurs using interactive examples wayback-archive Vulkanised 2027 and Real-time Shading Language Symposium - Call for submissions Call for submissions is now open for Vulkanised 2027 and the…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-18T12:00+08:00",
+   "first_seen": "2026-10-23T08:03+08:00"
   },
   {
    "id": "31aa4c0b8bad",
@@ -3080,17 +3311,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-08-24T22:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "734e360fcfb3",
-   "title": "Graphics Programming weekly - Issue 452 - August 23rd, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-452/",
-   "summary": "From Research to Recognition: Meet the SIGGRAPH 2026 Student Research Competition Winners highlights winning projects of the SIGGRAPH 2026 Student Research Competition each winner shares the inspiration behind their work, the biggest hurdles they faced, and what’s coming next wayback-archive [video] Synchronization, again... // Vulkan For Beginners #32 explains the new Vulkan Synchronization2 API describes how stage and access masks moved into the VkImageMemoryBarrier2 structure to allow for…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-23T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
