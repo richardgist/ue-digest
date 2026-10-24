@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>订阅源</title><link>https://richardgist.github.io/ue-digest/feeds/</link>
 <description>聚合图形渲染 / 游戏开发 / AI 工具方向的外部 RSS/Atom 订阅源,按时间线排列</description><language>en</language>
-<lastBuildDate>Fri, 23 Oct 2026 15:12:10 +0800</lastBuildDate>
+<lastBuildDate>Sat, 24 Oct 2026 09:12:19 +0800</lastBuildDate>
 <atom:link href="https://richardgist.github.io/ue-digest/feeds/feed.xml" rel="self" type="application/rss+xml"/>
 <item><title>Docker is weird</title><link>https://codeandcake.dev/posts/2026-10-22-docker-is-weird</link><guid isPermaLink="true">https://codeandcake.dev/posts/2026-10-22-docker-is-weird</guid><pubDate>Fri, 23 Oct 2026 07:45:00 +0800</pubDate><category>AI 工具</category><source url="https://richardgist.github.io/ue-digest/feeds/feed.xml">Hacker News 首页(250 分以上)</source><description>Hacker News 热度:369 分,184 条评论</description></item>
 <item><title>LLMs are making formal software verification feasible at a much larger scale</title><link>https://www.anthropic.com/research/formal-verification</link><guid isPermaLink="true">https://www.anthropic.com/research/formal-verification</guid><pubDate>Fri, 23 Oct 2026 06:54:00 +0800</pubDate><category>AI 工具</category><source url="https://richardgist.github.io/ue-digest/feeds/feed.xml">Hacker News 首页(250 分以上)</source><description>Hacker News 热度:292 分,160 条评论</description></item>

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-24",
+  "items": [
+    {
+      "title": "PerfGuard：World Partition 与流送——单元网格、HLOD 构建成本与专用服务器陷阱",
+      "url": "https://getperfguard.com/tutorials/world-partition",
+      "source": "PerfGuard",
+      "published": "原文未标注（锚定 UE 5.0–5.7 演进；文中含 5.6 FastGeo / 5.7 Custom HLOD Actor）",
+      "ue_version": "原文未标注（以 UE5 World Partition 稳定后行为为主；可在 5.8 工程验证）",
+      "summary": "把 WP 建模成按 Actor（OFPA）流送而非整子关卡：运行时网格的 Cell Size 与 Loading Range 决定内存与弹入风险；硬引用会跨格子触发 Grid Promotion，静默放大加载集，应用软引用控制。HLOD 层含 Instancing / MergedMesh / SimplifiedMesh 与 5.7+ Custom HLOD Actor；WorldPartitionHLODsBuilder 需 -AllowCommandletRendering 才能烘焙材质，大地图烘焙易 OOM，宜进 CI。Data Layer 负责叙事/难度/服务器专用内容。专用服务器默认整图常驻：需显式开 wp.Runtime.EnableServerStreaming 与 EnableServerStreamingOut；服务器通常可 wp.Runtime.HLOD.ForceDisable=1。调试用 ToggleDrawRuntimeHash2D/3D、DumpStreamingGenerationLog，Insights Loading Time 抓阻塞加载。",
+      "try_points": [
+        "用 wp.Runtime.ToggleDrawRuntimeHash2D 看加载/卸载格子；有跨区硬引用时改软引用，并用 ShowRuntimeSpatialHashGridLevel 查是否被 Grid Promotion",
+        "HLOD 进 CI：WorldPartitionHLODsBuilder + -AllowCommandletRendering；合并/简化层注意烘焙显存，必要时 SimplifiedMesh 降 VRAM",
+        "多人专用服务器：DefaultEngine.ini 开 EnableServerStreaming=1 与 EnableServerStreamingOut=1，并评估 ForceDisable HLOD；用 Insights Loading Time 查阻塞加载"
+      ],
+      "topics": ["HLOD", "渲染"]
+    },
+    {
+      "title": "PerfGuard：移动端性能深潜——Forward/Deferred 路径、分档预算与真机 profiling",
+      "url": "https://getperfguard.com/tutorials/mobile-performance",
+      "source": "PerfGuard",
+      "published": "原文未标注（锚定 UE 5.5/5.6 移动路径；5.8 默认多通道 Deferred 需自行对照）",
+      "ue_version": "原文未标注（文中以 UE 5.5/5.6 为主；Mobile Deferred/Forward 与 Device Profile 思路适用于现行移动端）",
+      "summary": "移动端三条路径：Mobile Forward（默认、带宽友好）、Mobile Deferred（需 Vulkan/Metal + MobileHDR）、高端机桌面渲染器（约 3× 成本）。瓷砖 GPU 带宽敏感，MobileHDR 把 tile buffer 提到浮点代价大。Draw Call 参考 Epic 每视图 <700，文中给低/中/旗舰约 250/450/700 与三角形量级。r.Mobile.SupportGPUScene 只读，必须写进 DefaultEngine.ini。标准移动路径无 Lumen/Nanite/非 Nanite VSM，实用光照是方向光+CSM、角色动态点光、烘焙/DFAO。强调按 Adreno/Mali/Apple 做 Device Profile 继承、纹理池约设备可用显存 30–40%，以及 Snapdragon Profiler / Arm Performance Studio / Xcode Metal Capture 真机抓帧；并提示 UE 5.6 Mali Vulkan 描述符崩溃需钉版本或 GLES 回退。",
+      "try_points": [
+        "在 DefaultEngine.ini 设好 r.Mobile.ShadingPath / MobileHDR / SupportGPUScene=1（只读，运行时改无效），再按真机对比 Forward vs Deferred",
+        "按低/中/旗舰写 AndroidDeviceProfiles 继承链，限制每视图 Draw Call 与 sg.*，并用动态分辨率兜底低端",
+        "出包前在 Adreno、Mali、Apple 各档真机用厂商 profiler 留基线；若仍跟 5.6 Mali Vulkan 崩溃，钉引擎或对该 SKU 回退 GLES"
+      ],
+      "topics": ["移动端"]
+    },
+    {
+      "title": "2026 年用 UE5 做手游还现实吗？路径选择、可扩展档与商店约束",
+      "url": "https://dev.to/aplusgamesstudio/unreal-engine-5-for-mobile-games-in-2026-realistic-381d",
+      "source": "A Plus Games Studio / DEV Community",
+      "published": "2026-10-20",
+      "ue_version": "原文未标注（讨论 UE5 移动路径；文中引用 5.7 目标 SDK 建议）",
+      "summary": "结论：UE5 适合视觉要求高的中重度、已有 UE 经验或要跨 PC/主机同代码的团队；普通手机走专用移动渲染路径，Lumen/Nanite 面向更高端而非典型机型。建议按市场数据定低/中/高档并做 Scalability，从原型起就在最低档真机测（热节流模拟器看不出）。包体用 Android Play Asset Delivery / iOS On-Demand Resources。文中提醒 Google Play 对新应用/更新要求 target Android 16（API 36），Epic 对 5.7 曾建议 target SDK 35，发版前需核对当前引擎工具链。变现侧 UE 官方 SDK 少于 Unity；清单强调先定最低机、不依赖 Nanite/Lumen 做主路径、提前规划分包。",
+      "try_points": [
+        "立项先定最低档真机与帧率，核心循环在该机上跑通再扩美术",
+        "主路径按移动 Forward/Deferred + LOD/合批/烘焙光设计，把 Nanite/Lumen 留作高端机可选",
+        "发版前核对当前 UE 版本能否满足商店 target API，并用 PAD/ODR 拆包体"
+      ],
+      "topics": ["移动端"]
+    }
+  ]
+}
