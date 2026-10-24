@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24",
+  "items": [
+    {
+      "title": "Claude Code 2.1.310：Monitor 工具与企业云会话权限",
+      "url": "https://code.claude.com/docs/en/changelog",
+      "source": "Claude Code Docs",
+      "published": "2026-10-23",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "官方 changelog 记载 2.1.310（2026-10-23）新增 Monitor 工具，并在 Bedrock、Vertex、Foundry 以及关闭遥测/非必要流量时也可用；长前台 sleep 在那些环境下会被拦截。企业自定义角色可分别控制 Claude Code 云会话与 Remote Control。另有云环境从文件加载 setup script、MCP 超时未应答时的错误提示改写，以及多项 VS Code / 云会话 / Code Review 修复。本人未在本机实测 Monitor。",
+      "why_useful": "长时间挂 agent 或企业管云会话时，可对照 Monitor 与角色权限，少踩「以为能监控其实没开」的坑。",
+      "try_it": "升级到 2.1.310 后看 changelog 里 Monitor 条目；企业管理员在自定义角色里核对云会话 / Remote Control 开关。"
+    },
+    {
+      "title": "Mobile-4DGS：移动端统一静态与动态实时高斯溅射",
+      "url": "https://arxiv.org/abs/2610.05289",
+      "source": "arXiv",
+      "published": "原文未标注具体投稿日（arXiv id 2610.05289）",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "论文提出 Mobile-4DGS：用蒙特卡洛镜面能量聚合把高阶 SH 压到一阶并在推理前 bake Attribute-Conditioned SH 偏移；多视角 alpha densify/prune 控制点数；动态侧用显式二阶运动 + 可学习静/动二分，配合 Depth-Order Certificate 复用深度排序。作者报告在 Snapdragon 8 Gen 3（静态）与 iPhone 14/A15（动态 N3DV）上可达实时，并给了相对 Mobile-GS / OMG4 等的表格数字；代码与 WebGL 演示见项目页。以上性能与质量数字均为作者自报，本人未独立复现。",
+      "why_useful": "若你在跟移动端/Web 高斯或 4D 回放，这篇把「压缩外观 + 少排深度」写进同一套表示，可对照工程折中。",
+      "try_it": "先打开 https://xiaobiaodu.github.io/mobile-4dgs-project/ 用手机浏览器拖场景；再读摘要与 Table II–IV。"
+    },
+    {
+      "title": "UE 5.8.4 默认改用 UIScene：iOS 前后台回调可能静默失效",
+      "url": "https://indietooling.com/posts/unreal-5-8-4-ios-uiscene",
+      "source": "Indie Tooling",
+      "published": "2026-10-21",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Indie Tooling 根据 Epic 5.8.4 热修说明：iOS/iPadOS/tvOS 客户端默认改用 Apple UIScene 生命周期。一旦采用 scene，UIKit 不再调用旧 app delegate 的 become/resign active、进后台/回前台等方法，即使代码仍实现它们——暂停、静音、存档、广告/归因 SDK 刷新若挂在自定义 delegate 或第三方插件上，可能不崩溃只是不跑。文中建议分支升级、全仓搜旧回调名、向插件厂商确认、真机测来电/锁屏/控制中心。另复述热修里 VS2026 .slnx、新 Apple 机型 profile、Lumen SceneCapture 等项。官方帖是否提供切回旧行为的项目设置，文中称未写明。",
+      "why_useful": "昨天精选已覆盖 5.8.4 热修清单；这篇把「上架苹果机前必须测的那一行」拆成可执行检查表。",
+      "try_it": "在分支升 5.8.4；搜 applicationDidBecomeActive 等四个旧方法；真机后台再回前台核对暂停与存档。"
+    },
+    {
+      "title": "Cursor CLI v2026.10.22：更新已有云环境与更稳的子 agent / 规则",
+      "url": "https://cursor.com/docs/cli/changelog",
+      "source": "Cursor Docs",
+      "published": "2026-10-22",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "官方 CLI changelog 的 v2026.10.22：可用 agent env deploy --env <公开 ID> 把环境文件重新部署到已有 Cloud Agent 环境（保留名称与仓库列表）。自托管 worker 改按登录所选 team 注册；自定义子 agent 若钉死的模型被团队禁用/需 Max/不可用，会回落到父 agent 模型并在结果里注明。编辑子目录文件时会带上该目录的 AGENTS.md 与嵌套 always-apply 规则。另有后台摘要保留、MCP 单工具坏掉不再拖垮整服、Windows PowerShell UTF-8 等修复。本人未逐项复测。",
+      "why_useful": "日常用 CLI 云环境或嵌套规则时，少踩「环境只能新建」「子目录规则不生效」这类摩擦。",
+      "try_it": "agent update 升到含 2026.10.22 的版本；agent env list 后对已有环境试 agent env deploy --env <id>。"
+    },
+    {
+      "title": "IndieBots：可上架售卖视角的游戏 AI 工具目录（52 款）",
+      "url": "https://indiebots.ai/",
+      "source": "IndieBots",
+      "published": "2026-10-23（页脚 Last checked）",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "IndieBots 汇总面向 Unreal / Unity / Godot / Blender 的 AI 工具（自称 52 个），按代码与引擎、角色动画、美术、音效、剪辑推广、测试上架分组，并对照各厂商许可页标注价格、引擎版本与「能否把生成内容拿去卖」。页脚写明上次核对 2026-10-23。站点为第三方汇编，具体许可以各工具官网为准；部分条目带联盟链接标注。",
+      "why_useful": "选型「写蓝图/出资产/做 NPC」类 AI 时，先按「能不能上架」筛一遍，少读完文档才发现免费档不能商用。",
+      "try_it": "打开 https://indiebots.ai/ 按引擎筛一遍；点进候选工具的 Details 核对许可原文再决定试用。"
+    }
+  ]
+}

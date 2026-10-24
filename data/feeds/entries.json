@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T15:11+08:00",
+ "updated": "2026-10-24T09:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-23T15:11+08:00",
-   "last_new": 0
+   "checked": "2026-10-24T09:57+08:00",
+   "last_new": 3
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,17 +62,17 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
    "topic": "游戏开发",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 403: Forbidden",
+   "ok": true,
+   "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-23T15:11+08:00",
-   "last_new": 1
+   "checked": "2026-10-24T09:57+08:00",
+   "last_new": 3
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-23T15:11+08:00",
-   "last_new": 0
+   "checked": "2026-10-24T09:57+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,7 +98,7 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-23T15:11+08:00",
+   "checked": "2026-10-24T09:57+08:00",
    "last_new": 6
   },
   "Hugging Face Blog": {
@@ -107,11 +107,143 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-23T15:11+08:00",
-   "last_new": 0
+   "checked": "2026-10-24T09:57+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "a9380d6cca87",
+   "title": "Quick Study",
+   "link": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+   "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection , with no external libraries beyond Google Fonts. Tags: tools",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-24T05:35+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "aa9706009567",
+   "title": "Introducing Kimi K3.1 Pro",
+   "link": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+   "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own benchmarks show…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-24T03:40+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "8d6a946b6958",
+   "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+   "link": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+   "summary": "Hacker News 热度:276 分,144 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50214218",
+   "date": "2026-10-24T03:34+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "223d4028074f",
+   "title": "GameMaker's GMRT runtime will soon be free for all developers",
+   "link": "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
+   "summary": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-24T01:51+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "f353c9a11218",
+   "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2",
+   "link": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/",
+   "summary": "The Global Performance Tuner is a feature for automatic performance tuning released in NVIDIA TensorRT 11.1. It provides automatic, accuracy-aware and...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-24T01:27+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "900caa3909a9",
+   "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 1",
+   "link": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1/",
+   "summary": "Deploying a trained neural network involves more than translating each operator into a GPU kernel. It is a compilation problem with many legitimate answers. For...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-24T01:27+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "a414001e9e8e",
+   "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+   "link": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+   "summary": "https://www.kimi.com/code/docs/en/kimi-code/models.html https://artificialanalysis.ai/models/kimi-k3-1-pro https://www.modelcompare.ai/blog/china-open-source-ai Comments URL: https://news.ycombinator.com/item?id=50212065 Points: 723 # Comments: 458",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50212065",
+   "date": "2026-10-24T00:59+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "81325c0b23fc",
+   "title": "Today, we hacked what we'd set out to hack: the iPhone",
+   "link": "https://blog.calif.io/p/iphone",
+   "summary": "Hacker News 热度:747 分,501 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50211474",
+   "date": "2026-10-24T00:21+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "57eca9a71eff",
+   "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+   "link": "https://huggingface.co/blog/allenai/litpivot",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-24T00:15+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "d227b515c4f5",
+   "title": "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation",
+   "link": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/",
+   "summary": "Teaching a robot to navigate an obstacle course requires more than a walking policy. It must perceive its surroundings, maintain balance, and adjust its actions...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-23T22:58+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "ceb8361e36bb",
+   "title": "Apple Music 404 Not Found",
+   "link": "https://music.apple.com/this-url-doesnt-exist",
+   "summary": "https://www.macrumors.com/2026/10/23/apple-music-has-a-hidde... Comments URL: https://news.ycombinator.com/item?id=50207910 Points: 591 # Comments: 191",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50207910",
+   "date": "2026-10-23T20:28+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "442270c4bd29",
+   "title": "Does Your Model Run on AWS Trainium? Look It Up",
+   "link": "https://huggingface.co/blog/torch-neuronx-model-support",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-23T08:00+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
   {
    "id": "0d6cfc3f69d0",
    "title": "Docker is weird",
@@ -124,6 +256,17 @@
    "first_seen": "2026-10-23T15:11+08:00"
   },
   {
+   "id": "b9c2471b6fee",
+   "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+   "link": "https://edjefferson.com/localwiki/",
+   "summary": "Hacker News 热度:1244 分,225 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50202285",
+   "date": "2026-10-23T07:01+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
    "id": "ca664c9883d6",
    "title": "LLMs are making formal software verification feasible at a much larger scale",
    "link": "https://www.anthropic.com/research/formal-verification",
@@ -133,6 +276,17 @@
    "comments": "https://news.ycombinator.com/item?id=50202217",
    "date": "2026-10-23T06:54+08:00",
    "first_seen": "2026-10-23T15:11+08:00"
+  },
+  {
+   "id": "58c7f4d11674",
+   "title": "Canadians are running out of time to oppose Bill C-22",
+   "link": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
+   "summary": "Hacker News 热度:331 分,167 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50202114",
+   "date": "2026-10-23T06:43+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
   },
   {
    "id": "1b261e3caa9e",
@@ -155,6 +309,17 @@
    "comments": "https://news.ycombinator.com/item?id=50201259",
    "date": "2026-10-23T05:24+08:00",
    "first_seen": "2026-10-23T09:01+08:00"
+  },
+  {
+   "id": "7e7d2324869f",
+   "title": "Opinion: Why words matter when we prioritize 'core teams' in game development",
+   "link": "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs",
+   "summary": "How we describe game development will inevitably shape our processes.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-23T04:33+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
   },
   {
    "id": "462941766bf8",
@@ -267,6 +432,17 @@
    "first_seen": "2026-10-23T08:03+08:00"
   },
   {
+   "id": "2de9f56ae06f",
+   "title": "VR pioneer Owlchemy Labs jumps to XR for its next release",
+   "link": "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
+   "summary": "Owlchemy Labs' new game Hyper Visor will be a launch title for HTC's XREAL Aura headset.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-22T22:37+08:00",
+   "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
    "id": "c39c9039abab",
    "title": "Quad9 to exit France",
    "link": "https://quad9.net/news/blog/au-revoir-france/",
@@ -358,7 +534,7 @@
    "id": "7dbfe4927012",
    "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
    "link": "https://simedw.com/2026/10/21/world-model-terminal/",
-   "summary": "Hacker News 热度:526 分,164 条评论",
+   "summary": "Hacker News 热度:613 分,184 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50190363",
@@ -3171,17 +3347,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "05f192c5d28a",
-   "title": "Meta VR Glasses are coming. Build with Unity from day one.",
-   "link": "https://unity.com/blog/build-for-meta-vr-glasses-with-unity",
-   "summary": "Unity 6.6 adds day-one support for Meta VR Glasses development: build with OpenXR, XR Interaction Toolkit, XR Hands, eye tracking, and quad views rendering.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-24T08:00+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
    "id": "969056aabaca",
    "title": "TT Games brings Gotham City to life in LEGO Batman: Legacy of the Dark Knight",
    "link": "https://www.unrealengine.com/developer-interviews/tt-games-brings-gotham-city-to-life-in-lego-batman-legacy-of-the-dark-knight",
@@ -3377,17 +3542,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-08-26T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "7656ea4dc88b",
-   "title": "Fixing high polling rate mice on Windows in Godot",
-   "link": "https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/",
-   "summary": "At long last, a performance issue with high polling rate mice on Windows has been fixed. This article describes how the fix works, and why it's so important today.",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-08-24T22:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
