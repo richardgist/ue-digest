@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-25",
+  "items": [
+    {
+      "title": "Arm：Opacity Micromap 降低植被光追阴影成本（Mali G2 + Moku，最高约 +31% FPS）",
+      "url": "https://developer.arm.com/community/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/reducing-ray-traced-shadow-costs-for-foliage-with-omm-moku-results-on-arm-mali-g2",
+      "source": "Arm Community",
+      "published": "2026-10-22",
+      "ue_version": "基于 UE 5.6.1（自 NvRTX 分支改 Vulkan/移动端；引擎默认不支持 OMM，需定制）",
+      "summary": "Arm 用 UE 样例 Moku 在 Mali G2 上评估 Opacity Micromap：把 alpha 遮罩植被的不透明度烘焙进加速结构，减少光追过程中的 any-hit/材质求值。七组参考机位 Off→On FPS 约 +5.9%～+31%（Ref2 最高）；Streamline 匹配负载下非不透明三角命中近乎归零、RTU active 约 −66.8%，内存带宽变化很小。文中说明 MegaLights 在 SM5 RQ 路径上缺材质求值会导致植被影缺失，并给出 EvaluateMaterialMode 0/1/2 与细分预览流程；强调需改引擎，非开箱即用。",
+      "try_points": [
+        "仅在有 Mali G2 + 可改引擎（或 NvRTX 衍生）时跟进；先对照文中 Ref10 OMM Off/On 与 Streamline 计数",
+        "试 r.MegaLights.HardwareRayTracing.EvaluateMaterialMode 0（纯 OMM）与 2（未知态再材质求值），用 Static Mesh Editor 预览细分级，选「刚好保轮廓」的最低级",
+        "Arm 路径优先 FastBuild；比较 Off/On 时保持构建偏好一致，避免把建加速结构差异算进 OMM 收益"
+      ],
+      "topics": ["移动端", "渲染"]
+    },
+    {
+      "title": "UE 5.8：MegaLights + GI Medium 下骨骼网格丢阴影（社区可复现修复）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-skeletal-meshes-lose-shadows-with-megalights-at-gi-medium-fix/2840756",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-15",
+      "ue_version": "UE 5.8",
+      "summary": "帖主指出 5.8 在 Global Illumination Medium 预设中关闭了骨骼网格的 Ray Tracing Geometry 与 Mesh Card 表示；开启 MegaLights 后角色不投影（推测默认阴影路径被替换后无可用回退）。会话内临时修复：控制台设 r.RayTracing.Geometry.SkeletalMeshes 1 与 r.MeshCardRepresentation.SkeletalMesh 1。永久修复：改 Engine/Config/BaseScalability.ini 的 [GlobalIlluminationQuality@1] 将上述两项从 0 改为 1。作者提醒这两项被关掉多半为省性能，重开会抬 CPU/GPU 成本。",
+      "try_points": [
+        "先在控制台临时打开两项确认阴影回来，再决定是否改 BaseScalability.ini",
+        "对照同一场景 GI High vs Medium + MegaLights，确认是否仅 Medium 复现",
+        "改 ini 后用 Insights/stat gpu 量骨骼表示重开的开销，再写入项目 Scalability"
+      ],
+      "topics": ["渲染"]
+    },
+    {
+      "title": "UE 5.8.4 热修：Lumen+SceneCapture 每帧清空间接光 atlas，以及 ASD SODB 工具",
+      "url": "https://forums.unrealengine.com/t/5-8-4-hotfix-released/2842775",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-20",
+      "ue_version": "UE 5.8.4",
+      "summary": "官方热修说明：修复 SceneCapture2D 渲染材质时 Lumen 间接光 atlas 被每帧误清空的回归；Path Tracer 补部分 Substrate 材质的 specular profile；改进 D3D12 enhanced barriers。ASD 侧支持用 ASDTool 从已 cook 游戏为 compute shader 与捆绑 PSO 生成 SODB，并附本地编译/注册测试工具。另有 VS2026 .slnx 识别、多项崩溃修复。已知问题 UE-401568：PCG Editor Mode 画笔不实时更新。跟帖有用户报告 HDR 崩溃、升级后多占约 3GB RAM 等，官方帖未宣称已解决。",
+      "try_points": [
+        "若 5.8.3 上 Lumen 搭配 SceneCapture2D 出现间接光闪空，升到 5.8.4 做前后对照",
+        "需要 Advanced Shader Delivery 时按帖内文档链接试 ASDTool 从 cook 产物生成 SODB",
+        "升级后留意内存与 HDR；PCG 画笔若卡住可先做任意其他操作触发刷新（已知问题变通）"
+      ],
+      "topics": ["渲染"]
+    }
+  ]
+}

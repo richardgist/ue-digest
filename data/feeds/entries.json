@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T09:57+08:00",
+ "updated": "2026-10-25T09:25+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-24T09:57+08:00",
-   "last_new": 3
+   "checked": "2026-10-25T09:25+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-24T09:57+08:00",
-   "last_new": 3
+   "checked": "2026-10-25T09:25+08:00",
+   "last_new": 0
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-24T09:57+08:00",
+   "checked": "2026-10-25T09:25+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-24T09:57+08:00",
-   "last_new": 2
+   "checked": "2026-10-25T09:25+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-24T09:57+08:00",
-   "last_new": 6
+   "checked": "2026-10-25T09:25+08:00",
+   "last_new": 7
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,88 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-24T09:57+08:00",
-   "last_new": 2
+   "checked": "2026-10-25T09:25+08:00",
+   "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "c7ed4b828f98",
+   "title": "Show HN: Steal My Bitcoin",
+   "link": "https://stealmybitcoin.com/",
+   "summary": "Made this because I'm curious if anyone out there has figured out how to actually use this PHP RCE we spent the last few days panicking over. Have fun! Comments URL: https://news.ycombinator.com/item?id=50224916 Points: 388 # Comments: 233",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50224916",
+   "date": "2026-10-25T04:30+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "d49afc987040",
+   "title": "No signs of AI payoff outside the tech sector",
+   "link": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+   "summary": "Hacker News 热度:470 分,457 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50224463",
+   "date": "2026-10-25T03:47+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "d50496f98ca3",
+   "title": "Roku developer repositories moved from GitHub to GitLab",
+   "link": "https://blog.roku.com/developer/gitlab-move",
+   "summary": "Hacker News 热度:256 分,167 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50222622",
+   "date": "2026-10-25T00:06+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "00b068f23e81",
+   "title": "I don't understand quantum physics (2018)",
+   "link": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
+   "summary": "Hacker News 热度:278 分,209 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50219666",
+   "date": "2026-10-24T17:53+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "102a0fe27658",
+   "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
+   "link": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+   "summary": "Hacker News 热度:274 分,137 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50219177",
+   "date": "2026-10-24T16:06+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "53025e7fb74e",
+   "title": "battledrones v14: Compass Rose, a four player map",
+   "link": "https://simonwillison.net/2026/Oct/24/battledrones/",
+   "summary": "Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Here's the initial prompt I used: Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works with the WebSocket non-audio based multiplayer mode so up to four human players can join (any spare slots use AI) Claude Opus 5.5 added a new map called \"Compass Rose\" and modified the WebSockets multiplayer network code…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-24T11:59+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "a2fa1fdbff72",
+   "title": "Twelve years of distributed SQLite",
+   "link": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+   "summary": "Hacker News 热度:365 分,62 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50217500",
+   "date": "2026-10-24T09:16+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
+  },
   {
    "id": "a9380d6cca87",
    "title": "Quick Study",
@@ -259,7 +336,7 @@
    "id": "b9c2471b6fee",
    "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
    "link": "https://edjefferson.com/localwiki/",
-   "summary": "Hacker News 热度:1244 分,225 条评论",
+   "summary": "Hacker News 热度:1548 分,243 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50202285",
@@ -584,6 +661,17 @@
    "comments": "https://news.ycombinator.com/item?id=50188228",
    "date": "2026-10-22T05:58+08:00",
    "first_seen": "2026-10-22T09:27+08:00"
+  },
+  {
+   "id": "069c7539a505",
+   "title": "Physicists trap a single antimatter particle for a month",
+   "link": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
+   "summary": "Hacker News 热度:277 分,80 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50186450",
+   "date": "2026-10-22T03:40+08:00",
+   "first_seen": "2026-10-25T09:25+08:00"
   },
   {
    "id": "b6b7083a4edc",
@@ -3333,17 +3421,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-27T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "7f03451e82f1",
-   "title": "How RUST LTD built the deep firearm simulation for Hot Dogs, Horseshoes & Hand Grenades 2",
-   "link": "https://unity.com/blog/rust-ltd-hot-dogs-horseshoes-hand-grenades-2",
-   "summary": "Rust LTD rebuilt Hot Dogs, Horseshoes & Hand Grenades 2 from scratch in Unity – ECS ballistics, custom firearm physicals, Quest 3 frame budget, and Editor tooling.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-25T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
