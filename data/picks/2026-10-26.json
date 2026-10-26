@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-26",
+  "items": [
+    {
+      "title": "RTX Remix 1.6：DLSS 神经渲染、稀疏渲染与最多 6× 插帧",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/rtx_remix/latest/docs/changelog/remix-releasenotes.html",
+      "source": "NVIDIA RTX Remix Docs",
+      "published": "2026-10-23",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "官方 Release Notes 记载 RTX Remix 1.6（2026-10-23）：集成 DLSS 3D-Guided Neural Rendering 与 Toolkit 内实时艺术控制，并加入 Frame Generation 的 beta Performance Mode（Preset C）；新增均匀稀疏渲染（compact GBuffer + DLSS Ray Reconstruction）及采样率控制；支持最高 5×/6× Multi Frame Generation；OpenEXR/HDR 天空盒可直接摄入而不经 8-bit 中间转换。平台侧最低驱动升至 616.92，并提供 Windows on ARM 运行时与 ARM64 构建产物；MCP 默认端点从 SSE `http://127.0.0.1:8000/sse` 改为 Streamable HTTP `http://127.0.0.1:18014/mcp`（破坏性变更，旧客户端需改配置）。另含 ComfyUI 2.0 资产工作流、无头 Toolkit/agent skill，以及 Minecraft Java 1.21.1 Fabric 的 beta 集成。部分帧率/社区测试数字为厂商或社区自报，本人未独立复测。",
+      "why_useful": "做经典游戏光追重制或 Remix 模组时，1.6 把神经渲染、稀疏渲染与更高倍率插帧一次补齐，并要注意 MCP 端点迁移。",
+      "try_it": "升到 Remix 1.6 与驱动 ≥616.92；若用 agent/MCP，把客户端指到 http://127.0.0.1:18014/mcp；有支持硬件可试 Sparse Rendering 与 FG Preset C。"
+    },
+    {
+      "title": "Roblox Custom Terrain Materials 正式可发布：最多 62 种自定义地形材质",
+      "url": "https://devforum.roblox.com/t/full-launch-publish-games-with-custom-terrain-materials-and-performance-improvements/4950620",
+      "source": "Roblox Developer Forum",
+      "published": "2026-10-22",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Roblox 宣布 Custom Terrain Materials 与首批地形渲染/存储/分发优化已退出 Early Access，可正式发布供全平台游玩。Workspace 将 Expanded Terrain 设为 Enabled 后，最多可定义 62 种可编辑地形材质（Water/Air 只读未计入）。官方称一项基准中 CPU 内存开销约降 90%、meshing 延迟约降 45%（厂商自报）。帖内注明发布后曾发现部分 iOS 客户端地形流送崩溃，称已修复并将随后续版本下发。已知限制含：自定义物理属性尚未作用于自定义地形槽；小于 16 voxel 厚的地形在小流送半径下可能在客户端消失等。",
+      "why_useful": "做大世界/多生物群系地形时，终于能上线自定义材质，并对照官方基准看负载与发布体积是否划算。",
+      "try_it": "Studio 更新重启 → Workspace → Expanded Terrain = Enabled → 保存后重开；用 Terrain Material Manager 加材质并真机/多端测流送。"
+    },
+    {
+      "title": "TensorRT 11.1 Global Performance Tuner：可定制 build route 的端到端调优",
+      "url": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-10-23",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "NVIDIA 技术博客（Part 1，2026-10-23）介绍 TensorRT 11.1 的 Global Performance Tuner：把编译建模为「builder 生成候选解 + searching 在精度约束下选最快可行解」，并用可定制 build route 扩大解空间；三原则是 accuracy-aware tuning、customizable build routes、从大解空间中选满足数值容差的最快引擎。文中强调单一启发式难以覆盖多样化模型/部署环境，以及本地 kernel 剖析与端到端引擎耗时可能不一致。本人未在本机用 11.1 实测该 Tuner。",
+      "why_useful": "本地/游戏侧推理若卡在「默认调度对自家模型不优」，可对照这套框架决定是否打开 Tuner 并读官方配置文档。",
+      "try_it": "读文末 Global Performance Tuner 文档与 Part 2；在 TensorRT 11.1 上对目标 ONNX 开 Tuner，对比默认 route 的延迟与精度。"
+    },
+    {
+      "title": "Codex CLI 0.164：十个编号 /presets 槽与内联 /model、/permissions",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+      "source": "openai/codex GitHub Releases",
+      "published": "2026-10-23",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "官方 Release 0.164.0（标注 23 Oct）：可用十个编号 `/presets` 槽保存可复用提示词与 slash 命令，并用键盘菜单快速调用；`/model` 与 `/permissions` 支持内联参数直接设模型、推理力度、速度与权限配置。另含全屏 transcript 的 Kitty/Sixel 图片预览、企业 MCP 可用 Codex 账号授权、远程 Bash/Zsh 会话中凭证掩码，以及 Bedrock 安装向导默认开启等。压缩失败不再留下半截摘要；恢复会话可找到压缩历史。本人未在本机逐项实测 presets。",
+      "why_useful": "每天重复的「审 diff / 跑测试 / 写提交说明」可收成编号预设，少反复粘贴长提示。",
+      "try_it": "升到 0.164.0 后开 `/presets` 建一条常用审查提示，再试 `/model` 内联切模型。"
+    },
+    {
+      "title": "UE 5.8 性能精选：Lumen Lite、MegaLights 与 Insights 注解/卡顿快照",
+      "url": "https://tomlooman.com/unreal-engine-5-8-performance-highlights/",
+      "source": "Tom Looman",
+      "published": "约 2026-08-27（文末 Updated）",
+      "category": "效率",
+      "direction": "图形渲染",
+      "summary": "Tom Looman 梳理 UE 5.8 与性能相关的变更：Lumen Lite 作为 Medium GI（相对 High 约 2× 更快，面向掌机/低端 PC，文档仍标 Beta）；MegaLights 生产可用并减少非半影区重复追光等；Insights 可加时间/区间注解并 sidecar.ini 分享，以及 `snapshothitches` 在卡顿时写 trace 快照与截图。另覆盖 Nanite 手持端光栅/剔除、World Partition Spatial Profiler、HLOD 编辑器可见性大幅加速（文中 CitySample 数字为作者引用）等。文末标注 Updated: August 27, 2026；内容基于官方发布说明加作者注释，非独立基准。",
+      "why_useful": "升 5.8 或做可扩展性档时，比通读整份 Release Notes 更快定位「该开 Lite / 该开 Insights 注解」的入口。",
+      "try_it": "把 GI/Reflection 调到 Medium 看 Lumen Lite；Insights 里试注解；控制台 `snapshothitches -start` 抓一次卡顿目录。"
+    }
+  ]
+}

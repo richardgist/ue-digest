@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T09:25+08:00",
+ "updated": "2026-10-26T09:47+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-25T09:25+08:00",
-   "last_new": 0
+   "checked": "2026-10-26T09:47+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-25T09:25+08:00",
-   "last_new": 1
+   "checked": "2026-10-26T09:47+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-25T09:25+08:00",
-   "last_new": 7
+   "checked": "2026-10-26T09:47+08:00",
+   "last_new": 6
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,77 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-25T09:25+08:00",
+   "checked": "2026-10-26T09:47+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "9eec27bbc0ce",
+   "title": "Dolly Parton's Imagination Library",
+   "link": "https://imaginationlibrary.com/",
+   "summary": "With today's news, I thought I'd share this great program: “When I was growing up in the hills of East Tennessee, I knew my dreams would come true. I know there are children in your community with their own dreams. They dream of becoming a doctor or an inventor or a minister. Who knows, maybe there is a little girl whose dream is to be a writer and singer. The seeds of these dreams are often found in books and the seeds you help plant in your community can grow across the world.” Comments URL…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50234474",
+   "date": "2026-10-26T02:23+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "8240848664ce",
+   "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+   "link": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
+   "summary": "Hacker News 热度:383 分,96 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50234232",
+   "date": "2026-10-26T02:04+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "70ff3853da67",
+   "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+   "link": "https://talkweb.eu/openweb/4558/",
+   "summary": "Hacker News 热度:385 分,191 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50233929",
+   "date": "2026-10-26T01:30+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "373122b56953",
+   "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+   "link": "https://lynchlab.net/llm-skin-cancer",
+   "summary": "Hacker News 热度:429 分,206 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50233779",
+   "date": "2026-10-26T01:15+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "b5d081c09bbc",
+   "title": "Godot XR Community Game Jam VI",
+   "link": "https://godotengine.org/article/godot-xr-update-oct2026/",
+   "summary": "Results of the sixth Godot XR Community Game Jam.",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-25T20:00+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "deeaf140169e",
+   "title": "We should be more ambitious with the software we build",
+   "link": "https://danluu.com/ambitious/",
+   "summary": "Hacker News 热度:742 分,692 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50225695",
+   "date": "2026-10-25T05:47+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
+  },
   {
    "id": "c7ed4b828f98",
    "title": "Show HN: Steal My Bitcoin",
@@ -166,6 +232,17 @@
    "comments": "https://news.ycombinator.com/item?id=50219177",
    "date": "2026-10-24T16:06+08:00",
    "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "ac0cf9d445e9",
+   "title": "Root shell on Samsung TV",
+   "link": "https://twitter.com/log4j/status/2113014142600953868?s=46",
+   "summary": "Merged threads: \"Samsung running a TensorFlow lite model on 960x540 image to track you\": https://twitter.com/mike64_t/status/2114150399406202896 \"Samsung TVs look for microphones in your house via Bluetooth and then spy events\": https://twitter.com/freddier/status/2114042326758867453 Comments URL: https://news.ycombinator.com/item?id=50218633 Points: 769 # Comments: 582",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50218633",
+   "date": "2026-10-24T13:49+08:00",
+   "first_seen": "2026-10-26T09:47+08:00"
   },
   {
    "id": "53025e7fb74e",
@@ -3608,17 +3685,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-27T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "95a9aed2bb37",
-   "title": "Dev snapshot: Godot 4.8 dev 4",
-   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-4/",
-   "summary": "4.8 development is now in full force!",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-08-26T20:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
