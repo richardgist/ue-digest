@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-26",
+  "items": [
+    {
+      "title": "Unreal Fest Shanghai：高通×Epic 移动端 Lumen Lite / MegaLights，骁龙演示 60FPS·整机功耗<5W",
+      "url": "https://www.itheat.com/view/64156.html",
+      "source": "热点科技 / ITheat（转述 Unreal Fest Shanghai 2026 高通演讲；另有新浪科技全文实录）",
+      "published": "2026-10-23",
+      "ue_version": "UE 5.8（Lumen Lite 为测试阶段；高通基于 5.8 定制移动延迟渲染器路径）",
+      "summary": "10月22日 Unreal Fest Shanghai 上，高通工程技术副总裁张珩介绍与 Epic 在移动图形上的最新合作：Epic 在 5.8 加入约 2× 于高质量模式的 Lumen Lite；Snapdragon Gaming Studios 基于 5.8 定制引擎，使 Lumen 可在移动延迟渲染器上运行，并针对 Adreno 做半精度着色、管线空泡、距离场更新、去噪与调度优化。演示条件下第六代骁龙8超级至尊版跑 Lumen 可达 60FPS、整机功耗低于 5W；完美世界《异环》展示霓虹城市场景的移动端 Lumen。MegaLights 演示同平台每帧超过 3100 个动态光源（Sanctuary demo）。另介绍 Adreno Neural Fusion（AI 超分/帧生成）与虚幻引擎插件，以及开发者联盟支持。文中强调数字为演示条件，实机仍受分辨率、温控与场景复杂度约束。",
+      "try_points": [
+        "旗舰 Android +  deferred 路径上评估 Lumen Lite / 定制引擎能力时，先对照原文功耗与帧率前提，再在目标机上用同一场景做 A/B（开/关 Lumen）",
+        "开放世界夜景/室内外过渡项目：对照《异环》案例看间接光与反射是否值得进高端机 Scalability，中低端仍保留烘焙或更简 GI",
+        "需要大量动态阴影灯时了解 MegaLights 移动演示上限；量产前用真机热节流与续航压测，不要把演示的 3100 灯数直接当预算"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "Inside Unreal：UE 5.8 移动工作流现状——Landscape 可扩展 LOD、Substrate、PCG/PVE、MetaHuman 与 Insights 真机 profiling",
+      "url": "https://www.youtube.com/watch?v=2OCeuCj0swQ",
+      "source": "Inside Unreal（Epic；嘉宾 Paul Georges / Arvind Neelakantan / Ari Arnbjörnsson）",
+      "published": "2026-10-16",
+      "ue_version": "UE 5.8",
+      "summary": "约两小时直播拆解 5.8 移动工作流。Arvind 从空白关卡现场演示跨端可复用做法：Landscape 开启 Use Scalable LOD Settings 按设备覆盖 LOD0 屏占比以降移动端三角；默认 Mobile Deferred 下用立方体贴图 Skylight（关实时捕获）、CSM 替代距离场阴影、Substrate 景观材质配合 Feature Level Switch 与导出烘焙权重贴图以在移动端复现笔刷层；PCG Hierarchical Generation + 分区 + Instance End Cull Distance；PVE 树导出注意体素化在移动预览上的观感并用 Minimum LOD 覆盖；MetaHuman 用 UE Optimized/Medium 装配。Ari 讲 Android 上 Insights：ADB 启动参数 / UECommandLine.txt、Wi-Fi·USB·落盘三种传 trace，以及 memory 符号加载。Paul 覆盖 multipass deferred 默认、iOS SM6 桌面渲染器实验、原生手势、文档与原生 profiling 页、UFN 触摸与 MCP 等。",
+      "try_points": [
+        "开放世界跨端：先给 Landscape 开 Use Scalable LOD Settings，在 Android Mid 预览对照 stat landscape 的 processed triangles",
+        "Substrate 景观要上手机：用 Feature Level Switch，移动默认路径改走导出的 layer weight PNG，而不是指望 Landscape Layer Weight 直接进包",
+        "真机抓 Insights：先写好 ADB am start … -e cmdline \"-trace=default,task -tracehost=<PC>\" 的 bat；USB 优先用 USB3 线并视需要开 ADB burst mode"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "Tokyo DevDays 26'：跨平台图形 Scalability——Lumen Lite、Nanite Fallback、移动 Multipass Deferred 与 Diffuse Ambient Capture",
+      "url": "https://image.docswell.com/s/EpicGamesJapan/ZDM79W-DevDays26-Scalability",
+      "source": "Epic Games Japan（Unreal Engine Tokyo Dev Days 26' 演讲幻灯；篠山範明）",
+      "published": "2026-08-31",
+      "ue_version": "UE 5.8",
+      "summary": "正式发布日期早于近两周窗口（幻灯 2026-08-31 / 演讲 08-26），因近几日缺少同等深度的跨端渲染策略新文而扩窗收录。系统讲解 BaseScalability.ini 与 DeviceProfiles 分层、失败案例（仅 PC 测、用 PC 代替主机、只测最高端机）与成功案例（以最低规格为基准）。桌面渲染器侧覆盖 Lumen Lite（Irradiance Field Gather，约 2× 快；Medium 反射退 SSR）、Lite 仍贵时的 DFAO / 调 Skylight / Stationary 灯烘焙并用、Nanite 关时的 Fallback Mesh 与 Mesh Streaming、VSM→CSM、MegaLights 平台支持差异、TSR vs TAAU、Substrate Blendable vs Adaptive GBuffer、VRS。移动部分：5.8 Multipass Deferred 更接近桌面、与 Subpass 用 r.Mobile.AllowFramebufferFetch 切换；介绍 r.Mobile.DiffuseFromCapture 与 Runtime Reflection Capture 作移动端简易 GI。",
+      "try_points": [
+        "跨端立项：先定最低机帧率与是否允许 Nanite/Lumen，再写 Device Profile 继承链，而不是先按高端机堆功能",
+        "GI 预算紧：Medium 开 Lumen Lite（sg.GlobalIlluminationQuality 1）；再不够依次试 DFAO、进室内降 Skylight、Stationary 灯兼顾烘焙与 Lumen",
+        "PC+手机同内容：评估 5.8 Multipass Deferred（默认 AllowFramebufferFetch=0）；移动端间接光可试 r.Mobile.DiffuseFromCapture=1 + Runtime Reflection Capture"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "Tokyo DevDays 26'：MegaLights 入门——伪影排查、采样/追踪管线与可调 CVar",
+      "url": "https://www.docswell.com/s/EpicGamesJapan/Z27EW1-DayDays26-MegaLights",
+      "source": "Epic Games Japan（Unreal Engine Tokyo Dev Days 26'；澤田祐太朗）",
+      "published": "2026-08-31",
+      "ue_version": "UE 5.8",
+      "summary": "同样扩窗收录（幻灯 2026-08-31）。比「MegaLights 是什么」更深：用 900 影灯场景展示约 134ms→13ms；拆解残像（TSR/Temporal）、Masked 板阴影（ScreenTraces / EvaluateMaterialMode）、薄几何漏影、ScreenTrace 纠偏等伪影；管线为选灯（Light Grid→Tile Classification→GenerateLightSamples）→ 影追踪（VSM→Screen→HWRT）→ Shade → Temporal/Spatial。给出 NumSamplesPerPixel、DownsampleMode、ScreenTraces.Quality、MaxShadingWeight、Temporal.MaxFramesAccumulated、HardwareRayTracing.EvaluateMaterialMode 等 CVar，以及 Shadow Quality 档位表；强调用 Light Complexity / Shadow Caster Quality 视图收紧半径与整理 Fallback/RT Proxy。",
+      "try_points": [
+        "开 MegaLights 后先看残影与噪点：对照 r.AntiAliasingMethod 与 Temporal.MaxFramesAccumulated，再用 r.MegaLights.Debug 1 查光标处候选灯",
+        "Masked/薄片阴影不对：试 ScreenTraces 与 EvaluateMaterialMode 2，或把板换成有厚度几何；ScreenTraces.Quality 0 可换半分辨率加速",
+        "灯多出现块状噪：查 Light Grid（r.Forward.LightGridDebug 1），收紧 Attenuation Radius，并检查 Ray Tracing Proxy / Fallback 是否撑起 HWRT 阴影"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
