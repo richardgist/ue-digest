@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T09:47+08:00",
+ "updated": "2026-10-27T09:15+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 0
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 0
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 0
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 3
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 1
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 0
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 0
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 4
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-26T09:47+08:00",
-   "last_new": 6
+   "checked": "2026-10-27T09:15+08:00",
+   "last_new": 10
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,198 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-26T09:47+08:00",
+   "checked": "2026-10-27T09:15+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "2c470e0e83d0",
+   "title": "GPT-6.1 Terra",
+   "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+   "summary": "GPT-6.1 Terra It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing. A significant step up from GPT‑5.6 Terra, it excels at the communication and computer-based tasks that fill the workday, from drafting…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-27T07:53+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "bf03207dadfa",
+   "title": "Announcing three new discoveries in mathematics, computer science, and physics",
+   "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+   "summary": "Related: The Exponential Time Hypothesis Is False [pdf] - https://news.ycombinator.com/item?id=50251661 Comments URL: https://news.ycombinator.com/item?id=50251344 Points: 379 # Comments: 143",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50251344",
+   "date": "2026-10-27T05:35+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "afb61b6cd85c",
+   "title": "Quoting Jason Koebler",
+   "link": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
+   "summary": "Because big tech platforms essentially do not have customer support and make it impossible for their users to contact a human, many people experiencing run-of-the-mill tech problems have turned to ChatGPT. And, increasingly, ChatGPT is telling people that have normal tech support problems that they have discovered something journalistically notable and that 404 Media, specifically, can help them. — Jason Koebler , ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-27T03:00+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "785a0fc3c075",
+   "title": "Xbox reportedly turned down a $500 million deal from Netflix to adapt its video game properties",
+   "link": "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties",
+   "summary": "A new report states that Netflix was looking to adapt a host of Xbox properties for a $500 million deal, but Xbox turned the streaming company down in hopes of upping the number.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T02:45+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "91d3711c7436",
+   "title": "GPT-6.1 Terra",
+   "link": "https://openai.com/index/introducing-gpt-6-1-terra/",
+   "summary": "https://developers.openai.com/api/docs/models/gpt-6.1-terra Comments URL: https://news.ycombinator.com/item?id=50248124 Points: 488 # Comments: 309",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50248124",
+   "date": "2026-10-27T02:01+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "00548a0bdc96",
+   "title": "Oldest GUI application that still runs on Windows 11",
+   "link": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+   "summary": "Hacker News 热度:270 分,177 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50248055",
+   "date": "2026-10-27T01:56+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "5a59bcacc745",
+   "title": "Xbox's first-ever COO is out after just three months",
+   "link": "https://www.gamedeveloper.com/console/xbox-coo-helen-chiang-leaves-role-shortly-after-its-creation",
+   "summary": "Three months after the role was created, cited by Xbox CEO Asha Sharma as necessary to make Xbox less fragmented, the inaugural Xbox COO is leaving her position with little fanfare.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T00:24+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "da24d78ede7a",
+   "title": "webframe: evaluated as a scraper and a sandbox",
+   "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+   "summary": "Research: webframe: evaluated as a scraper and a sandbox webframe is a neat little project from Jeff Lindsay which lets you \"run a web page like a program\" - you point it at a URL or file and it executes it in a hidden headless web view and outputs console.log() to standard output and any exceptions to standard error. It's written in Go on top of the glaze library, which provides access to a system browser (\"WKWebView on macOS, WebKitGTK on Linux, WebView2 on Windows\") so it doesn't need to…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-27T00:15+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "b59659c65ed6",
+   "title": "How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield",
+   "link": "https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield/",
+   "summary": "AI Factories are some of the most technologically complex operational environments ever created. Hundreds of thousands of GPUs, NVIDIA Spectrum-X Ethernet...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-27T00:00+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "0e6e5dce9d01",
+   "title": "CSS-Tricks has a new owner",
+   "link": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+   "summary": "Hacker News 热度:375 分,88 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50245831",
+   "date": "2026-10-26T23:51+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "779e2e458c40",
+   "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+   "link": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
+   "summary": "Hacker News 热度:743 分,650 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50245524",
+   "date": "2026-10-26T23:35+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "b2c57da2fec9",
+   "title": "Obituary: Voice actor Eric Bauza has passed away at 46",
+   "link": "https://www.gamedeveloper.com/audio/obituary-voice-actor-eric-bauza-has-passed-away-at-46",
+   "summary": "The voice behind Bugs Bunny, Daffy Duck, and a host of other well-loved characters has passed away suddenly at age 46.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-26T23:24+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "d779d8377c72",
+   "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+   "link": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+   "summary": "Hacker News 热度:541 分,81 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50245138",
+   "date": "2026-10-26T23:11+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "0e5e89d1e61c",
+   "title": "How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes",
+   "link": "https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes/",
+   "summary": "Training large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resiliency...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-26T23:00+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "f8fa283aa2f6",
+   "title": "Anthropic S-1",
+   "link": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+   "summary": "Hacker News 热度:1461 分,1429 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50242939",
+   "date": "2026-10-26T21:04+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "598d29d50671",
+   "title": "Websites Should Be Printable",
+   "link": "https://brennenputh.me/blog/printable-websites/",
+   "summary": "Hacker News 热度:262 分,172 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50241664",
+   "date": "2026-10-26T18:32+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
+  {
+   "id": "5281c38a83cc",
+   "title": "Meccha Chameleon : How two devs built the indie smash hit of the summer",
+   "link": "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer",
+   "summary": "Get the full story on how two Japanese developers took just two months to build Prop Hunt-inspired indie game Meccha Chameleon in UE5—and instantly had a massive hit on their hands that sold an impressive 1,000,000 copies in its first four days.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-26T08:00+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
+  },
   {
    "id": "9eec27bbc0ce",
    "title": "Dolly Parton's Imagination Library",
@@ -155,6 +342,17 @@
    "comments": "https://news.ycombinator.com/item?id=50233779",
    "date": "2026-10-26T01:15+08:00",
    "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "80b5a5f63ac5",
+   "title": "Seam Cutter",
+   "link": "https://simonwillison.net/2026/Oct/25/seam-cutter/",
+   "summary": "Tool: Seam Cutter I built this weird and very specific cropping tool - it lets you create a horizontal or vertical cut across an image, then slide the two sides relative to each other. Effectively it lets you crop out a section in the middle of an image. I wanted this because I often use Tailor on my iPhone to stitch several screenshots together into lot long image, but sometimes I find myself wanting to crop out a section in the middle - to redact an irrelevant prompt from a transcript, for…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-25T23:10+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
   },
   {
    "id": "b5d081c09bbc",
@@ -265,6 +463,17 @@
    "comments": "https://news.ycombinator.com/item?id=50217500",
    "date": "2026-10-24T09:16+08:00",
    "first_seen": "2026-10-25T09:25+08:00"
+  },
+  {
+   "id": "315286187e70",
+   "title": "Birdwatching rewires the brain and slows cognitive decline",
+   "link": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
+   "summary": "Hacker News 热度:509 分,199 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50215997",
+   "date": "2026-10-24T06:04+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
   },
   {
    "id": "a9380d6cca87",
@@ -474,6 +683,17 @@
    "comments": null,
    "date": "2026-10-23T04:33+08:00",
    "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "6a1273330afa",
+   "title": "Blaise Pascal invented fixed route public transport (2024)",
+   "link": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
+   "summary": "Hacker News 热度:261 分,136 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50200152",
+   "date": "2026-10-23T03:52+08:00",
+   "first_seen": "2026-10-27T09:15+08:00"
   },
   {
    "id": "462941766bf8",
@@ -3663,28 +3883,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-08-30T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "d9ee9317e79a",
-   "title": "August’s Epic learning content: Networked physics, dynamic audio, and more",
-   "link": "https://www.unrealengine.com/learning/augusts-epic-learning-content-networked-physics-dynamic-audio-and-more",
-   "summary": "Explore free Epic learning content that covers everything from networked physics and features like Mesh Terrain to tips on key workflows, such as project optimization, material creation, and beyond.",
-   "source": "Unreal Engine 官方",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-28T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "124b237ef0ef",
-   "title": "AMD FSR plugin updated for Unreal Engine 5.8",
-   "link": "https://gpuopen.com/learn/amd-fsr-plugin-updated-for-unreal-engine-58/",
-   "summary": "The updated AMD FSR™ Unreal® Engine plugin brings ML-powered upscaling and frame generation to Unreal Engine 5.8, now extending FSR Upscaling support to AMD Radeon RX 7000 Series GPUs.",
-   "source": "AMD GPUOpen",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-27T20:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
