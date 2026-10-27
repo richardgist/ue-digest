@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27",
+  "items": [
+    {
+      "title": "Unity CLI 1.0.0-beta.14：无人值守打开与脚本退出码契约",
+      "url": "https://discussions.unity.com/t/unity-cli-1-0-0-beta-14-is-rolling-out/1739999",
+      "source": "Unity Discussions",
+      "published": "2026-10-21",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 员工帖宣布 CLI 1.0.0-beta.14：1.0 前敲定输出与退出码；原统一 exit 6 拆成 11–14（非项目/无 Editor/无命令/超时等）；tsv 表头与 JSON 键一致；`--timeout` 只接受整秒；状态类「否」答案 `success:false`；`unity open --until-ready/--batchmode/--accept-upgrades` 与 `terms accept` 支撑无人值守；agent 侧 `unity mcp --tools/--exclude-tools`、按 port/pid/instance 钉 Editor、`logs --console --follow`、`docs toc/--content`、`setup antigravity`。另有大量安全加固。帖下用户反馈浮动许可/`doctor --ci`、无 Hub 时 Editor 未登录等问题仍在跟进。完整细节见 `unity changelog` / docs release notes；本人未安装实测。",
+      "why_useful": "用脚本或 AI agent 管 Unity 工程时，这版把「会不会挂在对话框」和「退出码能不能区分重试」写清楚了，升前必读破坏性变更。",
+      "try_it": "`unity self-update`（或按帖装 beta 频道）；脚本先对照新 exit code；无人值守用 `open --until-ready --accept-upgrades`。"
+    },
+    {
+      "title": "Claude Code 2.1.311：超 200K 自动压缩续跑与子 agent MCP 修复",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+      "source": "anthropics/claude-code GitHub Releases",
+      "published": "2026-10-26",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "官方 Release v2.1.311（2026-10-26）：self-hosted-runner 新增 `--hold-idle-file` / `--max-hold-min`；标准上下文会话请求超过 200K token 时不再因「1M 用量」停住，改为压缩后继续；修长大 CLAUDE.md 列表项导致启动/读写卡死、中断要等 MCP/skill 超时、大文件 Write/Edit 假报 0 行、子 agent 用不了后连上的 MCP、压缩后看到过期 MEMORY/CLAUDE.md、SubagentStop 钩子约每分钟误触发等。VS Code 回复代码块加语法着色。本人未在本机升级实测。",
+      "why_useful": "长会话或挂自托管 runner 时，这版直接修「超 200K 就停」和一批子 agent/MCP 假死，值得先升再排重活。",
+      "try_it": "升到 2.1.311；长会话故意推过 200K 看是否压缩续跑；自托管 runner 按需设 hold-idle。"
+    },
+    {
+      "title": "SpeedrunCI：ue6-main 一周（UBT 公共 C# 改名、全量 recook、Horde 密钥进 trace）",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-oct-19-25-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-10-26",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "第三方周报汇总 2026-10-19–25：公共 5.8.4 已于 10-20 从 10-5 的候选切出；ue6-main 约 1420 提交。UBT 上 PluginDescriptor 等公共字段去掉 `b` 前缀、公共参数改 camelCase（Build.cs/Target.cs 与 ini/命令行键名不变，自定义 UAT/BuildGraph/Gauntlet 命名实参会编不过）。Linux 编译因 response file 变更会全量重跑一次；cook 增量版本改了四次并强制 Blueprint 一次性 recook。自托管 Horde 若开 tracing：MongoDB span 曾把 service account token/签名密钥送进 Datadog，需轮换凭证或清理旧 span。另列 5.8.4 上仍建议自 cherry-pick 的物理 handle UAF、Niagara redo、CEF 等。数字与 SHA 为作者对 Epic 分支统计，非 Epic 官方周报。",
+      "why_useful": "跟 ue6-main 或刚升 5.8.4 时，用这篇当「先查 C# 自动化 / 预留 recook / 查 Horde 密钥」清单，比自己翻 1400 提交快。",
+      "try_it": "同步前 grep 自定义 UAT 里的 `bCanContainContent` 等；Linux 农场错峰 sync；Horde+Datadog 用户按文内提示轮换密钥。"
+    },
+    {
+      "title": "Sentry × Unreal MCP：用 agent 在编辑器里装崩溃上报并闭环调试",
+      "url": "https://blog.sentry.io/unreal-mcp-sentry/",
+      "source": "Sentry Blog",
+      "published": "2026-10-06",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Sentry 说明 UE 5.8 实验性 Unreal MCP 允许插件注册工具；Sentry 插件 ≥1.24.0 提供 Get Started / Fix Stack Traces / Instrument / Debug Issue 等 skill，可经编辑器改 DSN、开符号上传、拉 issue 并对照工程根因。步骤：启用 Unreal MCP 与 All Toolsets；`ModelContextProtocol.GenerateClientConfig`；StartServer 或 Auto Start。可再接 Sentry MCP（直接或经 MCPClientToolset 代理）自动取 DSN/查事件。文中用 Sentry Tower demo + Claude Code 演示从零配置到可读崩溃；并提醒 tool-search 模式下 agent 常跳过发现、编辑器重启会断 MCP。本人未在本机复现该流程。",
+      "why_useful": "已经在 5.8 上试 MCP、又要接崩溃平台时，这篇把「编辑器工具 + Sentry MCP」闭环步骤写全了，少手点 Project Settings。",
+      "try_it": "UE 5.8 + Sentry 插件 ≥1.24.0；开 MCP/All Toolsets 后 GenerateClientConfig；连上 agent 说用 Sentry skills 配置并打一次打包崩溃验证符号。"
+    }
+  ]
+}
