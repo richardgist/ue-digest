@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-28",
+  "items": [
+    {
+      "title": "NVIDIA RTX Spark：游戏侧神经渲染、DLSS 5、Nsight WoA 与 NvRTX 5.8",
+      "url": "https://developer.nvidia.com/blog/nvidia-rtx-spark-powers-neural-rendering-and-ai-characters-in-games/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-10-27",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 技术博客介绍 RTX Spark（Blackwell RTX GPU + Grace CPU、最高约 128GB 统一内存）上的游戏开发相关栈：DLSS 套件（含 Super Resolution、Ray Reconstruction、Dynamic Multi Frame Generation、3D-Guided Neural Rendering）；称 10 月 DLSS 5 模型相对 9 月版“快约 2 倍、GPU 开销约减半、4K VRAM 约降 20%”（厂商自述，未独立验证）；DLSS 4.5 UE 插件 8.9.0 为 UE 5.8 增加官方 Windows on Arm 支持；Nsight Graphics 2026.3 提供 WoA 安装包，Nsight Systems 2026.5 起 Windows 统一安装包覆盖 native Arm64；并提到 NvRTX 5.8（侧重重构/稳定/兼容）与 RTX Kit 八项技术在 Spark 上的支持列表。另含 ACE/Nemotron 3.5 Bolt 本地 NPC 等内容，属厂商推广口径。",
+      "why_useful": "把 UE 5.8 上 DLSS WoA、Nsight Arm64 与 NvRTX 5.8 的入口收在一篇，方便评估是否跟 Spark/神经渲染路线。",
+      "try_it": "按文中链接下载 DLSS UE 插件 8.9.0 / Nsight Graphics 2026.3；NvRTX 需按 NVIDIA 流程绑定 UE 账号与 GitHub 后申请仓库访问。"
+    },
+    {
+      "title": "GameMaker：GMRT 运行时将自 2027-01-01 起对所有开发者免费",
+      "url": "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
+      "source": "Game Developer",
+      "published": "2026-10-23",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Game Developer 报道：Opera 旗下 GameMaker 宣布其较新的 GMRT 运行时将从 2027 年 1 月 1 日起免费，开发者可据此在 PC、移动、浏览器与 GX Games 等平台发布；此前需专业许可才能用 GMRT 或旧 GMS2 运行时出货。已有专业许可者仍可用 GMS2，并“受益于”GMS2 运行时源码访问；要在 PS5 / Xbox Series / Switch 2 上出货仍需企业许可。文中另有对 Unity/Epic LLM 工作流与 Verse 的行业背景叙述，属记者综述，非引擎官方变更清单。",
+      "why_useful": "2D 引擎商业模型变化直接影响是否还要买专业许可才能出货，可纳入选型与预算判断。",
+      "try_it": "关注 GameMaker 官方后续文档确认免费范围与企业许可边界；现有专业许可项目可对比继续用 GMS2 还是迁 GMRT。"
+    },
+    {
+      "title": "GeoGSplat：带几何先验的非像素对齐前馈 Gaussian Splatting",
+      "url": "https://arxiv.org/abs/2610.36760",
+      "source": "arXiv",
+      "published": "2026-10-27",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "arXiv 2610.36760（2026-10-27）：前馈 3DGS 若按像素对齐预测，高斯数量会随分辨率与视角数膨胀；非像素对齐方法用固定数量高斯，但缺少显式射线/深度约束时中心易错位、大视角变化下易出伪影。GeoGSplat 在非像素对齐框架中引入几何先验：双分支编码器构建 Anchors 与 Triplane，分层解码器逐步解码稠密 3D 点与高斯原语。摘要称据此改善大视角变化下的重建与渲染稳定性。论文方法与指标以原文为准，本地未复现实验。",
+      "why_useful": "针对前馈 3DGS 的原语冗余与几何错位，对实时新视角合成管线选型有参考价值。",
+      "try_it": "读摘要与方法节，对照现有像素对齐 feed-forward GS；是否有代码以作者后续发布为准。"
+    },
+    {
+      "title": "Codex CLI 0.165.0：内置 Vertex AI、GPT-6.1 Terra、会话中改 reasoning effort",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+      "source": "GitHub openai/codex",
+      "published": "2026-10-27",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "OpenAI Codex CLI 稳定版 rust-v0.165.0（2026-10-27）：新增内置 Google Cloud Vertex AI 提供方（`model_provider = \"gcp\"`）；模型目录加入 GPT-6.1 Terra；会话选择器增加仓库过滤、agent command center 按目录分组；对支持的模型默认允许对话中途改 reasoning effort；新 profile 默认启用 memory v2，并支持导入外部 agent 记忆。修复包括：无显式覆盖时尊重服务端默认 approval reviewer、取消本地已丢弃的远程 MCP 请求、打断或切 Plan 模式后不让排队消息重启工作等。",
+      "why_useful": "相对已收录的 0.164，这版补上 Vertex 与 Terra，并让会话中途调 reasoning 成为默认能力。",
+      "try_it": "升级到 0.165.0 后试 `model_provider = \"gcp\"`；新 profile 观察 memory v2；对话中途改 reasoning effort。"
+    },
+    {
+      "title": "TensorRT Global Performance Tuner Part 2：构建路线搜索与实践",
+      "url": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-10-23",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "接 Part 1（已收录）：本篇讲 TensorRT 11.1 Global Performance Tuner 的实现与用法——把调度策略表示为可搜索的 build route（编译器旋钮组合）；C++ API 可 set/get 当前 route，并枚举 200+ 旋钮空间；`trtexec` 展开 route 表达式、逐条构建/测速/测精度，丢弃崩溃或精度不合格者，再选最快合格引擎。文称在 10 个评估工作负载上相对默认 route 约 1.14×–1.63×（厂商评测）。实践建议：按搜索空间选 fast/mixed/full、`--dryRun` 预览、`--tuningCacheFile`+`--continue` 断点续跑，换模型/形状/GPU/软件栈后需重调。Python 侧称将随 Torch-TensorRT 2.15 提供同类实现。",
+      "why_useful": "把 Part 1 概念落到可执行的 trtexec 调优流程，适合部署侧系统扫 build route。",
+      "try_it": "对目标模型用 trtexec 配 tunable build route；先 `--dryRun`，再用 tuning cache 做可恢复搜索，并自备精度数据集当约束。"
+    }
+  ]
+}

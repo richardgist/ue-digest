@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T09:40+08:00",
+ "updated": "2026-10-28T09:28+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 4
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-27T09:40+08:00",
+   "checked": "2026-10-28T09:28+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-27T09:40+08:00",
+   "checked": "2026-10-28T09:28+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-27T09:40+08:00",
+   "checked": "2026-10-28T09:28+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-27T09:40+08:00",
+   "checked": "2026-10-28T09:28+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 8
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 6
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-27T09:40+08:00",
+   "checked": "2026-10-28T09:28+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 1
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 7
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,319 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-27T09:40+08:00",
-   "last_new": 0
+   "checked": "2026-10-28T09:28+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "c38abd7cfd25",
+   "title": "Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4",
+   "link": "https://developer.nvidia.com/blog/memory-enforced-gpu-sharing-in-kubernetes-with-nvidia-cuda-13-4/",
+   "summary": "Many AI workloads need only a fraction of a GPU. Giving each one an entire device can leave capacity idle; sharing GPUs lets platform teams serve more workloads...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-28T04:50+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "bb8d045830e6",
+   "title": "Rockstar Games workers to vote on unionization right as Grand Theft Auto VI launches",
+   "link": "https://www.gamedeveloper.com/business/rockstar-workers-to-vote-on-unionization-ahead-of-grand-theft-auto-vi-release",
+   "summary": "Rockstar employees will have two weeks to decide if they want to recognize the IWGB Rockstar Game Workers Union.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T03:34+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "276f769ce91e",
+   "title": "Game Boy Color on My Conference Badge",
+   "link": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+   "summary": "Game Boy Color on My Conference Badge I'm at GitHub Universe this week and, similar to last year , the conference badge is a full-blown color screen computer. I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a full NES emulator working on it, and then went a step further and deployed an emulator for both the Game Boy and the Game Boy Color. Which means, if you can obtain the ROM, you can run The Legend of Zelda: Link's Awakening on…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T03:34+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "8ea918089f3c",
+   "title": "Warhorse Studios hit by an undetailed cybersecurity incident",
+   "link": "https://www.gamedeveloper.com/programming/warhorse-studios-hit-by-an-undetailed-cybersecurity-incident",
+   "summary": "The developer behind the Kingdom Come: Deliverance games has revealed that it has been hit by a 'serious' cybersecurity attack and is taking steps to assess the full impact.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T03:15+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "e66512cedb3e",
+   "title": "Crossy Road creator Matt Hall named Atari's EVP of Mobile",
+   "link": "https://www.gamedeveloper.com/mobile/crossy-road-creator-matt-hall-named-atari-s-evp-of-mobile",
+   "summary": "One of the mobile game industry's most well-known pioneers will spearhead Atari's own foray into mobile.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T02:45+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "625967273b08",
+   "title": "Epic is updating its EULA to allow AI training on outputs from Unreal Engine and MetaHuman",
+   "link": "https://www.gamedeveloper.com/programming/epic-is-updating-the-eula-to-allow-ai-training-on-outputs-from-unreal-engine-and-metahuman",
+   "summary": "In a post on X, Epic CEO Tim Sweeney casually states that the EULA for using Epic's engine will allow for training AI on the output, though developers can still choose to restrict it for individual games.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T01:53+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "10877c0713c9",
+   "title": "Build specialized multimodal models with LFM3",
+   "link": "https://huggingface.co/blog/LiquidAI/lfm3",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T01:16+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "8f7cf25c001a",
+   "title": "NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games",
+   "link": "https://developer.nvidia.com/blog/nvidia-rtx-spark-powers-neural-rendering-and-ai-characters-in-games/",
+   "summary": "NVIDIA RTX Spark is a new Windows PC platform for AI development, creation, and gaming in slim laptops and compact desktops. Powered by an NVIDIA Blackwell RTX...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-28T01:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "f8563aa01d95",
+   "title": "Ghostty 1.4",
+   "link": "https://ghostty.org/docs/install/release-notes/1-4-0",
+   "summary": "Hacker News 热度:747 分,225 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50261998",
+   "date": "2026-10-28T00:51+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "f7c8ff3e0f69",
+   "title": "Can we trust LLMs to judge whether a research idea is novel?",
+   "link": "https://huggingface.co/blog/allenai/novelty-bench",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T00:12+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "00342d31454e",
+   "title": "New 14‑inch MacBook Pro with M6",
+   "link": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+   "summary": "Hacker News 热度:279 分,342 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50261352",
+   "date": "2026-10-28T00:08+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "21ec57e4e0e3",
+   "title": "Genie 4",
+   "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "summary": "Hacker News 热度:719 分,429 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50261319",
+   "date": "2026-10-28T00:06+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "14b7fab728aa",
+   "title": "Fine-Tuning NVIDIA Nemotron to Know Local Rules, Not Just Local Languages",
+   "link": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-to-know-local-rules-not-just-local-languages/",
+   "summary": "As AI adoption expands globally, people across languages and cultures are using it in more aspects of their daily lives. General-purpose language models serve...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-28T00:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "4974bf6f0c14",
+   "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+   "link": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/",
+   "summary": "Generating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evaluation of Ling-3.0-flash from Inclusion AI on NVIDIA...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-27T23:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "862f486e1c3c",
+   "title": "Changing acquired studios' core identity consistently leads to doom, says Nightdive Studios CEO",
+   "link": "https://www.gamedeveloper.com/business/night-dive-studios-ceo-says-atari-is-demonstrating-right-way-to-do-acquisitions",
+   "summary": "Why don't large publishers acquire companies and let them do what they do best?",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T22:47+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "a7224207b2dd",
+   "title": "Sucker Punch lays off 24 to align with 'current market', 'next project needs'",
+   "link": "https://www.gamedeveloper.com/business/sucker-punch-lays-off-24-to-align-with-current-market-next-project-needs",
+   "summary": "24 members of staff have been laid off from the studio making for an estimated total staff reduction of around 10 percent.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T22:10+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "3396e5b412be",
+   "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+   "link": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+   "summary": "Hacker News 热度:776 分,278 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50259604",
+   "date": "2026-10-27T22:06+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "998c6c1f5cd6",
+   "title": "New iMac with M6",
+   "link": "https://www.apple.com/imac/",
+   "summary": "Hacker News 热度:306 分,375 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50258538",
+   "date": "2026-10-27T21:02+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "09f790d1313a",
+   "title": "Python's experimental JIT to be removed",
+   "link": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+   "summary": "Hacker News 热度:444 分,233 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50257419",
+   "date": "2026-10-27T19:17+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "efe5e4841688",
+   "title": "Wikipedia's Cleanup of AI-Generated Content",
+   "link": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+   "summary": "Hacker News 热度:446 分,205 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50257326",
+   "date": "2026-10-27T19:08+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "c80c961cd26c",
+   "title": "Mutable Sample for runtime character customization—now updated for UE 5.8!",
+   "link": "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
+   "summary": "The Mutable toolset is now Production-Ready in Unreal Engine 5.8—and to celebrate, there’s a completely updated Mutable Sample. Download it today and start building characters your players can truly customize in real time.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "df32ce9eccca",
+   "title": "How does terrain work in video games?",
+   "link": "https://unity.com/blog/video-game-terrain-guide",
+   "summary": "A beginner’s guide to video game terrain: how tiles, heightmaps, voxels, and noise create the ground players walk on, and how to design terrain.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "6d4868fbf874",
+   "title": "Frame rate explained: What is fps in video games?",
+   "link": "https://unity.com/blog/frame-rate-in-video-games-explained",
+   "summary": "Learn what frames per second (fps) means, why 30, 60, and 120 fps are common targets, why steady beats fast, and how to pick a frame rate for your video game.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "1182c7766102",
+   "title": "10 things you need to know before building your first video game",
+   "link": "https://unity.com/blog/things-to-know-before-starting-your-first-game",
+   "summary": "New to video game making? Learn the 10 design decisions to plan before you build – from core loop and scope to physics, camera, controls, and playtesting.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "32bb73aed38e",
+   "title": "How bosses and enemies decide what to do in video games",
+   "link": "https://unity.com/blog/how-enemy-ai-works-video-games",
+   "summary": "A beginner’s guide to how enemy AI works in video games: states, senses, telegraphed attacks, and boss phases, plus how designers keep enemies fair and fun.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "2578516f0256",
+   "title": "Jump, match, build, or explore? How to find your core game loop",
+   "link": "https://unity.com/blog/find-your-core-game-loop",
+   "summary": "Jump, match, build, or explore? Learn how to find your core game loop – the one action players repeat – and use genre to shape the rest of your game.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "631e29f52786",
+   "title": "Start with a feeling: How to define your first video game",
+   "link": "https://unity.com/blog/define-your-video-game",
+   "summary": "Before you list features, name the feeling. Learn how to define what your video game is about with one sentence and three design pillars – no coding needed.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
+  {
+   "id": "c9db483b8b0b",
+   "title": "How much story does your video game need?",
+   "link": "https://unity.com/blog/how-much-story-does-your-video-game-need",
+   "summary": "From zero words to a full script: find the right amount of story for your first video game design and learn what each level asks you to plan.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-27T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
+  },
   {
    "id": "2c470e0e83d0",
    "title": "GPT-6.1 Terra",
@@ -617,6 +925,17 @@
    "comments": null,
    "date": "2026-10-23T08:00+08:00",
    "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "df9a93c446f8",
+   "title": "Video game UX and UI basics: How games talk to players",
+   "link": "https://unity.com/blog/video-game-ui-ux-basics",
+   "summary": "A beginner’s guide to how enemy AI works in video games: states, senses, telegraphed attacks, and boss phases, plus how designers keep enemies fair and fun.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-23T08:00+08:00",
+   "first_seen": "2026-10-28T09:28+08:00"
   },
   {
    "id": "0d6cfc3f69d0",
@@ -3707,17 +4026,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-09-29T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "de8424b6e299",
-   "title": "Scaling Scritchy Scratchy across platforms",
-   "link": "https://unity.com/blog/scaling-scritchy-scratchy-across-platforms",
-   "summary": "Learn how Scritchy Scratchy used Unity to port the game across PC, mobile, Nintendo Switch, and Nintendo Switch 2 while maintaining performance and tactile gameplay.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-28T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
