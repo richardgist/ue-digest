@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T09:02+08:00",
+ "updated": "2026-10-29T09:26+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 1
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-29T09:02+08:00",
+   "checked": "2026-10-29T09:26+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,8 +26,8 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 1
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
    "url": "https://www.jendrikillner.com/index.xml",
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-29T09:02+08:00",
+   "checked": "2026-10-29T09:26+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-29T09:02+08:00",
+   "checked": "2026-10-29T09:26+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-29T09:02+08:00",
+   "checked": "2026-10-29T09:26+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 2
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 3
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 1
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,16 +89,16 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 4
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": true,
-   "error": null,
+   "ok": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-29T09:02+08:00",
+   "checked": "2026-10-29T09:26+08:00",
    "last_new": 9
   },
   "Hugging Face Blog": {
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-29T09:02+08:00",
-   "last_new": 1
+   "checked": "2026-10-29T09:26+08:00",
+   "last_new": 0
   }
  },
  "entries": [
