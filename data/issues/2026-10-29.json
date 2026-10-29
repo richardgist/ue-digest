@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-29",
+  "items": [
+    {
+      "title": "Epic 10 月免费学习包：UE 移动端从立项到上架",
+      "url": "https://gamedev.net/news/6779-octobers-epic-learning-content-mobile-development-in-unreal-engine/",
+      "source": "GameDev.net（转载 Unreal Engine 官方通告）",
+      "published": "2026-10-28",
+      "ue_version": "原文未标注",
+      "summary": "Epic 本月免费学习内容聚焦移动端：如何把项目跑起来、压住性能、并走到打包上架；同时覆盖跨平台写实角色制作，方便高低端共用资产管线。通告强调移动端成功更多靠范围克制与优化纪律，而不是堆内容量。",
+      "try_points": [
+        "若团队刚接手机/平板或久未碰移动端，先按这套免费课对齐工程/美术/制作对内存、Shader 与动画预算的共识，再扩内容。",
+        "把「立项—性能—上架」当成同一条检查清单，而不是等内容做完才优化。"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    },
+    {
+      "title": "PerfGuard：约 30 个真正能动毫秒的 UE5 CVar（含实测影响）",
+      "url": "https://getperfguard.com/tutorials/cvar-reference",
+      "source": "PerfGuard",
+      "published": "约 2026-10",
+      "ue_version": "UE 5.5 / 5.6 锚定（文中标注）",
+      "summary": "整理约 30 个高影响 CVar：Lumen HW/SW 与 Screen Probe、Nanite 光栅/流送池、VSM/SMRT、TSR、PSO 预缓存、MegaLights 降采样等，并给出默认值、分档建议与来自 GPUOpen / Tom Looman / Epic 文档的实测量级。强调数字绑定具体硬件与场景，升级时还要核对 5.5/5.6 默认值变更。",
+      "try_points": [
+        "改任何值前先用 DumpCVars 看实际生效来源（DeviceProfile / Scalability / Code），避免和设备档互相打架。",
+        "优先试 Lumen ScreenProbe 的 StochasticInterpolation、IntegrateDownsampleFactor，以及 MegaLights 的 r.MegaLights.DownsampleFactor=2；AMD 上可对照关掉 Lumen HWRT 的约 1.2 ms 量级再在本机复测。"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "UE 5.8 World Partition：流送源、运行时网格与安全传送清单",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/streaming-sources-grids/",
+      "source": "Adventures in Causality",
+      "published": "原文未标注（文档目标 UE 5.8）",
+      "ue_version": "UE 5.8",
+      "summary": "讲清流送源模型（Target State / Priority / Shape、以及按需指定 Target Grid 与 Target HLOD Layer）、用「最大接近速度 × 最差就绪延迟 + 前瞻 + 安全余量」估算 Loading Range，并给出安全传送与高速穿越模式。建议默认单层 2D Runtime Spatial Hash，多网格只在 profiling 证明某类内容需要不同 cell/range 时再加。",
+      "try_points": [
+        "传送前用临时 StreamingSource 对准目的地，轮询 IsStreamingCompleted 成功后再传送；超时要有加载界面/回退点，禁止静默落到缺碰撞区域。",
+        "调参时不要同时改 Cell Size 与 Loading Range；用 wp.Runtime.* 调试命令诊断后，录最终性能前务必恢复作者设置。"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "社区教程：在 UE 5.8 里搭建并理解 MegaLights",
+      "url": "https://dev.epicgames.com/community/learning/tutorials/RexYm/megalights-in-unreal-engine-5-8",
+      "source": "Epic Developer Community（Gautam Bodas）",
+      "published": "2026-10-26",
+      "ue_version": "UE 5.8",
+      "summary": "社区实操教程：从工程设置到原理，讲解如何在 UE5 中启用 MegaLights，并理解它如何以近乎恒定的成本渲染大量带阴影动态灯。论坛同日帖已给出入口，适合在看过官方文档后按步骤在工程里落地。",
+      "try_points": [
+        "在代表性场景开 MegaLights，用 ShowFlag / 调试视图对照噪声与阴影质量，再结合 r.MegaLights.DownsampleFactor 找成本和画质平衡。",
+        "不要默认在移动端 Forward 路径硬开；先确认目标渲染路径与平台支持，再谈灯数扩展。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Arm Neural Graphics Playbook 导论：用 NFRU / NSSD 评估移动端神经图形",
+      "url": "https://dev.epicgames.com/community/learning/tutorials/eDG9E/unreal-engine-arm-neural-graphics-playbook-introduction",
+      "source": "Epic Developer Community（Epic Education and Training）",
+      "published": "2026-10-14",
+      "ue_version": "原文未标注",
+      "summary": "面向评估 Arm Neural Technology 的手游与图形工程：介绍 Neural Graphics Development Kit（含 UE 插件、模型与 Vulkan 运行时），重点看 NFRU 与 NSSD；引导按内容类型、相机行为与性能目标判断是否合用，并开始组件级试用。",
+      "try_points": [
+        "先按自家内容与相机运动做合用性评估，再上真机测帧时/功耗，不要直接全项目默认开启。",
+        "试用时固定代表镜头与功耗档，对比关闭神经升采样/超分时的画质与稳定性，再决定是否进入正式管线。"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}

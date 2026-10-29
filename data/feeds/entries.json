@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T09:28+08:00",
+ "updated": "2026-10-29T09:02+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-28T09:28+08:00",
+   "checked": "2026-10-29T09:02+08:00",
    "last_new": 1
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 4
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,8 +26,8 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 1
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
    "url": "https://www.jendrikillner.com/index.xml",
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-28T09:28+08:00",
+   "checked": "2026-10-29T09:02+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-28T09:28+08:00",
+   "checked": "2026-10-29T09:02+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-28T09:28+08:00",
+   "checked": "2026-10-29T09:02+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 8
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 6
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 3
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 1
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 4
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 7
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,231 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-28T09:28+08:00",
-   "last_new": 2
+   "checked": "2026-10-29T09:02+08:00",
+   "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "b991e55a2f83",
+   "title": "Quoting Ted Sanders",
+   "link": "https://simonwillison.net/2026/Oct/28/ted-sanders/",
+   "summary": "In general, LLM performance is incredibly multidimensional. There's no guarantee of a fixed ordering where the model that is best at math is also the model that's best at jokes. Despite that complexity, much of the variation in performance is explained by just a single variable: model size. In general, models that are bigger will (a) be more performant / reliable, (b) cost more per token, and (c) have better recall of esoteric facts. As you note, our models are ordered: Luna < Terra < Sol <…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T07:23+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "48dec5cd5052",
+   "title": "Why is this fingerprinting script creating bioweapons?",
+   "link": "https://nullpt.rs/fingerprinting-bioweapons",
+   "summary": "Hacker News 热度:792 分,176 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50276998",
+   "date": "2026-10-29T01:13+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "5caf09e4cc50",
+   "title": "MacBook Pro with PROLED XDR Display and Touch",
+   "link": "https://www.apple.com/macbook-pro/proled-xdr-display/",
+   "summary": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundb... Comments URL: https://news.ycombinator.com/item?id=50276940 Points: 491 # Comments: 838",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50276940",
+   "date": "2026-10-29T01:10+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "8cd3da53904a",
+   "title": "Gemini 4 Carbon",
+   "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+   "summary": "Hacker News 热度:788 分,644 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50276792",
+   "date": "2026-10-29T01:01+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "4e6dacea15cf",
+   "title": "GitHub Octoverse 2026",
+   "link": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+   "summary": "GitHub Octoverse 2026 I'm at GitHub Universe today (GitHub gave me a free ticket through their \"GitHub Stars\" program). EVP Jay Parikh just announced this year's Octoverse report, and highlighted these numbers in particular: This is a pretty stark representation of the impact of agentic engineering on GitHub. In 2026, merged pull requests tripled in less than a year to 220 million per month. Commits more than tripled to 7.38 billion per month, with most of that increase in the second half of…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T00:45+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "3ee7c23915c3",
+   "title": "Epic VP says AI code tools have stomped out decade-old 'non-deterministic cooking bugs' in Unreal Engine",
+   "link": "https://www.gamedeveloper.com/programming/unreal-engine-will-be-developed-with-ai-code-confirms-epic",
+   "summary": "After an AI-first pivot, Epic has confirmed that AI is shaping the Unreal Engine in the near future.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-29T00:28+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "82c8610a32a7",
+   "title": "Roblox confirms no adult content used in AI training after scraping Open3DLab data",
+   "link": "https://www.gamedeveloper.com/business/roblox-confirms-no-adult-content-used-in-ai-training-after-scraping-open3dlab-data",
+   "summary": "Roblox says an AI agent failed to operate 'as intended' when it mass-downloaded adult content from Open3DLab, Smutlab, and SFMLab.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T23:45+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "9bb2f7ad5998",
+   "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+   "link": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T22:58+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "222dc229bfd2",
+   "title": "Valve weighs in on Next Fest AI cloning phenomenon",
+   "link": "https://www.gamedeveloper.com/pc/valve-addresses-steam-ai-cloning-problem",
+   "summary": "The worrying trend of games on Steam getting quick clones for the same storefront has been acknowledged by store owner Valve — and the onus placed on developers to prevent it themselves.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T22:42+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "e2729f5c7aa8",
+   "title": "CNC Stone Carving",
+   "link": "https://carmelitegothic.com/cnc-stone-carving/",
+   "summary": "Hacker News 热度:396 分,116 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50274409",
+   "date": "2026-10-28T22:38+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "bd6e09539e26",
+   "title": "The October inflection point for vibe game development",
+   "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+   "summary": "I've written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflection point in October 2026, and this time it's for vibe coding computer games . Tree Appreciator Emberwick Battle Drones Pumpkin Farmer, aka Quarter Sun Cove Four times as insulting What happens if someone actually puts…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T21:55+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "566f7a4b6e6b",
+   "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+   "link": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+   "summary": "Hacker News 热度:425 分,468 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50273396",
+   "date": "2026-10-28T21:41+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "fe00f2ad87af",
+   "title": "Emacs Turns 50",
+   "link": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
+   "summary": "Hacker News 热度:405 分,173 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50273171",
+   "date": "2026-10-28T21:25+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "5e594fc62d46",
+   "title": "AMD FSR SDK 2.4 Brings ML Upscaling to RX 6000 Series and Ryzen APUs",
+   "link": "https://gpuopen.com/learn/amd-fsr-sdk-2-4-rx-6000-ryzen-apus/",
+   "summary": "AMD FSR™ \"Redstone\" SDK 2.4 brings ML-based FSR Upscaling 4.1.2 to AMD Radeon™ RX 6000 Series GPUs and select AMD Ryzen processors, adds Vulkan® support, and updates FSR Frame Generation with improved frame pacing on AMD Radeon RX 9000 Series GPUs.",
+   "source": "AMD GPUOpen",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-28T21:00+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "bb254786372b",
+   "title": "Ready for XREAL AURA",
+   "link": "https://godotengine.org/article/godot-xreal-aura-launch/",
+   "summary": "Godot is part of the launch lineup for XREAL AURA",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T20:00+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "5be39637cf85",
+   "title": "Apple's git still trusts the compromised eMudhra certificates",
+   "link": "https://emudhra.we-have-a-problem.com/apple.html",
+   "summary": "Hacker News 热度:1031 分,377 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50271640",
+   "date": "2026-10-28T19:03+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "4cf2ae4529af",
+   "title": "Quoting Terk Terkowitz",
+   "link": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+   "summary": "If your work does not benefit from current AI tooling, that is a finding, not a failing. Document why, share it with your community of peers, bring it to your manager, and work to find solutions. An engineer who can explain where AI does not yet help their work is demonstrating the judgement we are asking for. — Terk Terkowitz , An update from Amazon engineering leadership on the role of the developer in the age of AI Tags: amazon , generative-ai , agentic-engineering , ai , llms",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-28T18:09+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "8c4f0904be0a",
+   "title": "October’s Epic learning content: Mobile development in Unreal Engine",
+   "link": "https://www.unrealengine.com/learning/octobers-epic-learning-content-mobile-development-in-unreal-engine",
+   "summary": "This month’s free learning content puts mobile development in Unreal Engine in the spotlight. Learn how to get started, optimize performance, and ship your game. Plus, find out how to create realistic characters for cross-platform experiences, and much more.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-28T08:00+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "c3597dd9d822",
+   "title": "Google Play Indie Games Fund in Africa 2026 - Games Made with Unity",
+   "link": "https://unity.com/blog/google-play-indie-games-fund-2026",
+   "summary": "Google Play Indie Games Fund 2026",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T08:00+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
+   "id": "6c3e27975586",
+   "title": "XREAL AURA Is Here: Meet Seven Made With Unity Titles",
+   "link": "https://unity.com/blog/xreal-aura-games-made-with-unity",
+   "summary": "See which Made With Unity games are launching on XREAL AURA glasses, hear from the studios behind them, and learn how to start building for Android XR.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-28T08:00+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
   {
    "id": "c38abd7cfd25",
    "title": "Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4",
@@ -586,6 +806,17 @@
    "first_seen": "2026-10-27T09:15+08:00"
   },
   {
+   "id": "21e54eec134e",
+   "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
+   "link": "https://www.circuithub.com/post/unveiling-the-grid",
+   "summary": "Hacker News 热度:405 分,197 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50243060",
+   "date": "2026-10-26T21:13+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
+  },
+  {
    "id": "f8fa283aa2f6",
    "title": "Anthropic S-1",
    "link": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
@@ -903,6 +1134,17 @@
    "comments": null,
    "date": "2026-10-23T22:58+08:00",
    "first_seen": "2026-10-24T09:57+08:00"
+  },
+  {
+   "id": "fe70ea1bbf25",
+   "title": "Start Doing Graph Theory",
+   "link": "https://vertex.degree/",
+   "summary": "Hacker News 热度:574 分,125 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50208960",
+   "date": "2026-10-23T21:49+08:00",
+   "first_seen": "2026-10-29T09:02+08:00"
   },
   {
    "id": "ceb8361e36bb",
@@ -4015,17 +4257,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-09-29T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "b23a9310dfe8",
-   "title": "Unity Announces External Dependency Manager Package",
-   "link": "https://unity.com/blog/external-dependency-manager",
-   "summary": "Unity's External Dependency Manager (EDM) replaces EDM4U for Android and iOS SDK dependencies.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-29T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
