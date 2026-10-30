@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-30",
+  "items": [
+    {
+      "title": "[PREVIEW] Raytracing: Clustered Geometry, Partitioned TLAS, Indirect Acceleration Structure Builds",
+      "url": "https://devblogs.microsoft.com/directx/clas-ptlas-preview/",
+      "source": "DirectX Developer Blog",
+      "published": "2026-10-28",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "微软在 Agility SDK 1.722-preview（同日还有 1.620 零售版）里放出自 2018 年 DXR 亮相以来幅度最大的光追更新：Clustered Geometry（CLAS，单簇最多 256 三角/顶点，可组装 Cluster BLAS 并跨 BLAS 复用）、Partitioned TLAS（按分区稀疏更新，未改分区可保留结构）以及统一的 GPU 驱动加速结构构建 API（GetRTASOperationPrebuildInfo / ExecuteIndirectRTASOperations）。官方说明：不要求超出现有光追的新硬件能力；当前驱动支持含全部 RTX、AMD RX 9000、部分 Intel Arc B / Core Ultra；需 Shader Model 6.10 预览与 Developer Mode。文章强调 Gears of War: E-Day 已通过 NVIDIA 厂商 API（RTX Mega Geometry）采用同类能力，DirectX 标准化意在跨厂商。文中样本对比表（AMD RX 9070 沙盒）显示量级加速，但微软明确写了「不要假设游戏会看到同样量级收益」。另有 PIX 预览与 Microsoft/NVIDIA 样本链接。",
+      "why_useful": "若你在做 Nanite 级细节下的光追阴影/反射，或大世界 TLAS 每帧全量重建太贵，这是跨厂商统一路径的预览入口。",
+      "try_it": "装 Agility SDK 1.722-preview + 对应 IHV 预览驱动，开 Developer Mode 启用 D3D12RaytracingPreview；跑 DirectX-Graphics-Samples 里的 D3D12RaytracingClusteredGeometry / PartitionedTLAS，或对照 NVIDIA RTXMG v2.2.0。"
+    },
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 2",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
+      "source": "Godot Engine",
+      "published": "2026-10-29",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "距 4.8 beta 1 两周后，官方发布 feature-complete 阶段的 beta 2：59 名贡献者提交约 144 项修复（相对 beta 1），重点是回归修复而非新功能。文中列举的亮点包括 Compatibility 渲染器 multiply blending 过暗修复、粒子角度曲线默认范围改为 [-1,1]、C# GodotSharp Debug 开 Optimize、Asset Store 默认排序改回 most relevant、CI 最低 Python 3.9→3.10 等。构建自提交 cafc17a19。.NET 构建仍要求 .NET 10.0 或更新（最低支持从 .NET 8 抬到 10）。官方欢迎继续测回归与显著新 bug。",
+      "why_useful": "在跟 4.8 的项目可升到 beta 2 专盯回归；.NET 用户需确认本机已是 .NET 10+。",
+      "try_it": "从文章 Downloads 取 4.8-beta2（Standard 或 .NET），用版本控制备份后再开现有工程；回归优先报 GitHub。"
+    },
+    {
+      "title": "The October inflection point for vibe game development",
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "source": "Simon Willison",
+      "published": "2026-10-28",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "Simon Willison 认为 2026 年 10 月对「vibe coding 做游戏」形成类似 2025 年 11 月对编程 agent 的拐点。他以 Claude Opus 5.5 为主，记录了近几周几乎不看代码做出的四款浏览器 HTML/JS 游戏（Tree Appreciator、Emberwick、Battle Drones、Pumpkin Farmer/Quarter Sun Cove），并称 Opus 5.5 在 3D 建模、音乐与「游戏设计/好玩」上进步明显；他印象是 GPT-6 Astra 尚不及。文中给出可玩链接、部分对话 transcript，以及「Make it a LOT more fun」等提示。属作者实测与观点文，非第三方评测；文中也提到社区对全 AI 资产生成游戏的抵触。",
+      "why_useful": "想用 coding agent 快速验证玩法原型时，可参考他的 three.js 起步提示与迭代方式，并对照文内可玩样例自己判断「好玩」是否站得住。",
+      "try_it": "用「Build a mobile-friendly three.js game where…」在 Claude/ChatGPT 出首版，不够好玩再加「Make it a LOT more fun」；过概念验证后再切到 Codex/Claude Code。"
+    },
+    {
+      "title": "Claude Code v2.1.314",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+      "source": "GitHub · anthropics/claude-code",
+      "published": "2026-10-30",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "2026-10-30 发布。新增 permissions.blockWritesOutsideWorkingDirectories：在所有权限模式下 Write/Edit/NotebookEdit 拒绝工作目录外路径；Claude apps gateway 上游可配可选 groups（仅列出的 IdP 组走该上游，故障转移亦然）；Bedrock 上游可开 guardrail_trace（记录触发了哪条 Amazon Bedrock guardrail，不含匹配文本）；VS Code 与 Claude Desktop 的 Code 页签加入 idle compaction：超过约 200K token 的会话闲置后会摘要，若 prompt cache 已过期则下次消息用该摘要。另修了组织 effort 上限导致反复 Invalid effort、claude -p 启动失败仍 exit 0、Bedrock 多图 400、Foundry 缺默认模型部署、网关拒 tool_reference、交叉签名根证书 TLS、MCP 登出误报成功等一长串问题。",
+      "why_useful": "多仓库/多目录日常用时，打开 blockWritesOutsideWorkingDirectories 可少一次写到错目录；长会话闲置后也少被迫整段重来。",
+      "try_it": "升级到 2.1.314 后在设置里打开 permissions.blockWritesOutsideWorkingDirectories；长会话可故意闲置再发一条，观察是否走 idle compaction 摘要续跑。"
+    },
+    {
+      "title": "Mistral Large 4 (Le Chonk) is now open weight",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "source": "Mistral AI",
+      "published": "2026-10-29",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Mistral 宣布改进版 Mistral Large 4（Le Chonk，约 1 万亿参数、原生多模态）开源权重：可自托管（文中提到 Hugging Face、vLLM/SGLang、NVIDIA NIM 等），并提供 Low/Medium/High 三档推理模式。厂商自述相对公开预览在 coding/防御向安全等基准上有提升（如 FrontierCode 2.0 19.7%、Coding Agent Index 约 48% 且自称平均少约 47% token、Terminal-Bench 4.0 约 41% 等），并给出 Surge Code 人类盲测偏好等；这些数字均来自厂商材料，未经本摘要独立复现。许可为修改版 MIT（Mistral Ecosystem Open-Weight）：免费使用/修改/微调/商用，但以 Model-as-a-Service 商用需另获商业许可。API 标价文中写为 $0.70 / $0.07 cached / $2.10 每百万 token（输入/缓存输入/输出）。文中亦提到向部分企业设计伙伴提供偏红队/渗透测试的特化变体（需严格审查），并称会继续收紧对恶意用途的护栏。",
+      "why_useful": "需要可自托管、可审计的大模型做 coding agent 时，这是新近开源权重选项；商用 SaaS 再分发前先读许可条件。",
+      "try_it": "从 Hugging Face 拉权重用 vLLM/SGLang 起服务，或走 Mistral API / OpenRouter 先比一轮你自己的仓库任务；做 MaaS 前核对 Ecosystem Open-Weight 条款。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T08:57+08:00",
+ "updated": "2026-10-30T09:29+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-30T08:57+08:00",
+   "checked": "2026-10-30T09:29+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 1
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-30T08:57+08:00",
+   "checked": "2026-10-30T09:29+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 1
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-30T08:57+08:00",
+   "checked": "2026-10-30T09:29+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-30T08:57+08:00",
+   "checked": "2026-10-30T09:29+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-30T08:57+08:00",
+   "checked": "2026-10-30T09:29+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 2
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 1
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 3
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 8
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-30T08:57+08:00",
-   "last_new": 4
+   "checked": "2026-10-30T09:29+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -127,7 +127,7 @@
    "id": "8cc253933551",
    "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
    "link": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
-   "summary": "Hacker News 热度:632 分,382 条评论",
+   "summary": "Hacker News 热度:680 分,416 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50296470",
@@ -138,7 +138,7 @@
    "id": "0389c49e7e77",
    "title": "Patrick Stewart has died",
    "link": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
-   "summary": "https://archive.ph/y4Egm https://en.wikipedia.org/wiki/Patrick_Stewart Comments URL: https://news.ycombinator.com/item?id=50294702 Points: 2306 # Comments: 480",
+   "summary": "https://archive.ph/y4Egm https://en.wikipedia.org/wiki/Patrick_Stewart Comments URL: https://news.ycombinator.com/item?id=50294702 Points: 2363 # Comments: 491",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50294702",
@@ -160,7 +160,7 @@
    "id": "7776162c8adf",
    "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
    "link": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
-   "summary": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-... , https://archive.ph/K7bih Comments URL: https://news.ycombinator.com/item?id=50293047 Points: 279 # Comments: 192",
+   "summary": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-... , https://archive.ph/K7bih Comments URL: https://news.ycombinator.com/item?id=50293047 Points: 283 # Comments: 196",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50293047",
@@ -193,7 +193,7 @@
    "id": "6a923b4340c7",
    "title": "H.264 Is Magic (2016)",
    "link": "https://sidbala.com/h-264-is-magic/",
-   "summary": "Hacker News 热度:320 分,122 条评论",
+   "summary": "Hacker News 热度:326 分,124 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50291054",
@@ -215,7 +215,7 @@
    "id": "32aa5b7adc0a",
    "title": "LLM Voice",
    "link": "https://martinfowler.com/bliki/LLM-Voice.html",
-   "summary": "Hacker News 热度:334 分,171 条评论",
+   "summary": "Hacker News 热度:337 分,178 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50290177",
@@ -226,7 +226,7 @@
    "id": "32c270bdcfc7",
    "title": "We're releasing the weights of Mistral Large 4",
    "link": "https://mistral.ai/news/mistral-large-4-oss/",
-   "summary": "Hacker News 热度:1170 分,334 条评论",
+   "summary": "Hacker News 热度:1188 分,338 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50289418",
@@ -259,7 +259,7 @@
    "id": "4896c84a7a5e",
    "title": "DoorDash to acquire Instacart",
    "link": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
-   "summary": "Hacker News 热度:411 分,593 条评论",
+   "summary": "Hacker News 热度:415 分,597 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50287919",
@@ -281,7 +281,7 @@
    "id": "22f292a8fd09",
    "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
    "link": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
-   "summary": "Hacker News 热度:278 分,138 条评论",
+   "summary": "Hacker News 热度:283 分,138 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50286987",
