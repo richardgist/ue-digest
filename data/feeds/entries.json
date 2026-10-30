@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T09:26+08:00",
+ "updated": "2026-10-30T08:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-29T09:26+08:00",
+   "checked": "2026-10-30T08:57+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 1
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-29T09:26+08:00",
+   "checked": "2026-10-30T08:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 1
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-29T09:26+08:00",
+   "checked": "2026-10-30T08:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-29T09:26+08:00",
+   "checked": "2026-10-30T08:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-29T09:26+08:00",
+   "checked": "2026-10-30T08:57+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,8 +71,8 @@
    "ok": true,
    "error": null,
    "title": "gamedeveloper",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 2
   },
   "Godot Engine": {
    "url": "https://godotengine.org/rss.xml",
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,17 +89,17 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 3
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": false,
-   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+   "ok": true,
+   "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 9
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 8
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,220 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-29T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-10-30T08:57+08:00",
+   "last_new": 4
   }
  },
  "entries": [
+  {
+   "id": "e05989bb27bd",
+   "title": "API credits benefit for eligible ChatGPT subscriptions",
+   "link": "https://simonwillison.net/2026/Oct/29/api-credits/",
+   "summary": "API credits benefit for eligible ChatGPT subscriptions Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the Anthropic API. OpenAI have now launched pretty much exactly the same deal: if you have a $100, $200, or $500 subscription plan with them you now get that same quantity of credits to apply to one of your API organizations. I…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-30T06:48+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "8cc253933551",
+   "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+   "link": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+   "summary": "Hacker News 热度:632 分,382 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50296470",
+   "date": "2026-10-30T05:38+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "0389c49e7e77",
+   "title": "Patrick Stewart has died",
+   "link": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+   "summary": "https://archive.ph/y4Egm https://en.wikipedia.org/wiki/Patrick_Stewart Comments URL: https://news.ycombinator.com/item?id=50294702 Points: 2306 # Comments: 480",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50294702",
+   "date": "2026-10-30T03:41+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "56cfcd64b27a",
+   "title": "Donald Glover to direct, star in Netflix adaptation of PUBG Battlegrounds",
+   "link": "https://www.gamedeveloper.com/business/netflix-adapts-krafton-pubg-to-be-written-and-led-by-donald-glover",
+   "summary": "An adaptation of the battle royale shooter has been picked up by Netflix, with protean entertainer Donald Glover to write, produce, and star in the adaptation.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-30T02:17+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "7776162c8adf",
+   "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+   "link": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+   "summary": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-... , https://archive.ph/K7bih Comments URL: https://news.ycombinator.com/item?id=50293047 Points: 279 # Comments: 192",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50293047",
+   "date": "2026-10-30T01:43+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "e43a8036b306",
+   "title": "Xbox CEO says console demand is outstripping supply—but sales continue to drop",
+   "link": "https://www.gamedeveloper.com/console/xbox-ceo-says-console-demand-is-outstripping-supply-as-sales-continue-to-drop",
+   "summary": "Xbox CEO Asha Sharma insists that the demand for Xbox consoles is there, Microsoft simple cannot produce enough, a claim that may clash with Xbox's public sales data.",
+   "source": "Game Developer",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-30T01:35+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "2075f47fc4b3",
+   "title": "Building a multiplayer game world with autonomous Fable-class models",
+   "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+   "summary": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few minutes and was able to prompt a castle…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-30T01:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "6a923b4340c7",
+   "title": "H.264 Is Magic (2016)",
+   "link": "https://sidbala.com/h-264-is-magic/",
+   "summary": "Hacker News 热度:320 分,122 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50291054",
+   "date": "2026-10-29T23:53+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "eca0f0708470",
+   "title": "Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials",
+   "link": "https://developer.nvidia.com/blog/unlocking-tensor-core-performance-for-machine-learning-interatomic-potentials/",
+   "summary": "Atomistic simulations help researchers understand how molecules and materials behave, from chemical reactions and phase transitions to mechanical failure. These...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-29T23:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "32aa5b7adc0a",
+   "title": "LLM Voice",
+   "link": "https://martinfowler.com/bliki/LLM-Voice.html",
+   "summary": "Hacker News 热度:334 分,171 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50290177",
+   "date": "2026-10-29T22:57+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "32c270bdcfc7",
+   "title": "We're releasing the weights of Mistral Large 4",
+   "link": "https://mistral.ai/news/mistral-large-4-oss/",
+   "summary": "Hacker News 热度:1170 分,334 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50289418",
+   "date": "2026-10-29T22:13+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "12399600af28",
+   "title": "Quoting Ben Hylak",
+   "link": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+   "summary": "every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath. except for our product, of course. in our product, customers love the ui and love us very much. we're special that way. — Ben Hylak Tags: model-context-protocol , ai",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T22:06+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "13a4facb28c8",
+   "title": "Granite Switch 4.1.1 — Update models like you update software",
+   "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T21:37+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "4896c84a7a5e",
+   "title": "DoorDash to acquire Instacart",
+   "link": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+   "summary": "Hacker News 热度:411 分,593 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50287919",
+   "date": "2026-10-29T20:33+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "ea581be10401",
+   "title": "Dev snapshot: Godot 4.8 beta 2",
+   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
+   "summary": "4.8's second beta snapshot arrives",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-29T20:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "22f292a8fd09",
+   "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
+   "link": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+   "summary": "Hacker News 热度:278 分,138 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50286987",
+   "date": "2026-10-29T18:42+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "c1c5250f19ee",
+   "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+   "link": "https://huggingface.co/blog/announcing-project-protostar",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T08:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "44a641f01abe",
+   "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+   "link": "https://huggingface.co/blog/mistral-large4",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T08:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "b8d946e5e74c",
+   "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+   "link": "https://huggingface.co/blog/anydecisionmodel",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-29T08:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
+  },
   {
    "id": "b991e55a2f83",
    "title": "Quoting Ted Sanders",
@@ -914,6 +1123,17 @@
    "comments": null,
    "date": "2026-10-25T20:00+08:00",
    "first_seen": "2026-10-26T09:47+08:00"
+  },
+  {
+   "id": "4256d4ae3c1d",
+   "title": "Graphics Programming weekly - Issue 460 - October 25th, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-460/",
+   "summary": "GPU-Driven Anything explains the count/prefix-sum/write pattern used in GPU-driven graphics for culling, LOD, and clustered lighting covers expansion, compaction, and binning discusses the difference between push- and pull-based models for moving data additionally presents the effect of determinism compared against atomics wayback-archive Paint That Squishes details the GPU-based paint simulation behind the iOS app Fold & Squish implements splats, thin-film flow, folding, rubbing, peeling, and…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-25T12:00+08:00",
+   "first_seen": "2026-10-30T08:57+08:00"
   },
   {
    "id": "deeaf140169e",
@@ -4238,17 +4458,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "3403f8fdc1b4",
-   "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
-   "link": "https://huggingface.co/blog/open-tts-leaderboard",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-09-30T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "a28d44b48446",
    "title": "Dev snapshot: Godot 4.8 dev 7",
    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-7/",
@@ -4422,17 +4631,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-02T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "85a1f020bf03",
-   "title": "Graphics Programming weekly - Issue 453 - August 30th, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-453/",
-   "summary": "DLSS 5: Generative Neural Rendering presents DLSS 5 as a real-time generative neural rendering stage that complements rendering with learned visual expectations introduces 3D-guided neural rendering using a one-step pixel-space diffusion model conditioned on rendered frames, motion vectors, and temporal state wayback-archive What happens when a GPU writes memory follows a single store instruction through the RTX 4090 memory hierarchy from warp to DRAM details coalescing, write-through L1, L2…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-08-30T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

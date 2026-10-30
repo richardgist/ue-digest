@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-30",
+  "items": [
+    {
+      "title": "Cubix：为高画质手游优化 Unreal Engine（分档、预算与 Nanite/Lumen 取舍）",
+      "url": "https://www.cubix.co/blog/optimizing-unreal-engine-for-high-fidelity-mobile-games/",
+      "source": "Cubix",
+      "published": "2026-10-27",
+      "ue_version": "原文未标注（讨论 UE5 移动端路径）",
+      "summary": "面向旗舰/中端/低端三档的手游优化清单：先定 Device Profile 与 30/60 FPS 目标，给出约 16.6 ms 帧预算里 GPU/CPU 切分，再按 LOD、实例化、贴图流送、烘焙光照、材质简化、遮挡剔除与 HLOD 降负载。强调 Nanite、Lumen、Mobile HDR、动态分辨率要在真机验证，并持续用 Unreal Insights 与长局热节流测试，而不是桌面预览。",
+      "try_points": [
+        "立项时就写死三档 Device Profile（贴图/阴影/后处理/分辨率），并按 60 FPS 把 GPU≈10–12 ms、CPU≈4–6 ms 当硬预算。",
+        "优先做 LOD + 实例化降 Draw Call；Nanite/Lumen 只在旗舰档、且真机 profiling 通过后再开，中低档保留烘焙光与传统 LOD。"
+      ],
+      "topics": [
+        "移动端",
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "UE 5.8 MegaLights 性能清单：固定采样预算、方向光默认关闭与可调 CVar",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/megalights/",
+      "source": "Adventures in Causality",
+      "published": "原文未标注（文档目标 UE 5.8）",
+      "ue_version": "UE 5.8",
+      "summary": "按 UE 5.8 生产就绪口径整理 MegaLights：每像素固定采样预算，灯再多时帧时相对稳定，但重要灯竞争同一像素时噪声/质量会掉。方向光需显式开 r.MegaLights.DirectionalLights，Epic 更推荐强太阳用 Deferred+VSM；诊断用 light finder / ray visualizer，并对比整帧 GPU 而不只看单个事件。给出 Allow、DownsampleMode、NumSamplesPerPixel、逐灯 Shadow Method 等缩放杠杆。",
+      "try_points": [
+        "先用 MegaLights 调试视图找过密灯区与过大衰减半径，再动采样数或降采样，避免只看单一 pass 计时。",
+        "强 Directonal Light 默认保持 VSM/Deferred；只有弱月光类场景再试 MegaLights Directional，并写入 Scalability。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 Nanite 几何成本：可视化、流送池与 Masked/WPO 杠杆",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/nanite-geometry/",
+      "source": "Adventures in Causality",
+      "published": "原文未标注（文档目标 UE 5.8）",
+      "ue_version": "UE 5.8",
+      "summary": "提醒 Nanite 不消除材质、Masked 叠盖、WPO、阴影、流送与存储成本。诊断用 Nanite Visualization 与 NaniteStats（含 VirtualShadowMaps 视图）；流送池抖动可加大 r.Nanite.Streaming.StreamingPoolSize 或减常驻需求；Masked/WPO 要看 Overdraw 并限制距离。强调不要用三角面数当性能目标，要量 Nanite pass、材质/阴影、流送与 fallback。",
+      "try_points": [
+        "静态镜头下若流送池抖动，先对照 NaniteStats 再决定加 StreamingPoolSize 还是砍源细节/贴图。",
+        "对植被与变形内容：看 Preserve Area、关掉远处 WPO；Max Edge Length Factor 保持 0，除非已观察到过度简化。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8：提交、剔除与 LOD——用 HLOD/实例化压 Render Thread",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/submission-culling-and-lods/",
+      "source": "Adventures in Causality",
+      "published": "原文未标注（文档目标 UE 5.8）",
+      "ue_version": "UE 5.8",
+      "summary": "指出 Render Thread 成本常跟可见 primitive/section/灯数与状态多样性走，而不是三角面数。给出 stat sceneRendering / Primitive Debugger（5.8 Experimental）排查路径；建议可实例化则用 ISM/HISM，远景用 HLOD，Nanite 不适用处保留传统 LOD，并配合 Max Draw Distance / Cull Distance Volume。合并 Actor 时要保住剔除粒度与流送边界；遮挡改动要在相机运动中复测，避免弹出或查询更贵。",
+      "try_points": [
+        "Render Thread 高、GPU 有余量时：先对重复网格上 HISM/HLOD，再动合并；合并后用冻结渲染/遮挡可视化确认没伤剔除。",
+        "调 Cull Distance 或 Precomputed Visibility 后，录一段转相机的 Insights，确认没有更贵的查询或明显弹出。"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "PerfGuard：GPU / CPU / 内存三棵性能分诊决策树",
+      "url": "https://getperfguard.com/tutorials/decision-trees",
+      "source": "PerfGuard",
+      "published": "约 2026-10（文中锚定 UE 5.5/5.6）",
+      "ue_version": "UE 5.5 / 5.6 锚定（文中标注）",
+      "summary": "从 stat unit 出发的三棵流程图：GPU 界用 ScreenPercentage 确认后按 Lumen/Nanite/VSM/反射/半透明分支给 CVar 与深潜链接；CPU 界区分 Draw（Draw Call→HISM/HLOD）与 Game（Tick/Anim/物理/GC/Blueprint/流送）；内存界覆盖 Streaming Pool、VRAM（含 Lumen/Nanite/VSM 池）与系统内存。适合回归时按症状最快落到可试改动。",
+      "try_points": [
+        "先跑 ScreenPercentage 升降测试分 GPU/CPU；GPU 界用 ProfileGPU 点名最大 pass 再进对应子系统，不要一次改多个 CVar。",
+        "Draw 线程高时优先 HISM/HLOD/合并静态体；纹理池告警用 ListTextures 找未流送/过大贴图，而不是只调高 PoolSize。"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD",
+        "移动端"
+      ]
+    }
+  ]
+}
