@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T09:29+08:00",
+ "updated": "2026-10-31T09:00+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 2
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 4
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,16 +62,16 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 1
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
    "topic": "游戏开发",
-   "ok": true,
-   "error": null,
+   "ok": false,
+   "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-30T09:29+08:00",
+   "checked": "2026-10-31T09:00+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 4
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,143 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-30T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-10-31T09:00+08:00",
+   "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "bb46da2dc3b3",
+   "title": "dbreunig/nesformer",
+   "link": "https://simonwillison.net/2026/Oct/30/nesformer/",
+   "summary": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on Hacker News Drew reveals the Opus 5.5 prompts he used to build this system: Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-31T05:59+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "1759ad28d747",
+   "title": "Build a Validated Kubernetes Runtime for NVIDIA Dynamo",
+   "link": "https://developer.nvidia.com/blog/build-a-validated-kubernetes-runtime-for-nvidia-dynamo/",
+   "summary": "Teams building AI applications need a repeatable path from a model configuration to a working inference endpoint. NVIDIA Dynamo is a distributed inference...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-31T05:35+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "fc5cc8df6916",
+   "title": "Run AI Models for Edge Application Development with Just a Few Commands",
+   "link": "https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands/",
+   "summary": "AI is expanding beyond the data center as developers build a new generation of agents to act at the edge: monitoring driver attention and cabin conditions,...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-31T04:33+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "3bf1f8b6e99d",
+   "title": "Rivian brings Ghostbusters universe to Halloween Mode, with real-time visuals in Unreal Engine",
+   "link": "https://www.unrealengine.com/news/rivian-brings-ghostbusters-universe-to-halloween-mode-with-real-time-visuals-in-unreal-engine",
+   "summary": "Who you gonna call? Rivian brings Ghostbusters universe to life with its Halloween Mode, featuring Slimer, Mini-Pufts, and spooky surprises—all powered by real-time 3D graphics created in Unreal Engine 5.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-31T02:00+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "b62497b2b14e",
+   "title": "nemotron-halloween",
+   "link": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-10-31T01:57+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "58321c254e8e",
+   "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
+   "link": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
+   "summary": "Building an autonomous agent requires a model, a harness, and domain-specific tools. To deploy an agent more securely, developers need a runtime that enforces...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-31T00:00+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "6f2dfb4a6085",
+   "title": "AI isn't replacing SREs, it's deskilling them",
+   "link": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+   "summary": "Hacker News 热度:498 分,374 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50305693",
+   "date": "2026-10-30T23:52+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "f77876c3876a",
+   "title": "Northflank Breached",
+   "link": "https://status.northflank.com",
+   "summary": "Hacker News 热度:349 分,271 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50305025",
+   "date": "2026-10-30T23:10+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "ea0c4d42af38",
+   "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
+   "link": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform/",
+   "summary": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-30T23:01+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "085f52aa9362",
+   "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+   "link": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
+   "summary": "Hacker News 热度:260 分,51 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50301854",
+   "date": "2026-10-30T18:06+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "d4f691c037f4",
+   "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+   "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+   "summary": "https://cursor.com/blog/claude-code-extension-security-notic... Comments URL: https://news.ycombinator.com/item?id=50300683 Points: 758 # Comments: 473",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50300683",
+   "date": "2026-10-30T15:09+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
+  {
+   "id": "fe608f19e6e8",
+   "title": "2026 Industry releases and what’s coming in Q4",
+   "link": "https://unity.com/blog/unity-industry-product-releases-2026",
+   "summary": "Explore Unity Industry 2026 product releases, from Unity Studio and Pipeline Automation to Simulation Pro, AI Workflows, SOC 2 Type 2, HMI, and Q4 plans.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-10-30T08:00+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
+  },
   {
    "id": "e05989bb27bd",
    "title": "API credits benefit for eligible ChatGPT subscriptions",
@@ -320,6 +452,17 @@
    "comments": null,
    "date": "2026-10-29T08:00+08:00",
    "first_seen": "2026-10-30T08:57+08:00"
+  },
+  {
+   "id": "3868e405419f",
+   "title": "UE devs can now choose to train AI Models on their projects",
+   "link": "https://www.unrealengine.com/ue-devs-can-now-choose-to-train-ai-models-on-their-projects",
+   "summary": "We’ve updated the Unreal Engine End User License Agreement (EULA) so developers can choose to train AI models on their Unreal Engine and MetaHuman projects.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-10-29T08:00+08:00",
+   "first_seen": "2026-10-31T09:00+08:00"
   },
   {
    "id": "b991e55a2f83",
@@ -4420,28 +4563,6 @@
    "summary": "With the latest major main-series installment of Gears of War about to drop, we caught up with The Coalition to find out how UE5 helped recapture the desperate “destroyed beauty” aesthetic of the original games—while evolving gameplay, animation, and more.",
    "source": "Unreal Engine 官方",
    "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-01T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "dfe998d44a0f",
-   "title": "Meeting you where you work: Unity Plugin for Grok Build",
-   "link": "https://unity.com/blog/unity-plugin-grok",
-   "summary": "The official Unity Plugin now works in Grok Build. Get 30+ Unity-written skills with one terminal command. Unity 6+.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-01T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "d801085d75d3",
-   "title": "Games made with Unity: September 2026 in review",
-   "link": "https://unity.com/blog/games-made-with-unity-september-2026-releases",
-   "summary": "Stay updated with the latest creations from the Unity community. Explore our list of standout games made with Unity in August 2026.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
    "comments": null,
    "date": "2026-10-01T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"

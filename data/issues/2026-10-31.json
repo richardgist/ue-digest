@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-31",
+  "items": [
+    {
+      "title": "Epic Office Hours：UE 5.8 MegaLights 入门（生产就绪、设置与调优）",
+      "url": "https://www.youtube.com/watch?v=LPKz7gH-T0U",
+      "source": "Epic Games Education（YouTube）",
+      "published": "2026-10-28（官方 X 推送 VOD；Toolfarm 同日转载）",
+      "ue_version": "UE 5.8",
+      "summary": "Epic 教育团队 Office Hours 录播，讲解 5.8 起生产就绪的 MegaLights：用重要性采样统一处理大量可投影动态灯光。需 DX12、Shader Model 6.6，并在项目设置、逐灯 Allow MegaLights、后处理体积三处启用；阴影方法可选 Ray Tracing 或 Virtual Shadow Maps。实操建议收紧 Attenuation Radius、避免灯光嵌进几何、用 IES/形状灯与纹理矩形灯，注意 Nanite fallback 导致的伪影；方向光默认关闭需 r.MegaLights.DirectionalLights；支持 Niagara 粒子灯、体积雾与半透明。调试可用 Light Mixer、光照复杂度、MegaLights 视图与 r.MegaLights.* CVar。",
+      "try_points": [
+        "先开 DX12 + SM6.6，在 Rendering > Direct Lighting 启用 MegaLights，再检查逐灯 Allow 与 Post Process Volume 开关，并在 Demo 场景用 Light Mixer 批量收紧衰减半径。",
+        "热点像素用 Lighting Complexity / MegaLights 调试视图查重叠灯；噪声先调 denoiser/降采样再盲目加 NumSamples；强太阳优先保留 Deferred+VSM，弱月光再试 Directional。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Arm：Neural Dawn 开放下载——手游上的 MegaLights、光追与神经图形",
+      "url": "https://newsroom.arm.com/blog/neural-dawn-game-available-to-download",
+      "source": "Arm Newsroom",
+      "published": "2026-10-29",
+      "ue_version": "UE 5.6.1（原文：Neural Dawn 所用引擎版本）",
+      "summary": "Arm 与 Sumo 联合的 Neural Dawn 正式可下载试玩，面向搭载 Mali G2-Ultra NX 的机型（OPPO Find X10 Pro Max、vivo X500 Pro/Pro Max、Xiaomi 18 Fold、Xiaomi Pad 9 Pro Max）。演示将 Unreal MegaLights 与移动端光追、Arm Neural Technology（NSS / NFRU / NSSD）结合，在功耗约束下做电影感动态光照与阴影。文中强调神经图形进入量产管线，并指向 Neural Technology Playbook 与引擎侧生态进展；Sumo CEO 称把神经图形当作开发过程一部分，而非事后贴片。",
+      "try_points": [
+        "有对应真机时按 Arm 开发者页核对设备列表、装 APK，并把刷新率设为 60 Hz，对照 MegaLights 场景观察光影与热节流。",
+        "自研项目先从小范围评估 NSS/NFRU 插件入手；原文明确 NSSD+MegaLights 完整管线需更深引擎改动，不是开箱即用。"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 Virtual Shadow Maps：诊断 Shadow Depths/Projection 与失效源",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/virtual-shadow-maps/",
+      "source": "Adventures in Causality",
+      "published": "原文未标注（文档目标 UE 5.8；近两周窗口内补齐 VSM 实操清单）",
+      "ue_version": "UE 5.8",
+      "summary": "面向 Nanite 与大体量动态光场景的 VSM 排障清单：先把成本拆成 Shadow Depths（深度页更新）与 Shadow Projection（投影采样）。用 Virtual Shadow Map 视图看 Cached Page（绿缓存/红未缓存）、Shadow Casters 找失效源，以及 Nanite Overdraw 与 Virtual Page。常见失效源包括移动灯、增删 caster、WPO/PDO、骨骼变形、过大包围体与镜头切。给出收紧边界、远处关 WPO/投影、Contact/Distance Field 阴影替代、仅在刚性断言成立时用 Invalidation Behavior 覆盖等杠杆；并提醒 r.Shadow.Virtual.Cache 0 只用于诊断。",
+      "try_points": [
+        "先用 VSM Cached Page / Shadow Casters 视图定位红页与失效 caster，再对一类植被关远处 WPO 或投影，对比整帧 GPU。",
+        "移动灯不要按静止灯期望复用缓存；改 Resolution LOD Bias 或页池前先量 Depths vs Projection 哪边涨。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
