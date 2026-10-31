@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-31",
+  "items": [
+    {
+      "title": "Splatting the Gaussians into Blender",
+      "url": "https://code.blender.org/2026/10/splatting-the-gaussians-into-blender/",
+      "source": "Blender Developers Blog",
+      "published": "2026-10-30",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Blender 5.3 引入原生 3D Gaussian Splat：可导入 .PLY / .SPZ，也可从 USD 加载；在编辑器里以点云形态表示，Geometry Nodes 提供 Pointcloud Type，属性含 Position、三维 Scaling、四元数 Rotation，以及拆成 radiance:base / radiance:sh 的球谐辐射。Workbench / EEVEE 用光栅化投影为 2D billboard（EEVEE 初版走 dithered 透明，噪声需提高采样；Workbench 需 Flat 光照预览）；Cycles 对每条射线求与 splat 的最大不透明度交点并用随机接受做不透明，以兼容二次射线与 GI，并注明与 EEVEE 在透视/训练假设上会有细微差异。文中给出重光照、法线估计的早期做法与当前限制（EEVEE overdraw、编辑工具仍偏点云、重光照仍早期），并列出后续性能与工具改进计划。",
+      "why_useful": "若你在 UE/自研管线外需要把 3DGS 捕获直接进 DCC 做剪辑、节点处理或对照 Cycles/EEVEE 表现，这是官方一手说明与限制清单。",
+      "try_it": "升到 Blender 5.3，把 .PLY/.SPZ 拖进视口导入；EEVEE 适当提高 Viewport/Render 采样，Workbench 切 Flat；需要重光照时在着色器改 emissive/radiance 并对照 Cycles 结果。"
+    },
+    {
+      "title": "2026 Industry releases and what’s coming in Q4",
+      "url": "https://unity.com/blog/unity-industry-product-releases-2026",
+      "source": "Unity Blog",
+      "published": "2026-10-30",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 汇总 Industry 2026 已发货能力并预告 Q4：Industry AI Workflows（实验）可用自有 agent（文中写 Claude Code / Cursor / GitHub Copilot）对接 Asset Manager、Asset Transformer、Pipeline Automation，用自然语言编排 CAD 导入到发布；另有 Figma→UI Toolkit 连接器（实验）、USD Toolkit 与 Isaac Sim 往返（实验）、Unity Studio GA 与协同、Pipeline 封闭测试、Simulation Pro 早期访问、Android 共享 Render Service beta，以及 Unity 6.4–6.6。文末「Coming later this quarter」写明 Editor agent 插件（Claude/Codex/Grok）、Asset Manager 文件夹/集合分享、Unity 6.7 LTS 仍为当前计划、上线时间可能变动。",
+      "why_useful": "做数字孪生、仿真、HMI 或要把 AI agent 接进 Unity 资产管线时，可按「已实验可试 / Q4 规划未定」分层跟进，避免把路线图当已发货。",
+      "try_it": "优先打开文中 Industry AI Workflows / USD Toolkit / Figma 连接器实验入口；若做机器人仿真再申请 Simulation Pro；Q4 插件与 6.7 LTS 等官方再宣布再升级。"
+    },
+    {
+      "title": "Codex CLI 0.166.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+      "source": "openai/codex (GitHub Releases)",
+      "published": "2026-10-29",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "GitHub 标注 github-actions 于 2026-10-29 19:47 发布 rust-v0.166.0（Latest）。新特性：键盘驱动 transcript 选择（词/行/页）、集成搜索与可配置快捷键；异步问答与 transcript 中 Markdown 渲染更一致；模型目录加入 GPT-6.1 Terra（bundled / Vertex AI / Amazon Bedrock）；新增 `codex queue --resume` 在排队后恢复未加载线程；TUI 更清晰的安全拦截说明与可选更安全后续提示；`codex doctor --network-only` 专查配置、连通性与 WebSocket。修复包括 resume/fork 保留审批与权限、推理 token 计数以免过早 compaction、TUI 重连等。Changelog 相对 rust-v0.165.0。",
+      "why_useful": "日常用 Codex TUI 或走 Vertex/Bedrock 的人可立刻用上 transcript 检索、队列恢复和网络诊断；接在 0.165 之后的增量很实用。",
+      "try_it": "升级到 0.166.0 后试 `/` 相关 transcript 选择与搜索；Vertex/Bedrock 用户确认本账号是否真有 GPT-6.1 Terra 再改默认；连不上时先跑 `codex doctor --network-only`。"
+    },
+    {
+      "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
+      "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-10-30",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "NVIDIA 介绍 NemoClaw 开源蓝图：在已有 harness（目前写明支持 OpenClaw、Hermes Agent、LangChain Deep Agents）外组装 Nemotron 模型、NeMo 优化/观测（含 NeMo Relay）与 OpenShell 安全运行时（管文件、网络、凭证与工具访问）。文中强调它不是另一套 harness，也不替代运行时，而是可定制的参考栈；可与 Claude/Codex/Cursor 等 frontier agent 协作，把领域子任务委派给自托管专家。文中引用 LangChain 将 Deep Agents harness 调优到 Nemotron 3 Ultra、「接近前沿表现且约 10× 更低每次运行成本」——属合作方/厂商说法，原文未给出独立第三方基准细节。页首有 Nemotron AI 生成摘要条，正文需以人工段落为准。",
+      "why_useful": "若你已在用 OpenClaw/Hermes/LangChain Deep Agents，又想把模型优化、遥测和策略围栏一次性接上并可自托管，这是官方架构说明与入门路径。",
+      "try_it": "按文末 Next Steps：看 Deploy Secure Agents with NemoClaw DLI、跑 NemoClaw quickstart，再对照 GitHub 蓝图与 OpenShell 策略教程；LangChain 用户可查文中提到的 Nemotron 3 Ultra profile。"
+    },
+    {
+      "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
+      "url": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-10-30",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "NVIDIA 发布开源 CLI `gds-diag`（GPUDirect Storage 团队出品，随 Magnum IO 仓库分发），用于评估 GDS 环境、定位问题并给出改进建议。子命令覆盖端到端检查、安装前验证、安装后确认，以及对容器与具体挂载点的深挖；结果带 FAIL/WARN/INFO/PASS 等状态、说明与缓解建议。另附可选 agent skill：用自然语言编排多步诊断并做模型辅助解读（仍落在同一 CLI 上）。运行要求：Linux + Python 3.8+；完整 GDS 功能需要数据中心级 GPU 与 CUDA 12.2+，但文中写明这些不是 gds-diag 自身依赖。安装：`git clone https://github.com/NVIDIA/MagnumIO.git`，进入 gds-diag 目录。页首亦有 AI 生成摘要条。",
+      "why_useful": "训练/推理 IO 瓶颈时，比翻长篇 GDS 文档更快做基线体检；也可让 Claude/Codex 直接打开该目录用 skill 做自然语言分诊。",
+      "try_it": "克隆 MagnumIO，`cd` 到 gds-diag 后跑 `python3 gds-diag.py --help` 并按文档做端到端检查；需要自然语言编排时用 coding assistant 打开该目录启用 agent skill。"
+    }
+  ]
+}

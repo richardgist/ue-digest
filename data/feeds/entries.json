@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T09:00+08:00",
+ "updated": "2026-10-31T09:31+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 2
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 4
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-31T09:00+08:00",
+   "checked": "2026-10-31T09:31+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 4
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-31T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-10-31T09:31+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -182,7 +182,7 @@
    "id": "6f2dfb4a6085",
    "title": "AI isn't replacing SREs, it's deskilling them",
    "link": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
-   "summary": "Hacker News 热度:498 分,374 条评论",
+   "summary": "Hacker News 热度:502 分,379 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50305693",
@@ -193,7 +193,7 @@
    "id": "f77876c3876a",
    "title": "Northflank Breached",
    "link": "https://status.northflank.com",
-   "summary": "Hacker News 热度:349 分,271 条评论",
+   "summary": "Hacker News 热度:358 分,272 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50305025",
@@ -212,10 +212,21 @@
    "first_seen": "2026-10-31T09:00+08:00"
   },
   {
+   "id": "b3e507e45172",
+   "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+   "link": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+   "summary": "Hacker News 热度:308 分,216 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50303172",
+   "date": "2026-10-30T20:50+08:00",
+   "first_seen": "2026-10-31T09:28+08:00"
+  },
+  {
    "id": "085f52aa9362",
    "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
    "link": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
-   "summary": "Hacker News 热度:260 分,51 条评论",
+   "summary": "Hacker News 热度:262 分,51 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50301854",
@@ -226,7 +237,7 @@
    "id": "d4f691c037f4",
    "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
    "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
-   "summary": "https://cursor.com/blog/claude-code-extension-security-notic... Comments URL: https://news.ycombinator.com/item?id=50300683 Points: 758 # Comments: 473",
+   "summary": "https://cursor.com/blog/claude-code-extension-security-notic... Comments URL: https://news.ycombinator.com/item?id=50300683 Points: 771 # Comments: 484",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50300683",
