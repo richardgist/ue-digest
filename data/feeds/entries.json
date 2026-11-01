@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T09:31+08:00",
+ "updated": "2026-11-01T09:30+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-10-31T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-01T09:30+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-10-31T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-01T09:30+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,88 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-10-31T09:31+08:00",
+   "checked": "2026-11-01T09:30+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "82edef8e8b94",
+   "title": "How We Took Over ChatGPT Accounts",
+   "link": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+   "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-01T07:15+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "7108e33c7fcd",
+   "title": "datasette-llm 0.1a9",
+   "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+   "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-01T06:10+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "d696d50b5810",
+   "title": "HackerTube: YouTube built from videos recommended by HN",
+   "link": "https://karpathy.bearblog.dev/hacker-tube/",
+   "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/ Comments URL: https://news.ycombinator.com/item?id=50319510 Points: 673 # Comments: 231",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50319510",
+   "date": "2026-11-01T03:56+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "c9f8678f3a3b",
+   "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+   "link": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+   "summary": "Hacker News 热度:327 分,154 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50319143",
+   "date": "2026-11-01T03:16+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "b3aa3ecd4b47",
+   "title": "Do the math: How we took over ChatGPT accounts",
+   "link": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+   "summary": "Hacker News 热度:302 分,149 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50314699",
+   "date": "2026-10-31T18:30+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "00420241e7b8",
+   "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
+   "link": "https://piefed.world/post/1503394",
+   "summary": "Hacker News 热度:301 分,176 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50314666",
+   "date": "2026-10-31T18:23+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "bee6a342d8b9",
+   "title": "Serbia just elected the world's brainiest parliament",
+   "link": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+   "summary": "Hacker News 热度:806 分,462 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50314654",
+   "date": "2026-10-31T18:21+08:00",
+   "first_seen": "2026-11-01T09:30+08:00"
+  },
   {
    "id": "bb46da2dc3b3",
    "title": "dbreunig/nesformer",
@@ -4513,39 +4590,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "71f466b568a4",
-   "title": "From attention to action: why the state of play matters for marketers",
-   "link": "https://unity.com/blog/mobile-gaming-attention-economy-driving-marketing-performance",
-   "summary": "In a fragmented media landscape, the state of play matters. Learn how mobile gaming captures high-quality attention to drive measurable marketing action",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-02T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "3130c078cf42",
-   "title": "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills",
-   "link": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills/",
-   "summary": "AI agents are becoming a standard part of development workflows, but general-purpose agents weren't built with specialized infrastructure software such as...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-02T02:13+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "06c5b72bfbfe",
-   "title": "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples",
-   "link": "https://developer.nvidia.com/blog/build-local-ai-apps-with-c-and-nvidia-tensorrt-rtx-samples/",
-   "summary": "Adding AI models to local applications requires a portable model format, a reliable runtime, and acceleration that works across target systems. Do Inference Now...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-02T01:59+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "45d2f676df1c",
    "title": "Advanced Shader Delivery State Object Compiler now available",
    "link": "https://gpuopen.com/news/asd-compiler-launch/",
@@ -4752,17 +4796,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-03T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "c7b3459f86e0",
-   "title": "Here’s why Rebel Wolves chose UE5 to power its ambitious, large scale, open world RPG The Blood of Dawnwalker",
-   "link": "https://www.unrealengine.com/developer-interviews/heres-why-rebel-wolves-chose-ue5-to-power-its-ambitious-large-scale-open-world-rpg-the-blood-of-dawnwalker",
-   "summary": "We connected with the Warsaw-based developer to learn more about its debut project and to sink our teeth into the reasons Unreal Engine 5 was chosen.",
-   "source": "Unreal Engine 官方",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-02T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

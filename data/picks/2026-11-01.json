@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-01",
+  "items": [
+    {
+      "title": "Graphics Programming Weekly - Issue 460 (October 25th, 2026)",
+      "url": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-460/",
+      "source": "Jendrik Illner",
+      "published": "2026-10-25",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "本周汇编涵盖 GPU-driven 渲染中的 count/prefix-sum/write 模式（剔除、LOD、集群光照）、虚拟阴影贴图（级联虚拟页表与物理页分配，并给出 RTX 3070 计时）、Godot 4 着色器中的深度/模板缓冲用法，以及一份对照 FXC/DXC/Metal/Khronos/Tint/Naga/NIR/Slang 的着色器编译器调研。另有 Metal 油画模拟与不依赖 Vulkan Wayland WSI 的呈现路径等条目。",
+      "why_useful": "把近期可对照的 GPU-driven / VSM / Godot 深度模板与着色器编译器材料集中到一期，方便按需点进原文深挖。",
+      "try_it": "优先打开 Virtual Shadow Maps 与 GPU-Driven Anything 两条；若做 Godot 特效可看 Depth & Stencil Buffers。"
+    },
+    {
+      "title": "Autopilot: A Continually Learning Real-Time General Playtesting System",
+      "url": "https://www.tryaura.dev/updates/autopilot-continually-learning-real-time-general-playtesting-system/",
+      "source": "Aura (Ramen)",
+      "published": "2026-10-31",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Ramen 开源 Autopilot（Apache-2.0，仓库 ramenvr/autopilot）：编辑器内 playtest 插件，支持 Unreal Engine 5、Unity 6、Godot 4（文档写明 UE 5.4–5.8、Unity 6+、Godot 4.7+；Windows/macOS）。架构为引擎插件 + Agent 服务 + 编码智能体（Claude Code / Codex / OpenCode SDK）动态写决策模型 harness，再用决策模型约每 0.25s 选动作并注入真实键鼠输入；带按项目记忆以便后续运行复用。厂商自测：在未改的 Easy Survival RPG V5（UE 5.8）上冷启动对比 Claude Code 与另一竞品；基准与「更快」结论均为厂商自报，第三方文章亦注明未独立复测。",
+      "why_useful": "UE/Unity/Godot 项目可直接装插件做探索、验证、目标驱动 playtest，并可用 Claude Code/Codex 订阅或自备密钥。",
+      "try_it": "从 tryaura.dev/autopilot 下载对应引擎构建，或看 GitHub ramenvr/autopilot；装好后可用 `autopilot connect claude` / `codex` 走 MCP。"
+    },
+    {
+      "title": "Unity 6000.3.27f2",
+      "url": "https://unity.com/releases/editor/whats-new/6000.3.27f2",
+      "source": "Unity",
+      "published": "2026-10-30",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "LTS 维护版（changeset 22188f149405）。安全相关：捆绑 Autodesk FBX SDK 升至 2020.3.11 以修复两处 FBX 解析缓冲区溢出；IL2CPP/Mono 的 Brotli 解码器修复 CVE-2026-111497（称解码不可信数据可能导致远程代码执行）；Package Manager 所用 Node.js 升至 v24.22.1 同属该 CVE；联网侧拒绝使用已泄露的 eMudhra 证书的 TLS。图形侧新增只读 API Graphics.disableDepthAndStencilBuffers，并修 DX12 释放 GPU buffer 的 use-after-free、Metal 过大线程组导致的 GPU hang、URP 2D 在关闭 Depth/Stencil 时仍建缓冲等问题。",
+      "why_useful": "仍在 6000.3 LTS 线的项目可直接评估升级以覆盖 FBX/Brotli/证书与若干渲染崩溃类修复。",
+      "try_it": "Hub 安装 6000.3.27f2；若项目常导入 FBX 或启用压缩/Package Manager 脚本，优先对照 Release Notes 里 Improvements 与 IL2CPP/Mono/Networking 条目。"
+    },
+    {
+      "title": "Claude Code v2.1.316",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "source": "GitHub / Anthropic",
+      "published": "2026-10-31",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "正式发布于 2026-10-31（UTC）。新增：可用 CLAUDE_CODE_DISABLE_ULTRATHINK 关闭 ultrathink；CLAUDE_CODE_SUBAGENT_EFFORT 可单独设定子代理默认 effort；Claude apps gateway 支持 pooled_budget 组共享月度预算、managed.policy_mode: layered，以及 Bedrock 上游的 guardrail.input_tagging。变更：自 2026-10-30 起弃用 Opus 4.8 的 fast mode，并写明将于 2026-11-30 移除（届时不会回退到标准 Opus 4.8，需迁到 Opus 5.5 以保留加速）。另含退出时清理残留 shell、若干 auto mode / VS Code / cloud sessions 修复。",
+      "why_useful": "日常用 Claude Code 的人可升级拿子代理 effort 控制与网关策略；仍用 Opus 4.8 fast mode 的需在月底前迁移。",
+      "try_it": "`claude update` 后看 `claude --version`；团队可查 CLAUDE_CODE_SUBAGENT_EFFORT 与 gateway layered 策略文档。"
+    },
+    {
+      "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "source": "Liquid AI",
+      "published": "2026-10-27",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Liquid AI 发布约 2B 参数量级的 LFM3 系列开源权重：在同一 LFM3-1.7B-Base 上分支出文本（256K 上下文）、视觉（含视频）、音频、Omni 与决策模型；称基于三混合架构与约 22T token 预训练，可在单卡上微调并面向端侧部署。文中给出厂商自测基准（如与 LFM2.5、Qwen3.5、Gemma 4 等对比）及 llama.cpp Q4_0 / SGLang 等吞吐数字——均为厂商声明，需自行核验。权重与文档称可在 Hugging Face、Playground 与 Liquid API 获取。",
+      "why_useful": "若需要可本地微调的小型多模态/决策模型做边缘或工具调用实验，这是一套新开源候选。",
+      "try_it": "到 Hugging Face 搜 LFM3 权重；按官方文档用 llama.cpp / MLX / vLLM 等跑文本或 VL 变体，再决定是否 LoRA。"
+    }
+  ]
+}
