@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T09:30+08:00",
+ "updated": "2026-11-02T08:58+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,7 +98,7 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 5
   },
   "Hugging Face Blog": {
@@ -107,11 +107,77 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-01T09:30+08:00",
+   "checked": "2026-11-02T08:58+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "214d677c0c1f",
+   "title": "If in doubt, delete the uv.lock file",
+   "link": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+   "summary": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-02T07:24+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "dd5d9bccf392",
+   "title": "Patrick Stewart taught us what good men do with power",
+   "link": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
+   "summary": "Hacker News 热度:357 分,249 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50327650",
+   "date": "2026-11-02T01:28+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "27b5977ab818",
+   "title": "Quoting Kyle Kingsbury",
+   "link": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+   "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-02T00:49+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "72446d2cbff4",
+   "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+   "link": "https://hackerbooks.org",
+   "summary": "Saw Karpathy's HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5). It's ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about page. To be clear: Claude wrote almost all of it, including the data pipeline and the site. I mostly steered and made calls, bought the domain name, etc. It counts mentions, so it's not perfect (praising a book and…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50326821",
+   "date": "2026-11-01T23:58+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "090ebb76fbe0",
+   "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+   "link": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+   "summary": "Hacker News 热度:386 分,137 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50326099",
+   "date": "2026-11-01T22:34+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "d6756f65c5e6",
+   "title": "The AI cost of JavaScript frameworks",
+   "link": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+   "summary": "Hacker News 热度:291 分,226 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50323088",
+   "date": "2026-11-01T14:06+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
+  },
   {
    "id": "82edef8e8b94",
    "title": "How We Took Over ChatGPT Accounts",
@@ -122,6 +188,17 @@
    "comments": null,
    "date": "2026-11-01T07:15+08:00",
    "first_seen": "2026-11-01T09:30+08:00"
+  },
+  {
+   "id": "3da40622d341",
+   "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+   "link": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+   "summary": "Hacker News 热度:768 分,197 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50320963",
+   "date": "2026-11-01T06:41+08:00",
+   "first_seen": "2026-11-02T08:58+08:00"
   },
   {
    "id": "7108e33c7fcd",
@@ -138,7 +215,7 @@
    "id": "d696d50b5810",
    "title": "HackerTube: YouTube built from videos recommended by HN",
    "link": "https://karpathy.bearblog.dev/hacker-tube/",
-   "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/ Comments URL: https://news.ycombinator.com/item?id=50319510 Points: 673 # Comments: 231",
+   "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/ Comments URL: https://news.ycombinator.com/item?id=50319510 Points: 2251 # Comments: 538",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50319510",
@@ -4579,17 +4656,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "22586d3388d8",
-   "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
-   "link": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-02T12:01+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "45d2f676df1c",
    "title": "Advanced Shader Delivery State Object Compiler now available",
    "link": "https://gpuopen.com/news/asd-compiler-launch/",
@@ -4774,28 +4840,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-06T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "c70a1792aa05",
-   "title": "Stepping inside a retro anime-inspired game: a look into the rendering of Orbitals",
-   "link": "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
-   "summary": "Discover how Shapefarm recreated the look of classic 80s and 90s anime in space adventure game ‘Orbitals’ using UE5. Learn how custom shaders and film-inspired effects bring its retro sci-fi world to life.",
-   "source": "Unreal Engine 官方",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-03T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "cd80f2f996a0",
-   "title": "EMEA Dev Days | Unreal Engine",
-   "link": "https://www.unrealengine.com/events/emea-dev-days",
-   "summary": "Live in EMEA? Unreal Engine Dev Days are coming to a city near you, bringing together Unreal Engine developers to learn, connect, and share ideas.",
-   "source": "Unreal Engine 官方",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-03T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

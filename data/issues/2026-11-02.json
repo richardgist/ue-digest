@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-02",
+  "items": [
+    {
+      "title": "Generating a State Object Database for Advanced Shader Delivery（ASDTool）",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/generating-a-state-object-database-for-advanced-shader-delivery",
+      "source": "Epic Games Documentation",
+      "published": "约 2026-10-21（随 UE 5.8.4 / Microsoft ASD 公告同期文档）",
+      "ue_version": "UE 5.8（文档；工具随 5.8.4）",
+      "summary": "Epic 官方说明如何用独立命令行 ASDTool 从已 cook 的 Windows D3D12/SM6 构建生成 SODB（.sodb），供商店预编译成按 GPU/驱动的 PSDB，以减轻首次启动着色器编译卡顿。范围仅限 PCD3D_SM6；不支持光追 PSO；需源码编译 ASDTool，并开启 bShareMaterialShaderCode。采集来源：-AllCompute 收齐 SM6 compute shader，-BundleDir 从已有 .upipelinecache 导入 graphics/compute PSO；二者可并用。文档强调 ASD 不替代 PSO precaching / bundled PSO cache，仍建议保留 precaching。提供 generatesodb / compilepsdbs / registerpsdbs 本地验证流程，以及 -ValidatePSOs 排查失败 PSO。",
+      "try_points": [
+        "源码构建 ASDTool 后，对 cook 输出跑 generatesodb（-AllCompute + -BundleDir），确认摘要里 graphics PSO 数量 > 0",
+        "用 compilepsdbs -LocalAdapter + registerpsdbs 在本机复现商店侧流程，并用 D3D12CacheListener 等核对 PSDB 命中",
+        "着色器有变更才重生成 SODB；同时保持 r.PSOPrecaching 与 bundled cache，覆盖 ASD 未命中的路径"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Setting up PSO Precaching & Bundled PSOs for Unreal Engine（含 ASD 5.8.4 节）",
+      "url": "https://tomlooman.com/unreal-engine-psocaching/",
+      "source": "Tom Looman",
+      "published": "2026-10-27（页面 Updated）",
+      "ue_version": "UE 5.x（文中覆盖至 5.8.4 ASD）",
+      "summary": "实操文把 PSO Precaching（r.PSOPrecaching）与 Bundled PSO Cache（-logPSO / ShaderPipelineCacheTools）并线配置：DefaultEngine.ini / DefaultGame.ini、Insights 基线（务必 -clearPSODriverCache）、ExcludePrecachePSO 轻量录制、以及与 Decal 等覆盖度演进。2026-10-27 更新新增 Advanced Shader Delivery（Since 5.8.4）小节：指向 Epic SODB 文档，摘录 5.8.4 发布说明（ASDTool 从 cook 构建生成 SODB、本地 compile/register 测试），并明确作者当时尚未亲自跑通 ASD。",
+      "try_points": [
+        "先按文中 CVar 同时开 Precaching + Bundled，用 Insights 书签确认 hitch 是否仍为 PSO",
+        "录制时加 -clearPSODriverCache，避免驱动缓存掩盖未覆盖问题",
+        "在完成 bundled 覆盖后再接 Epic ASDTool 流程，把 ASD 当补充而非替换"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8：材质、半透明与 Overdraw——诊断顺序与杠杆",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/materials-translucency-and-overdraw/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；近两周窗口内补齐材质/半透明实操页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "UE 5.8 渲染性能参考页：先用 GPU 计时确认 BasePass / 半透明 / 后处理或材质相关 draw 是否显著，再用 Shader Complexity（Alt+8）定位高指令密度区域，怀疑小三角或反复覆盖时检查 Quad Overdraw 等视图，并隔离材质/图元/特效后同帧复测。文中明确 Shader Complexity 主要反映指令数，不可靠定价贴图带宽、发散循环、WPO 或平台调度。杠杆包括：先减全屏/大面积材质覆盖，再减半透明/Masked 层叠与粒子密度，必要时用 Opaque/Masked/抖动/网格替代，收敛 WPO、静态开关排列与材质槽数量——均以平台置换与可见最坏重叠的毫秒证据为准。",
+      "try_points": [
+        "同一相机下 ProfileGPU：记下半透明/BasePass 毫秒，再切 Shader Complexity 标出热点材质",
+        "对最贵特效做「减一层重叠 / 缩屏幕覆盖」单变量 A/B，确认视觉可接受后再固化",
+        "给带 WPO 的网格设禁用距离，避免远距无效变形继续吃可编程光栅/阴影失效"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 Scalability 与 Device Profiles：分档工作流与可读性底线",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/scalability-and-device-profiles/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；近两周窗口内补齐分档/设备配置页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "区分职责：scalability groups 管玩家可见画质族；device profiles 管平台/设备默认、特性支持、内存桶与覆盖。项目覆盖写在工程 Config，不要改引擎 Base 文件；以 BaseScalability.ini 与平台基线 device profile 为参考后再按测量覆盖。核心组含分辨率、视距、抗锯齿、阴影、GI、反射、后处理、贴图、特效、植被、着色等——一个 sg.* 可联动多枚 CVar。工作流：定义最低/推荐硬件与渲染器能力 → 设 Low/Medium/High/Epic 意图与玩法可读性底线 → 从引擎默认起在各目标设备测量 → 组不够预算时才覆盖子系统 → 标出需重启/重载的设置，并测存档、自动检测与不支持硬件回退。硬规则：低档不得拿掉敌人、危险、导航线索或竞技可见性，只缩放表现而非规则。",
+      "try_points": [
+        "移动/掌机档先锁最低可读性底线，再从引擎默认组往下测，避免空壳 Low 档",
+        "改 sg.* 后用控制台核对实际生效 CVar，并在打包构建设备 profile 上复测",
+        "需要重启才能切换的特性路径在设置 UI 上明确标注，防止玩家以为「没生效」"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "UE 5.8 World Partition：生产模式与含 HLOD 的验收测试矩阵",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/patterns-testing/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；近两周窗口内补齐 WP 生产模式/测试门页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "把常见大世界做法收成可执行模式：开阔遍历（默认单 runtime grid、玩家流送源+速度/前瞻、远处静态剪影用 HLOD、Runtime Data Layer 仅用于内聚阶段）、无缝传送（目的地流送源先开→等待完成→权威移动→临时源退役）、有状态地点（存档真相映射到 Data Layer，Loaded 预热 / Activated 揭示）、重复 POI（Level Instance / Packed Level / OFPA 选型并校验每实例 HLOD/导航/引用）。附最低测试矩阵：构建形态、冷/热缓存、运动极端、网络晚加入、各 Data Layer 迁移、内存往返浸泡，以及 HLOD 轴（源与代理对比、运动中过渡、源编辑后重建）。验收门包含：玩家不到达缺碰撞/可交互态、无无界内存爬升、Cell/HLOD 过渡满足项目弹出与卡顿预算、权威 Data Layer 状态一致、干净 builder 可复现。",
+      "try_points": [
+        "为最快移动方式做 cooked 往返基准，并单独记 HLOD 过渡帧的可见弹出与 hitch",
+        "改源内容后强制重建相关 HLOD，再做源/代理同距对比，避免脏代理进包",
+        "传送链路加超时回安全点；临时流送源在常规源接管后再关掉"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    }
+  ]
+}
