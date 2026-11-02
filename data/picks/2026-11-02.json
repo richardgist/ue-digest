@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-02",
+  "items": [
+    {
+      "title": "DirectX Agility SDK 1.620 零售 + 1.722 预览：Dump Files、Partial Graphics Programs 与 DXR 集群几何",
+      "url": "https://devblogs.microsoft.com/directx/agilitysdk-1-620-retail-and-1-722-preview/",
+      "source": "DirectX Developer Blog",
+      "published": "2026-10-28",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "微软发布 Agility SDK 1.620 零售与 1.722 预览。1.620 把 DirectX Dump Files、Fence Barriers Tier 1、Batched Asynchronous Command List APIs、Partial Graphics Programs 等推进零售；Advanced Shader Delivery 还补上 Explicit PSDB、SODB 枚举/事务 API 与序列化 root signature。1.722 预览则带来 Clustered Geometry、Partitioned TLAS 与间接加速结构构建，以及 GPU Timeline CopyDescriptors。文中注明 Shader Model 6.10 仍属预览，计划在 1.621 零售（约 12 月初）推进；各功能按 IHV 的驱动支持表不一，例如 Partial Graphics Programs 目前仅列 AMD RX 7000/9000。",
+      "why_useful": "做 D3D12/DXR 或跟进 ASD/PSO 缓存的人，这一篇是 1.620 零售能力与 1.722 DXR 预览的总清单，可对照驱动支持表决定现在能用不。",
+      "try_it": "从 Agility SDK Downloads 装 1.620.1（或 1.722-preview），对照文末 Feature Support 表与自家 GPU；若要用 Batched Async Commands，可再读同日发布的 Fallback Layer 博文。"
+    },
+    {
+      "title": "Agility SDK 1.620.1：Batched Async Commands 的 Fallback Layer",
+      "url": "https://devblogs.microsoft.com/directx/async-commands-fallback-layer/",
+      "source": "DirectX Developer Blog",
+      "published": "2026-10-28",
+      "category": "效率",
+      "direction": "图形渲染",
+      "summary": "1.620.1 为 Batched Async Commands 提供可选 Fallback：在不支持原生实现的设备上，由运行时用已有操作模拟 batched copy/fill/clear/resolve，原生支持设备仍走驱动快路径。启用后即使命令列表不用这些 API 也会有额外 CPU 记账开销（屏障、根参数、PSO、RT 绑定等）；需 Enhanced Barriers。文中列出与原生的差异（如部分 MSAA/保护资源清屏会失败、bound clear 在 render pass 内的限制），并可用 d3dconfig device force-async-commands-fallback=true 在原生硬件上强制测 fallback。微基准显示多数命令 GPU 开销接近，ClearTextureSubresources 在无法原地清时更贵。",
+      "why_useful": "想统一走 batched 路径、又不想为老硬件维护两套 copy/clear 代码时，这篇说明了能省什么、会付出什么、以及怎么强制压测。",
+      "try_it": "设备创建前 Enable Fallback；用 CheckFeatureSupport(D3D12_FEATURE_ASYNC_COMMANDS) 看 Impl 是 NATIVE / FALLBACK / NOT_SUPPORTED；开发机可 d3dconfig 强制 fallback 对比帧耗。"
+    },
+    {
+      "title": "Fortnite Ecosystem v43.00：Progression API 正式、UEFN 上 PCG 与 MCP 工具集扩展",
+      "url": "https://forums.unrealengine.com/t/fortnite-ecosystem-v43-00/2848257",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-01",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Epic 宣布 Fortnite 生态 v43.00：自定义任务用的 Progression API 达到可发布状态；UEFN 可用 Procedural Content Generation（PCG）做编辑器内程序化摆放，并可通过 UEFN MCP 让 agent 创建/编辑 PCG 图。MCP 新增 Profiling（Timing/Verse Insights、Memory Snapshot、Spatial Profiler）、Sequencer、MetaSound、IK Retargeter 等工具集。同版本还列了实验性 Gaussian splat 导入、USD 导入、Verse Health/Damage Pipeline、创作者门户客户端/服务器性能指标与移动端 profiling 等。完整变更需看官方 43.00 发布说明链接。",
+      "why_useful": "做 UEFN/Fortnite 创作者或关注引擎侧 MCP/PCG 落地的人，这是当周可直接试的功能入口清单。",
+      "try_it": "更新到 v43 后先试 Progression API 发岛与 PCG 摆场景；有 agent 工作流的可接 UEFN MCP 的 Profiling/Sequencer 工具集；需要写实场景可看实验性 Gaussian splat 导入。"
+    },
+    {
+      "title": "LucidLyra：单图前馈生成可查询语义/实例的 3DGS 场景",
+      "url": "https://arxiv.org/abs/2610.40495",
+      "source": "arXiv",
+      "published": "2026-11-01",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 等作者提出 LucidLyra：在 Lyra 的 video-latent→3DGS 框架上，用多任务蒸馏把相机可控视频扩散与冻结 2D 视觉基础模型的语义/实例信号写入同一套高斯，使单图前馈即可得到几何、外观、开放词汇语义与实例特征，无需逐场景优化或真实多视图标注。论文报告在自建 LucidLyra-SDG 静态基准上相对最强可比基线语义 mIoU / 实例 mTrackPR 分别约高 31.7 / 9.8 个百分点，且相对 Lyra 重建 PSNR 约 +0.53 dB（数字来自论文 Table 1，未在本地复现）。另有动态扩展与编辑/资产挖掘/机器人仿真等应用示意。训练与数据规模大（文中称教师目标预处理约 1580 A100-天量级），属研究系统而非开箱工具。",
+      "why_useful": "关注生成式 3DGS、开放词汇场景理解或 physical AI 仿真数据管线时，这篇把“能渲染”推到“可查询/可交互”的一条清晰路径。",
+      "try_it": "读 arXiv 摘要与 §4 表格理解指标；项目页链接在摘要作者栏。权重/数据是否公开以论文与项目页为准，本文未验证可下载 checkpoint。"
+    },
+    {
+      "title": "Gemini CLI 0.66.0：终端渲染更稳、Git 环境更干净、MCP OAuth 可走私网",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
+      "source": "GitHub · google-gemini/gemini-cli",
+      "published": "2026-10-27",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Google Gemini CLI 稳定版 0.66.0（约 2026-10-27）主要是体验与稳健性：同步输出并隔离 spinner、减少终端闪烁并保留 scrollback；工具调度改为由 scheduler 发出 tool call groups；Windows diff 参数正确加引号；getSafeGitEnv 关闭交互式 credential/SSH 提示并保留用户级 ~/.gitconfig；keybindings.json 支持 keys 数组；bootstrap 父进程会转发终止信号；可选允许私网端点做 MCP OAuth。发行说明里还有一条横幅：Gemini CLI 尚未针对 Gemini 4 优化。细节交叉核对了第三方整理页与官方 tag 页面摘要；未在本机安装验证。",
+      "why_useful": "日常用 Gemini CLI 写代码/跑 MCP 时，这类终端与 Git/OAuth 修复能少踩 PATH、凭证弹窗和私网 MCP 的坑。",
+      "try_it": "升级到 v0.66.0 后看横幅与 README；若接私网 MCP，确认需显式 opt-in 私网 OAuth 端点。"
+    }
+  ]
+}

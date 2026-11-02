@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T08:58+08:00",
+ "updated": "2026-11-02T09:28+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-02T08:58+08:00",
-   "last_new": 2
+   "checked": "2026-11-02T09:28+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-02T08:58+08:00",
-   "last_new": 5
+   "checked": "2026-11-02T09:28+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-02T08:58+08:00",
+   "checked": "2026-11-02T09:28+08:00",
    "last_new": 0
   }
  },
@@ -127,7 +127,7 @@
    "id": "dd5d9bccf392",
    "title": "Patrick Stewart taught us what good men do with power",
    "link": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
-   "summary": "Hacker News 热度:357 分,249 条评论",
+   "summary": "Hacker News 热度:365 分,255 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50327650",
@@ -160,7 +160,7 @@
    "id": "090ebb76fbe0",
    "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
    "link": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
-   "summary": "Hacker News 热度:386 分,137 条评论",
+   "summary": "Hacker News 热度:389 分,140 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50326099",
@@ -171,7 +171,7 @@
    "id": "d6756f65c5e6",
    "title": "The AI cost of JavaScript frameworks",
    "link": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
-   "summary": "Hacker News 热度:291 分,226 条评论",
+   "summary": "Hacker News 热度:293 分,228 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50323088",
@@ -215,7 +215,7 @@
    "id": "d696d50b5810",
    "title": "HackerTube: YouTube built from videos recommended by HN",
    "link": "https://karpathy.bearblog.dev/hacker-tube/",
-   "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/ Comments URL: https://news.ycombinator.com/item?id=50319510 Points: 2251 # Comments: 538",
+   "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007. https://hackertube.org/ Comments URL: https://news.ycombinator.com/item?id=50319510 Points: 2277 # Comments: 538",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50319510",
