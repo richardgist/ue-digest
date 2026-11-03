@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-03",
+  "items": [
+    {
+      "title": "DirectX Dump Files 零售可用：Agility SDK 1.620 + PIX 2610.28 统一 GPU 崩溃转储",
+      "url": "https://devblogs.microsoft.com/directx/directx-dump-files-are-now-released/",
+      "source": "DirectX Developer Blog",
+      "published": "2026-10-28",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "微软宣布 DirectX Dump Files 可进入零售游戏：搭配 Agility SDK 1.620 与 PIX 2610.28，可在玩家机与开发机捕获 GPU 崩溃（.dxdmp），再在任意 PC 用 PIX 分析，无需复现原 GPU。默认 NO_OVERHEAD 驱动选项、无需 Developer Mode；预览期的 .dxdmp_preview 扩展名改为正式 .dxdmp。文中列出三档场景（开发/QA 保留转储、日常零售、对少数玩家临时开 MEDIUM/HIGH_OVERHEAD）及硬件表：AMD RX 7000/9000（MEDIUM/HIGH）、NVIDIA Turing+ 且 R620+（含 NO_OVERHEAD）、Intel/Qualcomm 仍标 Coming soon。已知限制含软件设备移除（非 TDR）暂不生成 dump；厂商插件数据深度不一。",
+      "why_useful": "跟 PC GPU 偶发 TDR/挂起的团队，这是零售路径下统一拿到可 PIX 分析的跨 IHV 转储的入口清单。",
+      "try_it": "升到 Agility SDK ≥1.620 与 PIX ≥2610.28；开发机用 RetainDumpFile / D3DConfig 留本地；零售走 dump end callback 上传，需要时再对少数会话 ConfigureDumpFile 提 overhead。"
+    },
+    {
+      "title": "Last Week in Unreal（10/26–11/1）：ue6-main 遗留 RT 默认关闭、UAT/分片 cook 行为变化与 5.8 可热修清单",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-oct-26-nov-1-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-11-02",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "SpeedrunCI 梳理 Oct 26–Nov 1：ue6-main 约 1506 提交。遗留光线追踪 AO/半透明/天空光改为启动前只读 CVar（r.RayTracing.*.Supported）默认关闭，无运行时警告；UAT 不再接受 -ue4exe（静默忽略）、Localize/Gauntlet 行为收紧；-ZenStoreShardId 分片 cook 在空输出目录上曾恒为 full cook 的问题已修。文中另列 FUObjectItem 默认打包、Windows RHI 去掉 GPU 型号白名单、多处默认值与回退（Lumen radiance cache 默认改动等）。对仍锁 5.8 的团队给出可对照 5.8.4 的 cherry-pick 优先项（Live Link Hub 路径穿越、Landscape cook 崩溃、ALT2 loader 卡住等），并注明尚无 5.8.5 标签。提交 SHA 均在文内标注；未在本地复现。",
+      "why_useful": "跟 ue6-main 或准备从 5.8.4 热修的人，可按文中「先查遗留 RT 与 -ue4exe」顺序避免静默踩坑。",
+      "try_it": "同步前 grep 流水线里的 -ue4exe；若用遗留 RT AO/半透明/天空光，在启动参数设对应 .Supported；用分片 cook 的先在农场验证增量行为；5.8 团队按文末清单挑 Live Link Hub/Landscape/ALT2 等补丁。"
+    },
+    {
+      "title": "Unity CLI 1.0.0-beta.15：离线 docs 缓存、CLI 版本钉扎与 create 可顺带装 Editor",
+      "url": "https://docs.unity.com/en-us/unity-cli/release-notes",
+      "source": "Unity Documentation",
+      "published": "2026-10-29",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "官方 release notes 在 2026-10-29 记入 1.0.0-beta.15（上一档 beta.14 为 10-21）。要点包括：unity docs cache add 可把手册（及可选 --api）下成 Markdown 供离线查；项目可用 ProjectSettings/UnityCliConfig.json 的 cli.version（npm 风格范围）钉住 CLI，CI 超出范围直接失败；unity projects create --install-editor 可在缺 Editor 时先安装再创建，3D 新建项目默认加 Cinemachine（--bare 可跳过）；unity install --set-default、pipeline upgrade 跟最新已发布 Pipeline 包、插件经 UNITY_CLI_CTX_* / UNITY_CLI_CTX_JSON 拿到项目与运行上下文等。安装脚本改为装最新稳定版，beta 需 UNITY_CLI_CHANNEL=beta。本机未安装验证；页面同时含更早版本说明。",
+      "why_useful": "用 Unity CLI/Pipeline 或 agent 自动化建项、查文档时，beta.15 把离线文档、版本钉扎和 create+装 Editor 一次补齐。",
+      "try_it": "升到 1.0.0-beta.15 后试 unity docs cache add 与 unity docs --content；在 UnityCliConfig.json 设 cli.version；需要无人值守建项用 projects create --install-editor。"
+    },
+    {
+      "title": "本周 Claude Code / Codex / Gemini CLI（11/1 周）：Opus 4.8 fast mode 11/30 将报错下线",
+      "url": "https://aicoding-guide.com/en/posts/weekly-2026-11-01/",
+      "source": "AI Coding Guide",
+      "published": "2026-11-01",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "第三方周报（文首称 2026-11-01 核实）汇总：Claude Code 2.1.311–2.1.316 中，Opus 4.8 fast mode 自 10/30 弃用、11/30 移除后请求直接报错且不回退标准档，需迁 Opus 5.5；2.1.314 增加 permissions.blockWritesOutsideWorkingDirectories，并把 idle compaction 扩到 VS Code 与桌面 Code 页；2.1.316 增加 CLAUDE_CODE_DISABLE_ULTRATHINK 与 CLAUDE_CODE_SUBAGENT_EFFORT；claude_code.safety_event 在加入约一周后于 2.1.312 停发。Codex 侧复述 0.166 的 queue --resume、doctor --network-only、转录选择与 GPT-6.1 Terra 编目；Gemini CLI 0.66 以修复为主并提示尚未针对 Gemini 4 优化。作者指向官方 changelog；未替代官方原文。",
+      "why_useful": "日常用这三家 coding CLI 时，可按清单在 11/30 前改掉 Opus 4.8 fast mode，并核对写盘围栏与失效的 safety_event 看板。",
+      "try_it": "claude update 到 2.1.316；脚本里的 Opus 4.8 fast mode 改 Opus 5.5；需要时在 settings 开 blockWritesOutsideWorkingDirectories；有 telemetry 看板的去掉 safety_event。"
+    },
+    {
+      "title": "NVIDIA Recovery：开源集群级训练作业自动恢复（Slurm，默认先 monitor）",
+      "url": "https://developer.nvidia.com/blog/keep-distributed-training-running-with-automated-workload-recovery/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-11-02",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "NVIDIA 介绍开源服务 NVIDIA Recovery（属 DSX OS）：在集群层对训练作业做检测→归因→隔离→按策略重启/停止，信号来自应用日志、GPU 指标与调度器；与 NVSentinel/NVRx 等分层互补。当前支持 Slurm（含 Slurm-on-Kubernetes），Kubernetes 原生在路线图。新部署默认 monitor/observe：只给建议、不改调度，确认信噪后再开自动动作；提供 Helm、审计轨迹与 Recovery Console。文中称某训练集群 7/9–10/9 监测约每日近 200 作业、约 8550 次异常检测，平均检测/恢复动作延迟约 69/94 秒（厂商自报，未复现）。仓库 Apache 2.0；页首有 AI 生成摘要提示需核对正文。",
+      "why_useful": "跑多机多卡训练、半夜手动捞 NCCL/挂起的人，可先用 monitor 模式对照自家运维决策再决定是否托管重启。",
+      "try_it": "按文内链到 dsx-ai-factory/NVIDIA-Recovery；Helm 快速入门可无物理 GPU；sbatch 用 comment 里 nvidia-recovery 字段 opt-in，先 mode=observe。"
+    }
+  ]
+}
