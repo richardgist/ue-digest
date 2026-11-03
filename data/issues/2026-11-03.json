@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-03",
+  "items": [
+    {
+      "title": "Last Week in Unreal：ue6-main 遗留光追改 opt-in、LumenWorldCache/MegaLights/移动端计时（Oct 26–Nov 1, 2026）",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-oct-26-nov-1-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-11-02",
+      "ue_version": "跟踪 ue6-main / ue5-main / 公共 5.8；文中含 5.8.4 cherry-pick 清单",
+      "summary": "SpeedrunCI 周报覆盖 2026-10-26 至 11-01 提交。渲染侧：新增 RayTracingMode=SimplifiedMaterial（目前用于 LumenWorldCache），NaniteTest/LumenWorldCache 示例从 3.05ms→2.78ms（1080p console）；r.MegaLights.MinSampleWeight 等改名为 r.LightCulling.*，光能剔除始终作用于 world light grid。移动端：r.AmbientLightingVolume.SingleVolumePerVoxel（默认关）在样例上把 ALV 开销从 1.21ms 降到 0.50ms（文中警告部分重叠可能出现体素缝）；移动端 eye adaptation 在 Switch/Adreno 640 上给出 0.169→0.028ms、0.333→0.051ms。另强调遗留 RT AO/半透明/天空光需启动前设 .Supported CVar（默认关、无运行时警告）。对发货 5.8 的团队列出可 cherry-pick 修复，含「超过 VSM_MAX_SINGLE_PAGE_SHADOW_MAPS 本地灯」时的 VSM 崩溃修复（失败则禁用该灯阴影）。",
+      "try_points": [
+        "若项目仍用遗留 RT AO/半透明/天空光：在启动配置显式打开对应 .Supported，并计划迁离（提交写明将移除）",
+        "移动端 deferred 可试 r.AmbientLightingVolume.SingleVolumePerVoxel=1，同场景对比 ALV 毫秒与体素缝",
+        "仍在 5.8.4：按文中清单评估 VSM 多灯崩溃修复与 Landscape/Live Link 等 hotfix 是否值得 cherry-pick"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "论坛：Nanite + Masked TwoSidedFoliage + VSM 叶片阴影闪烁的三分诊",
+      "url": "https://forums.unrealengine.com/t/the-leaves-of-the-plant-model-are-twinkling/2845231",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-10-26",
+      "ue_version": "UE 5.4.4（提问方；答复按该组合归纳）",
+      "summary": "提问方在 UE 5.4.4 下使用 Masked/TwoSidedFoliage、Lumen GI、Virtual Shadow Maps、Nanite，植物叶阴影快速闪烁。答复称这是常见组合问题，多半来自阴影缓存或 TSR 在细 Masked 卡片上的表现，建议先做三项单变量测试再换资产：(1) 复制材质把 Two Sided Foliage 改成 Default Lit，并提高 Opacity Mask Clip Value 约到 0.4–0.5；(2) 断开 WPO 验证；若因风场 WPO 导致 VSM 每帧失效，设 WPO Disable Distance，关掉平行光 Contact Shadow，并确认 r.Nanite.ProgrammableRaster.Shadows=1；(3) 临时关掉 TSR/改 FXAA 区分抗锯齿闪烁。Nanite 设置建议开 Preserve Area，避免叶卡片在 LOD 间掉出被误读成闪烁。",
+      "try_points": [
+        "先只改着色模型或只断 WPO，确认闪烁来源后再动 GI/光追开关",
+        "有风场时给远距叶设 WPO Disable Distance，并关掉平行光 Contact Shadow 做对比",
+        "确认 r.Nanite.ProgrammableRaster.Shadows=1，Nanite 网格开 Preserve Area 后再判是否仍闪"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 渲染症状菜谱：从分辨率/VSM/MegaLights 到低档位无效",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/symptom-recipes/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "把常见渲染症状收成「先证明什么 → 第一次有界实验」对照表：仅高分辨率慢→查像素缩放 GPU pass 并降 Screen Percentage；密林/城市场景慢→隔离图元/overdraw/VSM 失效；植被运动时阴影尖刺→查 VSM 未缓存页并禁远距 WPO/阴影；多灯仍快但噪→MegaLights 采样竞争，控半径或提采样做 A/B；反射占主导→单独对比反射档与 GI；半透明战斗特效拖垮 GPU→减单特效重叠/覆盖；Render Thread 慢而 GPU 有余量→实例化/剔除高提交类别；按地点涨显存→资源快照找新驻留所有者；低档位改了没变化→核对 device profile/组是否生效或需重启，并在打包构建验证；动态分辨率见底→在最低百分比下看主导 GPU pass 或是否实际 CPU 受限。每条要求恢复开关、用正式设置落地，并在同一最坏场景复测。",
+      "try_points": [
+        "按当前症状只跑表中「第一次有界实验」，禁止一次改多个 CVar",
+        "怀疑低档无效时：控制台核对生效 CVar/profile，并在打包构建设备上复测",
+        "植被阴影尖刺：先对一类植被关远距 WPO/阴影，用未缓存 VSM 页证据再定案"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "UE 5.8 World Partition：Actor 放置、硬引用与含 HLOD 的生命周期分类",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/actor-placement-references/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "要求对承重 Actor 显式记录五项：空间生命周期、Data Layer 世界状态、Runtime Grid（通常 None 走默认）、远处表示（指定 HLOD Layer 或故意不加）、依赖类型（硬引用/软引用/子系统/稳定 ID）。解释 Is Spatially Loaded：开启则按流送源距离加载（仍受 Runtime Data Layer 约束）；关闭则不做距离流送，适合真正全局且便宜的 Actor，不能当「引用丢失」的万能药或给远处普通可交互物乱用。硬引用会使空间 Actor 进入同一流送依赖捆，跨远 cell 引用会提前拉驻留；优先用子系统解析、接口+查询、软资产引用、稳定 ID 注册表或消息，而不是为消警告乱改软引用。附校验：Reference Viewer/Size Map、流送生成警告、带 cell 可视化的遍历、反复卸载/重载保留玩法状态、以及服务器/客户端分测。",
+      "try_points": [
+        "给关键 Actor 填五列表（含 HLOD Layer 决策），缺项先补文档再改流送参数",
+        "对可疑跨 cell 硬引用跑 Reference Viewer，观察是否意外捆绑远处内容",
+        "卸载/重载 cell 多次，确认玩法真相不存在流送 Actor 上"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "UE 5.8 World Partition Data Layers：Loaded/Activated、网络权威与流送代价",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/data-layers/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "区分 Data Layer Asset 与世界内 Instance；Editor Data Layer 只管编辑视图，Runtime Data Layer 才参与运行时状态机。运行时三态：Unloaded（不驻留）、Loaded（驻留未激活，作预热）、Activated（驻留且可见/可用）。联网时服务器改权威 Runtime 状态，客户端只观察复制结果，不要让客户端独自激活会改变碰撞/交互/世界真相的层。适用：Boss 场地预热、季节/毁坏变体、按任务权威分相、共享地形上的交替布景；不适用：单个小物件可见性开关、每个任务布尔一层、大范围零散 Actor 多层、仅客户端藏权威 Actor、把持久任务真相存在层状态里。状态迁移建议：服务器尽早请求 Loaded 覆盖最坏加载延迟→需要碰撞/交互时再等就绪→在揭示边界 Activated→玩法真相另存以便读档重建。性能提醒：Actor 大范围分散或多 Runtime 层会碎片化流送依赖。调试命令含 wp.DumpDatalayers、SetDataLayerRuntimeState、ToggleDrawDataLayers 等。",
+      "try_points": [
+        "把「预热」和「揭示」拆成 Loaded→Activated 两步，并在服务器侧驱动",
+        "用 wp.DumpDatalayers / ToggleDrawDataLayers 核对实例状态与空间分布是否内聚",
+        "测晚加入、重连、重生与 server travel，确认层状态可由存档真相重建"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    }
+  ]
+}
