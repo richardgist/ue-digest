@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-04",
+  "items": [
+    {
+      "title": "AMD GPUOpen：Agility SDK 1.620 / 1.722-preview 的 Radeon 日一支持（含 DXR Clustered Geometry）",
+      "url": "https://gpuopen.com/learn/amd-directx12-agility-sdk-october-2026/",
+      "source": "AMD GPUOpen",
+      "published": "2026-11-03",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "AMD 原文标注 2026-11-03：配合微软 10/28 发布的 Agility SDK 1.620（零售）与 1.722-preview，同日提供两套驱动——Retail Edition 26.20.12.02 与 Developer Preview Edition 26.20.12.01。文中列出零售特性（DirectX Dump Files、Extended PIX Markers、Partial Graphics Programs 等）在 RX 7000/9000 与 AI PRO R9700/R9600 的支持表；1.722-preview 的 Clustered Geometry / Partitioned TLAS / 间接加速结构构建目前标在 RX 9000 与上述 AI PRO 系列。文中转载微软在 RX 9070 上跑 D3D12RaytracingClusteredGeometry 样例的对比数字（传统 BLAS 重建 vs Clustered Geometry），并注明为单配置测试、游戏不应假设同等提升。另述 ASD（含 UE 5.8.4 SODB）、RRA 1.11.1、PIX 2610.28 与 DxCGC 独立预览驱动等入口。",
+      "why_useful": "跟 DX12/DXR 或刚升 Agility SDK 的人，可按 AMD 对照表选 Retail/Preview 驱动并核对 Clustered Geometry 样例与 GPU 范围。",
+      "try_it": "零售特性用 Agility SDK Retail Edition 26.20.12.02；试 DXR preview 用 Developer Preview 26.20.12.01 + Agility 1.722-preview + SM 6.10 preview DXC，并开 Developer Mode 实验特性；样例见微软 D3D12RaytracingClusteredGeometry。"
+    },
+    {
+      "title": "Epic 官宣 UE 5.9：下周 Preview（AI 工作流、Web 目标平台、渲染与动画更新）",
+      "url": "https://x.com/UnrealEngine/status/2117603978489811012",
+      "source": "Unreal Engine (@UnrealEngine)",
+      "published": "2026-11-03",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "官方 X 账号 @UnrealEngine 于 2026-11-03 发帖确认：Unreal Engine 5.9「正式发生」，Preview 定于「下周」；列改进的 AI workflows、web 作为目标平台、rendering 与 animation 更新，并写「plus more」。帖中称正在 GitHub 的 5.9 分支做若干改动，未来几天还会继续合入，更多细节即将公布。本条仅依据该一手帖；二手报道中对 MCP/具体功能的扩写未写入。具体 Preview 日与功能规格原文未给出。",
+      "why_useful": "UE5 团队可据此盯 5.9 Preview 窗口与 GitHub 分支，避免只盯 UE6 EA 而漏掉中间版本。",
+      "try_it": "关注该帖后续与 Epic 发布说明；有源码权限的可先看 GitHub 5.9 分支近期合入，等 Preview 说明再决定是否上测试流。"
+    },
+    {
+      "title": "Claude Code 2.1.318：登录到期提示、mod fork effort、续聊与网络盘配置等大量修复",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "source": "GitHub · anthropics/claude-code",
+      "published": "2026-11-04",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "正式 tag v2.1.318（发布页时间 2026-11-04）。新增：会话内开启 mod 时记录你的答复；Claude apps gateway 的 mantle upstream 可 assume_role；mod 的 $.model.fork 可设 effort（如 low）；claude auth status / claude -p JSON 暴露登录到期字段，文本模式在到期前 10 天打一行 stderr 警告。修复面很广：含 2.1.314 回归的 --continue 丢上下文、macOS 多 Bash 内存涨、权限提示被抢答、共享网络家目录写配置失败却报成功、版本清理误删仍在跑的二进制、云会话重启后工作目录/连接器工具状态等。行为变化包括：IDE 终端内启动不再自动装/更 IDE 扩展；「Ask each time」下被标记消息时子代理改为停止而非换模型等。本机未升级复现。",
+      "why_useful": "日常用 Claude Code / 网关 / 云会话的人，2.1.318 补的是续聊、登录到期与网络盘配置等真实踩坑点。",
+      "try_it": "claude update 到 2.1.318；看 claude auth status 是否出现 loginExpiresAt；共享家目录或多终端同账号场景重点回归 logout/mcp/配置写入。"
+    },
+    {
+      "title": "NVIDIA Attribution 开源：把分布式训练失败归因到根因节点与证据链",
+      "url": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-11-02",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "NVIDIA 介绍开源的 NVIDIA Attribution：面向单次 workload attempt，把日志、指标、遥测与调度器状态关联成结构化诊断（outcome、root cause、受影响节点、supporting symptoms、evidence trail）。组件为 Attribution Service（HTTP API）与 Attribution Blueprint（连接 Slurm/Kueue/静态输入与 Loki/本地文件/K8s pod 日志/PromQL 等）。文中用合成样例说明如何把 node-02 上的 XID 149（NVLink signal integrity）定为根因，并把各 rank 的 NCCL 错误保留为症状。页首有 AI 生成摘要提示；文中称生产环境每周分析数百万作业（厂商自报）。仓库含 Docker quickstart 与规则目录；可与前一日介绍的 Recovery 互补（归因 vs 自动恢复）。",
+      "why_useful": "多机训练被 NCCL/XID 淹没时，可先用样例跑通「症状 vs 根因」再接到自家调度器与日志后端。",
+      "try_it": "按文内 clone dsx-ai-factory/attribution，Docker 起 Blueprint/Service，打开本机 dashboard 看样例诊断；再按 Blueprint 配置接 Slurm/Kueue 与日志源。"
+    },
+    {
+      "title": "StateBench：长上下文「状态追踪」四级基准（Allen AI / Hugging Face）",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source": "Hugging Face Blog · Allen AI",
+      "published": "2026-11-03",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Allen AI 在 HF Blog 发布 StateBench（2026-11-03）：按变量赋值难度分四级（R-trivial 不可变赋值、Aperiodic 按值重赋、Soluble 自引用更新、General finite 按引用赋值/交换），用来测模型在长文档中跟踪实体状态的能力。预训练开源模型在 r-trivial 较好、aperiodic 随长度掉点、general finite 接近随机；直接在任务上训练时，Gated DeltaNet/hybrid 在前三级可泛化到远超训练长度，transformer 仍学不会最难级。文中称 Gemini 3.8 Flash、Claude Opus 5.5、GPT-6 Sol/Luna 等前沿模型在 soluble/general finite 上随输入变长准确率骤降（最长 general finite 可到 13% 或更低，原文数字）。动机含对照 recurrent/hybrid 与理论极限；文末列出仍开放的问题。",
+      "why_useful": "做长上下文、代码变量追踪或选型 recurrent/hybrid 架构时，可用四级难度对照「卡在读最新值还是跟链式更新」。",
+      "try_it": "读文内四级定义与图示；若评自家模型，按同序列派生四级变体，先看 aperiodic→soluble 掉点位置。"
+    }
+  ]
+}

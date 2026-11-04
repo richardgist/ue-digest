@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T09:04+08:00",
+ "updated": "2026-11-04T09:31+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-04T09:04+08:00",
-   "last_new": 1
+   "checked": "2026-11-04T09:31+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,8 +26,8 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-04T09:04+08:00",
-   "last_new": 1
+   "checked": "2026-11-04T09:31+08:00",
+   "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
    "url": "https://www.jendrikillner.com/index.xml",
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-04T09:04+08:00",
+   "checked": "2026-11-04T09:31+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-04T09:04+08:00",
-   "last_new": 3
+   "checked": "2026-11-04T09:31+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-04T09:04+08:00",
-   "last_new": 8
+   "checked": "2026-11-04T09:31+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-04T09:04+08:00",
-   "last_new": 4
+   "checked": "2026-11-04T09:31+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -116,7 +116,7 @@
    "id": "ef1ab26cae35",
    "title": "Safari introduces Adaptive Dark Mode in 27.3",
    "link": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
-   "summary": "Hacker News 热度:264 分,171 条评论",
+   "summary": "Hacker News 热度:279 分,183 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50358562",
@@ -138,7 +138,7 @@
    "id": "fdf1822c9e67",
    "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
    "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-   "summary": "Hacker News 热度:476 分,151 条评论",
+   "summary": "Hacker News 热度:483 分,151 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50355251",
@@ -149,7 +149,7 @@
    "id": "2e948531deb5",
    "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
    "link": "https://github.com/postmanlabs/postman-app-support/issues/14370",
-   "summary": "Hacker News 热度:1003 分,334 条评论",
+   "summary": "Hacker News 热度:1012 分,339 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50354960",
@@ -171,7 +171,7 @@
    "id": "35cc7ca68cb2",
    "title": "Stringman, an $800 open-source room scale gripper robot",
    "link": "https://neufangled.com/",
-   "summary": "Hacker News 热度:357 分,137 条评论",
+   "summary": "Hacker News 热度:371 分,141 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50354358",
@@ -193,7 +193,7 @@
    "id": "60e53e852f6e",
    "title": "Mac at Any Scale",
    "link": "https://namespace.so/blog/mac-at-any-scale",
-   "summary": "Hacker News 热度:310 分,175 条评论",
+   "summary": "Hacker News 热度:312 分,181 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50352758",
@@ -204,7 +204,7 @@
    "id": "d799a9ad6b1e",
    "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
    "link": "https://honnibal.dev/blog/astra-read-write-misleading",
-   "summary": "Hacker News 热度:889 分,190 条评论",
+   "summary": "Hacker News 热度:903 分,191 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50351111",
@@ -215,7 +215,7 @@
    "id": "6913e1d76a89",
    "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
    "link": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
-   "summary": "Hacker News 热度:443 分,210 条评论",
+   "summary": "Hacker News 热度:447 分,211 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50349276",
@@ -380,7 +380,7 @@
    "id": "2c42cb4545d2",
    "title": "Jailbreaking my car's navigation system just so I can change the time",
    "link": "https://blog.nns.ee/2026/11/02/renault-hack/",
-   "summary": "Hacker News 热度:595 分,238 条评论",
+   "summary": "Hacker News 热度:606 分,242 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50339288",
@@ -424,7 +424,7 @@
    "id": "a823a22841c2",
    "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
    "link": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
-   "summary": "Hacker News 热度:370 分,156 条评论",
+   "summary": "Hacker News 热度:377 分,160 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50336918",
