@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-04",
+  "items": [
+    {
+      "title": "Epic 文档：用 Xcode / Instruments 做 iOS 原生侧性能诊断（与 Insights 互补）",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/profiling-ios-projects-with-platformnative-tools",
+      "source": "Epic Games Documentation",
+      "published": "约 2026-06（UE 5.8 文档；此前未收录）",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.8 官方说明：Insights/stat 只看引擎内；驱动开销、内存压力、功耗等要用 Xcode 与 Instruments。要求真机（Designed for iPad on Mac 结果不可外推）、Development/Shipping 包，以及已生成的 iOS xcworkspace。文档覆盖 Debug Navigator 实时表计、Metal Frame Debugger 单帧拆解、Instruments 的 Time Profiler / Metal System Trace / Allocations / Power Profiler，以及与 Insights 时间轴对齐的拍板点方法；并给出 PSO 编译卡顿、热节流等常见症状对照。",
+      "try_points": [
+        "真机 Development 包用 Xcode 挂上后，先看 Debug Navigator 的 CPU/GPU/Memory/Energy，再决定开哪套 Instruments 模板",
+        "疑似 GPU 单帧贵时用 Metal Frame Debugger；疑似热节流时用 Power Profiler 看持续高能耗是否先于卡顿",
+        "与 Insights 对齐：在同一可识别事件（如按键）两边各打标记，或先后各录一条再对照"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 文档：Android 平台原生 Profiler 选型表（APA / APS / Studio / Perfetto / Snapdragon）",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/profile-android-projects-with-platformnative-tools",
+      "source": "Epic Games Documentation",
+      "published": "约 2026-06（UE 5.8 文档；此前未收录）",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.8 官方 Android 原生性能分析指南：强调先带着具体问题再采数据。按问题选型——Android Performance Analyzer 看帧时/带宽/线程调度；Arm Performance Studio（Streamline、Frame Advisor、RenderDoc、Mali Offline Compiler）看 Mali GPU；Android Studio Profiler 做 Callstack Sample / System Trace / Native Allocations；Perfetto 看内核调度；Snapdragon Profiler 看 Adreno/SoC。文档还要求可调试/可 profiling 构建，并说明如何与 Unreal Insights 互相对齐。",
+      "try_points": [
+        "先写清问题（例如关卡切换间谁在涨内存），再选 APA / Studio Native Allocations / Perfetto，避免无目标长录",
+        "Mali 真机优先 APS：Streamline 看系统计数器，Frame Advisor/RenderDoc 拆单帧",
+        "Adreno 设备补 Snapdragon Profiler；引擎内瓶颈仍先用 Insights，再下沉到平台工具"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8：渲染预算与基线——锁目标后再量测",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/budgets-and-baselines/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "把优化起点写成可复现基线：目标 FPS 与整帧预算、Render/GPU 子预算与安全余量、输出分辨率与主/次 Screen Percentage、渲染路径/RHI/光追/升级采样器、Device Profile 与全部 sg.* 档位，以及场景/相机/动态内容与内存/热/功耗约束。给出 30/60/90/120 fps 对应毫秒表，并提供分辨率敏感性实验：只降 Primary Screen Percentage、保持相机与内容不变，区分随像素缩放的 Pass 与固定/几何/提交类成本。",
+      "try_points": [
+        "改任何 CVar 前先锁硬件、分辨率、档位、场景与相机，并留热与战斗等未采样余量",
+        "做一次分辨率敏感性：降 Primary Screen Percentage 看总 GPU 与各 Pass 是否同比下降",
+        "弱分辨率响应不要直接断定为 CPU bound——部分 GPU Pass 本身对分辨率不敏感"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "UE 5.8：GPU 内存与渲染资源——Render Resource Viewer 审计清单",
+      "url": "https://adventuresincausality.com/unreal/unreal-rendering-performance/gpu-memory-and-resources/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "用 Tools → Render Resource Viewer 做打开瞬间的 GPU 分配快照（需手动 Refresh）。流程：记录平台 GPU 预算与当前常驻/已分配 → 在流送稳定后的代表场景/相机抓拍 → 按大小排序并映射到资产/LOD → 区分持久常驻与 RDG 瞬时别名资源 → 同地点同流送状态做前后对比。常见杠杆包括纹理组/mip、错误 Always Resident、过大 RT/历史缓冲/阴影池、Nanite 流送池与重复引用；并提醒不要把进程 RAM、包体与流送池占用量简单相加。",
+      "try_points": [
+        "打开 Render Resource Viewer 后按 Size 排序，把最大几项反查到具体资产或 LOD",
+        "默认关掉 Transient 过滤器时注意：瞬时 RT 与常驻资源要分账",
+        "改纹理组或 Nanite 池后，回到同一相机/流送状态再 Refresh，对比 Resident 变化"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8 World Partition：PCG 集成——生成所有权、Data Layer 与 HLOD 继承",
+      "url": "https://adventuresincausality.com/unreal/unreal-world-partition/pcg-integration/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "明确 WP 管空间驻留、PCG 管程序化生成；不要把 PCG 生成网格与 WP Runtime Grid 当成同一概念。工作流要求先定烘焙/编辑器按需/运行时生成，再定是否分区与分层生成；在源/PCG 设置层指定 Data Layer 与 HLOD，并确认生成 Actor 继承；对齐生成超前距离与玩家速度。失败模式覆盖重复输出、接缝、永不卸载、错误阶段可见、HLOD 漏生成内容、到达卡顿；离线可用 PCGWorldPartitionBuilder，但退出码成功不等于验收通过。",
+      "try_points": [
+        "在 PCG 源设置里显式指定 Data Layer 与 HLOD Layer，生成后抽查 Actor 是否继承",
+        "远景代理缺失时先确认生成物是否有资格进入 HLOD，再重建 HLOD，而不是只重跑 PCG",
+        "到达卡顿：把生成与 cell 流送错开（更早预载、减负、可缓存则缓存，或稳定内容改烘焙）"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    }
+  ]
+}
