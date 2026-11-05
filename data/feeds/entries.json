@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T09:31+08:00",
+ "updated": "2026-11-05T08:54+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 4
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-04T09:31+08:00",
+   "checked": "2026-11-05T08:54+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 4
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,198 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-04T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-05T08:54+08:00",
+   "last_new": 1
   }
  },
  "entries": [
+  {
+   "id": "e083fa935b25",
+   "title": "How NVIDIA Uses AI Agents to Streamline AI Factory Operations",
+   "link": "https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations/",
+   "summary": "As GPU clusters scale, operations span compute, network, hardware, and scheduling. Site reliability engineers (SREs) often have to examine multiple dashboards...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-05T06:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "e9091af45fa2",
+   "title": "Residential proxies detected on White House network",
+   "link": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+   "summary": "Hacker News 热度:576 分,179 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50371246",
+   "date": "2026-11-05T04:45+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "801af3516247",
+   "title": "NVIDIA CUDA 13.5 Brings NVIDIA Vera Rubin GA Support",
+   "link": "https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/",
+   "summary": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-05T02:46+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "3a60ec25b6a6",
+   "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+   "link": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-05T01:50+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "15bf9a7f724c",
+   "title": "How NVIDIA Factory Operations Blueprint Coordinates AI Agents to Investigate Production Issues",
+   "link": "https://developer.nvidia.com/blog/how-nvidia-factory-operations-blueprint-coordinates-ai-agents-to-investigate-production-issues/",
+   "summary": "A Siemens report estimates that unplanned downtime costs an average large plant in the surveyed sectors $253 million per year. Whether investigating a failed...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-05T01:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "1d2ea6d42235",
+   "title": "Use NVIDIA NeMo to Turn Agent Failures into Tests and Harness Fixes",
+   "link": "https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/",
+   "summary": "Turn production evidence into prioritized issues and custom evaluations that help you improve prompts, tools, models, memory, skills, and harness code. When you...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-05T00:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "836ec740f54d",
+   "title": "AMD expects to outsell Intel in Q4 for the first time in history",
+   "link": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
+   "summary": "Hacker News 热度:453 分,165 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50367125",
+   "date": "2026-11-04T23:38+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "5ce3511d0915",
+   "title": "Kimi K3.1 Pro model weights are out",
+   "link": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "summary": "Hacker News 热度:352 分,94 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50366999",
+   "date": "2026-11-04T23:30+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "a1d3122acc27",
+   "title": "datasette-llm 0.1a10",
+   "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+   "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T23:26+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "2ed0ade1fe0e",
+   "title": "AI is forcing us to pay off 40 years of technical debt",
+   "link": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+   "summary": "Hacker News 热度:1041 分,624 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50364336",
+   "date": "2026-11-04T19:52+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "0b9a72532823",
+   "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+   "link": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+   "summary": "Hacker News 热度:587 分,271 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50362905",
+   "date": "2026-11-04T16:46+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "68105b5d15ce",
+   "title": "datasette-apps 0.3a0",
+   "link": "https://simonwillison.net/2026/Nov/4/datasette-apps/",
+   "summary": "Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. New app_add_stored_queries() and app_remove_stored_queries() tools let the agent manage which stored…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T08:29+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "7a999d6293b5",
+   "title": "Unreal Engine Innovation Heads to I/ITSEC 2026",
+   "link": "https://www.unrealengine.com/news/unreal-engine-innovation-heads-to-i-itsec-2026",
+   "summary": "Don’t miss our Mesh Terrain demo, discussion on Unreal MCP and agnostic LLM integrations, AI co-developed applications, and much more as we head to I/ITSEC 2026 in Orlando on 30 November. Book your meeting with us today.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-04T08:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "0ab49c2125d3",
+   "title": "How Ares Interactive runs live ops without waiting on client updates",
+   "link": "https://unity.com/blog/ares-interactive-live-service-games",
+   "summary": "How Baseball Hits 26 and The Walking Dead: Aftermath use remote config, versioned bundles, and CI to ship live ops changes without a client release.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-04T08:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "34eda31343c4",
+   "title": "The Immersive Edge: October 2026 industry content wrap-up",
+   "link": "https://unity.com/blog/october-2026-industry-content-wrap-up",
+   "summary": "The Immersive Edge, October 2026: 23 Unity Industry resources, from an F1 Academy simulator to five Industry Summit sessions.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-04T08:00+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "e21b187842dc",
+   "title": "datasette-agent 0.5a0",
+   "link": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+   "summary": "Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io . Tags: projects …",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T07:13+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "79663c16cccb",
+   "title": "llm 0.37.1",
+   "link": "https://simonwillison.net/2026/Nov/3/llm/",
+   "summary": "Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T05:41+08:00",
+   "first_seen": "2026-11-05T08:54+08:00"
+  },
   {
    "id": "ef1ab26cae35",
    "title": "Safari introduces Adaptive Dark Mode in 27.3",
@@ -132,17 +319,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-11-04T02:00+08:00",
-   "first_seen": "2026-11-04T09:04+08:00"
-  },
-  {
-   "id": "fdf1822c9e67",
-   "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-   "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-   "summary": "Hacker News 热度:483 分,151 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50355251",
-   "date": "2026-11-04T01:40+08:00",
    "first_seen": "2026-11-04T09:04+08:00"
   },
   {
@@ -187,6 +363,17 @@
    "topic": "AI 工具",
    "comments": null,
    "date": "2026-11-04T00:35+08:00",
+   "first_seen": "2026-11-04T09:04+08:00"
+  },
+  {
+   "id": "fdf1822c9e67",
+   "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+   "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "summary": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model - literally a text description of the model containing a bunch of floating point numbers. I've been playing with…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T00:29+08:00",
    "first_seen": "2026-11-04T09:04+08:00"
   },
   {
@@ -4961,17 +5148,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-10-06T23:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "32f2de9dc17f",
-   "title": "New for Unity Industry: Automotive HMI sample for embedded-style hardware",
-   "link": "https://unity.com/blog/unity-industry-hmi-template-for-embedded-systems",
-   "summary": "Unity Industry HMI template: An automotive HMI sample with instrument cluster, ADAS view, climate controls, and city sim, targeting constrained, embedded systems",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-06T08:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

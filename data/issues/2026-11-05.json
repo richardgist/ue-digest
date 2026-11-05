@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-05",
+  "items": [
+    {
+      "title": "论坛：UE 5.8 VSM Cached Page 误读与 DynamicRes 节流 CVar（Epic 实操答复）",
+      "url": "https://forums.unrealengine.com/t/vsm-cached-page-mode-in-5-8/2843727",
+      "source": "Epic Developer Community Forums（Petrockets / Alex Peterson）",
+      "published": "2026-09-11（提问）；2026-09-22～09-23（Epic 详解 DynamicRes）",
+      "ue_version": "UE 5.8（答复亦对照 5.7+ 可视化变更）",
+      "summary": "清场场景仍见「整页动态失效」时，Epic 说明 Cached Page 视图里大片蓝色常因默认 r.Shadow.Virtual.UseReceiverMaskDirectional=1，未必等于全面失效；5.7+ 调查失效源应优先用 Shadow Casters 可视化。帖内还给出 Witcher demo 用过的 VSM DynamicRes 族：用 TimeBudgetMs（需 Dynamic Resolution）或 LoadBudget 监视 Nanite ShadowDepths，超预算则抬分辨率 LOD bias；MaxResolutionLodBias / 方向光与局部光分帽；LoadBudget=0 关节流、约 1.2–1.5 为较强节流。系统偏 Nanite、依赖历史平滑，不擅长镜头硬切尖峰；5.9 暂无重做 Cached Page 可视化的计划。",
+      "try_points": [
+        "先开 VSM Shadow Casters 找失效物体，再决定是否关 UseReceiverMaskDirectional 对比 Cached Page 颜色",
+        "试 r.Shadow.Virtual.DynamicRes.TimeBudgetMs（有 DynRes）或 LoadBudget（编辑器也可用），配合 r.shadow.virtual.showstats 1 看节流状态",
+        "用 MaxResolutionLodBias 与 MaxComputeResolutionLodBiasDirectional/Local 分帽；预期对「大量失效」场景更有效，而非镜头切换尖峰"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：Sub World Partition HLOD 在父世界不可见——须 Runtime Hash Set 与分区名对齐",
+      "url": "https://forums.unrealengine.com/t/subwp-hlods-not-visible-from-the-parent-world/2764398",
+      "source": "Epic Developer Community Forums（Svegn2 / Martin Sevigny）",
+      "published": "2026-08-06～08-14",
+      "ue_version": "UE 5.8",
+      "summary": "Epic 明确：Standalone HLOD 只在 Runtime Hash（WorldPartitionRuntimeHashSet）可用，旧 Spatial Hash 不支持，这是父世界看不到 SubWP HLOD 的常见根因。建议在 World Settings 一键切到 Runtime Hash Set，核对 RuntimePartitions 的 cell/loading range/HLOD setups，再 PIE 用 wp.Runtime.ToggleDrawRuntimeHash2D 等调试，最后重新生成 HLOD。对齐清单：主世界与 SubWP 使用相同 grid 名、HLOD Partition 名一致、SubWP Default HLOD Layer 设对；Epic 还附了 5.8 示例工程。SubWP HLOD 在 5.8 仍标实验性，主缺 External Data Layers（Game Feature Plugin）支持，不用 EDL 的项目可考虑落地。",
+      "try_points": [
+        "父世界看不到 Standalone HLOD 时，先确认 Runtime Hash Class 是否为 WorldPartitionRuntimeHashSet，而非 Spatial Hash",
+        "迁移后检查 RuntimePartitions、bIs2D，重测 loading range，再重新 Build HLOD",
+        "对齐 Main/SubWP 的 grid 名与 HLOD Partition 名，并设置 SubWP Default HLOD Layer；有 EDL 需求则暂缓 SubWP HLOD"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "UE 5.8：Geometry and world readiness——Nanite 池、WP 就绪门与传送预加载",
+      "url": "https://adventuresincausality.com/unreal/unreal-memory-streaming/geometry-and-world-readiness/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；memory-streaming 系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "把「几何已加载」与「可进入」拆开：Nanite 用 StreamingPoolSize 在内存与 IO/解压之间权衡，过小即使静态视口也会 thrash，改前先看 Nanite Streaming Geometry 与 NaniteStats，并单独核验包体/存储。World Partition 格子加载只是一层，就绪门还应覆盖 collision/navigation、资产与 bundle、贴图/Nanite/VT 质量下限、渲染/物理组件注册、首帧可见 PSO、玩法初始化。预加载超前距离按最大接近速度 × 最差就绪延迟 + 余量估算；传送用临时目的地 streaming source，等 WP subsystem 完成后再过完整就绪门，避免为一条路径全局抬 loading range。",
+      "try_points": [
+        "调 r.Nanite.Streaming.StreamingPoolSize 前先开 Nanite Streaming Geometry / NaniteStats，区分 thrash 与真实驻留需求",
+        "进入区域验收清单：cell 激活、碰撞导航、资源/VT/Nanite 质量、组件注册、PSO、玩法 init——不要只看 UObject Loaded",
+        "传送：先挂目的地 streaming source → IsStreamingCompleted → 再过就绪门；拒绝靠全局加大 loading range「糊弄」单条路径"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8：Texture streaming——先诊断再动 PoolSize",
+      "url": "https://adventuresincausality.com/unreal/unreal-memory-streaming/texture-streaming/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；memory-streaming 系列未收录页）",
+      "ue_version": "UE 5.8（文档目标；原文未标注实测版本）",
+      "summary": "贴图流送调优流程：先 Build Texture Streaming，再用 Primitive Distance / Mesh UV Density / Material Texture Scales / Required Texture Resolution 等视图找坏 bounds、UV 密度、材质缩放或驻留不足；用 stat streaming 记录 Texture/Streaming/Wanted/budget/over-budget/update time，并在目标相机路径上区分临时缓存 mip 与持续需求。给出 PoolSize、FramesForFullUpdate、MaxTempMemoryAllowed、MipBias、UsePerTextureBias、LimitPoolSizeToVRAM 等杠杆；明确 r.TextureStreaming 0、PoolSize 0、UseAllMips、FullyLoadUsedTextures 只作诊断/展示，不是 Shipping 默认解。应先修过期 MI 流送数据、错误 UV 密度、过大 bounds、强制驻留、贴图组与源分辨率，再考虑加大池。",
+      "try_points": [
+        "改池前：Build Texture Streaming → 四个准确性视图 → stat streaming 沿同一路径冷/热各跑一遍",
+        "优先修 MI 流送数据、UV 密度、bounds、强制驻留与贴图组；最后才动 r.Streaming.PoolSize",
+        "受控测 wanted 分辨率可用 r.Streaming.DropMips 2，测完立刻恢复；Shipping 勿关 TextureStreaming / 勿把 PoolSize 置 0"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 文档：移动端 Frame Pacing（Android Swappy 与 Device Profile 锁帧）",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/frame-pacing-for-mobile-devices-in-unreal-engine",
+      "source": "Epic Games Documentation",
+      "published": "约 2026-06（UE 5.8 文档；此前未收录）",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.8 移动端帧节奏说明：用低于设备原生刷新率的稳定提交换更平滑体验。Android 默认集成 Android Game SDK 的 Swappy（约自 5.2 起默认开），让渲染周期与刷新周期对齐，减轻帧缓冲回退造成的提交抖动与触控延迟；可用 a.UseSwappyForFramePacing=0（或写进 Android Device Profile）退回引擎旧 pacer。Device Profiles 侧用 FrameRateLock、iOS 的 bEnableDynamicMaxFPS（120Hz）、r.setframepace 直接设目标刷新；C++ 经 FPlatformRHIFramePacer 的 Supports/Set/GetFramePace 控制。",
+      "try_points": [
+        "Android 真机先确认 Swappy 开着；若要对比旧 pacer，在对应 Android_* Device Profile 写 a.UseSwappyForFramePacing=0",
+        "用 r.setframepace 锁 30/60，结合 FrameRateLock，按机型写进 DeviceProfiles.ini 而非只靠控制台",
+        "iOS 若需 120Hz 再开 bEnableDynamicMaxFPS；改完用真机摸触控延迟与帧时间方差，不只看平均 FPS"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
