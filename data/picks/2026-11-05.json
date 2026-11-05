@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-05",
+  "items": [
+    {
+      "title": "DLSS 5 3D-Guided Neural Rendering：Hogwarts Legacy 今日上线，War Thunder / Where Winds Meet 本月跟进",
+      "url": "https://www.nvidia.com/en-us/geforce/news/hogwarts-legacy-war-thunder-dlss-5-3d-guided-neural-rendering/",
+      "source": "NVIDIA GeForce News",
+      "published": "2026-11-03",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 官方（厂商推广）宣布：Hogwarts Legacy 于 2026-11-05 为 GeForce RTX 50 系列、RTX Spark 与 GeForce NOW Ultimate 加入 DLSS 5「Neural Rendering」选项；War Thunder 约月中、Where Winds Meet 于 11-23 跟进。文中称 DLSS 5 的 3D-Guided Neural Rendering 以引擎已渲染帧（几何/贴图/光照缓冲）为基底，作为管线末端阶段用 AI 增强光照与材质，并提供多模型、Structure/Tone Intensity 与语义/引擎级遮罩供开发者按场景与资产调参。同期十月模型称约 118M 参数、4K 显存占用约降 20%、相对前代约 2× 性能。文中帧率数字为 NVIDIA 自家基准，第三方复测原文未提供。",
+      "why_useful": "若关心神经渲染进游戏管线的接口形态（模型选择、强度旋钮、角色/环境遮罩）与 RTX 50 实装节奏，这是本周可对照的官方落点说明。",
+      "try_it": "有 RTX 50 / RTX Spark：更新 Hogwarts Legacy 后在选项打开 Neural Rendering；开发侧可对照文中提到的 DLSS 5 SDK 控制项。"
+    },
+    {
+      "title": "Unreal Fest Tokyo：UE6 Early Access 起移除 Blueprints / Actors / C++ Gameplay Framework，改 Verse + Scene Graph",
+      "url": "https://www.invenglobal.com/articles/28098/epic-games-will-remove-blueprints-and-actors-from-unreal-engine-6",
+      "source": "Inven Global（报道 Game Makers / 基调演讲）",
+      "published": "2026-11-03",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "Inven Global 据 Game Makers 对 Unreal Fest Tokyo 2026（11-03）基调演讲与联合发布会的报道：Tim Sweeney 称 UE6（计划 2027 年末 Early Access）将从一开始移除 Blueprints、Actors 与既有 C++ Gameplay Framework（幻灯片标为 Remove，而非仅 deprecated），游戏逻辑改用 Verse，场景改用 Scene Graph（entity + component）；渲染/物理等底层仍用 C++。这与 6 月 Chicago 时「首版保留再逐步淘汰」的说法不同。Sweeney 称 Epic 内部 AI 使编程/调试/关卡设计生产率约 1.5–4×，并计划提供 AI 辅助把 BP/C++ 游戏逻辑转到 Verse（形态未定）；Fortnite 已在迁移数千 BP。UE5 在研项目可继续留在 UE5 线；同场确认 5.9 Preview 下周（该点已在昨日精选收录）。",
+      "why_useful": "UE 团队需要据此规划 Verse/Scene Graph 试用与 UE5→UE6 迁移窗口；比「5.9 下周 Preview」更硬的是「EA 起直接砍掉 BP/Actors」这一路线变更。",
+      "try_it": "有兴趣跟 UE6：按 Epic Japan 建议先在 UEFN 里摸 Verse 与 Scene Graph；现有 UE5 量产项目可暂不跟 EA 节奏。"
+    },
+    {
+      "title": "Unity：Ares Interactive 如何用远程配置跑 live ops，而不等客户端发版",
+      "url": "https://unity.com/blog/ares-interactive-live-service-games",
+      "source": "Unity Blog",
+      "published": "2026-11-04",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Unity 采访 Ares Interactive 两款 live 手游团队（Baseball Hits 26 / The Walking Dead: Aftermath）。7th Inning 自建后端与 live ops：50+ 配置域、管理面板校验后秒级热更且可版本回滚/内测账号灰度，事件可按周跑多场；Addressables 仅用于球场 bundle，其余默认进包以控首包。Swift Games 把商店/经济/远程配置等从旧作复用，设计师用表格发布远程 bundle（带兼容客户端版本与存档迁移链）；规则是「每周要改的进 bundle，美术/代码进构建」。两队共同点：尽早划清 live 数据与资产边界，并把每次服务器调用当不可靠来设计客户端。",
+      "why_useful": "做 live 手游时，远程配置边界、灰度回滚与「第十个 live 功能成本≈第一个」的工程拆分，比泛泛「用 Addressables」更可照抄。",
+      "try_it": "对照自家：列出「必须周更」的配置域，是否都能不发版热更；把存档迁移链与兼容客户端版本写进 bundle 元数据。"
+    },
+    {
+      "title": "Gemini CLI 0.67.0：/models 发现、沙箱内桥接 IDE companion，以及大量取消/配额修复",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0",
+      "source": "GitHub google-gemini/gemini-cli",
+      "published": "2026-11-04",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Gemini CLI 稳定版 v0.67.0（相对 v0.66.0）发布说明要点：新增 models 命令与 --list-models 做模型发现；把 IDE companion 经 exec stdio 桥进容器沙箱；非交互模式在取消后阻止继续跑工具、终止信号处理；项目 spending cap 错误归为终端配额错误；ACP 权限请求带上 MCP server/工具元数据；动态模型解析下保留显式选中的模型（含短暂 fallback/cancel/rewind）；另有 Windows 路径/进程查找、终端宽字符显示、扩展安装锁、Whisper 下载中断等一长串修复。",
+      "why_useful": "若日常用 Gemini CLI：模型列表可查、沙箱里还能连 IDE companion，以及取消后不再误跑工具，是比小版本修边更影响工作流的改动。",
+      "try_it": "npm/官方渠道升到 0.67.0 后跑 `gemini --list-models` 或 `/models`；在容器沙箱场景验证 IDE companion 是否仍可达。"
+    },
+    {
+      "title": "CUDA Toolkit 13.5 GA：Vera Rubin 生产可用，强化 locality domain / MPS v3 / CUDA Tile",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-11-04",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 宣布 CUDA Toolkit 13.5 达到 GA：Vera Rubin GPU 架构支持从早期开发者访问升到企业生产可用；Windows on Arm 支持延伸到 DGX Station for Windows。Locality domain 可用新 flag 把 supplemental SM 纳入分区（或保持均匀 SM 数），经 cudaDevSmResourceSplit() 发现各分区 SM 数。MPS v3 增加加权 timeslice、SM 分区负载均衡（借还）、cgroup 路由等。CUDA Tile 增加 NVLink/NVSwitch 上的多 GPU 单播/组播指针，并公开预览 SIMT 互操作（Tile kernel 可调 NVSHMEM/CCCL 等 device 函数）。另有 cuda.core 1.2 批量拷贝、CCCL 3.5 调优 API 等。文首 AI 摘要栏注明可能不完整，需以正文为准。",
+      "why_useful": "写 GPU 运行时/多进程共享/多卡通信的人可直接对照 13.5 的 locality domain 与 MPS v3 接口；做渲染/仿真侧 CUDA 的也可看 Tile 多卡与 SIMT 互通预览。",
+      "try_it": "从 NVIDIA 下载 CUDA Toolkit 13.5；有 Vera Rubin / 多进程场景时先读 Runtime API 里 locality domain 分区与 MPS v3 指南。"
+    }
+  ]
+}
