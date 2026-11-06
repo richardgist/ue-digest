@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-06",
+  "items": [
+    {
+      "title": "AMD FSR Upscaling 4.1.2 登陆 Xbox Series X|S（十月 GDK），首度提供主机端 ML 超分",
+      "url": "https://gpuopen.com/learn/amd-fsr-upscaling-412-xbox/",
+      "source": "AMD GPUOpen",
+      "published": "2026-11-04",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "GPUOpen（厂商）称：与 Xbox 合作，把 AMD FSR Upscaling 4.1.2 随 2026 年十月 Microsoft GDK 带到 Xbox Series X|S，称这是主机端首次可用的 ML 版 FSR Upscaling；已用分析型 FidelityFX Super Resolution 的开发者可升级。Series X|S 提供 Full INT8 与更小、更便宜的 Lite INT8 两套模型（均可在 X/S 上跑），可用 GDK sample 运行时切换对比画质与开销；文称两模型 upscaler 显存相同（取决于渲染/显示分辨率而非模型），取舍是性能而非内存。集成复用与 PC 相同的 FSR SDK API（已注册开发者从 GDK 取签名二进制），输入仍为 jittered color / depth / motion vectors，质量档与 PC 一致（Native AA–Ultra Performance）。ROG Xbox Ally 系列为 Windows 设备，走标准 FSR SDK 2.4（含 Ryzen AI Z2 Extreme / Z2 A）。玩家侧需各游戏自行集成后才可用。",
+      "why_useful": "做跨主机/掌机超分时，可按同一 FSR SDK API 评估 Xbox Full/Lite INT8 与 Ally 路径，不必另起一套集成。",
+      "try_it": "有 Xbox 注册：装十月 GDK，打开 AMD FSR GDK sample 对比 Full/Lite；Ally 侧用 FSR SDK 2.4 + ASUS preview driver 做对照。"
+    },
+    {
+      "title": "Unreal Fest Tokyo：MegaLights 时代如何摆灯——RectLight 可常开、作例 160 灯约 16ms",
+      "url": "https://gamemakers.jp/article/2026_11_06_149634/",
+      "source": "ゲームメーカーズ（Unreal Fest Tokyo 2026 演讲报告）",
+      "published": "2026-11-06",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Game Makers 报道 Unreal Fest Tokyo 2026（11-03/04）演讲「MegaLightsはライティングアーティストを解放するか？」：照明督导木村洋一谈 UE 5.8 正式版 MegaLights。要点含：成本大致不随灯数线性上涨；街景作例 Directional+Sky 约 13.12ms，加 160 个 RectLight 并切 RT 约 35.59ms，开 MegaLights 后约 16.16ms（演讲自测数字）。更大收益是全部灯可作正确 RT 区域光；建议不必只当局部省钱开关，可常开并大量放 RectLight，再与 VolumetricFog 组合。文亦区分物理必然光与演出光，并称 GI/Lumen 时代仍需照明美术。技术细节指向 Epic Japan 另两场幻灯（可扩展性 / MegaLights 入门）。",
+      "why_useful": "比「开 MegaLights」更落地：用演讲数字与「常开 + 大量 RectLight」工作流，重新评估灯数预算与美术职责。",
+      "try_it": "UE 5.8 工程打开 MegaLights，用场景预算对照文中「160 RectLight」量级做一次 before/after GPU 计时。"
+    },
+    {
+      "title": "Unity 6000.3.28f1：Licensing Client 加速、iPhone 18 枚举、DX12 大场景 mid-frame flush",
+      "url": "https://unity.com/releases/editor/whats-new/6000.3.28f1",
+      "source": "Unity Release Notes",
+      "published": "2026-11-03",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 官方 changelog：6000.3.28f1 于 2026-11-03 发布。Improvements：Licensing Client 升至 v1.19.0（称启动更快）。API：iOS 增加 iPhone 18 Pro / Pro Max / Duo 的 device generation 枚举与刘海/挖孔 cutout。Fixes 中与图形相关：DX12 在单帧大纹理（如动态字体图集）多次更新时的崩溃；IUnityGraphicsD3D12::GetNextFrameFenceValue 在开启 graphics jobs 时可能早于插件写入命令完成的问题；极端单帧绘制量导致 OOM/GPU reset 时，D3D12 在上传 scratch 超过约 1 GiB 会 mid-frame submit，可用 boot config d3d12-scratch-flush-threshold 调整（0 关闭）。另列多项已知问题（Android predictive back、USB 音频断连崩溃等）。",
+      "why_useful": "跟 6000.3 LTS/补丁线的团队可直接对照 DX12 scratch flush 与 iPhone 18 设备枚举是否覆盖当前崩溃/适配清单。",
+      "try_it": "升级到 6000.3.28f1；若 DX12 大场景仍爆显存，试调 d3d12-scratch-flush-threshold 并看日志首次 flush 提示。"
+    },
+    {
+      "title": "Cursor：Build Live Apps——云端 Agent 脚手架 + Postgres/SSO + 一键发布可分享链接",
+      "url": "https://cursor.com/changelog/build-live-apps",
+      "source": "Cursor Changelog",
+      "published": "2026-11-05",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Cursor 官方 changelog（2026-11-05）：付费计划且开启 cloud agents 后，可在 Cursor 内直接构建并发布 live apps。流程：启动 cloud agent 并明确要求做 app → 脚手架 Web 应用、按需起 Postgres、Cursor SSO 认证、托管；需要连内部系统时再索取 secrets；发布时自选唯一域名拿到 live 链接。支持从新/已有仓库部署（Cursor Origin 与 GitHub；GitLab「即将」）。发布前跑确定性与 agent 安全检查（如文件内密钥、暴露凭据），检查失败须修复且须显式 publish；团队管理员可查看全部 app/secret、加审查规则、放行被拦发布或下架。可按人/组/全员分享（个人计划也可公开），并可签发 Cursor API key 供脚本或 Grok Bot 调用。文中内部用例为厂商自述。",
+      "why_useful": "把「agent 写完的内部小工具」从 localhost 推到可分享链接，适合快速做 ops/看板类工具且要团队 SSO。",
+      "try_it": "更新 Cursor → 开 cloud agent，明确说要 build an app → 走完安全检查后再 publish；需要自动化时再开 API key。"
+    },
+    {
+      "title": "Qwen Code v0.26.8：订阅登录 + prompt.submit hooks + 项目钩子审批门",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.8",
+      "source": "GitHub · QwenLM/qwen-code",
+      "published": "2026-11-05",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Qwen Code 官方 release v0.26.8（2026-11-05T16:23:57Z，非 prerelease）。Breaking：文称无已知破坏性变更。Features 要点：OpenTUI / headless 可跑 prompt.submit hooks；Ink TUI 的 model rounds 与 tool batches 走 shared loop；跨 CLI / VS Code / Desktop 增加 Qwen subscription 支持；可配置 Conversations 工作目录根；GitHub bound-session 的 role-aware action templates；managed-agent 允许并发 workspace rewind。Fixes 含：项目 hooks 需审批对话框、审批环境限制在 workspace、headless 项目钩子信任依赖 folder-trust 等。",
+      "why_useful": "若在用或评估 Qwen Code，本版补齐订阅通路与 hook/审批门，便于对照 Claude/Gemini CLI 的权限模型。",
+      "try_it": "升级到 v0.26.8 后试 `subscription` 登录；有项目级 hooks 时确认审批门与 folder-trust 行为。"
+    }
+  ]
+}
