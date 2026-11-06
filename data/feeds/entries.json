@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T09:33+08:00",
+ "updated": "2026-11-06T08:58+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-05T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-06T08:58+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,8 +26,8 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-05T09:33+08:00",
-   "last_new": 1
+   "checked": "2026-11-06T08:58+08:00",
+   "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
    "url": "https://www.jendrikillner.com/index.xml",
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-05T09:33+08:00",
+   "checked": "2026-11-06T08:58+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-05T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-06T08:58+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-05T09:33+08:00",
-   "last_new": 2
+   "checked": "2026-11-06T08:58+08:00",
+   "last_new": 10
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,176 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-05T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-06T08:58+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "819229fc61c9",
+   "title": "Claude Code sends your email address to websites",
+   "link": "https://github.com/anthropics/claude-code/issues/107757",
+   "summary": "Hacker News 热度:397 分,136 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50385272",
+   "date": "2026-11-06T06:17+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "2437e6318275",
+   "title": "MS Paint Remote Code Execution Vulnerability",
+   "link": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+   "summary": "Hacker News 热度:278 分,87 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50384233",
+   "date": "2026-11-06T04:43+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "5930379c317a",
+   "title": "Search for everyone",
+   "link": "https://kagi.com/changelog#11820",
+   "summary": "Hacker News 热度:470 分,229 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50383740",
+   "date": "2026-11-06T04:03+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "c50b7edd94d6",
+   "title": "Goodbye from Salon",
+   "link": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+   "summary": "Hacker News 热度:389 分,141 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50383739",
+   "date": "2026-11-06T04:03+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "d6ff11ce1ca9",
+   "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+   "link": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-06T03:35+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "7e86eef75212",
+   "title": "Quoting Paul Ford",
+   "link": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+   "summary": "The web browser is very, very, very powerful software for applications, and the cost of accessing that power is going down seemingly every day . — Paul Ford , The Web Is More Than Enough Tags: browsers , paul-ford , web-development",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-06T01:34+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "e09268bef236",
+   "title": "Configure, Certify, and Operate Kubernetes GPU Clusters with NVIDIA DSX OS",
+   "link": "https://developer.nvidia.com/blog/configure-certify-and-operate-kubernetes-gpu-clusters-with-nvidia-dsx-os/",
+   "summary": "One underperforming GPU can slow an entire distributed training job. The node may pass basic health checks and show normal utilization, leaving operators to...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-06T01:00+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "f4f087d1e881",
+   "title": "Motorola Signature 27 with GrapheneOS support",
+   "link": "https://motorolanews.com/motorola-signature-27-2/",
+   "summary": "Hacker News 热度:388 分,292 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50380810",
+   "date": "2026-11-06T00:01+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "8b1ec95f1cc9",
+   "title": "Five Ways NVIDIA Co-Design Maximizes the Value of Every Byte in the AI Factory",
+   "link": "https://developer.nvidia.com/blog/five-ways-nvidia-co-design-maximizes-the-value-of-every-byte-in-the-ai-factory/",
+   "summary": "In an AI factory, high bandwidth memory (HBM)is the fastest, most expensive, and most contested memory tier. Every byte spent on a redundant weight copy, an...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-06T00:00+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "134dd360224f",
+   "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+   "link": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+   "summary": "Hacker News 热度:573 分,122 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50379704",
+   "date": "2026-11-05T22:44+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "a8fe3ac9fd9c",
+   "title": "I wish tech companies knew more about me",
+   "link": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
+   "summary": "Hacker News 热度:286 分,257 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50378942",
+   "date": "2026-11-05T21:40+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "9e0a4b12e54f",
+   "title": "Download your favourite YouTube videos",
+   "link": "https://criminallyvulgar.dev/you-should-absolutely-download-your-favourite-youtube-videos/",
+   "summary": "Hacker News 热度:266 分,121 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50378571",
+   "date": "2026-11-05T21:00+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "e573c9fd3905",
+   "title": "sshole",
+   "link": "https://sshhole.com",
+   "summary": "Hacker News 热度:2268 分,564 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50378228",
+   "date": "2026-11-05T20:19+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "268f8d7e2515",
+   "title": "GPT-6 Astra covertly underperforms on safety research",
+   "link": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+   "summary": "Hacker News 热度:286 分,151 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50376313",
+   "date": "2026-11-05T15:44+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
+  {
+   "id": "db23cc4830e0",
+   "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+   "link": "https://huggingface.co/blog/phonon-tts",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-05T08:00+08:00",
+   "first_seen": "2026-11-06T08:58+08:00"
+  },
   {
    "id": "e083fa935b25",
    "title": "How NVIDIA Uses AI Agents to Streamline AI Factory Operations",
@@ -5063,94 +5228,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "8405711af5b5",
-   "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
-   "link": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
-   "summary": "OpenAI “rogue” agent activities found on Wikimedia projects Given how tempting a target wikis are for rogue agent swarms, it's not a huge surprise that Wikipedia found evidence of that activity once they went looking: The Wikimedia Foundation conducted its own investigation to see whether Wikimedia websites had been similarly affected by AI agents, focusing on those operated by OpenAI. We can confirm that we have discovered some activity by these “rogue” OpenAI agents on Wikimedia platforms…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T08:16+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "f5c2e6628cbc",
-   "title": "Why we built Unity Spark",
-   "link": "https://unity.com/blog/why-we-built-unity-spark",
-   "summary": "Unity CEO Matt Bromberg introduces Unity Spark, a new way to make and share games in your browser with no prior Unity or game development experience required.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "9678ae15c3cb",
-   "title": "Quoting Victoria Kim",
-   "link": "https://simonwillison.net/2026/Oct/6/victoria-kim/",
-   "summary": "Since the Medicare breach, OpenAI has put in place additional monitoring to allow “immediate intervention” by staff to stop training if the company’s models access the internet in ways they’re not supposed to, Mr. Kwon [chief strategy officer at OpenAI] said. — Victoria Kim , Reporting from the Australian parliament Tags: accidental-cyberattacks , generative-ai , ai-security-research , openai , ai , llms",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T07:58+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "f13d2ff92b15",
-   "title": "Google debuts new 'experimental' AI game platform named Google Playground",
-   "link": "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
-   "summary": "A platform for people who want to play games made by AI.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T04:14+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "728a24e2ffb3",
-   "title": "Scale Bitwise-Deterministic Pretraining with NVIDIA Megatron Core",
-   "link": "https://developer.nvidia.com/blog/scale-bitwise-deterministic-pretraining-with-nvidia-megatron-core/",
-   "summary": "Bitwise determinism makes large-scale pretraining easier to debug, validate, and resume reproducibly. These benefits become especially valuable when training...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-07T03:58+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "ee5014209baa",
-   "title": "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack",
-   "link": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking/",
-   "summary": "GPU applications increasingly need networking and data movement to behave like first-class GPU-controlled operations rather than host-driven services. When the...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-07T03:07+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "01ae28de74c2",
-   "title": "GameStop, other retailers to sell used PlayStation 5 Pro units for 66 percent over MSRP",
-   "link": "https://www.gamedeveloper.com/console/gamestop-other-retailers-to-sell-used-playstation-5-pro-units-for-66-percent-over-msrp",
-   "summary": "The advanced PlayStation 5 console is already both highly sought-after and hard to find. Now retailers are pricing it well above MSRP.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T02:54+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "4e2647587f23",
-   "title": "Undead Labs studio head says they were 'irresponsibly transparent' in preparing staff for layoffs",
-   "link": "https://www.gamedeveloper.com/business/unlead-labs-studio-head-says-they-were-irresponsibly-transparent-in-preparing-staff-for-layoffs",
-   "summary": "Studio head Philip Holt says he was being incredibly candid with employees as layoffs loomed.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T01:12+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "686772c902b0",
    "title": "Source-to-ISA correlation for pre-compiled AMD GPU code objects with RGA 2.15",
    "link": "https://gpuopen.com/learn/rga-source-to-isa-correlation-gpu-code-objects/",
@@ -5159,28 +5236,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-10-07T01:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "ed863b0f2e94",
-   "title": "AICR v1.0: Open, stable, and verifiable GPU cluster configuration",
-   "link": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration/",
-   "summary": "GPU-accelerated Kubernetes clusters depend on compatible versions across dozens of components, each on its own release cycle: host kernels, GPU drivers,...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-07T00:13+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "9e07e9065e90",
-   "title": "Control How Your GPU Shares Work with Green Contexts",
-   "link": "https://developer.nvidia.com/blog/control-how-your-gpu-shares-work-with-green-contexts/",
-   "summary": "GPU applications increasingly consist of multiple independent components running at the same time within a single process: a latency-sensitive operator...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-06T23:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
@@ -5368,17 +5423,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-08T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "44cb34f7fa82",
-   "title": "Graphics Programming weekly - Issue 454 - September 6th, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-454/",
-   "summary": "Compact Neural Appearance Models for Efficient Gaussian Splatting presents an efficient appearance framework and a compact neural model for 3D Gaussian Splatting compares spherical harmonics and recent spherical appearance models shows how the framework allows reducing primitive cost and improving reconstruction quality wayback-archive Alwan 2.0.0 is out. Colour science in pure C11 releases version 2 of Alwan, a color science library written in C11 provides color space conversions, chromatic…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-06T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   }
  ]
