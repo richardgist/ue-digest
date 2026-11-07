@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-07",
+  "items": [
+    {
+      "title": "How SEED renders a world players never stop building",
+      "url": "https://unity.com/blog/seed-unity-rendering-performance",
+      "source": "Unity Blog",
+      "published": "2026-11-06",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Klang Games 用 Unity URP 做持久沙盒 MMO《SEED》：客户端只渲染服务器流式状态。建筑拆成约 1m 网格模块，用 BatchRendererGroup + Job/Burst 合批；表面颜色等多写在顶点而非贴图。PC 上用真实玩家存档剖析后发现偏 CPU：大量带 LOD Group 的 Prefab 因动画 cross-fade 没进 GPU Resident Drawer，仍走 SRP Batcher；关掉动画后恢复 hybrid/instanced 合批。移动端主要卡内存，靠 Memory Profiler 差分、按平台 Addressables，以及把经典 LOD 换成 Unity 6.2 Mesh LOD（多级细节收进同一 mesh）。",
+      "why_useful": "玩家共建大世界时，如何用 Profiler/Frame Debugger 抓「该走 GPU Resident Drawer 却没走」这类根因，以及移动端用 Mesh LOD 控内存，都很可直接套。",
+      "try_it": "在相似 URP 项目里对密集小物件 Prefab：Frame Debugger 看是否 hybrid batch；有 LOD cross-fade 动画时对照关掉动画后的合批与 CPU 提交时间。"
+    },
+    {
+      "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+      "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+      "source": "NVIDIA Developer Blog",
+      "published": "2026-11-06",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Black Forest Labs 的 FLUX 3 Image Klein（Base / distilled）用 Qwen3-VL-4B 做文本条件、DiT 细化 latent、自编码器编解码；NVIDIA 文介绍如何在 TensorRT LLM VisualGen 上配 NVFP4、融合 GEMM、torch.compile、FP8 注意力、Cache-DiT 步进缓存与多卡并行。文中给出单卡 B200 上相对未编译 BF16 的加速数字（例如组合优化后文生图最高约 3.46×、图生图约 4.45×），以及八卡 B200 上的延迟对比——均为厂商博客测量，需按自有 workload 复现。",
+      "why_useful": "若在 Blackwell 上部署扩散图生/图编，可对照 VisualGen 的量化、缓存与并行开关逐项压延迟。",
+      "try_it": "按文中 YAML 跑官方 FLUX 3 VisualGen 示例，先比 BF16 vs NVFP4 的 T2I 延迟，再决定是否开 Cache-DiT / 多卡。"
+    },
+    {
+      "title": "Cursor：Voice Chat with Agents（实时语音通话）",
+      "url": "https://cursor.com/changelog/voice-chat",
+      "source": "Cursor Changelog",
+      "published": "2026-11-06",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Cursor 2026-11-06 上线与 coding agent 的实时双向语音通话：可口述改动、问进度，agent 边跑边用短语音汇报。支持 Agents Window、IDE、Web 与 iOS（可用「Hey Siri, call Cursor」）；语音侧为 Grok Voice，可换 Ara/Eve/Leo 等音色，Privacy Mode 下称零数据留存。与原先把语音转成输入框文字的 dictation（旧称 Voice Mode）分开；空闲且输入框为空时点波形按钮开始通话。",
+      "why_useful": "长任务不必盯着打字：边听进度边口头纠偏，适合边走边盯云端/本机 agent。",
+      "try_it": "更新 Cursor 后，在空闲 agent 聊天输入框旁点 Start voice chat；需要只转写不朗读时继续用 dictation 快捷键。"
+    },
+    {
+      "title": "Claude Code 2.1.319：MCP task 默认后台跑 + denyInsteadOfPrompting",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "source": "GitHub anthropics/claude-code",
+      "published": "2026-11-06",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "终端里当 MCP 把某次 tool call 作为 task 跑时，Claude Code 会立刻放到后台，结束后再把结果告诉模型；可用 CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND 恢复阻塞等待，CLAUDE_CODE_DISABLE_MCP_TASKS=1 关掉 MCP tasks。新增 permissions.denyInsteadOfPrompting：本会卡在权限提示的调用直接拒绝并继续回合。另有 /claude-api latency-optimize、CLAUDE_CODE_DISABLE_FEATURE_FLAGS，以及关 telemetry/feature-flag 时 auto mode 不再回落到内置分类器等行为变更（详见 release notes）。",
+      "why_useful": "慢 MCP 不再堵整段会话；若你的集成依赖「等 task 结束再继续」的旧顺序，需要显式设环境变量。",
+      "try_it": "升级到 2.1.319 后对慢 MCP 试一次；若顺序乱了：export CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1。"
+    },
+    {
+      "title": "Gemini Omni 1.2 Flash：原生最长 15 秒视频与多轮编辑",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source": "Google Blog",
+      "published": "2026-11-05",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Google 宣布 Gemini Omni 1.2 Flash 在 Gemini API 与 Google Cloud 正式可用：原生生成/编辑最长 15 秒（相对 1.1 的 10 秒），支持多轮对话改同一段片、参考图/短运动/音频约束，并称相对 1.1 降价 30%（文中写 720p 约 $0.07/秒）。流程可先 360p/720p 打样再升 1080p/4K；输出带 SynthID。文中效果与价格均为厂商说明，未在本机实测。",
+      "why_useful": "需要 API/Cloud 侧短视频生成或广告变体时，可对照 15 秒上限与多轮改片能力选型。",
+      "try_it": "在 AI Studio / Cloud console 用同一参考图跑一段 10s vs 15s，再多轮改背景，看一致性是否够用。"
+    }
+  ]
+}
