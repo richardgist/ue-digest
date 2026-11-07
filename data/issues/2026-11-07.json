@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "items": [
+    {
+      "title": "Unreal Fest Tokyo 2026：NTE 都市开放世界如何在 PC/移动端稳住（WP 预载、FastGeo、LSM 影）",
+      "url": "https://gamemakers.jp/article/2026_11_06_149665/",
+      "source": "ゲームメーカーズ（Unreal Fest Tokyo 2026 演讲报道）",
+      "published": "2026-11-06",
+      "ue_version": "UE 5.5～5.6（Mass 管线所述；整体为 UE5 多平台实装）",
+      "summary": "Perfect World Games 的 Shi Jinwei / Zheng Shengwen 在 Unreal Fest Tokyo 2026 讲《NTE》都市开放世界的 PC+移动优化：传送前临时插入 Streaming Source 预载目的地，用状态机分「资源 / 世界 / 玩法」三阶段再交还控制；启用 Fast Geometry Streaming，把静态度几何在 WP 流送数据阶段转成轻量表示以降 Actor 开销，并把绘制与碰撞网格分离。Mass Entity↔Actor 切换按帧限流，Snapdragon 8 Elite Gen 5 上 300 NPC 对比：限流后帧时间 22.456→17.363ms（约 −22.7%），单帧 Actor 化 242→3，超 20ms 帧 70→3。移动端走 Deferred + Depth Prepass，Vulkan 子通道尽量把 GBuffer 留在 tile memory；Device Profile 分级并实测 Vulkan/GLES 例外（例：Pixel 6 因 backbuffer 格式退回 GLES）。阴影：全平台近景 CSM；PC 侧视锥投影收窄更新区，整图更新约 −90%、静止视角 GPU 影约 −20–30%；移动远景用自研 Layer Shadow Map（LSM）按瓦片跨帧更新，称远景影 hitch 降 90% 以上（换日时旧缓存失效可能暂无远景影）。",
+      "try_points": [
+        "传送/快速旅行：目的地临时 Streaming Source + 分阶段就绪判定；对照内存双驻留预算与出发地卸载时机",
+        "静态纯视觉几何试开 FastGeo，把需玩法碰撞的 Actor 留在标准 WP 路径；用限流把 Mass→Actor 切换摊到多帧并在目标机抓超预算帧",
+        "移动 Deferred：Depth Prepass +（可时）subpass/tile memory；远景影优先缓存/跨帧更新而非拉长 CSM，并做长时热节流测试"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE5 优化清单 50 条：Nanite / LOD / HLOD / World Partition / VSM 按系统逐项排查",
+      "url": "https://fungaz.com/unreal-engine-optimization-checklist-50-ways-to-increase-fps",
+      "source": "Fungaz",
+      "published": "2026-11-05",
+      "ue_version": "UE5（设置/CVar 以 Epic 文档为准，文内提醒跨版本核对）",
+      "summary": "按「先量再改」组织的 50 条实操清单：先用 stat unit / stat gpu / Insights / 打包包 / r.ScreenPercentage 50 分清线程与像素瓶颈。Nanite 段强调实体几何优于 masked 叶片卡、控制 WPO、查 Overdraw/Triangles、谨慎聚合几何与 tessellation、调 fallback。HLOD 段：仅 Static 且已挂 HLOD Layer 的 Actor 会进层；植被偏 Instancing，建筑偏 Merged/Simplified；可开 Generate Nanite Enabled Mesh、远距代理可关 Allow Distance Fields；用 Build HLODs 或 WorldPartitionHLODsBuilder 自动化。WP 段覆盖 Cell/Loading Range、多 Runtime Grid、Spatially Loaded、Data Layers、限制 Streaming Source、wp.Runtime.ToggleDrawRuntimeHash2D。VSM 段围绕缓存失效、Shadow Cache Invalidation Behavior、分辨率 bias、页面池与 RadiusThreshold。文末附常用 CVar 速查并指向 Epic Nanite/VSM/HLOD/WP/PSO 文档。",
+      "try_points": [
+        "打包 Development/Test 包固定机位：stat unit → stat gpu → Insights，一次只改一类系统",
+        "HLOD：按内容分 Layer（植被 Instancing / 建筑 Merged·Simplified），确认 Mobility=Static 后再 Build，并量 draw call、内存与过渡 hitch",
+        "VSM：用 cache 可视化与 Shadow Casters 找失效源；WPO 叶片设 Disable Distance / Max Displacement，低配试 ResolutionLodBias"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "Epic Knowledge Base：Fast Geometry Streaming Guide（5.6 初版至 5.8 更新）",
+      "url": "https://dev.epicgames.com/community/learning/knowledge-base/zqzP/unreal-engine-fast-geometry-streaming-guide",
+      "source": "Epic Developer Community（Knowledge Base；Jean-Sebastien Guay 论坛指引）",
+      "published": "约 2026-06（论坛 2026-06-11 发布指引；覆盖 UE 5.6～5.8）",
+      "ue_version": "UE 5.6～5.8（Experimental）",
+      "summary": "Epic 官方 Knowledge Base 汇总 Fast Geometry Streaming（FastGeo）插件自 5.6 引入到 5.8 的用法。Epic Education 对 Unreal Fest Orlando 2025《Witcher 4》密集体世界流送演讲的摘要指出：该实验性插件面向不可变静态度几何，可让更多静态内容以更稳帧率更快载入，并配合异步物理状态创建/销毁等流送改进。启用侧常见坑（论坛）：p.Chaos.EnableAsyncInitBody 为只读，须写进 DefaultEngine.ini（控制台改无效）；同时需 LevelStreaming.AllowIncrementalPreRegisterComponents=true。NTE 东京演讲亦印证：在 WP 流送数据构建阶段把合格静态几何转成轻量表示，以降低逐 Actor 生成开销。适合与 HLOD/标准 WP 网格分工——远距代理仍靠 HLOD，中近距纯视觉静态可评估 FastGeo。",
+      "try_points": [
+        "DefaultEngine.ini 设置 p.Chaos.EnableAsyncInitBody=true，并用控制台只读查询确认来源文件；同步打开 LevelStreaming.AllowIncrementalPreRegisterComponents",
+        "只把不可变、无玩法逻辑的静态度几何交给 FastGeo；需查询碰撞/可破坏/可动的仍走标准 WP",
+        "对照开启前后的单元格加载 hitch 与内存双驻留；可与 HLOD 分层验收远距代理 vs 中距全模"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "论坛：Commandlet 生成 Approximate HLOD 部分组件 Static Mesh 为空（Epic 排查方向）",
+      "url": "https://forums.unrealengine.com/t/hlod-building-issues/2734584",
+      "source": "Epic Developer Community Forums（[EPIC] Sebastien Lussier）",
+      "published": "2026-06-01（提问）；2026-06-09（Epic 答复）",
+      "ue_version": "原文未标注（讨论 WorldPartitionHLODsBuilder / HLODBuilderApproximate）",
+      "summary": "提问方用 WorldPartitionBuilderCommandlet -Builder=WorldPartitionHLODsBuilder -SetupHLODs -BuildHLODs 批量生成时，最末 Approximate 层约 130/7k 个 HLOD Actor 出现父级与首个子 Static Mesh 组件未赋值（Instanced 层正常）；编辑器内对该 Actor 点 Build HLOD 则三组件均有网格。Mesh Approximation 调试输出显示近似网格本身已生成，问题更像嵌入式 SM 写回/赋值。Epic 的 Sebastien Lussier 建议先检查 commandlet 保存后的 HLOD Actor 包内是否真有网格：若包内缺失，优先查 SavePackage 路径警告/错误；编辑器内 Build 仍「看起来正常」往往因结果还在内存未落盘。他指出内部 SM 若引用了其他包的 private 对象会导致保存失败，正常应只引用同一 HLOD Actor 包内的 private 贴图与材质实例。",
+      "try_points": [
+        "Commandlet 跑完后直接打开/校验 HLOD Actor 包，确认嵌入 SM 资产是否落盘，而不是只看编辑器内存态",
+        "盯 SavePackage 日志；排查近似网格材质/贴图是否跨包引用了 private 对象",
+        "对失败子集可在编辑器单独 Build HLOD 对比，再回到 commandlet 复现保存路径差异"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 iOS Mobile Deferred（Multi-pass）下 Thin Translucent 透射色失效",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-thin-translucent-shading-model-ignores-transmittance-color-on-mobile-deferred-multi-pass-ios-metal-packaged-build-only-works-on-forward-shading-and-in-editor-mobile-preview/2738635",
+      "source": "Epic Developer Community Forums（Issues and Bug Reporting）",
+      "published": "2026-07-27",
+      "ue_version": "UE 5.8（相对 5.6 回归；iPad Pro M4 / Metal）",
+      "summary": "报告：UE 5.8 将 Mobile Shading Path 设为 Deferred（Multi-pass，5.8 默认）时，Thin Translucent + Translucent + Surface ForwardShading 材质在 iOS/Metal 真机包中完全不应用 Transmittance Color（背景无染色，等效透射为白/关闭），但表面自身高光/反射/基础光照仍正常；同项目编辑器 Mobile Preview（Deferred）与真机 Forward 路径、以及 UE 5.6 Mobile Deferred 均正常。已排除 Lighting Mode、半精度着色器与脏 DDC。提问者怀疑 Metal 上 Multi-pass Deferred 的 dual-source blending 透射输出未正确接线，并关联同版本 Mobile Deferred 上 Subsurface Profile 等着色模型回归讨论。对依赖彩色玻璃/薄透的移动项目，是真机验收清单上的高优先级陷阱。",
+      "try_points": [
+        "含 Thin Translucent 的内容必须在目标 iOS 真机包验收，不能只靠编辑器 Mobile Preview",
+        "临时对比：同材质切 Mobile Forward 打包，确认是否仅 Multi-pass Deferred 路径丢失透射",
+        "立项时记录 5.8 Mobile Deferred 默认带来的着色模型差异，玻璃/SSS 类尽早建真机回归用例"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}

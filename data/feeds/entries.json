@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T09:35+08:00",
+ "updated": "2026-11-07T08:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-06T09:35+08:00",
+   "checked": "2026-11-07T08:57+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-06T09:35+08:00",
+   "checked": "2026-11-07T08:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 1
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-06T09:35+08:00",
+   "checked": "2026-11-07T08:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-06T09:35+08:00",
+   "checked": "2026-11-07T08:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-06T09:35+08:00",
+   "checked": "2026-11-07T08:57+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,154 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-06T09:35+08:00",
-   "last_new": 0
+   "checked": "2026-11-07T08:57+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "149c43b066a2",
+   "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+   "link": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+   "summary": "When deploying diffusion models in design tools, image editors, and visual production workflows, developers must account for inference latency. Generating an...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-07T06:20+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "8876a6c596d2",
+   "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+   "link": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "summary": "Hacker News 热度:306 分,66 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50397429",
+   "date": "2026-11-07T03:48+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "f1d11ed1221f",
+   "title": "Accelerating Reinforcement Learning Weight Refit with the Reshard Collective",
+   "link": "https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/",
+   "summary": "During reinforcement learning (RL) post-training, training trajectories are generated on the fly by running inference with the current policy model. For...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-07T02:03+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "f2423ccc4d86",
+   "title": "Quoting Nilay Patel",
+   "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+   "summary": "The products aren't good enough to sell people on the costs. You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history. It's not worth it. It just isn't worth it to anyone. And agents aren't real and they might not be being used the way that anyone wants them to yet. All these companies are spending more than they're making on these products. Refrigerators holding blood storage in…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-07T01:13+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "b3e27f0614cf",
+   "title": "Deus Ex",
+   "link": "https://www.filfre.net/2026/11/deus-ex/",
+   "summary": "Hacker News 热度:333 分,170 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50393758",
+   "date": "2026-11-06T23:44+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "ee77fe036d92",
+   "title": "Godot Showcase - Sovereign Tower",
+   "link": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
+   "summary": "Paul and Lisa from Wild Wits Games tell us about their experience working on Sovereign Tower.",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-06T22:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "d9e0f4b741a5",
+   "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+   "link": "https://huggingface.co/blog/allenai/toyblocks",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-06T22:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "a86f7d47556f",
+   "title": "Gemini Omni 1.2 Flash",
+   "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+   "summary": "Hacker News 热度:292 分,216 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50392118",
+   "date": "2026-11-06T21:35+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "1bafea3414b9",
+   "title": "Tesla to wind down Cybertruck production",
+   "link": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+   "summary": "Hacker News 热度:818 分,1664 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50391456",
+   "date": "2026-11-06T20:13+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "65fef1cf7d67",
+   "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+   "link": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+   "summary": "Hacker News 热度:269 分,212 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50388001",
+   "date": "2026-11-06T12:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "35eecc24e3ea",
+   "title": "Our new XR e-book is here: Build XR with Unity: Meta XR",
+   "link": "https://unity.com/blog/our-new-xr-e-book-is-here-build-xr-with-unity:-meta-xr",
+   "summary": "Download the free Build XR with Unity: Meta XR e-book. Learn eye and hand tracking, 5K display optimization, and AI-assisted workflows for Meta VR Glasses.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-06T08:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "7a805accba65",
+   "title": "How SEED renders a world players never stop building",
+   "link": "https://unity.com/blog/seed-unity-rendering-performance",
+   "summary": "Unity rendering performance at scale: Klang Games profiles real player-built societies in SEED to find and fix CPU and memory bottlenecks on PC and mobile.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-06T08:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
+  {
+   "id": "112f9c7e115c",
+   "title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+   "link": "https://huggingface.co/blog/open-asr-leaderboard-liva",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-06T08:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
+  },
   {
    "id": "819229fc61c9",
    "title": "Claude Code sends your email address to websites",
@@ -914,6 +1057,17 @@
    "comments": "https://news.ycombinator.com/item?id=50323088",
    "date": "2026-11-01T14:06+08:00",
    "first_seen": "2026-11-02T08:58+08:00"
+  },
+  {
+   "id": "f655aa0befea",
+   "title": "Graphics Programming weekly - Issue 461 - November 1st, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-461/",
+   "summary": "What the 3DGS Literature Left on the Table presents a deep-dive analysis of CUDA optimization remaining in 3D Gaussian Splatting after comparison with current literature techniques details five hardware-level optimizations targeting warp execution, register pressure, L2 cache, and SIMT divergence wayback-archive Revisiting importance sampling explores the theoretical variance bounds of Monte-Carlo importance sampling for sign-changing functions derives the optimal sampling distribution using…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-01T12:00+08:00",
+   "first_seen": "2026-11-07T08:57+08:00"
   },
   {
    "id": "82edef8e8b94",
@@ -5038,193 +5192,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-10-08T23:13+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "b72a07dde0a0",
-   "title": "Echo Weaver: Building a time-loop metroidbrainia in Unity 6",
-   "link": "https://unity.com/blog/echo-weaver-time-loop-unity",
-   "summary": "Moonlight Kids explain how they built time-loop metroidbrainia Echo Weaver in Unity 6: chunk streaming, loop-reset architecture, and 2D optimization tips.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-08T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "ba0c1ad98565",
-   "title": "The model that didn't exist, so you made it yourself",
-   "link": "https://huggingface.co/blog/building-with-ml-intern",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-08T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "efc3dbf0e995",
-   "title": "Quoting Ben Affleck",
-   "link": "https://simonwillison.net/2026/Oct/7/ben-affleck/",
-   "summary": "I've always been kind of into computers since I was young. And then when film started to move from analog film to digital, I became more interested in that aspect of it. And the visual effects workflow for many years has included machine learning. So I can write like pretty shitty Python scripts and stuff like that because with convolutional neural networks, which were the sort of precursors to what the transformer can do, which is just much more computation simultaneously, you would do things…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-08T07:14+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "da31a175863d",
-   "title": "Claude Haiku 5.5",
-   "link": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
-   "summary": "As previously promised , here's Anthropic's new fast, low cost model: Introducing Claude Haiku 5.5 . The previous Haiku, 4.5, was very much showing its age. It came out almost a year ago , and was priced at $1/million input and $5/million output - relatively expensive even back then, and a full 10x the price of OpenAI's GPT-6 Luna , released last month. The new Haiku exactly matches the price of GPT-6 Luna - $0.10/$0.50 - up to 100,000 tokens. Beyond 100,000 tokens the price increases 5x to…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-08T04:56+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "4e25d2514de5",
-   "title": "The Machines that Make the Machines",
-   "link": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
-   "summary": "How we taught robots to assemble GB300 tester trays and what it taught us about robot learning, mechanical intelligence, and good old-fashioned engineering The...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-08T02:21+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "610a66134bb5",
-   "title": "Star Wars Zero Company developer Bit Reactor brings back 'over half' of furloughed staff",
-   "link": "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
-   "summary": "The studio suspended the majority of its staff ahead of the tactical Star Wars title's launch. Now it's bringing back many suspended employees.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-08T02:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "d0b6d71b7a14",
-   "title": "Former Activision Blizzard CEO Bobby Kotick named to the board of post-merger Skydance",
-   "link": "https://www.gamedeveloper.com/business/former-activision-ceo-bobby-kotick-named-to-the-board-of-post-merger-skydance",
-   "summary": "From the convergence of Paramount and WB comes a newly-formed company that has tapped Kotick to sit on its board.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-08T01:19+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "31acceff153e",
-   "title": "Multimodal open d1 decision models for the edge",
-   "link": "https://huggingface.co/blog/LiquidAI/open-d1",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-08T00:54+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "bb93d8f5ea10",
-   "title": "Validate AI Factory Changes with Digital Twins and AI Agents",
-   "link": "https://developer.nvidia.com/blog/validate-ai-factory-changes-with-digital-twins-and-ai-agents/",
-   "summary": "AI factories are some of the most complex operations in the world, combining GPUs, CPUs, switches, DPUs, and SuperNICs alongside schedulers, orchestration...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-08T00:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "449068f027b9",
-   "title": "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt",
-   "link": "https://developer.nvidia.com/blog/scaling-decision-optimization-to-100-million-variables-and-beyond-with-mpdlp-in-nvidia-cuopt/",
-   "summary": "Supply chain problems are expanding across more SKUs, lanes, and constraints than ever before, while energy grids are balancing more distributed sources in real...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-07T23:45+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "f3b993d3e80d",
-   "title": "Electronic Arts' leveraged buyout faces a bondholder battle",
-   "link": "https://www.gamedeveloper.com/business/electronic-arts-leveraged-buyout-faces-a-bondholder-battle",
-   "summary": "The acquisition of Electronic Arts required taking on a lot of debt, and some bondholders are reportedly demanding more cash.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T23:13+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "24ecd4e333f9",
-   "title": "Faster Scientific Image Analysis with NVIDIA cuPhoton",
-   "link": "https://developer.nvidia.com/blog/faster-scientific-image-analysis-with-nvidia-cuphoton/",
-   "summary": "Observatories and telescopes, lasers and X-ray light sources, and other high-throughput instruments generate image data faster than CPU-bound pipelines can...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-07T23:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "92bcf89ee7ba",
-   "title": "Anti-Patterns in Software Blogging",
-   "link": "https://simonwillison.net/2026/Oct/7/anti-patterns-in-software-blogging/",
-   "summary": "Anti-Patterns in Software Blogging Some excellent writing advice from Michael Lynch. Michael warns against \"meandering intros\", misjudging your reader's existing knowledge, assuming they'll read your previous posts, and excessive formality. He also warns against overreliance on links as an excuse not to explain terminology. This one hurt! I do this all the time, but I have a nagging suspicion that almost nobody ever clicks on them. (In a Lobste.rs comment Michael clarifies that \"My rule of…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T22:53+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "f8aa2948cd5f",
-   "title": "Introducing Falcon ASR",
-   "link": "https://huggingface.co/blog/tiiuae/falcon-asr",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T21:21+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "63d5af567d7c",
-   "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-   "link": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T20:45+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "9674f9f08f1b",
-   "title": "Unity unveils Unity Spark, an prompt-based tool for Google's AI game platform",
-   "link": "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform",
-   "summary": "Unity's new tool allows prompt-based game development, working in collaboration with Google AI.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-07T20:05+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "b6572969fc7c",
-   "title": "Quoting Jake Boggan",
-   "link": "https://simonwillison.net/2026/Oct/7/jake-boggan/",
-   "summary": "I was a graph theory junkie long ago and even moved to Budapest for awhile to study among the greats. While I was there I started working on Barnette's Conjecture which came to occupy my thoughts over the next 24 years of my life, on and off as I worked in many different fields. Last summer I even thought for a few days that I had actually solved it. But it's supposedly proven here - problem 180 . I don't know what to think exactly. I spent thousands of hours on that problem. I really enjoyed…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-07T12:47+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
