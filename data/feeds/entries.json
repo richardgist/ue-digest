@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T09:00+08:00",
+ "updated": "2026-11-08T09:31+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,17 +89,17 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-08T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-11-08T09:31+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": false,
-   "error": "RemoteDisconnected: Remote end closed connection without response",
+   "ok": true,
+   "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-08T09:00+08:00",
-   "last_new": 0
+   "checked": "2026-11-08T09:31+08:00",
+   "last_new": 6
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-08T09:00+08:00",
+   "checked": "2026-11-08T09:31+08:00",
    "last_new": 0
   }
  },
@@ -122,6 +122,72 @@
    "comments": null,
    "date": "2026-11-08T07:57+08:00",
    "first_seen": "2026-11-08T09:00+08:00"
+  },
+  {
+   "id": "a95593abcc49",
+   "title": "What I run on my $10 USD OpenStick homelab",
+   "link": "https://blog.bosscher.ch/posts/openstick/",
+   "summary": "Hacker News 热度:329 分,81 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50406670",
+   "date": "2026-11-08T02:12+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
+  },
+  {
+   "id": "9862bd9f9fa7",
+   "title": "The end of Microsoft Research's AI Frontiers group",
+   "link": "https://hunch.net/?p=13764006",
+   "summary": "https://archive.is/AaY5O https://businessexaminer.ca/victoria-articles/item/microsoft... Comments URL: https://news.ycombinator.com/item?id=50406563 Points: 374 # Comments: 219",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50406563",
+   "date": "2026-11-08T02:02+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
+  },
+  {
+   "id": "a3a1a6a05fd5",
+   "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+   "link": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+   "summary": "Hacker News 热度:350 分,235 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50406111",
+   "date": "2026-11-08T01:06+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
+  },
+  {
+   "id": "ef6c28a53de0",
+   "title": "Every Mac comes with an (undocumented) family member classifier",
+   "link": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+   "summary": "Hacker News 热度:593 分,345 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50403097",
+   "date": "2026-11-07T17:46+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
+  },
+  {
+   "id": "c17270459583",
+   "title": "Need for Speed Underground 2 online in the browser",
+   "link": "https://nfsu2.xyz/",
+   "summary": "Hacker News 热度:810 分,225 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50403052",
+   "date": "2026-11-07T17:36+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
+  },
+  {
+   "id": "28d8f037ea4f",
+   "title": "Asahi Linux Progress Linux 7.3",
+   "link": "https://asahilinux.org/2026/11/progress-report-7-3/",
+   "summary": "Hacker News 热度:316 分,257 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50401867",
+   "date": "2026-11-07T13:20+08:00",
+   "first_seen": "2026-11-08T09:31+08:00"
   },
   {
    "id": "149c43b066a2",

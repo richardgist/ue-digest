@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-08",
+  "items": [
+    {
+      "title": "AbacusGS: Gaussian Splatting without Per-Splat Sorting",
+      "url": "https://arxiv.org/abs/2611.01534",
+      "source": "arXiv",
+      "published": "2026-11-01",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "网页/移动端常见的 3DGS 查看器往往用硬件光栅化画 splat，并在 CPU 上按深度排序，排序会占掉大部分帧时间。AbacusGS 把混合顺序写进场景布局：用八叉树把 splat 分成每盒最多 128 个（文中平均约 31 个），写盘时沿由训练相机得到的轴排序；每帧只对可见盒排序，并用一次点积决定正向或反向读取。它保留 3DGS 的 over 混合算子，用短暂的顺序感知微调转换已有模型，而不必改合成公式。作者在 13 个标准场景上报告：相对同等步数微调的 3DGS，平均损失约 0.13 dB PSNR（微调前两级顺序的平均损失约 1.27 dB）；在用 CPU 排序的 OpenGL 查看器上，帧时间约为逐 splat 排序的 1/4.5。文中还给出约 17 字节/splat 的紧凑格式和采用同一顺序的 CUDA tile renderer，并称代码将开源。以上数字均为论文实验（计时在 RTX 6000 Ada 等平台），本机未复现。",
+      "why_useful": "若你在做 Web/移动端 3DGS 查看器，CPU 排序常常是帧时间大头；这篇给出「不改 over 算子、只把排序降到盒一级」的做法和对照数据。",
+      "try_it": "先读第 3 节的两级顺序与可逆存储，对照自己的 WebGL/OpenGL viewer 能否按盒做 multi-draw；作者若随后放代码，用同一场景比 CPU 排序耗时。"
+    },
+    {
+      "title": "Graphics Programming weekly - Issue 461 - November 1st, 2026",
+      "url": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-461/",
+      "source": "Jendrik Illner",
+      "published": "2026-11-01",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Jendrik Illner 第 461 期（2026-11-01）汇编当周图形向链接，条目包括：对照现有文献后，3DGS 仍可做的五类 CUDA 底层优化（针对 warp 执行、寄存器压力、L2 缓存与 SIMT 分歧等）；符号函数上重要性采样的方差界讨论；ScratchyToy（Shadertoy 式 GLSL 与 Scratch 积木双向同步的原型着色器编辑器）；Agility SDK 1.620 / 1.722 以及 DXR Clustered Geometry 与 Partitioned TLAS（这些 SDK 条目本站 11-02 至 11-04 已单独介绍）；用小型神经网络替换云内散射近似、并在普通 HLSL 里评估的 Neural Shaders 讲解；《Endfield》PC 端 Vulkan 管线拆解（延迟 G-buffer、虚拟纹理、屏幕空间效果、体积雾、辐照度体积，以及场景延迟 + 角色前向光照的混合路径）；直接降到 SPIR-V / AIR / GLSL 的着色语言与编译基础设施 Bento；用射线分割与稀疏探针哈希实现的 Split Radiance Cascades；以及用 shadow-caster volume 扩展视锥以剔除潜在阴影投射物。本期是链接汇编，各条原文中的实验数字未在本机验证。",
+      "why_useful": "一周图形资料的入口。若已看过近期 Agility SDK 新闻，可直接跳到 Endfield 拆解、Bento、Radiance Cascades 和 3DGS 的 CUDA 优化那几条。",
+      "try_it": "按当前工作打开 Endfield 分析或 3DGS CUDA 优化的原文细读，其余条目当作索引收藏即可。"
+    },
+    {
+      "title": "Unreal Fest Tokyo：别只装 Unreal MCP——为项目做 LLM 能用的 UMG / Sequencer 专用工具",
+      "url": "https://gamemakers.jp/article/2026_11_04_149329/",
+      "source": "游戏制造商（Game Makers）",
+      "published": "2026-11-04",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "游戏制造商对 Unreal Fest Tokyo 2026（11/3–11/4）Epic Games Japan 铃木孝司演讲的报道。验证环境是 UE 5.8.3，不改引擎，用项目侧代码/插件扩展 Unreal MCP，对象是 UMG 与 Sequencer 工作流；文中写明这是验证项目，不是商用上线数据。要点：MCP 只是操作窗口，项目知识要用 markdown/技能补上；标准 Tool Search 用 list_toolsets / describe_toolset / call_tool 按需装入上下文。AI 说「做不到」不一定缺工具——浮点轨道可用已有的 add_track_to_binding 与 set_property_name_and_path 组合完成。新工具要补齐「创建 / 修改 / 删除」并做闭环测试，否则会出现删不掉的动画行，或删除后同名重建导致崩溃。流程上用 JSON 分镜生成 Sequencer，专用编辑器把细项收进「给 LLM 的指示」栏；相机用继承 CineCamera 的自动构图相机减少反复试位。重新生成 3 个 Sequencer 的报道对照：Sonnet 初测约 17.7 分钟、110 次模型调用；加上可追踪进度的批处理后约 10.8 分钟、55 次；同样调整后 Opus 约 17.7 分钟、73 次。项目整体消耗约 15.6 亿 token（含调研与讲稿整理，且多为缓存读取，不能按普通输入单价估算费用）。UE 5.9 开发分支计划用 MCP 图像格式返回截图。",
+      "why_useful": "想在 UE 里用 coding agent 做 UI/过场时，这篇把「只装 MCP」和「为工作流补工具、技能、批处理与人工验收」拆得很清楚，并给出可对照的耗时和调用次数。",
+      "try_it": "若已接 Unreal MCP：先让 agent 做一件它声称做不到的事，核对是否已有工具组合能完成；再为编辑器重启、截图和删除补最小闭环。"
+    },
+    {
+      "title": "Godot Showcase - Sovereign Tower",
+      "url": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
+      "source": "Godot Engine Blog",
+      "published": "2026-11-06",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Godot 官方于 2026-11-06 访谈 Wild Wits Games 的 Paul Mozet（主程）与 Lisa Garnier（叙事设计/技术美术），介绍已在 Steam 上架（Windows / Linux）的叙事圆桌管理 RPG《Sovereign Tower》。Paul 认为最大工程难点是回溯：每个周期要存早、下午两份，且须记住过往周期状态，同时君主会保留已知信息，再叠加大量叙事变量、任务和一百多个角色。做法是尽量把存储拆细并大量测试，上线后仍在修残留问题。叙事侧则靠削减分支变体来控制字数和本地化成本。动画上 AnimationPlayer 与 Tween 大约各半；当时 UI 节点受布局系统约束，位移动画需要变通，Godot 4.7 引入的 transform offset 让小过渡更容易。简单肖像可由美术直接提交并在 Godot 里改，复杂 UI 再交程序接手；场景系统让美术能自己做视觉打磨。Paul 仍怀念 Unity 可锁定多个文件系统/检视器标签页的能力。全文是开发者自述，没有给出运行时性能数字。",
+      "why_useful": "做强叙事加时间回溯时，如何拆存档、控文本范围，以及 Godot 4.7 用 transform offset 做 UI 过渡，都是可直接对照的制作经验。",
+      "try_it": "若在 Godot 4.7+ 做 UI 过渡，试着用 transform offset，而不是硬改受容器约束的 position；回溯系统可对照「周期快照」与「角色记忆」分开存储。"
+    },
+    {
+      "title": "Codex CLI 0.167.0：agent command center、后端切换与 Vertex AI 向导",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+      "source": "GitHub openai/codex",
+      "published": "2026-11-06",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "openai/codex 于 2026-11-06 发布 Codex CLI 0.167.0（相对本站 10-31 收录的 0.166.0）。新功能包括：用 `codex agents --no-daemon` 打开 agent command center，命令中心与会话选择器会标记未读结果；可在终端会话选择器里切换已连接后端并保留草稿；支持的终端上撰写时可预览本地图片附件，成绩单里的本地图片路径可点击打开；「用其他方式登录」下可找到 API key 与云厂商选项，开启 `gcp_setup_wizard` 可用 Application Default Credentials 或凭证文件配置 Google Cloud Vertex AI；`/experimental` 可选用 macOS / Windows 系统代理；审批提示打开时也能在成绩单里展开补丁详情。修复包括：切换模型提供商后仍能看到已保存聊天，无法恢复时可阅读成绩单并准备可编辑提示到新对话；Ctrl+L 清屏后仍可通过 Ctrl+T 回顾更早消息；网络审批在请求结束后关闭，同一端点的并发请求会逐个提示；自动上下文压缩会计入失败响应以及缺少 token usage 的保留输出。未在本机安装验证。",
+      "why_useful": "同时跑多个 agent/后端，或要把 Codex 接到 Vertex AI 时，0.167.0 补了命令中心、未读标记、后端切换和 GCP 向导，比只看版本号更值得升。",
+      "try_it": "升级到 0.167.0 后运行 `codex agents --no-daemon`，看未读标记是否出现；若用 GCP，打开 gcp_setup_wizard 走一遍 ADC。"
+    }
+  ]
+}
