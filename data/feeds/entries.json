@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T09:26+08:00",
+ "updated": "2026-11-08T09:00+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,16 +89,16 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-07T09:26+08:00",
-   "last_new": 0
+   "checked": "2026-11-08T09:00+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": true,
-   "error": null,
+   "ok": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response",
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   },
   "Hugging Face Blog": {
@@ -107,11 +107,22 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-07T09:26+08:00",
+   "checked": "2026-11-08T09:00+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "9270cee68a91",
+   "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+   "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+   "summary": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: ; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-08T07:57+08:00",
+   "first_seen": "2026-11-08T09:00+08:00"
+  },
   {
    "id": "149c43b066a2",
    "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
@@ -5093,105 +5104,6 @@
    "topic": "AI 工具",
    "comments": null,
    "date": "2026-10-09T20:54+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "d0ea77a173bf",
-   "title": "ttok 1.0",
-   "link": "https://simonwillison.net/2026/Oct/9/ttok/",
-   "summary": "Release: ttok 1.0 I released ttok 0.4 , ran uv tool upgrade ttok , piped a file into the new version... and realized that it was defaulting to the GPT-4 tokenizer when it should very clearly default to GPT-5/GPT-6 instead! I figured switching the default was a reasonable excuse to finally ship a 1.0. OpenAI haven't actually confirmed that GPT-6 uses the same tokenizer as the GPT-5 family yet - there's an angry issue about it - but I found this commit by William Liu which reports on an…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T08:34+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "a13e42e07177",
-   "title": "Spooky games made with Unity: Your 2026 Halloween playlist",
-   "link": "https://unity.com/blog/horror-games-made-with-unity-halloween-2026",
-   "summary": "From cozy vampire sims to co-op nightmares, these are just a few standout horror games made with Unity in 2026 – organized by exactly how scared you want to be.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-09T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "6b55a8857ccf",
-   "title": "ttok 0.4",
-   "link": "https://simonwillison.net/2026/Oct/8/ttok/",
-   "summary": "Release: ttok 0.4 ttok is my CLI tool for counting tokens, using OpenAI's open source tiktoken library. It hasn't been in updated in a couple of years, but I finally fixed a Click warning, updated CI, and added a --list-models command to list available models. It works with uvx , so you can count tokens in anything like this: cat file.txt | uvx ttok Tags: projects , ai , openai , generative-ai , llms , tokenization",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T07:34+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "8b4c66f04ec9",
-   "title": "Quoting Carson Gross",
-   "link": "https://simonwillison.net/2026/Oct/8/carson-gross/",
-   "summary": "Computer programming is, fundamentally, about two things: Problem-solving using computers Learning to control complexity while solving these problems I have a hard time imagining a future where knowing how to solve problems with computers and how to control the complexity of those solutions is less valuable than it is today, so I think it will continue to be a viable career even with the advent of AI tools. — Carson Gross Tags: computer-science , carson-gross , careers , ai",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T05:05+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "5cc29d61ae6f",
-   "title": "5 Steps to Create SimReady Assets for Robotics with Frontier AI Models",
-   "link": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/",
-   "summary": "Preparing CAD assets for robotics simulation requires more than converting geometry to OpenUSD: developers must configure and validate materials, collision...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-09T04:57+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "feafe9c0084a",
-   "title": "Building Reliable Data Analytics Agents: Lessons from the KDD Cup",
-   "link": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup/",
-   "summary": "The NVIDIA KGMON team placed second in the KDD Cup 2026 Data Agents competition with a system built around a simple idea of making an agent's harness smaller,...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-09T02:30+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "5806a96f8808",
-   "title": "Trump administration suspends Microsoft's ability to apply for green cards, alleging fraud",
-   "link": "https://www.gamedeveloper.com/business/trump-administration-suspends-microsoft-s-ability-to-apply-for-green-cards-alleging-fraud",
-   "summary": "The tech giant is no longer able to apply for H1-B visas for employees who come to live and work in the United States, potentially stymieing Xbox hiring.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-09T02:05+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "9ac0aea7ad71",
-   "title": "Xbox CEO unveils 'new Xbox division' for game-adjacent ventures named 'XP'",
-   "link": "https://www.gamedeveloper.com/console/xbox-ceo-unveils-new-xbox-division-for-game-adjacent-ventures-named-xp-",
-   "summary": "Xbox is doubling down on its more IP-centric strategy with a division dedicated to expanding those properties outside of games.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-09T01:28+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "0c6f8f7670d2",
-   "title": "Denuvo attempts to subpoena Discord, Valve, and Reddit in effort to identify hacker",
-   "link": "https://www.gamedeveloper.com/business/denuvo-attempts-to-subpoena-discord-valve-and-reddit-in-effort-to-identify-hacker",
-   "summary": "After numerous and consistent cracks over the last year, Denuvo wants to find the hacker that has compromised its security through other online platforms.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-08T23:13+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

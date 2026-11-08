@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-08",
+  "items": [
+    {
+      "title": "Unreal Fest Tokyo 2026：不改引擎做出动画风角色——《モンギル：STAR DIVE》材质与描边做法",
+      "url": "https://gamemakers.jp/article/2026_11_05_149525/",
+      "source": "ゲームメーカーズ（Unreal Fest Tokyo 2026 演讲报道）",
+      "published": "2026-11-05",
+      "ue_version": "UE5（项目实例；Substrate Toon BSDF 部分指向 UE 5.8 Experimental）",
+      "summary": "Netmarble Monster 的 Ahn Wonchul 在东京讲《モンギル：STAR DIVE》动画风角色：他在正式上线前不到半年加入，资产已大量完成，因此不改引擎、不改 G-Buffer，只在现有自定义着色器上用材质补表现。头发保留各向异性高光，补上天空光颜色，并用法线与虚拟光源点积做不依赖真实灯光的伪照明，同时合并多余的遮罩/贴图采样。眼睛用相机空间驱动高光位置，瞳孔用 BumpOffset 做出凹陷。眉毛用 CameraOffset 写入 World Position Offset 前移，再叠加半透明第二层眉，避免前发遮住表情或整缕头发变半透明。贴图预算紧时，用 DDX/DDY 从一张单通道图案生成简易法线，并按 RGB 拆出三种法线、A 做遮罩，只用于边界清晰的花纹。描边走后处理拉普拉斯：用 Custom Depth 检轮廓并画在内侧（与 dither 更合）；角色内部描边则把本来没参与着色的 Roughness 写成分件 ID，再对 SceneTexture 的粗糙度做滤波。移动端受处理成本限制，且无法使用来自 G-Buffer 的 Scene Texture，因此只保留物体外周描边。玻璃不用半透明，改用 Scene Capture 立方体贴图模拟透射。演讲还试了 UE 5.8 的 Substrate Toon BSDF，称好上手，但用 Facial SDF 控脸部阴影时找不到 Shadow Attenuation 调节项。",
+      "try_points": [
+        "上线前不改 G-Buffer：用材质伪照明、BumpOffset、CameraOffset→WPO 双层眉等局部技巧补动画感",
+        "一张图案贴图用 DDX/DDY 生成法线时，只用于高对比花纹，并确认采样次数是否真的降下来",
+        "移动端描边不要依赖 G-Buffer Scene Texture；真机对比「只画外周」与桌面「粗糙度/模板内描边」的观感与成本"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "ARK: Survival Ascended 升到 UE 5.8：用 Nanite Voxels 画植被，低端 PC 走 Lumen Lite",
+      "url": "https://www.gamespress.com/ARK-SURVIVAL-ASCENDED-INTRODUCES-THE-SHAPESHIFTING-ENIGMASAUR-REVAMPS-",
+      "source": "Studio Wildcard / Games Press（官方通稿）",
+      "published": "2026-11-06",
+      "ue_version": "UE 5.8",
+      "summary": "Studio Wildcard 于 2026-11-06 宣布《ARK: Survival Ascended》完成一次面向 UE 5.8 的技术升级，称引入新的渲染技术以在尽量保住丰富场景的同时改善性能。通稿点名两项：用 Nanite Voxels 更高效、也更真实地绘制植被；以及用 Lumen Lite 为低端 PC 提供成本更低的动态光照路径。这是已上线 5.8 特性（Nanite 体素植被与 Lumen Lite）的公开产品落地，但通稿没有给出帧时间、分辨率或各平台开关细节，也未列出可复现的项目设置步骤。适合当作「5.8 植被/GI 轻量路径已经有 3A 级产品在用」的信号，具体预算仍要对照官方 Nanite Foliage / Lumen Lite 文档和自己的场景测量。",
+      "try_points": [
+        "评估 5.8 植被路径时，把 Nanite Voxels 与传统实例化植被 / HLOD Instancing 做同一机位的 GPU 与远景对比",
+        "低端 PC 档如要上动态 GI，先确认 Lumen Lite 是否作为独立画质项可选，并单独压测 GI 成本，不要和整体 Performance Mode 绑死后再判断",
+        "通稿没有数据：以自己打包场景的 stat gpu / Insights 为准，不要直接套用营销表述"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 文档：Landscape 启用 Nanite——双份流送、Skirt 补缝与构建时机",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/using-nanite-with-landscapes-in-unreal-engine",
+      "source": "Epic Games Documentation",
+      "published": "原文未标注（UE 5.8 文档；此前未收录）",
+      "ue_version": "UE 5.8",
+      "summary": "UE 5.8 官方说明如何给 Landscape 开 Nanite：在 Landscape 详情里勾选 Enable Nanite，再用 Build Data / Rebuild Data 或 Build → Build Landscape 生成网格。文档强调编辑器里未重建完成的非 Nanite 地形性能不能代表运行时；视觉上源数据相同，终端用户不应期待外观看起来更好或更差。技术上 Nanite Landscape 是叠在原有 Landscape 数据流送之上的——运行时仍需要非 Nanite 数据给 Runtime Virtual Texture、水体等使用，因此会同时流送两套数据并占用相应内存。HLOD 与 Landscape Proxy 流送行为和未开 Nanite 时相同。Proxy 边界因 Nanite 减面后顶点不对齐，远距可能出现细缝（通常靠 TAA 遮住）；可开 Nanite Skirt，在边缘加一圈顶点并按 Nanite Skirt Depth 下压，让相邻 Proxy 互相交错来堵缝。地形材质写位移即可走 Nanite Tessellation，但数据过期时编辑器里该 Proxy 看不到细分效果（烹饪时仍会构建），过期数据还会拖长 cook。推荐编辑时保持 Landscape.Nanite.LiveRebuildOnModification=0（Experimental，默认 0），以免大幅掉编辑器性能；可用 Landscape.RenderNanite 与 Landscape.Nanite.MultithreadedBuild 辅助。",
+      "try_points": [
+        "开 Nanite 后按「Nanite + 非 Nanite」双份流送做内存预算，并确认 RVT / 水体仍依赖非 Nanite 数据",
+        "远景出现 Proxy 接缝时先试 Nanite Skirt + Skirt Depth，而不是立刻加大地形分辨率",
+        "雕刻后及时 Build Data / 保存 Proxy，避免把过期网格拖到 cook；编辑中保持 LiveRebuildOnModification 关闭"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "论坛：Nanite Foliage 怎样进 World Partition HLOD（Epic：默认 Instancing，Mobility 常被打成 Movable）",
+      "url": "https://forums.unrealengine.com/t/nanite-world-partition-hlod/2735818",
+      "source": "Epic Developer Community Forums（Takashi.Suzuki）",
+      "published": "2026-06-08（提问）；2026-06-08～06-15（Epic 答复）",
+      "ue_version": "UE 5.7（提问方所述；答复针对 Nanite Foliage / InstancedSkinnedMeshComponent）",
+      "summary": "日文帖询问 Nanite Foliage 是否应纳入 World Partition HLOD。Epic 的 Takashi.Suzuki 答复：Nanite Foliage 一般作为 InstancedSkinnedMeshComponent 放置；在 Instanced 类型的 HLOD 层里会默认被收集并以 Instancing 方式进入 HLOD。若层是 Merge / Simplified，则只有该组件的 HLODBatchingPolicy 为 Instancing 时才会被收集，从而可以手动排除较小的 Nanite Foliage。提问方随后发现 IsHLODRelevant 因 Mobility=Movable 把组件全部排除：详情面板看不到 Mobility，而构造函数链会把父类的 Movable 默认值留下来。Epic 解释该组件主要为 PCG 放置设计、不预期在蓝图里直接改 Mobility；属性并未消失，可在 UCLASS 元数据加 ShowCategory=(Mobility)，或在 ConstructionScript 里 SetMobility。若使用 Instancing 的 HLODType，还需要正确设置 HLOD Batching Policy。",
+      "try_points": [
+        "Nanite Foliage 优先挂 Instancing 类型 HLOD Layer，确认组件被收集；Merge/Simplified 层则检查 HLODBatchingPolicy=Instancing",
+        "生成前查 Mobility：若是 Movable，在 ConstructionScript 里 SetMobility(Static)，或给组件类加上 ShowCategory=(Mobility) 再改回 Static",
+        "用 Instancing HLOD 时同时核对 HLOD Batching Policy，构建后再看远景实例化代理是否出现、小丛植被是否被有意排除"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.8：Landscape 与 World Partition 流送——格子不能混用，改完要重编 HLOD / Nanite / RVT",
+      "url": "https://adventuresincausality.com/unreal/unreal-landscape/world-partition-streaming/",
+      "source": "adventuresincausality.com",
+      "published": "原文未标注（文档目标 UE 5.8；此前未收录）",
+      "ue_version": "UE 5.8",
+      "summary": "面向 UE 5.8 的 Landscape × World Partition 操作清单：地形拓扑由 Landscape 负责，单元格驻留和 Streaming Source 由 World Partition 负责，二者不要混为一谈。导入分块高度图前先定拓扑与源瓦片约定，并记录 World Partition Grid Size、Region Size、Flip Y Axis 以及 XY/Z 缩放；导入后核对所有 Landscape Streaming Proxy、组件边界、编辑归属和源码管理文件。Streaming Source / Loading Range 应按最大移动速度和目标设备就绪时间来设。文档特别提醒：不要默认 Landscape 组件、Landscape Streaming Proxy、World Partition 单元格、HLOD 单元格、PCG 网格和导航瓦片是同一套尺寸，每一种都要单独写出大小。地形大改之后，应重建相关 HLOD/远景内容，并重做导航、PCG、植被、RVT 流送低 mip 以及 Nanite 数据。接缝验收覆盖高度/法线、Target Layer 权重、材质与 RVT、Spline/水体形变、碰撞、NavMesh、PCG/草/植被密度，以及 Nanite Proxy 是否过期和 Skirt 行为。运行时标准包括：最快穿越也碰不到缺失地形碰撞、视野里没有卸载空洞或不可接受的 LOD 跳变、来回穿越内存不无限涨、Data Layer 切换不留下地形依赖内容不一致。",
+      "try_points": [
+        "把 Landscape 组件、Streaming Proxy、WP 单元格、HLOD 单元格、PCG 网格、导航瓦片的尺寸写成一张对照表，避免用错加载范围",
+        "分块导入时记下 Grid Size / Region Size / Flip Y / 缩放；改地形后按清单重建 HLOD、Nanite、RVT 低 mip、植被和导航",
+        "在 Proxy 边界做接缝清单（含 Nanite Skirt），并用最快移动速度和传送路径做烹饪包验收"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    }
+  ]
+}
