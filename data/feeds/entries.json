@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T09:31+08:00",
+ "updated": "2026-11-09T09:34+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-08T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-09T09:34+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-08T09:31+08:00",
-   "last_new": 6
+   "checked": "2026-11-09T09:34+08:00",
+   "last_new": 8
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,88 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-08T09:31+08:00",
+   "checked": "2026-11-09T09:34+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "95ce0787146c",
+   "title": "parse_number() as a SQLite extension: C vs Rust",
+   "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+   "summary": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-09T06:26+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "f7c8abc547a1",
+   "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+   "link": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+   "summary": "Hacker News 热度:330 分,332 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50418016",
+   "date": "2026-11-09T06:20+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "3e599bd76126",
+   "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+   "link": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+   "summary": "Hacker News 热度:377 分,291 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50416801",
+   "date": "2026-11-09T04:26+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "98a50a037dfe",
+   "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+   "link": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "summary": "Hacker News 热度:589 分,355 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50415628",
+   "date": "2026-11-09T02:16+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "df66397688e3",
+   "title": "Writing as a thinking tool",
+   "link": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+   "summary": "Hacker News 热度:277 分,80 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50412067",
+   "date": "2026-11-08T18:41+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "7b0caeadc3d9",
+   "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+   "link": "https://github.com/synchopate/llama-modchip",
+   "summary": "Hacker News 热度:362 分,152 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50411961",
+   "date": "2026-11-08T18:22+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "51524ff18223",
+   "title": "Goodbye Claude, hello Pi",
+   "link": "https://caleb.software/posts/claude-to-pi.html",
+   "summary": "Hacker News 热度:698 分,429 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50410107",
+   "date": "2026-11-08T11:11+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
+  },
   {
    "id": "9270cee68a91",
    "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
@@ -122,6 +199,17 @@
    "comments": null,
    "date": "2026-11-08T07:57+08:00",
    "first_seen": "2026-11-08T09:00+08:00"
+  },
+  {
+   "id": "95a76befb5a5",
+   "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+   "link": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+   "summary": "Hacker News 热度:584 分,396 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50407882",
+   "date": "2026-11-08T04:45+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
   },
   {
    "id": "a95593abcc49",
@@ -540,6 +628,17 @@
    "comments": null,
    "date": "2026-11-05T01:50+08:00",
    "first_seen": "2026-11-05T08:54+08:00"
+  },
+  {
+   "id": "227a82b51e67",
+   "title": "Declarative Dragging",
+   "link": "https://declarative-dragging.github.io/",
+   "summary": "Hacker News 热度:337 分,40 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50368481",
+   "date": "2026-11-05T01:05+08:00",
+   "first_seen": "2026-11-09T09:34+08:00"
   },
   {
    "id": "15bf9a7f724c",
@@ -5096,83 +5195,6 @@
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
-   "id": "5bd7f8aba7df",
-   "title": "Deno is joining Cloudflare",
-   "link": "https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/",
-   "summary": "Deno is joining Cloudflare The Deno team released the first version of celld back in August - their open source implementation of the Durable Objects pattern from Cloudflare Workers. Today, Cloudflare are acquiring Deno outright, with the goal of building on celld to \"make workerd self-hosting a first-class supported way to build and run apps using the Workers programming model\" (see the Cloudflare blog .) The bad news is that Deno itself will not be maintained by Cloudflare beyond the next…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-10T06:48+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "b3e53a671e8f",
-   "title": "Busting myths in game writing ft. Bruno Dias, Aysha Farah, & Andrea Saravia Perez",
-   "link": "https://www.gamedeveloper.com/design/busting-myths-in-game-writing-ft-bruno-dias-aysha-farah-andrea-saravia-perez",
-   "summary": "Telling truths about how to tell great stories in video games.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-10T03:46+08:00",
-   "first_seen": "2026-10-17T08:13+08:00"
-  },
-  {
-   "id": "f88b057f5d39",
-   "title": "Ubisoft to sunset Rainbow Six Mobile just seven months after launch",
-   "link": "https://www.gamedeveloper.com/mobile/ubisoft-to-sunset-rainbow-six-mobile-just-seven-months-after-launch",
-   "summary": "The tactical mobile shooter was only globally released earlier this year.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-10T01:05+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "6922db39f0c9",
-   "title": "Impactful scheduling for GPU clusters",
-   "link": "https://huggingface.co/blog/allenai/impactful-scheduling",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T23:20+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "58eb2a6fa278",
-   "title": "Quoting Matthew Green",
-   "link": "https://simonwillison.net/2026/Oct/9/matthew-green/",
-   "summary": "Everyone is very concerned about being respectable, so I’m going to be the goofball who raises worst-case possibilities. I think there is a 1% chance we live in Minicrypt, and a 15% chance we functionally lose confidence in our existing public-key encryption algorithms. [...] The problem here is that the speed of AI producing surprises, and the speed of human beings replacing standards (even with the very best AI assistance) are just orders of magnitude different. You only recover from a…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T23:02+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "6b8efe086def",
-   "title": "Report: Double Fine's union drive collapsed due to miscommunication and culture clash",
-   "link": "https://www.gamedeveloper.com/business/report-double-fine-s-union-drive-collapsed-under-miscommunications-and-culture-clash",
-   "summary": "It appears the question of union eligibility crashed headlong into Double Fine Productions' decades-old company culture.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-09T22:49+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "68dee2e11183",
-   "title": "A new feature for my blog, built using my voice",
-   "link": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
-   "summary": "I shipped a new feature for my blog today: the Newsletters page, which offers an index of all of the newsletters I've sent out, both my free weekly Substack and my monthly sponsors-only updates. I built the feature almost entirely using my voice, chatting away to my laptop while I cooked dinner. Codex voice mode I used the ChatGPT desktop app for this, in the Codex tab, using the voice conversation mode, running against a local development environment. Here's what that looks like: I started the…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-09T20:54+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "686772c902b0",
    "title": "Source-to-ISA correlation for pre-compiled AMD GPU code objects with RGA 2.15",
    "link": "https://gpuopen.com/learn/rga-source-to-isa-correlation-gpu-code-objects/",
@@ -5346,17 +5368,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-09-10T20:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "20e3a04f4b52",
-   "title": "Temporally stable generative illumination with a one-step diffusion model",
-   "link": "https://gpuopen.com/learn/temporally-stable-generative-illumination/",
-   "summary": "A generative method for real-time global illumination using a single-step latent diffusion model, delivering stable, high-quality lighting without costly iterative processing.",
-   "source": "AMD GPUOpen",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-09T21:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

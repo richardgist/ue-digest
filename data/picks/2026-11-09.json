@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-09",
+  "items": [
+    {
+      "title": "Gaussians Can Subtract: Neural Dissolve Fields for Hybrid Scene Rendering",
+      "url": "https://arxiv.org/abs/2611.07049",
+      "source": "arXiv",
+      "published": "2026-11-04",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "现有 Mesh–Gaussian 混合重建多半是加法：网格负责大块规则表面，Gaussian 残差去补网格做不到的部分；但同一块网格内容可能在某个视角一致、换个视角就不一致（残余几何误差、遮挡错位、纹理投影伪影或视角相关外观）。这篇 2026-11-04 提交的论文把冲突改写成多视角不一致，提出 Gaussolve：用标量球谐 Gaussian 参数化的 Neural Dissolve Field，学习在何处、从哪些视线方向溶解网格，再让残差 RGB Gaussian 填回露出的区域；融合用连续透射率，而不是按深度做硬可见性切换。网格几何来自 RealityCapture，纹理是把训练图像直接投影到网格上（默认均匀减面到约 10 万三角），测试视角不参与重建和贴图。作者在 RTX 5000 Ada 上报告：ML-Hypersim-AI 上接 3DGS 主干的 Ours 为 PSNR 35.35 / SSIM 0.962 / LPIPS 0.108，相对 3DGS 的 34.39 / 0.959 / 0.155，Gaussian 数量减少约 30%；Deep Blending 上为 28.75 / 0.876 / 0.228，相对 28.50 / 0.877 / 0.272，数量减少约 47%。效率表（Deep Blending 平均）里，同一 3DGS 主干的并行混合渲染约 174 FPS、存储约 0.336G，对照 3DGS 约 99 FPS、0.655G；换成 Reduced 3DGS 主干约 241 FPS、0.219G，但仍慢于单独的 Reduced 3DGS（文中归因于额外的网格与 dissolve 开销）。与 MeshGS、Hybrid Mesh-Gaussian 的 Deep Blending 对照直接引用了对方论文数字。项目页为 https://ooosn.github.io/gaussians-can-subtract/ 。以上均为论文实验，本机未复现。",
+      "why_useful": "如果你在用网格锚大平面、再用 3DGS 补细节，这篇把「只往上加 Gaussian」和「先按视角溶解不一致的网格再回填」拆开，并给出 FPS、存储和 Gaussian 数量的对照。",
+      "try_it": "先看第 3.2–3.3 节的连续融合与 dissolve 场，对照自己是否在用 Hard-Z / 深度二分；作者若放代码，用同一网格先验对比硬可见性基线的 PSNR 和 primitive 数量。"
+    },
+    {
+      "title": "AffineGS: Unlocking Accurate Geometry in 3DGS via Spatially Varying Affine Rectification",
+      "url": "https://arxiv.org/abs/2611.07709",
+      "source": "arXiv",
+      "published": "2026-11-05",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "深度引导的 3DGS 常用单目深度先验，并假设预测视差可以用一次全局 scale-and-shift 对齐到度量深度。这篇 2026-11-05 提交的论文指出，Depth-Anything-V2、MoGe、Metric3D-V2 等现代单目网络会呈现区域相关、分段线性的畸变：在 MuSHRoom 与 ScanNet++ 上，残差阈值 0.02 时全局仿射（K=1）的 inlier 大约只有 58.9% / 58.6%，而分成 3 或 5 个局部线性区域时 inlier 分别升到约 84.9% / 84.6% 与 92.7% / 91.8%。AffineGS 不改 3DGS 表示，而是用渲染深度与单目视差的空间梯度估计局部尺度场，再用视差引导的 Guided Filter 做边缘感知平滑，并加上法线感知的梯度域正则和一次全局最小二乘重对齐。实验在单张 RTX 3090 上训练 3 万步。NeRF-LLFF 稀疏视角（2/3/4/5 张训练图，10 个随机种子平均）上，平均 PSNR 为 18.79 / 20.95 / 22.37 / 23.32，相对当时最强基线 DRGS 的 17.31 / 18.75 / 20.06 / 20.78。MuSHRoom 上无传感器深度的 Ours 新视角 PSNR 为 24.49 / 22.07（两个测试划分），接近带真值深度的 DN-Splatter（24.58 / 21.89），Abs Rel 为 0.0551 / 0.0490，而把同一单目先验做全局对齐的 DN-Splatter (Monodepth) 为 0.3542 / 0.3669；网格 F-score 为 0.7097 对 0.2765。ScanNet++ 上无传感器方法里法线一致性最高，但若干基线的 Chamfer / F-score 更好；文中也写明 kokko、sauna 等场景需要减弱损失权重，且结果仍没有绝对物理尺度。项目页为 https://eldentse.github.io/AffineGS/ 。以上均为论文实验，本机未复现。",
+      "why_useful": "用单目深度约束 3DGS 几何时，全局对齐往往会「校准一块、扭曲另一块」；这篇给出可操作的分段仿射纠正，以及和传感器监督方法接近的对照数字。",
+      "try_it": "先看第 3.1 节的梯度求局部 α 与 Guided Filter，对照自己是否还在优化一对全局 scale/shift；若随后放代码，在同一稀疏视角设置下对比 DRGS 或 DN-Splatter (Monodepth) 的深度与 mesh F-score。"
+    },
+    {
+      "title": "Unity 新 XR 电子书：面向 Meta VR Glasses 的移植、注视点渲染与用 CLI / Agent 闭环验证",
+      "url": "https://unity.com/blog/our-new-xr-e-book-is-here-build-xr-with-unity:-meta-xr",
+      "source": "Unity Blog",
+      "published": "2026-11-06",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Unity 于 2026-11-06 发布电子书《Build XR with Unity: Meta XR》，面向要新做或把现有应用移植到 Meta VR 设备的开发者。文中介绍 Meta VR Glasses：大约 100 克、以眼动和手部追踪为主要输入，并与 Quest 使用同一套操作系统、商店和 OpenXR，因而现有 Quest 应用可以在其上运行。教程基于 Unity 6.6 与 XR Interaction Toolkit 3.6（或更新），从 Unity Hub 的 VR 模板起步，可在真机、编辑器里的 XR Interaction Simulator，或 Meta XR Simulator 上测试。眼镜侧能力包括：眼动（用于注视点渲染和注视输入，默认视为隐私，需请求权限，并应准备用户拒绝后的回退，例如手部射线）；Quad Views（每只眼睛的周边以低于中心的分辨率绘制）；7.1.4 空间音频（Enhanced Audio Foundation）；以及 5K Infinite Display（每眼 2412×2288 的 micro-OLED，37 PPD，文中对照 Quest 3 的 25 PPD，对比度也更高）。优化章节覆盖基于注视的注视点渲染、Quad Views、Application SpaceWarp、动态分辨率和 Adaptive Performance；并从 Quest 2/3 移植时提醒：固定注视点渲染在 Glasses 上省下的开销更小，应重新评估并做基准测试。效率部分介绍 Unity CLI 与 Unity Pipeline 包：后者把正在运行的编辑器变成本地后台服务，场景和资源库保持热状态。Claude Code、Codex、Cursor、Copilot、Gemini CLI 等能跑 shell 的 agent 可以驱动编辑器；Unity 为 Claude 与 Codex 提供的官方插件会在启动时一条命令装上 29 个 skills。实验性的 Meta XR Operator 让 agent 在运行中的 XR 应用里检查场景、移动头/手柄/手、做 pinch/poke/grab（含 Glasses 的注视+捏合）并截取画面做验证，文中明确不要把它当生产依赖，舒适度、追踪和性能仍要在真机上测。这是厂商指南，本机未按教程完整复现。",
+      "why_useful": "要把项目迁到 Meta VR Glasses，或想让 coding agent 直接编、打、在 XR 里验收时，这篇把显示规格、注视点/Quad Views/SpaceWarp 和 CLI + Operator 闭环写在同一份指南里。",
+      "try_it": "用 Unity 6.6+ 打开 VR 模板，确认 OpenXR 以及 Meta / Android XR feature group；若已用 Unity CLI，可让 agent 走一遍 Build and Run，再用实验性的 Meta XR Operator 做手势与截图验收，最后仍在真机上看帧率和热预算。"
+    },
+    {
+      "title": "Qwen Code v0.27.0：多子问题托管会话、GitHub 仓库过滤与 Web Shell 问答热图",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.0",
+      "source": "GitHub QwenLM/qwen-code",
+      "published": "2026-11-07",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "QwenLM/qwen-code 于 2026-11-07 发布 v0.27.0（相对本站 11-06 收录的 v0.26.8；该版本的完整变更相对于 v0.26.9）。官方写明无已知破坏性变更。要点：托管 agent 会话可以同时挂起多个子问题，按任意顺序作答，并按子问题分开草稿和错误；Web Shell 增加任务问答热图（点某一天会滚到当天第一条问答并高亮），以及「Ask for details」侧栏任务，用来解释待处理的 Ask User Question 选项但不代为作答；GitHub 频道编辑器加入仓库过滤的允许名单/阻止名单，绑定 PR 的投递和普通评论投递也更可靠；shell 工具的 sed 替换能正确处理 CRLF 与 Unicode，取消的命令会报成 interrupted 并保留部分输出；托管 runtime 减少死锁，会话改名、快照发布、存储准入和锁处理更安全；升级拒绝信息和 Advisor 启动错误不再带出内嵌凭证，空的 Harness 用户信息会在 start/verify 时被拒绝。此外还加入本地非托管会话的 FileChanged hooks、按 URL 查看单个 PR 状态（含 mergeability 与 head SHA），以及 Web Shell 展开卡片里显示工具参数和结果。未在本机安装验证。",
+      "why_useful": "若你用 Qwen Code 看 GitHub PR 或在 Web Shell 里并行回答多个提问，0.27.0 补了仓库过滤、子问题隔离和问答热图，比只看到 0.26.8 更值得升。",
+      "try_it": "升级到 0.27.0 后，在 GitHub 频道编辑器里试仓库允许/阻止名单；在 Web Shell 打开任务问答热图，并对一个 Ask User Question 用 Ask for details 看它是否只解释选项而不代答。"
+    }
+  ]
+}
