@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T09:34+08:00",
+ "updated": "2026-11-10T08:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-09T09:34+08:00",
-   "last_new": 0
+   "checked": "2026-11-10T08:57+08:00",
+   "last_new": 1
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-09T09:34+08:00",
+   "checked": "2026-11-10T08:57+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-09T09:34+08:00",
-   "last_new": 0
+   "checked": "2026-11-10T08:57+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-09T09:34+08:00",
-   "last_new": 1
+   "checked": "2026-11-10T08:57+08:00",
+   "last_new": 6
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-09T09:34+08:00",
-   "last_new": 8
+   "checked": "2026-11-10T08:57+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,198 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-09T09:34+08:00",
-   "last_new": 0
+   "checked": "2026-11-10T08:57+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "11db4e3a5303",
+   "title": "llm-anthropic 0.31",
+   "link": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+   "summary": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T07:58+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "ebf57632b448",
+   "title": "Locating the source of a mysterious beep with Claude",
+   "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+   "summary": "Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a mysterious beep using multiple devices…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T07:57+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "5e3c43f8b63b",
+   "title": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+   "link": "https://artificialanalysis.ai/models/claude-fable-5-2",
+   "summary": "Hacker News 热度:270 分,190 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50431144",
+   "date": "2026-11-10T04:04+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "23da323cbc0e",
+   "title": "USPS now offers official ZIP Code boundary polygons",
+   "link": "https://postalpro.usps.com/zcb",
+   "summary": "Hacker News 热度:432 分,216 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50431058",
+   "date": "2026-11-10T03:58+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "99f4a23e2367",
+   "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
+   "link": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/",
+   "summary": "Picture guiding a robot arm by hand while its motors supply just enough torque to support its weight and keep the robot upright. This simple interaction, a...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-10T03:09+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "4b2ce90b1bbf",
+   "title": "Claude Fable 5.2 and Mythos 5.2",
+   "link": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "summary": "Hacker News 热度:902 分,546 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50429906",
+   "date": "2026-11-10T02:56+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "4ef7647555e7",
+   "title": "E-means: Outperforming k-means in one-tenth the epochs",
+   "link": "https://e-means.github.io/",
+   "summary": "Hacker News 热度:257 分,17 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50429734",
+   "date": "2026-11-10T02:45+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "2125b3d4f444",
+   "title": "Google Gemini routes personal Drive files and emails to human annotators",
+   "link": "https://github.com/thisisme6598/gemini_files/",
+   "summary": "Hacker News 热度:362 分,92 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50429426",
+   "date": "2026-11-10T02:24+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "41f833460b04",
+   "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+   "link": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+   "summary": "Hacker News 热度:452 分,256 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50427362",
+   "date": "2026-11-10T00:00+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "2bed7daf9a56",
+   "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+   "link": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-09T23:05+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "ea47b7fb5f15",
+   "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+   "link": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+   "summary": "https://www.cell.com/cell-reports-physical-science/fulltext/... Comments URL: https://news.ycombinator.com/item?id=50426175 Points: 269 # Comments: 168",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50426175",
+   "date": "2026-11-09T22:31+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "da317efc8ecf",
+   "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+   "link": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-09T20:34+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "b9c86623027e",
+   "title": "Foldable Flight: The Best Paper Airplanes",
+   "link": "https://www.foldableflight.com",
+   "summary": "Hacker News 热度:837 分,134 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50424581",
+   "date": "2026-11-09T20:19+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "6e52f03ca58d",
+   "title": "Dev snapshot: Godot 4.8 beta 3",
+   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-3/",
+   "summary": "Only a handful of blockers remain!",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-09T20:00+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "c4681fd6747c",
+   "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
+   "link": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+   "summary": "Hacker News 热度:738 分,473 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50422069",
+   "date": "2026-11-09T15:04+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "593a438e6118",
+   "title": "The Web Is More Than Enough, by Paul Ford",
+   "link": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+   "summary": "My comment on The Web Is More Than Enough, by Paul Ford — Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (98KB)…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-09T12:32+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "cf9ee5832cb3",
+   "title": "Hide your slop PR descriptions behind",
+   "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
+   "summary": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions. They're too good at describing the work The problem is that they are too good. An agent-written PR description is accurate and comprehensive. It describes…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-09T12:25+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
+  },
   {
    "id": "95ce0787146c",
    "title": "parse_number() as a SQLite extension: C vs Rust",
@@ -193,7 +380,7 @@
    "id": "9270cee68a91",
    "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
    "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
-   "summary": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: ; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching…",
+   "summary": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: ; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means for everyone else their browser…",
    "source": "Simon Willison",
    "topic": "AI 工具",
    "comments": null,
@@ -210,6 +397,17 @@
    "comments": "https://news.ycombinator.com/item?id=50407882",
    "date": "2026-11-08T04:45+08:00",
    "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "502a00022f89",
+   "title": "Terry Pratchett's Study",
+   "link": "https://simonwillison.net/2026/Nov/7/hn-50407316/",
+   "summary": "My comment on Terry Pratchett's Study — Hacker News. Terry Pratchett once wrote about the concept of \"horizontal wealth\". Vertical wealth is where you spend money on rich people stuff - yachts and suchlike. Horizontal wealth is where you spend more money on the things you liked before you got rich: https://chibuikeani.blogspot.com/2017/02/the-price-of-happin... But horizontal wealth means not letting your increased income dictate your tastes. You like books and now you have money? Buy more…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-08T03:34+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
   },
   {
    "id": "a95593abcc49",
@@ -688,7 +886,7 @@
    "id": "a1d3122acc27",
    "title": "datasette-llm 0.1a10",
    "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
-   "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+   "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: llm , datasette",
    "source": "Simon Willison",
    "topic": "AI 工具",
    "comments": null,
@@ -870,6 +1068,17 @@
    "comments": "https://news.ycombinator.com/item?id=50354358",
    "date": "2026-11-04T00:47+08:00",
    "first_seen": "2026-11-04T09:04+08:00"
+  },
+  {
+   "id": "faba7d4bfeeb",
+   "title": "AI is destroying my CS degree",
+   "link": "https://simonwillison.net/2026/Nov/3/hn-50354278/",
+   "summary": "My comment on AI is destroying my CS degree — Hacker News. I don't envy educators right now. AI clearly means you need to change how you teach and evaluate students. We are only a few years in though, and it's still extremely unclear what effective teaching with these tools looks like. The worst part is that the evaluation loop is measured in multiple years! If you start trying some new education mechanism today you won't get a robust idea of how well it works until your current cohort graduate…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-04T00:42+08:00",
+   "first_seen": "2026-11-10T08:57+08:00"
   },
   {
    "id": "c3cda67991a2",
@@ -5151,50 +5360,6 @@
    "first_seen": "2026-10-15T11:48+08:00"
   },
   {
-   "id": "7bf90c5622a7",
-   "title": "Dwarf Fortress uses version control now",
-   "link": "https://simonwillison.net/2026/Oct/11/dwarf-fortress/",
-   "summary": "I remember hearing a while ago that Dwarf Fortress didn't use version control. That fact has been lodged in my head, because given its inherent complexity I have trouble imagining a codebase that would benefit from version control more . That's art. I went looking and I'm sad to report that the days without version control appear to have ended. Quoting Tarn Adams over time: March 2013: \"I don't use version control -- I didn't like the feeling of having the code get committed into a black box…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-11T08:52+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "bd87ac90bfa7",
-   "title": "Python 3.15.0 added to actions/python-versions",
-   "link": "https://simonwillison.net/2026/Oct/10/python-actions/",
-   "summary": "Python 3.15.0 added to actions/python-versions Bit of a niche link, but I've been waiting for this for a couple of days - I even told ChatGPT to check for it: Clone https://github.com/actions/python-versions and git pull once an hour until they add the stable 3.15 - then tell me about it Now that this has landed, you can add \"3.15\" to a GitHub Actions testing matrix to run tests against the new Python 3.15.0 release . Tags: github , python , github-actions , chatgpt",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-11T07:58+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "bd9c3738e295",
-   "title": "Secret of Orange Cats Revealed After 60-Year Search",
-   "link": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
-   "summary": "Hacker News 热度:256 分,180 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50037711",
-   "date": "2026-10-11T06:10+08:00",
-   "first_seen": "2026-10-13T14:27+08:00"
-  },
-  {
-   "id": "6d712afa02e3",
-   "title": "Quoting The New York Times",
-   "link": "https://simonwillison.net/2026/Oct/10/the-new-york-times/",
-   "summary": "Anthropic detailed the activity of its A.I. agents in a blog post on Friday, without naming the targeted websites. But two sources with knowledge of the incidents said Anthropic’s A.I. agents had submitted 20 visa applications through a form available on the State Department’s website. All the applications were incomplete and were not processed, they said. — The New York Times , Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website Tags: accidental-cyberattacks , anthropic …",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-10T10:04+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
    "id": "686772c902b0",
    "title": "Source-to-ISA correlation for pre-compiled AMD GPU code objects with RGA 2.15",
    "link": "https://gpuopen.com/learn/rga-source-to-isa-correlation-gpu-code-objects/",
@@ -5357,17 +5522,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-13T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "aa3de5c6a27f",
-   "title": "Dev snapshot: Godot 4.8 dev 5",
-   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/",
-   "summary": "A healthy stream of new features await!",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-10T20:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {

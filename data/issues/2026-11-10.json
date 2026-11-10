@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-10",
+  "items": [
+    {
+      "title": "Inside Unreal：《Gears of War: E-Day》MegaLights / Nanite / WP×HLOD×FastGeo 实战（游戏メーカーズ整理）",
+      "url": "https://gamemakers.jp/article/2026_11_09_149945/",
+      "source": "游戏メーカーズ",
+      "published": "2026-11-09",
+      "ue_version": "UE 5.6（文中所述，自 4.27 起持续跟版）",
+      "summary": "The Coalition 在 Inside Unreal（2026-11-05 直播，归档已出）里讲 E-Day 迁到 UE5：MegaLights 与 Epic 联调后性能约翻倍并回灌引擎，夜城影投灯光同时约 500–1000（含枪口焰与警车灯），相对原先 VSM 影投灯预算约 10 个、优化后常只剩 5–6 个；森林用 Nanite，场景三角形约 2000 万、镜头移动时可达约 3000 万；都市 Kalona 用 World Partition 做单一大地图，最终 Actor 约 600–700 万，靠 Fast Geometry Streaming / Runtime Cell Transformers 降流送数，并改进远景 HLOD；5500 辆车用 WPO 表达晃动与凹陷以便进 FastGeo。完整约两小时见 YouTube：https://www.youtube.com/watch?v=S91UEeVdspo",
+      "try_points": [
+        "有大量可动影投局部灯时，用 MegaLights 对照 VSM 本地灯预算，优先把枪口焰/警报灯等短促光源挪到 GPU 路径",
+        "开放世界远景：先压 Actor 流送数（FastGeo / Cell Transformers），再单独验收 HLOD 过渡，而不是只拉大 Loading Range",
+        "可动布景若拖垮 CPU/流送，评估能否用 WPO 代替真正移动的 Actor，以便纳入 FastGeo"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    },
+    {
+      "title": "Last Week in Unreal（11/2–11/8）：5.9 公开分支、Web 走移动端渲染、Lumen Radiance Cache 与 RT Skylight 移除",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-nov-2-8-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-11-09",
+      "ue_version": "UE 5.9 分支 / ue6-main / 5.8.4",
+      "summary": "周报梳理公开 5.9 分支（尚无正式 tag）：Wasm/WebGPU 目标在 Preview 1 使用移动端 Forward（SP_WEBGPU_ES3_1）与移动端 Deferred（SP_WEBGPU_ES3_1_DEFERRED）两档，桌面档实验且不入 Preview；Nanite、VSM、硬件光追在 Web 各档均不支持，网格走 Nanite fallback、阴影走 CSM。ue6-main 移除编辑器进程内 Cook；遗留 RT Skylight 删除（改走 Lumen）；5.9 侧 r.Lumen.RadianceCache.MaxFramesAccumulated 默认 4（增加 GI 滞后换质量）。5.8 分支本周几乎无渲染修复可跟。",
+      "try_points": [
+        "评估 Web/移动档时按 README：内容-only 项目不可用；确认 Nanite/VSM 不可用并准备 fallback 与 CSM",
+        "跟 5.9 的渲染项目核对 Lumen Radiance Cache 默认 4 帧累积对动态场景的拖影",
+        "仍用 RT Skylight CVar 的配置在新主干上已失效，改为确认 Lumen 路径"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "Unreal Engine 5.9 MegaJam Preview：浏览器实验目标走移动端渲染器（含 Mobile Forward 已知问题）",
+      "url": "https://forums.unrealengine.com/t/unreal-engine-5-9-megajam-preview/2852840",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-09",
+      "ue_version": "UE 5.9 MegaJam Preview 1",
+      "summary": "Epic 发布主要为 AI MegaJam 赶制的 5.9 Preview：Web 体验基于 WebAssembly/WebGPU，使用移动端渲染器，需源码构建与 C++ 项目，Chrome 体验最佳。已知问题清单里与移动路径直接相关：Mobile Forward 档在 Reflection Capture 附近金属/高光可能发黑，需开启 Project Settings → Rendering → Mobile → Clustered reflections (When using ForwardShading) 后重 cook；Mobile Deferred 不受影响；另有手机多线程启动内存、无 BC/DXT 设备需 ASTC cook 等注意事项。该 Preview QA 较短，官方建议用项目副本测试。",
+      "try_points": [
+        "试 Web/移动 Forward 时若金属发黑，先开 Clustered reflections 并重 cook，再对比 Deferred 档",
+        "真机无 BC 纹理支持时按建议用 ASTC（-cookflavor=ASTC 等）做双纹理集",
+        "手机上先保持默认单线程启动，避免强制多线程导致加载期内存顶穿"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    },
+    {
+      "title": "80 Level：Alpine Forest——SpeedTree → Nanite Assemblies 针叶林工作流与 FoliageLab",
+      "url": "https://80.lv/articles/creating-realistic-mountain-scene-with-custom-unreal-engine-5-tool",
+      "source": "80 Level",
+      "published": "2026-11-09",
+      "ue_version": "原文未标注（UE5 Nanite Assemblies）",
+      "summary": "Biome 艺术家 Michael Gerard 复盘 Alpine Forest：目标是把 SpeedTree 植被不经中间 DCC 直接进 UE 的 Nanite Assemblies，并重点攻坚针叶树（结构密、对 Nanite 不友好）。用自研 SpeedTree Bridge 保留组装结构与实例化几何；大树以扫描树干为起点做可平铺贴图，多种树种复用同一套叶片实例与 Master Material；PCG 分 Trees / Bushes / GroundFoliage 三层并建立层级影响（树影响灌木，灌木影响地被）。文章偏工作流与艺术控制，不是帧时间报告，但对 Nanite 植被管线选型有参考价值。",
+      "try_points": [
+        "针叶/高细节植被优先评估 Nanite Assemblies + 实例化零件，而不是先压成 masked card",
+        "用共享叶片实例 + 每树 Material Instance 控树干，降低材质分箱",
+        "PCG 分层互相约束密度，避免三层独立撒点导致中景 Nanite 实例爆炸"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 文档：World Partition — Hierarchical Level of Detail（UE 5.9 文档树）",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition---hierarchical-level-of-detail-in-unreal-engine",
+      "source": "Epic Games Documentation",
+      "published": "原文未标注",
+      "ue_version": "UE 5.9 Documentation",
+      "summary": "官方 WP HLOD 指南（当前挂在 5.9 文档树）：用 HLOD Layer 资产组织远距静态网格并生成代理，以显示未加载格子、降低 Draw Call。Layer Type 为 Instancing（适合树木/植被 impostor，走最低 LOD 的 ISM）、Merged Mesh、Simplified Mesh；可设 Cell Size、Loading Range、Parent Layer、Always Loaded；Merged/Simplified 提供 Generate Nanite Enabled Mesh、Allow Distance Fields（远距可关以省内存）、Use Landscape Culling、Merge Distance 等。与本周 Gears 分享中的远景 HLOD/流送实践可对照阅读。",
+      "try_points": [
+        "植被层优先 Instancing；建筑/地形块用 Merged 或 Simplified，并按视距设 Screen Size / Merge Distance",
+        "远距代理可关 Allow Distance Fields；适合 Nanite 的代理勾 Generate Nanite Enabled Mesh 后对比显存与过渡",
+        "先按内容行为拆多个 HLOD Layer，再调 Cell Size / Loading Range，避免一张万能层"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    }
+  ]
+}
