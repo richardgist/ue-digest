@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-10",
+  "items": [
+    {
+      "title": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+      "url": "https://arxiv.org/abs/2611.08264",
+      "source": "arXiv",
+      "published": "2026-11-05",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "这篇 2026-11-05 提交的论文指出，现有前馈 3DGS 通常先由几何基础模型预测深度，再在径向距离归一化（RDNorm，用重建点到参考相机原点的平均径向距离做全局缩放）的坐标系里预测 Gaussian 属性；但相邻 Gaussian 中心间距（Gaussian spacing）仍会随场景尺度和相机配置大幅变化，使相近的局部观察对应不同的尺度监督目标。作者提出 SplatAnything 与 Gaussian Spacing Normalization（GSNorm）：在逐像素预测假设下，局部间距近似为深度除以焦距几何平均，即 d≈D/√(fx fy)，再用所有有效像素的中位数作为场景尺度，把几何、深度和相机平移一并缩放，使该中位数间距为 1。几何由冻结的 WorldMirror 2.0 估计，随后微调 Gaussian Backbone 并用从头训练的 GSHead 预测不透明度、旋转、尺度和球谐系数。为评估跨场景与外推视角，作者建了一套覆盖 ScanNet、NRGBD、DL3DV、Tanks & Temples、Mip-NeRF 360、ETH3D、DTU 的基准，控制输入 4/8/16/32/64 视并强调遮挡感知共视约 0.2–0.6 的外推目标。作者报告在多数设置下优于所列基线，例如无位姿时 ScanNet 上 DISTS/LPIPS 为 0.184/0.207（Mirror2-GS 为 0.193/0.222），DTU 上为 0.229/0.483（Mirror2-GS 为 0.347/0.617）；同一架构消融里 4 视 GSNorm 为 0.198/0.245，对照 RDNorm 的 0.223/0.278。训练为 2 万步、64 张 NVIDIA H20，输入 4–32 视、分辨率 504–1024。文中也写明：方法依赖几何先验，在极稀疏或几何不可靠输入上可能下降，且主要重建输入可见区域。项目页为 https://zju3dv.github.io/SplatAnything/ 。以上均为论文实验与作者结论，本机未复现。",
+      "why_useful": "做前馈 3DGS 时如果尺度在小物体上出洞、大场景上过平滑，这篇把问题从「几何归一化」改写成「先对齐 Gaussian 间距再预测尺度」，并给出跨数据集和外推视角的对照。",
+      "try_it": "先看第 3.3 节 GSNorm 如何用中位数间距替换平均径向距离；若随后放代码，在同一外推视角协议下对比 RDNorm 与 GSNorm 的 DISTS/LPIPS，并检查小物体与大场景是否还出现文中所述的破洞或过平滑。"
+    },
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 3",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-3/",
+      "source": "Godot Engine",
+      "published": "2026-11-09",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Godot 于 2026-11-09 发布 4.8 beta 3（Thaddeus Crews 撰文）。文中写：尽管团队上周多在参加 GodotFest，剩余发布阻断项仍有进展，看起来距离转入 release candidate 阶段不会太久，并请测试者用该快照寻找新的缺陷与回归。本篇只覆盖相对 beta 2 的改动，且「很大程度上是回归修复」。亮点包括：Sprite2D 在纹理图像为空时给出更好的错误信息（GH-125054）；新增抽象的 LineBase3D（GH-124741）；Animation 未激活时不再自动插入关键帧（GH-124940）；Web 平台 Sample 音频驱动的多项修复（GH-123996）；为带调试符号的 Linux/Windows 构建启用 build ID（GH-125188）；修复「Save on Focus Loss」会重建已删除但仍打开场景的问题（GH-124931）；修复 TabContainer 不在场景树中时选错标签（GH-113404）；修复菜单里鼠标移动覆盖手柄输入（GH-124735）；修复多线程同时 flush CommandQueueMT 时的竞态（GH-124990）；VisualShader 输出节点增加 light vertex 输入（GH-124917）。51 位贡献者提交了 74 项修复，构建自提交 c51ff06e8。标准包支持 GDScript 与 GDExtension；标为 mono 的 .NET 包额外支持 C#，且该包要求 .NET 10.0 或更新（最低支持版本从 .NET 8 改为 10）。这是预发布软件，文中提醒做好备份或使用版本控制。未在本机安装验证。",
+      "why_useful": "如果你在跟 4.8 beta，这篇把 beta 2 之后真正合入的回归修复和 .NET 10 最低版本变化写清楚了，也提示 RC 临近，适合集中报回归。",
+      "try_it": "从官网下载 4.8 beta 3（需要 C# 则选 mono 包并确认本机已是 .NET 10+），对照交互式 changelog 看自己项目是否踩到已修的编辑器保存、物理队列或 Web 音频问题；发现相对 4.7/更早 4.x 的回归应按文中指引先搜再报。"
+    },
+    {
+      "title": "Claude Code 2.1.321：默认 Fable 5.2，以及 MCP OAuth / 沙箱 / cp·mv 权限修复",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "source": "GitHub anthropics/claude-code",
+      "published": "2026-11-09",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "anthropics/claude-code 于 2026-11-09 发布 v2.1.321（GitHub 时间 2026-11-09T19:22:30Z）。新增 Claude Fable 5.2（claude-fable-5-2）并列为默认 Fable 模型，发布说明写明 1M 上下文、每百万 token 输入 $8 / 输出 $40、缓存读取 $0.20/Mtok。claude remote-control 增加 --settings，会把指定设置文件应用到它启动的每个会话；文件改动后需重启 remote-control 才会开始新会话。权限与安全相关修复包括：MCP OAuth 在服务器重定向时把 refresh token 等密钥发到另一主机；只读 Bash 命令在沙箱外执行却未弹出权限提示；Bash 权限检查从错误目录判断写文件因而不提示；把文件 cp/mv 进目录时 deny 规则和受保护文件提示未作用到实际写入的那个文件；以路径写出的 /bin/cp、/bin/mv 现在与直接写 cp/mv 走同一套路径检查。行为变化方面：已保存的 Fable 5.1 选择会迁到 fable（Pro/Max 立即生效，Team/Enterprise 需组织允许后生效，可用 /model claude-fable-5-1 切回）；Claude 写出的 mods 在 auto 与 bypass 模式下会直接启用而不再询问（即使有托管的 allowUnsandboxedCommands: false 或 allowManagedDomainsOnly），且在 dontAsk 模式下不加载；mods 自身的 $.tool.call / $.mcp.call 不再弹出权限提示，deny 规则与组织策略仍生效。此外还修复了网络路径上 NotebookEdit/Edit 误改、Windows 启动找程序方式、fast mode 在限流时长时间重试等问题。未在本机升级验证。",
+      "why_useful": "相对本站 11-07 收录的 2.1.319，这次不仅换了默认 Fable 模型，还修了一批会让权限检查失效的路径：OAuth 重定向泄密、沙箱外执行、以及 cp/mv 绕过 deny。",
+      "try_it": "升级到 2.1.321 后用 /model 确认默认 Fable 是否变为 5.2；若依赖 Fable 5.1，按说明用 /model claude-fable-5-1 切回。有 deny 规则或托管策略的环境，重点看 cp/mv 与 MCP 登录重定向是否仍符合预期；用 remote-control 时可试 --settings。"
+    },
+    {
+      "title": "Blender 5.3 Cycles：视口 DLSS 降噪、玻璃色散/各向异性与 RTX Spark",
+      "url": "https://developer.blender.org/docs/release_notes/5.3/cycles/",
+      "source": "Blender Developer Documentation",
+      "published": "原文未标注",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "这是 Blender 5.3 的 Cycles 发布说明。Blender 官网产品页（https://www.blender.org/releases/5-3/ ，已打开）写 5.3 Expected November 10, 2026；开发者文档总页写 currently in Release Candidate until November 10, 2026，因此本稿发布时不能把它当作已经稳定上线的正式版。Cycles 说明列出：为玻璃和透射材质增加色散（dispersion）与粗糙度各向异性；在 NVIDIA GPU 上为视口提供新的 DLSS denoiser，通过超分并复用先前帧的样本，以更快得到更干净的图像，且需要 NVIDIA 驱动 620 或更新；最终渲染进行时视口渲染会自动暂停；小/薄三角和近边缘的纹理烘焙质量有改进；还有若干 GPU 渲染优化，以及在运行 Windows 11 的 NVIDIA RTX Spark 设备上的支持（含统一内存优化）。色散加在 Principled BSDF 的 Transmission 面板，文档写可用于让玻璃或钻石把白光分成彩虹色；粗糙度各向异性现已支持 Glass BSDF 以及 Principled BSDF 的透射分量，行为与镜面反射的粗糙度各向异性相同。以上均为官方发布说明中的功能描述，本机未用 5.3 RC 验证视口 DLSS 或 RTX Spark。",
+      "why_useful": "若你在 Cycles 视口里等降噪、或关注玻璃色散/各向异性，这份 5.3 说明把 DLSS 视口降噪的前提（NVIDIA、驱动 620+）和材质节点变化写清楚了；今天也是官方标注的预计发布日，适合先看 RC 再决定是否跟上。",
+      "try_it": "确认 5.3 已从 RC 出正式包（或接受 RC 风险）后再升级；在 NVIDIA、驱动 620+ 的机器上打开视口渲染，对照文档试 DLSS denoiser，并在 Principled BSDF Transmission 面板查看 Dispersion 与 Glass/透射的 roughness anisotropy。最终出图仍以正式版验证为准。"
+    },
+    {
+      "title": "How Gaijin Tuned DLSS 5 for War Thunder",
+      "url": "https://www.nvidia.com/en-us/geforce/news/war-thunder-dlss-5-3d-guided-neural-rendering-developer-interview/",
+      "source": "NVIDIA GeForce News",
+      "published": "2026-11-03",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "NVIDIA 于 2026-11-03 刊登对 Gaijin Entertainment 美术总监 Kirill Stupin 的访谈，介绍 War Thunder 如何把 DLSS 5（3D-Guided Neural Rendering）接入自研 Dagor Engine。文中说：11 月中旬的 Eagle's Shadow 大更会上线该功能；游戏此前已有 DLSS 4.5 Multi Frame Generation、Super Resolution、Ray Reconstruction、DLAA，以及 Reflex、光线追踪和路径追踪全局光照。NVIDIA 写 DLSS 5 作为图形管线的最后阶段运行，以引擎已渲染的帧和运动向量为基础增加光照与材质细节——这是厂商对功能的描述。Gaijin 团队说真正的难点不在文档（他们估计 NVIDIA 文档覆盖了约 95%），而在色彩空间：DLSS 5 在 sRGB 中工作，Dagor 与多数现代引擎一样在线性 HDR 中渲染；既要在 bloom、运动模糊、色差等后处理和 UI 之前评估 DLSS 5，又要喂给它带有玩家最终观感的 sRGB 图像。他们的做法是让色彩管理管线可逆，先做出「半最终」观感的 sRGB 图给 DLSS 5，再把 DLSS 5 造成的变化映射回线性 HDR；并在代表性场景上对照参考外观，调整模型和强度。访谈中的「高光/阴影更好、出现过去做不到的微对比度」「有组员一度以为换了渲染引擎」等是对方美术团队的主观评价，并非独立测评。给其他开发者的建议是：花时间按自己的美术方向去调。这是厂商访谈，本机未验证其画质或性能说法。",
+      "why_useful": "相对本站 11-05 收录的 DLSS 5 上线预告，这篇把一个已上线引擎里最具体的接入坑写了出来：sRGB 与线性 HDR 的鸡生蛋问题，以及必须在后处理之前评估又要保留最终 look。",
+      "try_it": "若你也在自研或高度定制的色彩管线里接 DLSS 5，先核对文档要求的色彩空间，并确认能否在后处理之前得到可逆的「半最终」sRGB 图；用一条代表场景对照参考外观调模型和强度，空战/地面/海军等视距差异大的模式要分开看。"
+    }
+  ]
+}
