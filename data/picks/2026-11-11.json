@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-11",
+  "items": [
+    {
+      "title": "Blender 5.3：原生 3D Gaussian Splats、视口 DLSS 4.5 降噪与可选项目系统",
+      "url": "https://www.blender.org/download/releases/5-3/",
+      "source": "Blender",
+      "published": "2026-11-10",
+      "category": "工具",
+      "direction": "图形渲染",
+      "summary": "Blender Foundation 于 2026-11-10 发布 5.3.0 正式版（官网发布页与新闻稿均写 Initial release / November 10th, 2026）。相对本站 11-10 收录的 Cycles RC 说明，这是已出包的稳定版介绍，并补上 3DGS、EEVEE 与工作流改动。头牌是原生 3D Gaussian Splats：可从 PLY、SPZ 和 glTF 导入为点云，用 Geometry Nodes 处理，并在 Workbench、EEVEE 与 Cycles 中渲染；默认用自发光着色，文档称把 Emission 换成 Diffuse 等硬表面 BSDF 可做「初步」的可重打光，同时写明性能仍在优化，且因多数制作工具用 sRGB、Blender 用线性色彩，低透明度、高辐射区域可能出现不准。视口新增 DLSS 4.5 Ray Reconstruction 降噪器，通过超分并复用先前帧样本；位于渲染属性 Sampling 的 Denoise 面板，需要 NVIDIA 驱动 620 或更新；并写明对运行 Windows 11 的 NVIDIA RTX Spark 提供原生支持（含内存优化）。Cycles 方面 Principled BSDF 增加色散（对应 OpenPBR v1.1.1），Glass BSDF 与 Principled 透射分量支持粗糙度各向异性。EEVEE 新增 Material Lighting 节点（Light Accumulation / Light Info / Light Evaluation / Shadow Raycast 等），并支持全景相机；当前实现尚不支持景深、光线追踪，以及视口里体积的时间重投影。另外还有可选的项目系统（项目级资源库与色彩管理等）、把 Asset Library 作为扩展分享、合成器效果栈，以及视频序列编辑器的 ripple 编辑框架、重写的 Blade 工具和初步 OpenTimelineIO 支持。同期新闻稿还写 Vulkan 现为 Windows（ARM 除外）与 Linux 的默认后端，Workbench 可在 Metal 与 Vulkan 上使用硬件光线追踪阴影；本条链接是功能介绍页，该后端变化以新闻稿为准。本机未安装 5.3.0 验证。",
+      "why_useful": "昨天还只能按 RC 说明看 Cycles 视口 DLSS 和色散；今天正式包已出，可以把原生 3DGS 的导入格式、重打光限制和 EEVEE 灯光节点一并对照后再决定是否升级。",
+      "try_it": "从官网下载 5.3.0。有 NVIDIA 且驱动 620+ 时可在视口 Denoise 面板打开 DLSS 4.5；用一份 PLY/SPZ/glTF splat 看 EEVEE/Cycles 显示，并按文档试把 Emission 换成硬表面 BSDF。做最终出图前注意文中关于色彩空间与性能仍在优化的说明。"
+    },
+    {
+      "title": "Auto SR Officially Launches on ROG XBOX Ally X and X20, Expands to Copilot+ PCs powered by AMD Ryzen",
+      "url": "https://devblogs.microsoft.com/directx/autosr-performance-mode/",
+      "source": "DirectX Developer Blog",
+      "published": "2026-11-10",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Microsoft DirectX 博客于 2026-11-10 宣布 Automatic Super Resolution（Auto SR）在 ROG XBOX Ally X 与 ROG XBOX Ally X20 上结束预览、正式推出，并扩展到部分搭载 AMD Ryzen 的 Windows Copilot+ PC。文中列出四项能力：手持/未扩展坞、用电池时也可在内置屏使用（预览期仅限扩展坞）；游戏以 1080p 运行时也可启用（预览期需先降低分辨率，扩展到更高分辨率电视/显示器时可升到 1440p）；可与 Auto HDR 同时使用（以前二者只能二选一）；以及新的 Performance Mode，把此前约 60–75 FPS 的上限提到最高 120 FPS。文中明确：手持模式、AMD Ryzen Copilot+ PC 扩展和 1080p 支持即日起可用；Performance Mode 与 Auto HDR 兼容会随 Windows 更新推出，到达各设备的时间可能不同。1080p 手持内置屏下，文中也写性能可能不如其他配置，但在较老游戏上仍可能看到画质改善。厂商配了 Rocket League 在 Ally X、720p、游戏内高画质下的截图：Quality Mode 约 70 FPS，Performance Mode 约 115 FPS——这是 Microsoft 自己的测量，本机未复现。启用步骤：更新 Game Bar 与最新 Windows 11，从 Microsoft Store 下载或更新 Auto Super Resolution 包，打开 Game Bar（Win + G）到 Widgets > Display > Graphics，在 Quality 与 Performance 之间切换。",
+      "why_useful": "在掌机或 AMD Ryzen Copilot+ PC 上跑未专门做升级采样的游戏时，这是系统级自动超分的正式版说明，并把「今天能用」和「还在随 Windows 更新推送」的功能拆开了。",
+      "try_it": "先确认机器在文中所列范围内，按步骤更新 Game Bar、系统与 Auto SR 包后，在 Game Bar 的 Graphics 里打开 Auto SR。Performance Mode 或 Auto HDR 若还没出现，按文中所说等 Windows 更新，不要当成已经全量推到每台机器。"
+    },
+    {
+      "title": "Grit：在导出时把 GDScript 编译成原生 C++ 的实验性 Godot 模块",
+      "url": "https://github.com/DasDarki/grit",
+      "source": "GitHub DasDarki/grit",
+      "published": "2026-11-09",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Grit 是面向 Godot 4.7 的引擎模块，在导出时把项目里的 GDScript（含嵌入场景/资源的内置脚本）编译成 C++，再编进自定义导出模板，使导出后的游戏以本地机器码而不是字节码运行；编辑器里的编写、运行和调试仍走原来的 GDScript VM，无法处理的函数会按函数静默回退到 VM。仓库 README 以 2026-11-09 的置顶说明回应近期关注：项目并未停掉，目前主要缺测试，作者表示若 Godot 4.8 发布会跟进兼容。许可证为 MIT。文档把项目标为「高度实验性」：需要打过补丁的 Godot 4.7.2 与自定义导出模板；已在 Linux x86_64（GCC/Clang）和 Windows x86_64（MSVC）上验证 Godot 自带 GDScript 测试套件全部 1540 个函数可编译、499 条断言在原生执行下通过，macOS、移动端和 Web 未经测试；并写明暂时不要用来出货，且应保留回退到常规 VM 的办法。作者在 AMD Ryzen 9 7950X3D、Linux、GCC 16、发行版导出模板上，用同一二进制对比 VM（GRIT_DISABLE=1）与 Grit：带类型的整数循环 sum_to 为 196.3 ms 对 4.0 ms（约 49.1 倍），Vector2 与数组的 particles 为 31.7 ms 对 7.5 ms（约 4.2 倍），字符串拼接与创建/销毁节点几乎没有收益（约 1.0–1.1 倍）；附带的 Flappy 测试在无头自动驾驶 12 万物理步时，文档写目前原生大约快 2.5 倍。这些是作者在其基准项目上的测量，本机未复现。可选的脚本剥离（strip_scripts）会去掉已编译函数的函数体，剥离后的游戏不能再回退到 VM，且必须与同一次导出编出的模板配对。",
+      "why_useful": "如果你的 Godot 项目被脚本里的计算热路径拖住、又不想把整段改写成 GDExtension/C#，这是目前能在导出阶段做 AOT 的一条实验路径，文档把适用场景（计算密集）和几乎没收益的情况（大量引擎调用）写得很清楚。",
+      "try_it": "先读 README 的警告与 Limitations，用 python3 tools/grit.py doctor 检查编译环境，再按文档 clone 并 grit setup / build editor。不要直接用正式项目：可先导出 tests/projects/benchmark 或 flappy，用 GRIT_DISABLE=1 对照结果和耗时。这是实验性工具，不要用于出货。"
+    },
+    {
+      "title": "Cursor Projects is now multiplayer",
+      "url": "https://cursor.com/blog/projects-multiplayer",
+      "source": "Cursor Blog",
+      "published": "2026-11-10",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Cursor 于 2026-11-10 发文称，今年 9 月推出的 Projects（由一名协调者调度一组 agent 做大规模工作）现已支持多人：可以邀请同事进入同一个 Project，一起规划、实现和发布。文中说明每人仍保留与自己的 coordinator / worker agent 的一对一对话和本地上下文；之上增加共享上下文层，用来放需求文档、示意图、技术规格和设计稿等，并称「在一个对话里做出的决定，对 Project 里的每个 agent 都可访问」。共享任务板会显示谁在做什么、各人的 agent 在忙什么，以及每项任务对应的 PR。文章用 Cursor 内部值班交接作为例子：新值班的人进入共享 Project 后，其 coordinator 会先确认现状，再接上进行中的工作、未处理问题和需要交接的事件与笔记——这是厂商对自己工作流的描述，本机未验证。文中还写 teammate 之间的 agent 可以互相沟通以提前协调重叠改动，并举了产品页改版与数据库 schema 变更的例子；这些是说明性举例，不是已验证的通用效果。该功能以 beta 向所有 Cursor 用户推出：从左侧栏创建 Project，再邀请同事加入。本机未实际创建多人 Project 验证邀请与上下文共享。",
+      "why_useful": "如果团队已经在各自用 Cursor agent，却总要把需求、进行中的任务和值班上下文再讲一遍，这篇把「一个 Project 里共享文档与任务板、同时保留个人对话」的用法写清楚了。",
+      "try_it": "在已更新到含此 beta 的 Cursor 里，从左侧栏新建 Project 并邀请一位同事；先放一份简短规格或值班说明进共享上下文，看对方的 coordinator 是否读得到，再观察任务板能否对上各自的 PR。这是 beta，权限和上下文范围要以实际界面为准。"
+    }
+  ]
+}
