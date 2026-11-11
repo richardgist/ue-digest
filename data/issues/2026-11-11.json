@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-11",
+  "items": [
+    {
+      "title": "Epic 文档：Lumen World Cache——运行时路径追踪缓存，可替代网格 Cards 的 Surface Cache",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-world-cache-in-unreal-engine",
+      "source": "Epic Games Documentation",
+      "published": "约 2026-11-09（随 UE 5.9 Preview 文档树上线；同日发布说明标注 Last updated 11/9/26）",
+      "ue_version": "UE 5.9",
+      "summary": "5.9 新文档介绍 Lumen World Cache：默认关闭，仅在 Lumen 走硬件光追时生效；开启后该视图完全替换 Surface Cache（不再捕获/照明/驻留 mesh cards）。缓存按距相机的稀疏世界空间格子存储（默认约 10 米处每格约 25.6 cm，并按主朝向分条目），每帧从屏幕每 8×8 像素块随机取一点、最多 3 次反弹填入，格子最多平均 16 帧，64 帧未命中则回收。开启方式是在 DefaultEngine.ini 写入 r.Lumen.WorldCache.Supported=1 并重启；还要求 Hardware Ray Tracing Mode 为 Full 或 Simplified Material（Inline 不可用），且 r.Lumen.WorldCache.Allowed 保持开启（默认真，可作分档开关而不重启）。文档列明限制：软件光追仍走 Surface Cache；半透明不入库；暂不支持 Water、光追半透明、植被/次表面透射，以及 Far Field。GPU 耗时可在 stat gpu 的 LumenWorldCache 项查看，默认可走 async compute。",
+      "try_points": [
+        "已开硬件光追的项目先只加 Supported=1 重启，再用 r.Lumen.WorldCache.Allowed 在室内/室外做 A/B；用 Surface Cache 视图看粉（哈希冲突）和黄（尚未覆盖），用 stat gpu 看 LumenWorldCache",
+        "依赖水面、透射植被或 Far Field 远景的关卡不要整项目切换，先在隔离关卡验证",
+        "可用 r.RayTracing.SimplifiedMaterialOverride 在编辑器里预览 Simplified Material 档，不必改平台设置"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "UE 5.9 Preview 发布说明：Nanite 剔除改进、AVBOIT 半透明排序与阴影调试视图",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-9-release-notes",
+      "source": "Epic Games Documentation",
+      "published": "2026-11-09（页面标注 Last updated 11/9/26）",
+      "ue_version": "UE 5.9 Preview",
+      "summary": "官方 5.9 Preview 发布说明（Rendering & Lighting 节）补充了除 World Cache 以外的渲染改动：Nanite 剔除会把实例分成简单与复杂两类（蒙皮、样条变形、WPO 等分开处理），并可在单步中测试网格细节层级的多层；场景自动受益、无需改资源，收益随场景规模增大。AVBOIT（文中亦写作 ABVOIT）按正确混合重叠半透明（玻璃、烟、粒子），不依赖绘制顺序，同时适用于 Nanite 与非 Nanite 半透明，可处理彩色玻璃，并跳过完全不透明烟雾后方的像素；半透明材质需只输出自身颜色。阴影调试新增 Virtual Shadow Map Overview 并排视图、CSM 级联着色与深度分块视图、Far Shadow 高亮，并支持远影按独立频率更新、按组件在蓝图/代码中开关远影投射。",
+      "try_points": [
+        "把现有密集 Nanite 场景升到 5.9 Preview 副本后直接对比剔除/帧时间，不必先改资源",
+        "有多层彩色玻璃或烟雾排序错误时，在 Preview 中试 AVBOIT，并确认材质只输出自身颜色",
+        "阴影发糊、级联接缝或远影错投时，用 VSM Overview / Far Shadow 视图定位，再按组件开关远影或调远影更新频率"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "在 8 GB 笔记本上自测 UE 5.8 Lumen Lite 与 MegaLights 的 GPU 耗时",
+      "url": "https://aztech3d.com/en/guides/unreal-5-8-lumen-lite-megalights-8gb/",
+      "source": "AZTechnology",
+      "published": "2026-11-04（页面 Updated；文中实测日期 2026-11-01）",
+      "ue_version": "UE 5.8.1（文中实测安装版）",
+      "summary": "作者在 RTX 4070 Laptop 8 GB（驱动 610.62）上，用 UE 5.8.1 编辑器视口（约 2118×1271、TSR、DX12 SM6、硬件光追）搭建 16 m 房间、48 盏可投阴影点光，每条件记录约 400 帧、取三次中位数。同开 MegaLights 时，GI Epic（Lumen 高质量）9.18 ms、GI Medium（Lumen Lite）6.87 ms，约少 25%；GI Epic 下关闭 MegaLights 为 11.69 ms，开启约少 21%。该场景最快组合是 Lumen Lite + MegaLights（6.87 ms），与完全关闭 GI 的 6.91 ms 几乎相同；测完后整卡占用约 2727 MiB / 8188 MiB。文中说明 Lumen Lite 在 5.8 仍为 Beta，需把 Global Illumination 与 Reflections 同时设为 Medium；关闭 MegaLights 时出现 VSM one-pass projection 每像素灯数溢出警告，开启后警告消失。作者强调这是编辑器视口、单场景结果，打包或户外植被场景数字可能不同。",
+      "try_points": [
+        "不要只看编辑器锁 60 fps 的 Frame Time，用 stat unit 的 GPU 值、同一机位等 8–10 秒后再记，重复两三次取中位数",
+        "多灯室内先试 MegaLights + GI/Reflections Medium；出片或截图再临时把这两项调回 Epic，并检查天花板边缘是否出现 Lumen Lite 锯齿痕迹",
+        "出现 VSM 每像素灯数溢出警告时，优先减本地灯或开 MegaLights，而不是先盲目加大 r.Shadow.Virtual.OnePassProjection.MaxLightsPerPixel"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Epic 文档：MegaLights Far Field——用已构建的 World Partition HLOD1 延长阴影光线范围",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/megalights-in-unreal-engine",
+      "source": "Epic Games Documentation",
+      "published": "原文未标注（当前挂在 UE 5.9 文档树；Far Field 需已构建的 HLOD1）",
+      "ue_version": "UE 5.9 Documentation",
+      "summary": "5.9 文档树中的 MegaLights 指南专节说明 Far Field：在相对较低开销下，对非常简化、已合并的 HLOD1 网格追阴影，从而把阴影光线延伸到 TLAS 裁剪范围之外。启用方式是在 DefaultEngine.ini 设置 r.MegaLights.HardwareRayTracing.FarField，并要求项目使用 World Partition 的 HLOD，且必须已构建 HLOD1。方向光默认关闭，需 r.MegaLights.DirectionalLights 1 手动打开；远距阴影品质依赖光线追踪表示，文档建议用 Far Field 缓解 BVH 构建/遍历或内存限制，并推荐强太阳光仍走 Deferred Lighting + VSM，MegaLights 留给更暗、更软的光源。文档写明 MegaLights 不支持移动端、Switch 及上一代主机，也与 Forward Renderer 不兼容。",
+      "try_points": [
+        "先按 WP 流程构建 HLOD1，再在 DefaultEngine.ini 打开 r.MegaLights.HardwareRayTracing.FarField，对比远距方向光/大范围局部灯阴影是否延伸、以及 GPU 开销",
+        "强太阳光保持 VSM，只对月光等较暗光源开 MegaLights；室内可用后期体积减弱或关闭方向光，减少无效采样",
+        "用 r.MegaLights.Debug 1 查看所选像素的光线，需要时再 r.ShaderPrint.Lock 1 冻结后绕场景检查"
+      ],
+      "topics": [
+        "渲染",
+        "HLOD"
+      ]
+    }
+  ]
+}

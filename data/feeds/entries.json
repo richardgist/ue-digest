@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T09:31+08:00",
+ "updated": "2026-11-11T08:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 4
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-10T09:31+08:00",
+   "checked": "2026-11-11T08:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-10T09:31+08:00",
+   "checked": "2026-11-11T08:57+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-10T09:31+08:00",
+   "checked": "2026-11-11T08:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-10T09:31+08:00",
+   "checked": "2026-11-11T08:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-10T09:31+08:00",
+   "checked": "2026-11-11T08:57+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,17 +89,17 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 4
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": false,
-   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+   "ok": true,
+   "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 9
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 10
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,16 +107,280 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-10T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-11T08:57+08:00",
+   "last_new": 2
   }
  },
  "entries": [
   {
+   "id": "774811001e1e",
+   "title": "llm-gemini 0.36",
+   "link": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+   "summary": "Release: llm-gemini 0.36 Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5). Here are three pelicans for the low, medium and high thinking efforts (it defaults to medium). This is the pelican I got for…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-11T04:09+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "48b7a7f72d16",
+   "title": "Scion is back and is going to sell a kei truck in America",
+   "link": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+   "summary": "Hacker News 热度:304 分,224 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50445401",
+   "date": "2026-11-11T03:50+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "1223e6f13130",
+   "title": "Synaptics patent claims stop work on DisplayLink drivers",
+   "link": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+   "summary": "Hacker News 热度:280 分,137 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50443824",
+   "date": "2026-11-11T02:02+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "dbcaa75b2aaf",
+   "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+   "link": "https://github.com/GoogleChrome/modern-web-guidance",
+   "summary": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, ` ` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday's ftrain post touched on [0]) Models know about some of these by name, but consistently won't default to using the platform-native solution and instead prefer the incumbent +JS based pattern. We…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50443812",
+   "date": "2026-11-11T02:01+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "513ba4f46366",
+   "title": "Val Town is winding down",
+   "link": "https://blog.val.town/winding-down",
+   "summary": "Hacker News 热度:297 分,76 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50443427",
+   "date": "2026-11-11T01:31+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "b7ccd45d59df",
+   "title": ".name Grandfathered",
+   "link": "https://neil.fraser.name/news/2026/11/10/",
+   "summary": "Previously: .name Termination - https://news.ycombinator.com/item?id=49550772 - Sept 2026 (547 comments) Comments URL: https://news.ycombinator.com/item?id=50442736 Points: 664 # Comments: 154",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50442736",
+   "date": "2026-11-11T00:37+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "033d424edbb0",
+   "title": "Blender 5.3 released with Gaussian Splat support",
+   "link": "https://www.blender.org/download/releases/5-3/",
+   "summary": "Hacker News 热度:421 分,61 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50442426",
+   "date": "2026-11-11T00:15+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "d8eae327396f",
+   "title": "Running AV Reasoning Models Within Onboard Compute and Latency Limits",
+   "link": "https://developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits/",
+   "summary": "Autonomous vehicle (AV) developers need reasoning models that can operate within the compute and latency constraints of an onboard system. Larger models provide...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-11T00:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "298505a3fa12",
+   "title": "Smart home devices should work without the internet",
+   "link": "https://docodethatmatters.com/home-automation-overnight-success/",
+   "summary": "Hacker News 热度:676 分,244 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50441707",
+   "date": "2026-11-10T23:25+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "36cc859306eb",
+   "title": "Agent Substrate: Advancing Kubernetes for Agents at Scale",
+   "link": "https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/",
+   "summary": "AI agents spend most of their time idle, waiting on a human prompt, a tool result or a model response. Kubernetes wasn’t built for that. Running one Pod per...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-10T23:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "a09a84ae922d",
+   "title": "Start and Restore GPU Workloads in Seconds with NVIDIA Snapshot",
+   "link": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+   "summary": "NVIDIA Snapshot, a new open-source component of the NVIDIA DSX AI Factory Platform, makes initialized GPU workloads reusable across inference...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-10T23:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "349ca6c57ed6",
+   "title": "Manage Kubernetes Clusters for GPU Infrastructure with NVIDIA Kubernetes Engine",
+   "link": "https://developer.nvidia.com/blog/manage-kubernetes-clusters-for-gpu-infrastructure-with-nvidia-kubernetes-engine/",
+   "summary": "NVIDIA is announcing two open source projects for building and operating managed Kubernetes services on GPU infrastructure—NVIDIA Kubernetes Engine (NVKE) and...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-10T23:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "6b43ae74a281",
+   "title": "Ableton Live 13",
+   "link": "https://www.ableton.com/en/live/",
+   "summary": "Hacker News 热度:271 分,293 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50439695",
+   "date": "2026-11-10T20:58+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "4133c672faa8",
+   "title": "AlphaProof Code",
+   "link": "https://deepmind.google/blog/introducing-alphaproof-code/",
+   "summary": "Hacker News 热度:571 分,175 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50439193",
+   "date": "2026-11-10T20:11+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "232af69d6692",
+   "title": "JetBrains Renews its Platinum Sponsorship of the Godot Foundation",
+   "link": "https://godotengine.org/article/partners_jetbrains_sponsorship_renewal_2027/",
+   "summary": "JetBrains renews its Godot Foundation sponsorship and expands Godot support in Rider",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-10T20:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "30f899477579",
+   "title": "AI usage generates a fragile codebase",
+   "link": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+   "summary": "Hacker News 热度:358 分,394 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50438318",
+   "date": "2026-11-10T18:25+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "85071e0cfc3b",
+   "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+   "link": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "summary": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing. For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are $0.10/million input tokens and $0.50/million…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T15:28+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "466a4a372617",
+   "title": "Quoting Prompting Claude Fable 5.2",
+   "link": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+   "summary": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...] If you want the model to improve the structure as it works, say that the code is its own: This codebase is yours: what it's for and how it's built are your call, and you'll…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T13:34+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "23463daacfc6",
+   "title": "Yonkers Rises",
+   "link": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+   "summary": "Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and átomos around manhattan and queens and Brooklyn, use openstreetmap mapping data It correctly deduced that \"átomos\" was a mobile keyboard typo for…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T11:53+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "3391455b09f2",
+   "title": "Beyond the product page: Logitech G’s 360° Racing Studio",
+   "link": "https://www.unrealengine.com/spotlights/beyond-the-product-page-logitech-g-s-360-racing-studio",
+   "summary": "Unreal Engine Service Partner The New Face built Logitech G’s 360° Racing Studio, a sim racing showroom you can step into from the browser. See how they put it together with UE5’s Lumen, Nanite, Sequencer, and Pixel Streaming.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-10T08:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "96d23a2a7a37",
+   "title": "10 teams, 3 programs, and 7 years: Efficiently managing 3D assets in defense training",
+   "link": "https://unity.com/blog/3d-asset-management-defense-training",
+   "summary": "i3 Corps maintains military digital twins for years. See how its 10 art teams manage 3D assets with Unity Addressables and Unity Asset Manager.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-10T08:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "0f19ce4f3722",
+   "title": "10 tips for organizing your first video game project with AI",
+   "link": "https://unity.com/blog/how-to-organize-a-game-project-with-ai",
+   "summary": "How to organize a video game project with AI: 10 beginner tips on design briefs, naming, checkpoints, prompt logs, and playtesting – no coding needed.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-10T08:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "6fd06cc5bf95",
+   "title": "Pay for Hugging Face Hub with your Google Cloud Account",
+   "link": "https://huggingface.co/blog/hub-gcp-marketplace",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T08:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "e8f22730f8d6",
+   "title": "Decision Models in Hugging Face",
+   "link": "https://huggingface.co/blog/decision",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-10T08:00+08:00",
+   "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
    "id": "11db4e3a5303",
    "title": "llm-anthropic 0.31",
    "link": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
-   "summary": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to…",
+   "summary": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis . Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! I've added the new models to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2…",
    "source": "Simon Willison",
    "topic": "AI 工具",
    "comments": null,
@@ -5248,105 +5512,6 @@
    "comments": "https://news.ycombinator.com/item?id=50050553",
    "date": "2026-10-12T10:21+08:00",
    "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "20b5cf206455",
-   "title": "Fingerprints are the new cookies",
-   "link": "https://royfish.dev/fingerprints-are-the-new-cookies",
-   "summary": "Hacker News 热度:395 分,197 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50048642",
-   "date": "2026-10-12T06:33+08:00",
-   "first_seen": "2026-10-12T14:58+08:00"
-  },
-  {
-   "id": "d1b540f32c3d",
-   "title": "Google is illegaly cutting forest to build data centers",
-   "link": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-   "summary": "Hacker News 热度:369 分,98 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50048638",
-   "date": "2026-10-12T06:33+08:00",
-   "first_seen": "2026-10-12T14:58+08:00"
-  },
-  {
-   "id": "63f49a0c0f8b",
-   "title": "Passkeys are a trap",
-   "link": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-   "summary": "Hacker News 热度:652 分,379 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50048312",
-   "date": "2026-10-12T05:59+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "94f18cf931b3",
-   "title": "The gap in shared understanding of LLM capability is widening",
-   "link": "https://twitter.com/karpathy/status/2109361546505966046",
-   "summary": "Hacker News 热度:475 分,689 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50047422",
-   "date": "2026-10-12T04:20+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "c2dcb703c47a",
-   "title": "Cartographers of North Korea (2019)",
-   "link": "https://cartographers-nk.wonyoung.so/",
-   "summary": "Hacker News 热度:265 分,49 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50047091",
-   "date": "2026-10-12T03:46+08:00",
-   "first_seen": "2026-10-12T18:44+08:00"
-  },
-  {
-   "id": "8f88c22ed110",
-   "title": "So, you’d like to sell your print issues of The Onion?",
-   "link": "https://theonion.com/archivehunt/",
-   "summary": "Hacker News 热度:328 分,49 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50047055",
-   "date": "2026-10-12T03:43+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "c9481cd1d48a",
-   "title": "Total Annihilation, rebuilt for modern computers",
-   "link": "https://nanolathe.gg",
-   "summary": "Hacker News 热度:528 分,204 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50045984",
-   "date": "2026-10-12T02:04+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "fe94b0c16dbc",
-   "title": "NYC's \"Click to Cancel\" rule is now in effect",
-   "link": "https://www.nyc.gov/main/click-to-cancel",
-   "summary": "Hacker News 热度:484 分,233 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50045946",
-   "date": "2026-10-12T02:01+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "e6ce3a3dfca5",
-   "title": "Terence Tao: Math 2.0 [pdf]",
-   "link": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-   "summary": "Hacker News 热度:410 分,429 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50043026",
-   "date": "2026-10-11T21:16+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
   },
   {
    "id": "bc48e39f8975",
