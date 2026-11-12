@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T09:30+08:00",
+ "updated": "2026-11-12T09:32+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-11T09:30+08:00",
-   "last_new": 0
+   "checked": "2026-11-12T09:32+08:00",
+   "last_new": 9
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,209 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-11T09:30+08:00",
+   "checked": "2026-11-12T09:32+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "a8a654f8ee1d",
+   "title": "Nvidia is preparing to oust Jensen Huang",
+   "link": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+   "summary": "Hacker News 热度:484 分,706 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50459703",
+   "date": "2026-11-12T06:31+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "0a56c359d125",
+   "title": "Gemini Decisions API",
+   "link": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+   "summary": "Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. Jev is text (and JSON) only…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-12T06:03+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "52badfaf3d7a",
+   "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+   "link": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+   "summary": "Hacker News 热度:353 分,337 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50458900",
+   "date": "2026-11-12T05:24+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "f7f8a9140a1b",
+   "title": "aws-emulator",
+   "link": "https://simonwillison.net/2026/Nov/11/aws-emulator/",
+   "summary": "aws-emulator Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project. Swaminathan (Swami) Sivasubramanian wrote about how it came to be in a guest post on Werner Vogels' blog. It currently requires Docker to run on macOS or Windows. I'm hoping they fix that in the future - it would be great…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-12T05:18+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "050acf83d84c",
+   "title": "Browse tools.simonwillison.net by tag",
+   "link": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+   "summary": "Browse tools.simonwillison.net by tag I've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for JavaScript APIs, libraries, and web API hosts used by each tool. The homepage now features tag clouds for browsing by each of those categories of tag: Tags: javascript , tools , ai , generative-ai , llms , claude , vibe-coding",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-12T02:42+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "4b7190847ad2",
+   "title": "Gemini Decisions API",
+   "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+   "summary": "Hacker News 热度:263 分,81 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50456791",
+   "date": "2026-11-12T02:32+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "bae9f030740f",
+   "title": "AWS emulator",
+   "link": "https://github.com/aws/aws-emulator",
+   "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent... https://www.allthingsdistributed.com/2026/11/aws-emulator-an... Comments URL: https://news.ycombinator.com/item?id=50456631 Points: 658 # Comments: 215",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50456631",
+   "date": "2026-11-12T02:21+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "0b0def5b519c",
+   "title": "llm 0.37.2",
+   "link": "https://simonwillison.net/2026/Nov/11/llm/",
+   "summary": "Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been stored, or if a responses…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-12T01:19+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "23bfea80a528",
+   "title": "Validating GPU Platforms with Runtime AI Inventory via the NVIDIA DSX AI Factory",
+   "link": "https://developer.nvidia.com/blog/validating-gpu-platforms-with-runtime-ai-inventory-via-the-nvidia-dsx-ai-factory/",
+   "summary": "As teams deploy and scale AI workloads using NVIDIA Dynamo, Kubeflow, or Slurm, tracking what actually runs requires visibility beyond the platform...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-12T01:00+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "24372cb02d16",
+   "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+   "link": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+   "summary": "Hacker News 热度:407 分,204 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50455394",
+   "date": "2026-11-12T00:38+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "e548c69024db",
+   "title": "Anthropic's IPO roadshow video",
+   "link": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+   "summary": "Anthropic's IPO roadshow video Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. I'm not sure why there's no official video transcript, but here's one that I extracted using MacWhisper. Highlights…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-11T23:11+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "9e5ec930757e",
+   "title": "Hyper-Realistic Sand with WebGL2",
+   "link": "https://av.github.io/safe-sand/",
+   "summary": "Hacker News 热度:307 分,64 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50453288",
+   "date": "2026-11-11T21:39+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "22b2364bb772",
+   "title": "My AI agents found an unmapped Maya site?",
+   "link": "https://pietromiotti.com/latest/maya-site",
+   "summary": "Hacker News 热度:923 分,336 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50452455",
+   "date": "2026-11-11T20:05+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "e883da58ba7e",
+   "title": "Using voltage glitching to unleash the A100 in my mining card",
+   "link": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+   "summary": "Hacker News 热度:262 分,107 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50451903",
+   "date": "2026-11-11T18:48+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "cdb442124a07",
+   "title": "Tim Peters has died",
+   "link": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+   "summary": "https://www.reddit.com/r/Python/s/2Cm5dBcvQw Comments URL: https://news.ycombinator.com/item?id=50450488 Points: 856 # Comments: 94",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50450488",
+   "date": "2026-11-11T15:03+08:00",
+   "first_seen": "2026-11-12T09:32+08:00"
+  },
+  {
+   "id": "09936140454c",
+   "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+   "link": "https://huggingface.co/blog/qvac/botpsy",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-11T13:01+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "6ef166d6627b",
+   "title": "The gods are dead. But not forever: Inside Azra Games’ UnGodly",
+   "link": "https://unity.com/blog/ungodly-azra-games-mobile-rpg-unity",
+   "summary": "UnGodly is a dark-fantasy action RPG built with Unity for iPhone Duo, Android, Mac, PC, and Apple Vision Pro. Azra Games explains its console-like mobile vision",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-11T08:00+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
+  {
+   "id": "375e312bc022",
+   "title": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+   "link": "https://huggingface.co/blog/token-pooling",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-11T08:00+08:00",
+   "first_seen": "2026-11-12T09:00+08:00"
+  },
   {
    "id": "774811001e1e",
    "title": "llm-gemini 0.36",
@@ -303,7 +501,7 @@
    "id": "466a4a372617",
    "title": "Quoting Prompting Claude Fable 5.2",
    "link": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
-   "summary": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...] If you want the model to improve the structure as it works, say that the code is its own: This codebase is yours: what it's for and how it's built are your call, and you'll…",
+   "summary": "Claude Fable 5.2 pays close attention to who owns the code it works on. In Anthropic’s testing on small coding tasks, the model tended to add to the existing structure when the prompt said nothing about ownership or presented the code base as someone else’s, even when that duplicated existing code. When the prompt said the code base was the model’s own, it often consolidated duplicated code and sometimes made related fixes without being asked. If you want the model to improve the structure as…",
    "source": "Simon Willison",
    "topic": "AI 工具",
    "comments": null,
@@ -5314,204 +5512,6 @@
    "comments": null,
    "date": "2026-10-13T08:00+08:00",
    "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "ca6a1b2b1219",
-   "title": "llm-meta-ai 0.2",
-   "link": "https://simonwillison.net/2026/Oct/12/llm-meta-ai/",
-   "summary": "Release: llm-meta-ai 0.2 Meta AI release Muse Wonder (and Muse Wonder Full), their new \"most capable models\". These look like they may be Meta's first Fable class models - Artificial Analysis scores Muse Wonder (Max) as equivalent to GPT-6.1 Sol. I updated my llm-meta-ai plugin for the new model. Here are pelicans for Muse Wonder for the six reasoning levels: minimal, low, medium, high, xhigh, max. This is the max one: For comparison, here are pelicans for Muse 1.3 (released September 2nd) and…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-13T07:58+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "e78781a61745",
-   "title": "AI is a tool and using it well takes skill",
-   "link": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
-   "summary": "Hacker News 热度:332 分,274 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50063427",
-   "date": "2026-10-13T05:40+08:00",
-   "first_seen": "2026-10-13T14:27+08:00"
-  },
-  {
-   "id": "f7b6b498e516",
-   "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-   "link": "https://github.com/openai/codex/issues/48195",
-   "summary": "Hacker News 热度:526 分,270 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50060694",
-   "date": "2026-10-13T02:29+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "a0b4e24ed7b3",
-   "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
-   "link": "https://simonwillison.net/2026/Oct/12/python-3-15/",
-   "summary": "Python 3.15 is here ! Here's the essential What's new in Python 3.15 guide, this year curated by 3.14 and 3.15 release manager Hugo van Kemenade. As someone who builds open source software that works in every supported Python version, I get to say goodbye to Python 3.10 and start embracing features from Python 3.11. First, some highlights from Python 3.15. Explicit lazy imports I'm most excited about Explicit lazy imports from PEP 810 . These let you import modules like so: lazy import json…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-13T02:15+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "a2d0c717b7f1",
-   "title": "AI coding agents generate more code, but not more software",
-   "link": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
-   "summary": "Hacker News 热度:294 分,253 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50059523",
-   "date": "2026-10-13T01:14+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "521fe38cf2bc",
-   "title": "Profiling web-edit with Python 3.15: flame graphs and source heatmaps",
-   "link": "https://simonwillison.net/2026/Oct/12/python-3-15-web-edit-profiling/",
-   "summary": "Research: Profiling web-edit with Python 3.15: flame graphs and source heatmaps I put the new Python 3.15 profiler through its paces by having GPT-6 Astra Extra High in Codex run it against my new web-edit app : I need a Python 3.15 flame graph and heatmap demo of the \"web-edit\" app from PyPI - research first then make me those demos Here's the resulting example flame graph and heatmap . Tags: profiling , python , codex",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-13T00:58+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "f8135c2612d2",
-   "title": "Muse Wonder",
-   "link": "https://research.meta.ai/blog/muse-wonder",
-   "summary": "Hacker News 热度:600 分,324 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50059115",
-   "date": "2026-10-13T00:48+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "2ef68260d657",
-   "title": "A Modern Web App in C",
-   "link": "https://prophitt.me/writing/a-modern-web-app-in-c",
-   "summary": "Hacker News 热度:496 分,204 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50058528",
-   "date": "2026-10-13T00:13+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "07fd80ca31c5",
-   "title": "GLM-Legal",
-   "link": "https://z.ai/blog/glm-legal",
-   "summary": "Hacker News 热度:512 分,298 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50058507",
-   "date": "2026-10-13T00:11+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "f23bd3433012",
-   "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
-   "link": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
-   "summary": "Hybrid models interleave state-space model (SSM) layers with a few attention layers. NVIDIA Nemotron 3, Qwen3.5 through Qwen3.8, Kimi-K3, and GLM-5.3-Flash are...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-13T00:00+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "36f062fd4876",
-   "title": "web-edit 0.1a0",
-   "link": "https://simonwillison.net/2026/Oct/12/web-edit/",
-   "summary": "Release: web-edit 0.1a0 I was working on a project from my phone using Codex Remote when I found myself wanting to edit a credentials file without round-tripping those credentials through the LLM itself. So... I had Codex and GPT-6 Astra Extra High build this Python web app which provides a web UI for viewing and editing files in a folder. It's intended to be run over Tailscale, so I can have an agent start this running and then edit files via my Tailscale network directly from my phone. Here's…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-12T23:54+08:00",
-   "first_seen": "2026-10-13T09:39+08:00"
-  },
-  {
-   "id": "ac4fe3bd44df",
-   "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
-   "link": "https://github.com/h0m3us3r/w1700k-sdr",
-   "summary": "Hacker News 热度:315 分,89 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50055593",
-   "date": "2026-10-12T20:41+08:00",
-   "first_seen": "2026-10-13T09:39+08:00"
-  },
-  {
-   "id": "d4be160b211d",
-   "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
-   "link": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
-   "summary": "https://www.reuters.com/business/retail-consumer/french-supe... , https://www.bbc.com/news/articles/crq5nzxv9q4yo , https://www.lemonde.fr/en/france/article/2026/10/12/french-s... Related: https://www.claroty.com/team82/research/freeze-the-controlle... I think the military commissary's freezers were hacked - https://news.ycombinator.com/item?id=49508506 - Aug 2026 (239 comments) Comments URL: https://news.ycombinator.com/item?id=50055304 Points: 583 # Comments: 749",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50055304",
-   "date": "2026-10-12T20:16+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "05ff00537baa",
-   "title": "Citroen revives the 2CV for an electric age",
-   "link": "https://www.bbc.com/news/articles/c620r33plgppo",
-   "summary": "Hacker News 热度:306 分,342 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50055220",
-   "date": "2026-10-12T20:09+08:00",
-   "first_seen": "2026-10-13T09:39+08:00"
-  },
-  {
-   "id": "8c7d58477385",
-   "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
-   "link": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-   "summary": "https://www.heise.de/en/news/Crypto-thieves-sell-hardware-wa... https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wa... https://www.youtube.com/watch?v=8JnHdr30v4g https://www.youtube.com/watch?v=Nf4FEFlgv3Q https://www.tibane.net/research/ledger-nano-x-implant Comments URL: https://news.ycombinator.com/item?id=50054092 Points: 599 # Comments: 394",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50054092",
-   "date": "2026-10-12T18:09+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "a04b02530723",
-   "title": "Show HN: PS2 games statically recompiled to WebAssembly",
-   "link": "https://github.com/snuri00/ps2-web-recomp",
-   "summary": "Hacker News 热度:270 分,142 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50052251",
-   "date": "2026-10-12T14:46+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "5c33edcbee19",
-   "title": "datasette-ports 0.4",
-   "link": "https://simonwillison.net/2026/Oct/12/datasette-ports/",
-   "summary": "Release: datasette-ports 0.4 My plugin for detecting and listing all Datasette instances on the current machine now works with the latest version, and displays the detected PID as well. Knowing the PID makes it easier to attach the new Python 3.15 profiler . Tags: datasette",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-12T12:57+08:00",
-   "first_seen": "2026-10-13T07:54+08:00"
-  },
-  {
-   "id": "ab5510580859",
-   "title": "Do dentists know what they're doing?",
-   "link": "https://mapwriting.substack.com/p/dentists",
-   "summary": "Hacker News 热度:489 分,360 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50050553",
-   "date": "2026-10-12T10:21+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
   },
   {
    "id": "bc48e39f8975",
