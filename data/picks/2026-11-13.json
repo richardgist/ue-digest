@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-13",
+  "items": [
+    {
+      "title": "Gemini 4 Hydrogen：面向日常编码与 agent 工作流的 Gemini 4 新模型，并在 Antigravity 引入 Orchestrator",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "source": "Google Blog",
+      "published": "2026-11-12",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Google 于 2026-11-12 宣布推出 Gemini 4 Hydrogen。官方将其定位为面向日常编码和 agentic 工作流、强调速度与效率的模型，并把 Gemini 4 Carbon、Gemini 4 Argon 写成负责深层、长程推理的前沿模型；Hydrogen 可单独使用，也可在多模型流程里充当执行引擎。定价按完整 100 万 token 上下文窗口统一定价：每百万输入 token 1.50 美元、每百万输出 token 7.50 美元。官方 AI Studio 文档给出模型 ID 为 gemini-4-hydrogen，思考档为 low / medium / high（默认）以及新增的 xhigh，并写明在 Gemini API 的免费档与付费档均可使用（免费档有速率限制）。同日还介绍 Google Antigravity 中的 Orchestrator：可在同一会话里动态切换 Carbon 与 Hydrogen；文中称在 Terminal-Bench 4.0 上接近 Carbon 的任务成功率，同时平均少消耗 24% 配额、快 19%——这是厂商基准，本机未复现。文中还写可用 Carbon 做协调、Hydrogen 做并行 worker / verifier。相对 Gemini 3.8 Flash，官方称默认 high 档完成任务快 2.5 倍、Terminal-Bench 4.1 分数从 18.2% 提到 57%、虚构陈述减少 5 倍以上，并给出 Artificial Analysis Intelligence Index（默认 high 为 51、相对 Argon 的 50，xhigh 为 54）等多项基准——均为厂商或合作方数据，本机未验证。即日起面向开发者在 Google AI Studio、Gemini API 与 Android Studio 提供；付费 Google AI Pro / Ultra 可在 Antigravity 中试用；企业侧可在 Gemini for business 使用；消费侧进入 Gemini 应用与 Google Search，Gemini in Google Sheets 先面向 Pro / Ultra 及符合条件的商业订阅。免费 Gemini 应用用户会在自动选模认为合适时用到 Hydrogen。本机未调用该模型。",
+      "why_useful": "如果日常编码或 agent 流程还在用 3.8 Flash，或想在 Antigravity 里把 Carbon 的规划与更便宜的执行模型拆开，这篇把模型定位、价格、思考档和上线范围写清楚了。",
+      "try_it": "在 Google AI Studio 或 Gemini API 把 model 设为 gemini-4-hydrogen（默认 thinking_level=high，需要时可改 low / medium / xhigh）。付费 Pro / Ultra 可在 Antigravity 试 Orchestrator。基准与“更快 / 更少幻觉”是官方说法，先在自己的仓库任务上对比后再决定是否替换 3.8 Flash 或 Carbon。"
+    },
+    {
+      "title": "Hugging Face：用 LoRA 微调 TRELLIS.2 的 3D 生成指南，并提供 Jobs / Docker 脚本",
+      "url": "https://huggingface.co/blog/3d-lora-finetuning",
+      "source": "Hugging Face Blog",
+      "published": "2026-11-12",
+      "category": "效率",
+      "direction": "图形渲染",
+      "summary": "Hugging Face 的 Pedro Cuenca 于 2026-11-12 发布 TRELLIS.2 微调指南，提供可在 Hugging Face Jobs 或本地 Docker 运行的预处理与训练容器，用来把 TRELLIS.2 适配到自己的 3D 资产。文章说明 TRELLIS 用统一潜空间再解码到所需格式，TRELLIS.2 加强了结构表示，但二者都缺少面向具体品类的简便适配方式。实验用 Google Scanned Objects 中 188 个鞋类物体：作者称预训练结果鞋型大体正确、鞋底不准，因此只微调控制几何的阶段（稀疏结构 Sparse-Structure Flow DiT，以及细节几何 Shape Flow DiT），冻结材质 / 贴图阶段，并用 PEFT 加 LoRA。开始前需要 HF_TOKEN，且账号须已获准使用门控模型 DINOv3；自有数据要先把网格上传到 Hub。预处理容器用无头 Blender 为每个物体渲染 16 个视角，作者称 188 个物体在 a100-large 上大约 1 小时。镜像为 cr.hf.co/suvadityamuk/trellis2-finetuning-prep:latest 与 cr.hf.co/suvadityamuk/trellis2-finetuning-train:latest。文中在 9 个留出物体上给出对比：带鞋类适配器后面的平均 F-score 从 0.276 升到 0.803，Chamfer 距离从 0.174 降到 0.033，法线一致性从 0.530 升到 0.804，且 9 个物体的 F-score 均更好——这是文章自己的实验结果，本机未复现。训练好的适配器发布在 suvadityamuk/trellis-2-finetune-gso。文末把 Pixal3D、UniLat3D 以及 HunyuanWorld 2.0、NVIDIA Lyra 2.0 等列为后续可能方向，并非本次实验范围。",
+      "why_useful": "若要用图像生成特定品类的网格、又觉得通用 3D 模型在几何细节上不够，这篇把该冻哪一段、Jobs/Docker 怎么跑，以及一组可对照的鞋类适配器写在一起了。",
+      "try_it": "先申请 DINOv3 访问并准备 HF_TOKEN。可用文中的 trellis2-finetuning-prep / trellis2-finetuning-train 容器（Jobs 示例为 --flavor a100-large），先 --config ss 再 --config shape；也可直接用已处理数据 suvadityamuk/gso-footwear-trellis2-latents，或下载 suvadityamuk/trellis-2-finetune-gso 看作者的适配器。文中指标是作者实验，换品类时不必期待同样数字。"
+    },
+    {
+      "title": "Xogot Modeler：把 Godot 内的 3D 建模与灰盒关卡编辑做成 Windows / Linux 插件（Beta）",
+      "url": "https://blog.xogot.com/xogot-modeler-for-godot/",
+      "source": "Xogot Blog",
+      "published": "2026-11-12",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Xogot 的 Joseph Hill 于 2026-11-12 宣布，Xogot Modeler 已作为 Godot 插件向 Windows 与 Linux 提供 Beta。官方把它写成受 Unity ProBuilder 启发的编辑器内建模工具：可从基本体开始，编辑顶点 / 边 / 面，挤出、倒角，用贝塞尔路径勾勒再挤出曲面，赋材质、调 UV，并生成碰撞体，以便关卡、灰盒环境和简单道具直接进可玩关卡。产出是标准 Godot 网格与节点，另存一些供 Modeler 继续编辑的元数据；官方写明不需要专用运行时或私有网格格式。因此在 iPad 或 Mac 上做好的几何，拿到未安装 Modeler 的桌面 Godot 里仍可正常使用，只是没有那些专用编辑工具。Modeler 此前已随 Xogot for Mac（亦为 Beta）和 iPad 版提供；这次用 SwiftGodot 把相对轻量的界面抽成 Godot 扩展。Windows / Linux 插件与 Mac 上的 Xogot for Mac 在 Beta 期间免费。本机未安装该插件验证编辑流程。",
+      "why_useful": "在 Godot 里做白模或关卡块，又不想为这步单独开 Blender 时，可以直接在编辑器里改标准网格，并且和 iPad / Mac 上的 Xogot 工程来回接。",
+      "try_it": "按官方博文在 Windows 或 Linux 的 Godot 里安装 Xogot Modeler 插件（Beta 期免费）；Mac 则用 Xogot for Mac Beta。先用基本体挤出一块可碰撞的灰盒关卡，再把工程放到未装插件的 Godot 里确认网格仍能打开。功能与稳定性以 Beta 说明为准，本机未实测。"
+    },
+    {
+      "title": "Claude Code 2.1.323：实验性 Code Mode（用 JavaScript 调工具），以及插件版本约束与校验",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "source": "GitHub Releases",
+      "published": "2026-11-12",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Claude Code 于 2026-11-12 发布 2.1.323（发布页时间戳 2026-11-12T22:12:13Z）。主要新功能是实验性、需主动开启的 Code Mode：Claude 编写 JavaScript 来调用其工具；发布说明指向 https://code.claude.com/docs/en/code-mode 了解如何为个人或组织打开或关闭，本次抓取该文档地址返回 404，具体开关步骤以日后可打开的文档为准。插件方面，plugin.json 新增 engines[\"claude-code\"]：超出所声明版本范围的插件不会被安装、更新或加载，安装与更新会挑选符合范围的最新版本。claude plugin validate 增加对插件 TypeScript hooks 模块的类型检查（发现项默认为警告，加 --strict 会失败），并校验 mod 的 engine.create hook 增删改的 $ 名词。此外：受管设置支持 CLAUDE_CODE_AUTO_MODE_MODEL，用于第三方供应商上的 Claude Desktop 会话（需 Desktop 含此版本后生效）；模型需要用量积分但积分关闭或用尽时出现选项菜单（停止、改用用量积分、升级）；claude -p 与 SDK 会话中 hooks 耗时较长时每 30 秒发一次进度心跳，以免宿主把回合判为挂起；Artifact 工具的资源上传支持 .docx。还修了再次 /compact 或在 /context 等命令后误压缩尚未回复的消息、恢复会话把新消息拼到旧的中断消息、大文件编辑后下一轮提示内存尖峰、会话中保存设置覆盖刚改的 settings.json、Edit/Bash 在某些 /proc 或设备文件上内存耗尽、worktree 退出后目录已删导致路径错误等问题。本机未升级到 2.1.323，也未打开 Code Mode。",
+      "why_useful": "若在用 Claude Code 写插件或跑长时间 hooks，这次把版本约束、校验变严，以及 Code Mode 这种可选的工具调用方式放到了同一版；也可以先看修复是否命中你遇到的 compact / 大文件内存问题。",
+      "try_it": "升级到 2.1.323 后先看发布说明里的 Code Mode 文档再决定是否 opt-in；组织若要禁用也以该文档为准。写插件可在 plugin.json 加上 engines[\"claude-code\"]，并用 claude plugin validate（必要时加 --strict）检查 TypeScript hooks。长 hooks 的 30 秒心跳在 Desktop 含此版本后才会改变宿主行为。"
+    },
+    {
+      "title": "Unity 6000.0.86f1 LTS：更新 FBX SDK 修复溢出、Licensing Client 1.19.0，并加入 iPhone 18 机型枚举",
+      "url": "https://unity.com/releases/editor/whats-new/6000.0.86f1",
+      "source": "Unity",
+      "published": "2026-11-12",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 于 2026-11-12 发布 6000.0.86f1（三年 LTS，changeset 08914fffc5c2）。改进两项：捆绑的 Autodesk FBX SDK 升到 2020.3.11，官方写明修复模型导入解析中的两处缓冲区溢出（UUM-155199）；Licensing Client 升到 v1.19.0，官方称启动更快，本机未对比。API 方面为 iOS 增加 iPhone 18 Pro、iPhone 18 Pro Max 与 iPhone Duo 的设备世代枚举和屏幕挖孔。修复里对工程较直接的包括：Addressables / Scriptable Build Pipeline 在内容未变时包哈希仍变化、导致玩家重下未改包的问题（UUM-148841，升级后第一次构建受影响的包会拿到新哈希）；Vulkan 在 AMD GPU 上烘 APV 时把场景当成没有几何来布探针（UUM-137732）；APV 斑点（UUM-133626）；DX12 在 AddComputePass 且 EnableAsyncCompute(true) 时 Present 崩溃；图形作业开启时原生插件取到的下一帧 fence 可能早于当前命令列表完成；Vulkan+GraphicsJobs 的 mip streaming；CPU 解压小于 4×4 或边长非 4 倍数的 BC 纹理时内存损坏；批处理模式下连不上 Licensing Client 却以退出码 0 继续无许可运行。已知问题仍列出：Android 从后台返回后返回手势可能直接退出（UUM-159613）、macOS Player 库签名权益、反复异步切场景时 Player 卡住、打开特定 mp4 崩溃等。此版本还加入包 com.unity.steamworks-api@1.0.0。本机未安装该版本验证上述修复。",
+      "why_useful": "还在 6.0 LTS 上的项目，这次同时修了 FBX 导入安全问题、包哈希误变和 AMD+Vulkan 的 APV 布探针错误，升之前值得对照自己的构建与烘焙流程。",
+      "try_it": "在 Unity Hub 安装 6000.0.86f1（changeset 08914fffc5c2）。若用 Addressables / SBP，升级后第一次构建哈希变化是说明里写明的预期行为。AMD+Vulkan 可复查 APV 探针布局。先看页面上的已知问题，再决定是否立刻升生产分支。"
+    }
+  ]
+}
