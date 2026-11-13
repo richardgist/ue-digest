@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-13",
+  "items": [
+    {
+      "title": "UE 5.9 Preview：实验性高斯溅射导入（PLY/SPZ），大文件可把 SH Max Degree 调到 1",
+      "url": "https://radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+      "source": "Radiance Fields",
+      "published": "2026-11-11",
+      "ue_version": "UE 5.9 MegaJam Preview",
+      "summary": "Radiance Fields 指出，Epic 把实验性高斯溅射导入写进了 UE 5.9 MegaJam Preview 的路线图（Design & Compose Worlds）：可把其他软件里做好的 splat 以 PLY 或 SPZ 导入并放进关卡，并与 Niagara 结合做创意控制；Epic 把它称为在场景里展示照片级 3D 内容的高效选项。该能力先出现在 UEFN 43.00。Mukai（@syu_ya23）实测：先启用 Gaussian Splat 插件，再把 PLY/SPZ 拖进内容浏览器即可导入；大文件可能在导入时崩溃，把 SH Max Degree 调到较小值（例如 1）后可以载入。路线图未给出 splat 数量、文件大小或 SPZ 版本上限，Preview 公告本身也没有提到这项功能。",
+      "try_points": [
+        "在 5.9 Preview 副本工程里启用 Gaussian Splat 插件，先拖入较小的 PLY 或 SPZ 做连通性测试，再试 Niagara 控制",
+        "若大文件导入崩溃，按 Mukai 的做法把 SH Max Degree 先降到 1 再导入；官方尚未公布规模与性能数字，不要按生产特性来规划"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 Android 打包时 r.Mobile.VirtualTextures 已弃用，需改用 r.VirtualTextures",
+      "url": "https://forums.unrealengine.com/t/mobile-virtual-texture-error-when-packaging-for-android/2851136",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-05",
+      "ue_version": "UE 5.8",
+      "summary": "有开发者在 UE 5.8 为 Android（ASTC）打包时触发 ensure 并中断：引擎提示 r.Mobile.VirtualTextures 已弃用，应在平台专用的 engine .ini 里改用 r.VirtualTextures。发帖人从 DefaultEngine.ini 删除 r.Mobile.VirtualTextures 后，这一步 ensure 不再出现。同帖随后又遇到 Gradle assembleDebug 失败，该错误在本帖中尚未解决，应视为另一问题。",
+      "try_points": [
+        "在 DefaultEngine.ini 以及各平台/设备 Profile 的 engine ini 里搜索 r.Mobile.VirtualTextures，按引擎提示改到平台专用 ini 中的 r.VirtualTextures",
+        "去掉弃用 CVar 后再打包；若仍报 Gradle/rungradle 错误，不要和这次 Virtual Texture 弃用警告混在一起排查"
+      ],
+      "topics": [
+        "移动端"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T09:32+08:00",
+ "updated": "2026-11-13T08:57+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-12T09:32+08:00",
-   "last_new": 0
+   "checked": "2026-11-13T08:57+08:00",
+   "last_new": 1
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-12T09:32+08:00",
-   "last_new": 0
+   "checked": "2026-11-13T08:57+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,7 +98,7 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-12T09:32+08:00",
+   "checked": "2026-11-13T08:57+08:00",
    "last_new": 9
   },
   "Hugging Face Blog": {
@@ -107,11 +107,143 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-12T09:32+08:00",
-   "last_new": 0
+   "checked": "2026-11-13T08:57+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "40243ae082cb",
+   "title": "llm-gemini 0.37",
+   "link": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+   "summary": "Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: Model Dates Input ($/M) Cached input Output Gemini 4 Carbon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Argon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-13T06:55+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "f40ced1f11ea",
+   "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+   "link": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-13T03:07+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "3933d801d102",
+   "title": "Gemini 4 Hydrogen and Orchestrator",
+   "link": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+   "summary": "Hacker News 热度:281 分,62 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50472260",
+   "date": "2026-11-13T02:52+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "60e527769c74",
+   "title": "Rust 1.100",
+   "link": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+   "summary": "Hacker News 热度:379 分,159 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50472038",
+   "date": "2026-11-13T02:39+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "6a1447dd8c90",
+   "title": "Service degradation on Microsoft 365",
+   "link": "https://status.cloud.microsoft/",
+   "summary": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affe... https://www.reddit.com/r/sysadmin/comments/1xuje83/microsoft... https://downdetector.com/status/microsoft-365/ Comments URL: https://news.ycombinator.com/item?id=50471731 Points: 464 # Comments: 431",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50471731",
+   "date": "2026-11-13T02:20+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "aa44dcddf72c",
+   "title": "Gemini 4 Hydrogen",
+   "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+   "summary": "Hacker News 热度:451 分,292 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50471431",
+   "date": "2026-11-13T02:01+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "a755882e609e",
+   "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+   "link": "https://github.com/simpsoka/zigzag",
+   "summary": "Hacker News 热度:307 分,128 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50470488",
+   "date": "2026-11-13T01:02+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "d8da2629e743",
+   "title": "I'm making LLMs work on small and old devices",
+   "link": "https://github.com/hyperionaidev/smolmaxxing/",
+   "summary": "Hacker News 热度:275 分,92 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50468888",
+   "date": "2026-11-12T23:23+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "195a58014f38",
+   "title": "Jensen Huang resigns",
+   "link": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+   "summary": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-tran... https://www.reuters.com/business/retail-consumer/nvidia-ceo-... , https://www.reuters.com/live/nvidia-live-board-meets-fate-ce... https://www.nytimes.com/live/2026/11/12/business/nvidia-jens... Comments URL: https://news.ycombinator.com/item?id=50467087 Points: 2868 # Comments: 2718",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50467087",
+   "date": "2026-11-12T21:52+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "b9fd564218ef",
+   "title": "Anthropic IPO",
+   "link": "https://ipo.anthropic.com/us/",
+   "summary": "Hacker News 热度:804 分,799 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50465829",
+   "date": "2026-11-12T19:46+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "f57c0429c615",
+   "title": "Why writing correct software is hard and why math (alone) won’t help us (2016)",
+   "link": "https://pron.github.io/posts/correctness-and-complexity",
+   "summary": "Hacker News 热度:351 分,166 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50465352",
+   "date": "2026-11-12T18:28+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "851bd8cda7a9",
+   "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+   "link": "https://huggingface.co/blog/3d-lora-finetuning",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-12T08:00+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
+  },
   {
    "id": "a8a654f8ee1d",
    "title": "Nvidia is preparing to oust Jensen Huang",
@@ -760,6 +892,17 @@
    "comments": null,
    "date": "2026-11-09T12:25+08:00",
    "first_seen": "2026-11-10T08:57+08:00"
+  },
+  {
+   "id": "6b6e5ab81c25",
+   "title": "“Follow the fun”: a crowdfunding Q&A with Catino Town",
+   "link": "https://unity.com/blog/funding-unity-game-catino-town",
+   "summary": "Catino World creator Alex Tino shares how they planned a crowdfunding campaign for Catino Town, a made with Unity game – and raised $25,000 in under 12 hours.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-09T08:00+08:00",
+   "first_seen": "2026-11-13T08:57+08:00"
   },
   {
    "id": "95ce0787146c",
@@ -5250,259 +5393,6 @@
    "first_seen": "2026-10-15T08:53+08:00"
   },
   {
-   "id": "b1f7fd9522e7",
-   "title": "Redesigning source control at Anthropic",
-   "link": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
-   "summary": "Redesigning source control at Anthropic Interesting piece from Anthropic describing why and how they built their own custom alternative to Git, based on the dramatic increase in rate of changes to their code after the past six months. In May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day. They included a chart showing those changes. I had Claude modify their chart ( code here ) to add markers for the public releases of each of…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-14T07:00+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "aeca59265009",
-   "title": "llm-gemini 0.35",
-   "link": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
-   "summary": "Release: llm-gemini 0.35 I added support to llm-gemini for the new Gemini 4 Argon model, made available today via the Gemini API and for customers of their $100/month subscription plan. Here are the low, medium and high pelicans . As expected, they are all excellent: Gemini has a track record of producing great SVGs, and are the only lab where I know their staff have invested in SVG specifically (and who have boasted about their pelicans before.) Here's the \"high\" illustration, which cost me…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-14T06:28+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "2751d0c260e2",
-   "title": "How to Rewrite Apache Spark UDFs for GPU Acceleration with AI Agents",
-   "link": "https://developer.nvidia.com/blog/rewrite-apache-spark-udfs-gpu-acceleration-ai-agents/",
-   "summary": "Enterprise applications have become increasingly demanding. Agentic AI has compounded the need for vast amounts of enterprise data with frequent, complex...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-14T05:33+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "cf35197a5e72",
-   "title": "OpenAI engineer arrested in bugging of executive conference room",
-   "link": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-   "summary": "https://x.com/OpenAINewsroom/status/2110095403198849132 Comments URL: https://news.ycombinator.com/item?id=50078141 Points: 512 # Comments: 436",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50078141",
-   "date": "2026-10-14T04:23+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "426e0285da64",
-   "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
-   "link": "https://guitoro.com/",
-   "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners. No signup or download. 1 minute video demo: https://youtu.be/DtcluMLdSgs I would love feedback on how the strumming feels and sounds. Comments URL: https://news.ycombinator.com/item?id=50077020…",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50077020",
-   "date": "2026-10-14T03:11+08:00",
-   "first_seen": "2026-10-14T09:34+08:00"
-  },
-  {
-   "id": "ac718ea1ccb0",
-   "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-   "link": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-14T01:05+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "b4606c998906",
-   "title": "Gemini 4 Argon",
-   "link": "https://deepmind.google/models/gemini/",
-   "summary": "See also: Gemini 4 Argon for Robotics - https://news.ycombinator.com/item?id=50074869 Comments URL: https://news.ycombinator.com/item?id=50073879 Points: 1179 # Comments: 838",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50073879",
-   "date": "2026-10-14T00:03+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "c8aa0926c12a",
-   "title": "Redesigning source control at Anthropic",
-   "link": "https://www.anthropic.com/engineering/redesigning-source-control",
-   "summary": "Hacker News 热度:683 分,652 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50073633",
-   "date": "2026-10-13T23:49+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "e71c2afb8299",
-   "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-   "link": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
-   "summary": "Hacker News 热度:310 分,165 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50073221",
-   "date": "2026-10-13T23:25+08:00",
-   "first_seen": "2026-10-14T11:04+08:00"
-  },
-  {
-   "id": "5d622d479f9c",
-   "title": "The United Kingdom generates less electricity per person than in the 1970s",
-   "link": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
-   "summary": "Hacker News 热度:268 分,367 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50072994",
-   "date": "2026-10-13T23:12+08:00",
-   "first_seen": "2026-10-14T14:24+08:00"
-  },
-  {
-   "id": "1208903a46a9",
-   "title": "Thunderbird for iOS",
-   "link": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
-   "summary": "Hacker News 热度:407 分,176 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50072913",
-   "date": "2026-10-13T23:07+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "d232d7102cdb",
-   "title": "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform",
-   "link": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/",
-   "summary": "NVIDIA is making the full NVIDIA Run:ai platform available as open source software, giving customers, developers, and ecosystem partners access to...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-13T22:19+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "8e91162d4765",
-   "title": "Quoting Geoffrey Huntley",
-   "link": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/",
-   "summary": "If the agent isn't using my diagnostics library, I could introspect and update AGENTS.md, but there's still a delta, and it'll drift. Instead, I write a pre-commit hook that checks the git diff for direct calls to observability modules that bypass my diagnostics module. Boom: fail the commit, inject a prompt telling the agent to use the diagnostics library. All of a sudden it's ten out of ten. — Geoffrey Huntley , nobody should type code by hand anymore. here's what's left. Tags: coding-agents…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-13T21:32+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "d2abe60c1c48",
-   "title": "New Apple TV 4K",
-   "link": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
-   "summary": "Hacker News 热度:305 分,566 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50071310",
-   "date": "2026-10-13T21:21+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "2fc021f22174",
-   "title": "Owlchemy CEO: VR is still an emerging market because it hasn't passed the 'cafe test'",
-   "link": "https://www.gamedeveloper.com/extended-reality/owlchemy-ceo-vr-is-still-an-emerging-market-because-it-hasn-t-passed-the-cafe-test-",
-   "summary": "Andrew Eiche also claims layoffs are becoming commonplace within the VR industry because some companies refuse to meet audiences with what they want.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-13T21:15+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "75739da64d13",
-   "title": "Apple HomeView",
-   "link": "https://www.apple.com/apple-homeview/",
-   "summary": "Hacker News 热度:709 分,838 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50071017",
-   "date": "2026-10-13T21:02+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "3a734e05e29e",
-   "title": "Wanted to download an ISO, ended up writing a kernel exploit",
-   "link": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
-   "summary": "Author here. Does anyone know what to do with the rest of the drivers? I found at least 13 in-tree drivers with the same bug class. The nasty part is they work fine on x86 and silently corrupt data on arm and other non-coherent archs, and I don't have the hardware to test them. I'd guess that's what the DMA API is for and drivers shouldn't be doing cache maintenance by hand, but I'm not a kernel dev, so maybe I'm missing something. Comments URL: https://news.ycombinator.com/item?id=50070625…",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50070625",
-   "date": "2026-10-13T20:30+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "8913ce292e66",
-   "title": "Firefox Enterprise",
-   "link": "https://www.firefox.com/en-US/enterprise/",
-   "summary": "Hacker News 热度:668 分,270 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50070302",
-   "date": "2026-10-13T20:00+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "36af00926e86",
-   "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
-   "link": "https://eg2.haku.sh/",
-   "summary": "Hacker News 热度:396 分,86 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50069971",
-   "date": "2026-10-13T19:27+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "dd1208e65bb1",
-   "title": "11 year old unsoundness bugs found in Rust borrow checker",
-   "link": "https://github.com/rust-lang/rust/issues/164250",
-   "summary": "Hacker News 热度:706 分,390 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50069499",
-   "date": "2026-10-13T18:27+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "a7c4f3fe4f90",
-   "title": "Character.ai has initiated voluntary Chapter 11 bankruptcy",
-   "link": "https://blog.character.ai/an-update-on-character-ai/",
-   "summary": "https://www.theverge.com/ai-artificial-intelligence/1009802/... https://techcrunch.com/2026/10/13/just-5-years-in-interactiv... https://www.reuters.com/legal/litigation/characterai-files-b... https://variety.com/2026/biz/news/disney-bids-on-character-a... Comments URL: https://news.ycombinator.com/item?id=50068036 Points: 300 # Comments: 270",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50068036",
-   "date": "2026-10-13T15:28+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
-   "id": "197f139f3605",
-   "title": "Hittite royal archive found in Turkey",
-   "link": "https://www.thehistoryblog.com/archives/77107",
-   "summary": "Hacker News 热度:355 分,85 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50067414",
-   "date": "2026-10-13T14:02+08:00",
-   "first_seen": "2026-10-14T14:24+08:00"
-  },
-  {
-   "id": "976cf275ce41",
-   "title": "web-edit 0.1a1",
-   "link": "https://simonwillison.net/2026/Oct/13/web-edit/",
-   "summary": "Release: web-edit 0.1a1 Includes performance optimizations written by Claude Opus 5.5 after I fed it this Python 3.15 profiling report generated by GPT-6 Astra. Tags: profiling , projects",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-13T09:40+08:00",
-   "first_seen": "2026-10-14T07:45+08:00"
-  },
-  {
    "id": "62d28bd2bbfb",
    "title": "Fuse Games uses UE5 to make a fast and authentic Star Wars ™ racing game",
    "link": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
@@ -5676,17 +5566,6 @@
    "topic": "游戏开发",
    "comments": null,
    "date": "2026-09-16T01:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "a2532291440e",
-   "title": "Graphics Programming weekly - Issue 455 - September 13th, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-455/",
-   "summary": "[video] Offscreen Rendering // Vulkan For Beginners #33 demonstrates offscreen rendering in Vulkan as an alternative to rendering directly to the swapchain explains how swapchain rendering can cause additional hardware overhead that doing the lighting pass to an HDR offscreen image avoids covers command buffer refactorings required and integrating the submission into the render queue wayback-archive Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering introduces Gabor Fields…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-13T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
