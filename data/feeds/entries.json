@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T09:29+08:00",
+ "updated": "2026-11-14T09:33+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-13T09:29+08:00",
-   "last_new": 0
+   "checked": "2026-11-14T09:33+08:00",
+   "last_new": 6
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,176 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-13T09:29+08:00",
+   "checked": "2026-11-14T09:33+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "083a708bd10b",
+   "title": "datasette-cluster-map 0.19",
+   "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+   "summary": "Release: datasette-cluster-map 0.19 One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&E , also demonstrating Datasette's recently redesigned facets : Tags: datasette , geospatial , openstreetmap",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-14T07:02+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "c5241673e40c",
+   "title": "datasette-leaflet 0.3",
+   "link": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+   "summary": "Release: datasette-leaflet 0.3 OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to strict-origin-when-cross-origin…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-14T06:30+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "ef347a738ef8",
+   "title": "Faster Scientific Simulations with New FP64 Algorithms in NVIDIA cuBLAS",
+   "link": "https://developer.nvidia.com/blog/faster-scientific-simulations-with-new-fp64-algorithms-in-nvidia-cublas/",
+   "summary": "Many scientific simulations, from molecular chemistry to materials science, spend the majority of their execution time computing high-precision dense general...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-14T06:13+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "fedd4a5b7cb0",
+   "title": "Run GPU-Powered Black Hole Interferometry with NVIDIA cuPhoton",
+   "link": "https://developer.nvidia.com/blog/run-gpu-powered-black-hole-interferometry-with-nvidia-cuphoton/",
+   "summary": "Imaging black holes is challenging because they are distant and appear tiny in the sky—for example, M87*’s observed ring spans just 42 microarcseconds. The...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-14T05:17+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "50d8c7579c71",
+   "title": "FAA issues national ground stop",
+   "link": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+   "summary": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a... https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio... Comments URL: https://news.ycombinator.com/item?id=50489641 Points: 1284 # Comments: 772",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50489641",
+   "date": "2026-11-14T05:05+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
+  },
+  {
+   "id": "d0efad792377",
+   "title": "Run Native DLA Inference in Python on NVIDIA Jetson AGX Orin Using cuDLA",
+   "link": "https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla/",
+   "summary": "AI applications at the edge often need to run multiple neural networks within limited compute and power budgets. NVIDIA Deep Learning Accelerator (DLA)...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-14T02:57+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "bcbb8499693b",
+   "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+   "link": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+   "summary": "Hacker News 热度:282 分,160 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50487864",
+   "date": "2026-11-14T02:40+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
+  },
+  {
+   "id": "b851127b09cf",
+   "title": "It Takes 16 Clicks for a Student to Open a PowerPoint on an iPad",
+   "link": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
+   "summary": "Hacker News 热度:277 分,140 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50487522",
+   "date": "2026-11-14T02:18+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
+  },
+  {
+   "id": "e956ed049388",
+   "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+   "link": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-14T02:00+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "fca2b3d26517",
+   "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+   "link": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+   "summary": "Hacker News 热度:323 分,91 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50486748",
+   "date": "2026-11-14T01:30+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
+  },
+  {
+   "id": "89f29999c796",
+   "title": "XYBench: Helping with the problem behind the question",
+   "link": "https://huggingface.co/blog/allenai/xybench",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-14T01:02+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "56f1f1f5ae2b",
+   "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
+   "link": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+   "summary": "Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no longer fit on one machine. Two NVIDIA DGX Stations...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-14T01:00+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "7224e4ca5094",
+   "title": "Adapt Human Motion for Robots with NVIDIA SOMA Retargeter",
+   "link": "https://developer.nvidia.com/blog/adapt-human-motion-for-robots-with-nvidia-soma-retargeter/",
+   "summary": "Human motion offers roboticists a great starting point for teaching humanoid robots how to move. A human demonstration captures the coordination and timing...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-14T01:00+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "1c1521c176fd",
+   "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+   "link": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-13T22:05+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
+  },
+  {
+   "id": "01c0f13ac57b",
+   "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+   "link": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+   "summary": "Hacker News 热度:447 分,307 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50482379",
+   "date": "2026-11-13T20:10+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
+  },
   {
    "id": "40243ae082cb",
    "title": "llm-gemini 0.37",
@@ -122,6 +287,17 @@
    "comments": null,
    "date": "2026-11-13T06:55+08:00",
    "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "ff8ba1826806",
+   "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+   "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+   "summary": "Hacker News 热度:671 分,198 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50474959",
+   "date": "2026-11-13T06:03+08:00",
+   "first_seen": "2026-11-14T09:33+08:00"
   },
   {
    "id": "f40ced1f11ea",
@@ -243,6 +419,17 @@
    "comments": null,
    "date": "2026-11-12T08:00+08:00",
    "first_seen": "2026-11-13T08:57+08:00"
+  },
+  {
+   "id": "e06de559bc5d",
+   "title": "Rules, states, and win conditions in video games: a guide",
+   "link": "https://unity.com/blog/video-game-rules-states-win-conditions",
+   "summary": "Learn how rules, game states, and win and lose conditions work in video games, with simple examples and a five-step method to define yours before you build.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-12T08:00+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
   },
   {
    "id": "a8a654f8ee1d",
@@ -969,6 +1156,17 @@
    "comments": "https://news.ycombinator.com/item?id=50411961",
    "date": "2026-11-08T18:22+08:00",
    "first_seen": "2026-11-09T09:34+08:00"
+  },
+  {
+   "id": "e364527b286d",
+   "title": "Graphics Programming weekly - Issue 462 - November 8th, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-462/",
+   "summary": "Real-Time Path Tracing in Games outlines best practices and architecture strategies for real-time path tracing in modern game engines recommends budgeting rays per signal rather than per pixel, combining shallow bounces with radiance caching and ReSTIR discusses acceleration structure updates, firefly management, and tuning ray dispatch alongside denoising and upscaling wayback-archive AMD supports the latest DirectX 12 Agility SDKs, including new DXR features covers AMD driver support for…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-08T12:00+08:00",
+   "first_seen": "2026-11-14T09:00+08:00"
   },
   {
    "id": "51524ff18223",
@@ -5171,215 +5369,6 @@
    "comments": null,
    "date": "2026-10-15T08:00+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "dde8b65065e5",
-   "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
-   "link": "https://huggingface.co/blog/meta-muse-spark-open",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T08:00+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "9cb368175a72",
-   "title": "Welcome FLUX.3 Image Klein in Diffusers",
-   "link": "https://huggingface.co/blog/flux-3",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T08:00+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "f5fb7379ce8c",
-   "title": "Ubisoft to close Trials studio RedLynx, downsize Ubisoft Singapore",
-   "link": "https://www.gamedeveloper.com/business/ubisoft-to-close-trials-studio-redlynx-downsize-ubisoft-singapore",
-   "summary": "The decisions will ultimately impact over 120 jobs between the two studios as part of Ubisoft's ongoing restructuring efforts.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-15T06:08+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "22ee0a608ca6",
-   "title": "Tree Appreciator",
-   "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
-   "summary": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode), where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated trees and the game mechanics is about appreciating the differences between them. Think hard about how to make sure it is both fun and beautiful. Somewhat embarrassingly given my recent talk , I've found that telling Opus 5.5…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T05:23+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "577b8ed15ecf",
-   "title": "OpenCode 2.0",
-   "link": "https://anoma.ly/notes/opencode-2-0/",
-   "summary": "Hacker News 热度:376 分,160 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50094994",
-   "date": "2026-10-15T04:48+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "c2ac821d2fe0",
-   "title": "Anthropic's Scion is heavily inspired by Mononoke",
-   "link": "https://sunshowers.io/posts/anthropic-mononoke/",
-   "summary": "Hacker News 热度:284 分,117 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50094694",
-   "date": "2026-10-15T04:30+08:00",
-   "first_seen": "2026-10-15T11:48+08:00"
-  },
-  {
-   "id": "cd7e5bc940b4",
-   "title": "No more hand-written code? Epic's Disney project reportedly shifts to 'AI-First' development",
-   "link": "https://www.gamedeveloper.com/programming/no-more-hand-written-code-epic-s-disney-project-reportedly-shifts-to-ai-first-development",
-   "summary": "Developers working on the upcoming Star Wars and Marvel shooter have been reportedly instructed to lean heavily on AI, especially during the creation of code and art.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-15T04:24+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "9b862234026a",
-   "title": "Things to know when you get cancer",
-   "link": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
-   "summary": "Hacker News 热度:927 分,229 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50093568",
-   "date": "2026-10-15T03:26+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "db3068f40d10",
-   "title": "Suicide rates highest ever among middle-aged men",
-   "link": "https://www.telegraph.co.uk/news/2026/10/13/suicide-rates-highest-ever-among-middle-aged-men/",
-   "summary": "Hacker News 热度:321 分,413 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50093180",
-   "date": "2026-10-15T03:03+08:00",
-   "first_seen": "2026-10-15T09:34+08:00"
-  },
-  {
-   "id": "cfae3cbf95e1",
-   "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
-   "link": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
-   "summary": "Hacker News 热度:310 分,207 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50092730",
-   "date": "2026-10-15T02:37+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "89afa2cf8a13",
-   "title": "Banks are now trying to offload the AI data center debt they just underwrote",
-   "link": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
-   "summary": "Hacker News 热度:325 分,232 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50092664",
-   "date": "2026-10-15T02:32+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "3ef98b9b51a3",
-   "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-   "link": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
-   "summary": "Hacker News 热度:848 分,466 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50091788",
-   "date": "2026-10-15T01:45+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "cf2263059249",
-   "title": "Google is silently linking your phone number across all signed-in accounts",
-   "link": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
-   "summary": "Hacker News 热度:419 分,106 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50090349",
-   "date": "2026-10-15T00:28+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "8f4e222dccc1",
-   "title": "AI is mass decompiling games. That's both awesome and scary.",
-   "link": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
-   "summary": "AI is mass decompiling games. That's both awesome and scary. Indie game developer Popcar talks about the recent wave of AI-powered decompilation of existing games, enabling weird mashups between existing games, and producing a boom in game preservation projects to get old games working on new hardware (often in a browser using WebAssembly). I like how this piece captures both the positives and the negatives of this new development: Most people already realized the scary part by now. If AI can…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T00:26+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "5ea4c0c66169",
-   "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
-   "link": "https://huggingface.co/blog/allenai/hiro-acev2",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T00:12+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "c6738337af08",
-   "title": "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym",
-   "link": "https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/",
-   "summary": "AI agents offer remarkable productivity gains in complex chip design workflows, but their tendency to generate plausible yet incorrect artifacts makes...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-15T00:10+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "e415360fbda0",
-   "title": "Americans' social activity has steeply declined in the past 30 years",
-   "link": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
-   "summary": "Hacker News 热度:276 分,282 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50089921",
-   "date": "2026-10-15T00:09+08:00",
-   "first_seen": "2026-10-15T11:48+08:00"
-  },
-  {
-   "id": "1e167671ecbc",
-   "title": "Passkeys are not a trap",
-   "link": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
-   "summary": "Hacker News 热度:517 分,680 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50088935",
-   "date": "2026-10-14T23:15+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
-  },
-  {
-   "id": "ecd2c08918b6",
-   "title": "How Amazon pushes up prices all across the Internet",
-   "link": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
-   "summary": "Hacker News 热度:749 分,602 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50084757",
-   "date": "2026-10-14T17:28+08:00",
-   "first_seen": "2026-10-15T08:53+08:00"
   },
   {
    "id": "e0683cb7efe8",

@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-14",
+  "items": [
+    {
+      "title": "Unity Hub 4.0.0：重写为原生应用，命令行改走 Unity CLI，并改进 Git / SSH 支持",
+      "url": "https://unity.com/unity-hub/release-notes",
+      "source": "Unity",
+      "published": "2026-11-13",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 于 2026-11-13 发布 Unity Hub 4.0.0 正式版。官方发行说明写明：Hub 已重写为原生应用，保留原有常用功能，并称启动更快、下载体积约为原来的四分之一——这是厂商说法，本机未测量。更新会替换已安装的 Unity Hub 3。原先 Hub 的命令行模式（--headless）改由 Unity CLI 取代，说明里举例把旧命令对应到 unity install、unity editors 等；若仍要使用 Hub CLI 命令，官方建议安装 Hub 3 的最后一版 3.22.6。此版本把捆绑的 Unity CLI 更新到 1.0.0。新增 Settings > Security & Privacy 中的 “Send crash reports” 开关，默认开启、无需重启，也覆盖捆绑的 Unity CLI。Projects / Templates / Installs 页可用 Cmd+F（Windows / Linux 为 Ctrl+F）跳到搜索框。Linux 除 AppImage、.deb 和 .rpm 外，新增 Flatpak 发行。使用 High Definition Render Pipeline（HDRP）的项目和模板会在所有 Editor 版本上显示弃用警告；新建项目流程里，HDRP 模板会排到最后且不会被默认选中。源代码管理方面：Hub 改用操作系统凭据管理器或 Git Credential Manager 登录 GitHub / GitLab，若没有凭据助手，可在上述设置里安装；现支持 SSH 远程，并在连接失败时说明原因；可为每个组织和每个项目使用不同的 Git 账号；能识别你在终端、IDE 或浏览器里完成的登录；克隆仓库会显示真实进度，Cancel 会停止下载，若已安装 Git LFS，LFS 文件会以真实文件到达。Installs 页可为 Editor 复制路径；在 Hub 外用 unity uninstall 等移除的 Editor 或模块，会在数秒内从该页消失；在 Hub 外变更的许可证也会更新列表。2017.2 到 2018.4 的 Editor 不再从 Hub 获取账号信息，会显示为已退出登录，但项目仍可从 Hub 打开。若 Editor 或其他应用请求打开不在项目列表中的文件夹，Hub 会先询问。说明还写改进了 Windows 上 Hub 更新、模块安装以及从 Hub 3 升级的安全性；通过共享 Hub 链接切换分支时，非 GitHub / GitLab HTTPS 仓库需直接在 Git 里切换。本机未安装该版本。",
+      "why_useful": "如果你日常用 Hub 管多个 Editor 和 Git 仓库，4.0 把命令行、SSH、多账号凭据和 HDRP 弃用提示写进了正式版，升级前需要先看自己的脚本是否还在用 --headless。",
+      "try_it": "从现有 Hub 更新，或打开官方发行说明页安装 4.0.0。更新会替换 Hub 3；若自动化仍依赖 unity-hub --headless，按说明改用 Unity CLI，或暂时留在 3.22.6。新建项目时注意 HDRP 模板不再默认选中。启动更快、体积约四分之一是官方说法，本机未验证。"
+    },
+    {
+      "title": "llama.cpp v1.0.0：libllama / libggml 进入语义化版本，用不兼容的主版本号标出 API / ABI 变更",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "source": "Hugging Face Blog",
+      "published": "2026-11-13",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Hugging Face 博客于 2026-11-13 宣布 llama.cpp 与底层张量库 ggml 同时发布 v1.0.0：llama.cpp v1.0.0 对应 libllama（公开头文件在 llama.cpp/include/），ggml v1.0.0 对应 libggml（头文件在 ggml/include/）。官方把这次 1.0.0 定位为对下游集成者的承诺：此后 llama.cpp 和 ggml 会在出现 API / ABI 不兼容时提升主版本号。文中给出适用于 ggml-org 采用语义化版本项目的规则：MAJOR 表示 ./include 下公开 C API 的破坏性变更，MINOR 表示向后兼容的功能、后端更新、模型支持或 API 新增，PATCH 表示不改 API 的缺陷修复。分发渠道列出预发布产物（Linux、macOS、Windows、Android、iOS）、Docker、Debian、Homebrew、conda-forge、MacPorts、Winget 以及面向 iOS / macOS 的 XCFramework。文中还写 ggml 后端可编译为动态库并在运行时按需加载；并称目前支持 150 种以上模型架构变体以及所有主流投机解码方法——这是项目自述，本机未清点。GitHub 仓库 ggml-org/llama.cpp 的 v1.0.0 发行版标记为正式版（非 pre-release），published_at 为 2026-11-13T10:20:19Z。本机未编译或运行该版本。",
+      "why_useful": "如果你把 llama.cpp 当库嵌入本地或跨平台推理，1.0.0 第一次把公开 C API 的兼容性边界写进语义化版本，升级和打包时可以按主版本来锁依赖。",
+      "try_it": "从 GitHub 的 v1.0.0 发行版，或文中列出的 Homebrew / conda-forge / Winget / Docker / Debian 等渠道安装。若作为库使用，按文中规则锁定主版本，并对照 llama.cpp/include/ 与 ggml/include/ 的公开头文件。本机未编译验证。"
+    },
+    {
+      "title": "Claude Code 2.1.325：修复 zstd 解码安全问题，沙箱内 Bash 默认改走正常权限流程",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "source": "Claude Code",
+      "published": "2026-11-13",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Anthropic 于 2026-11-13 发布 Claude Code 2.1.325（GitHub 发行时间 2026-11-13T20:40:01Z）。官方 changelog 与 GitHub 发行说明写明：修复了 zstd 压缩响应在解码时的一个安全问题，但未给出 CVE 或漏洞细节，本机也未分析补丁。行为上，沙箱内的 Bash 命令默认改走正常权限流程，不再自动放行；若要恢复升级前的免询问，需设置 sandbox.autoAllowBashIfSandboxed: true；由托管设置打开沙箱时，该开关要写在优先级最高的托管来源里。只读 git 命令在非本项目、也未被信任的仓库里会先询问；要用 --add-dir 指出该仓库才能免询问，不能靠 additionalDirectories 设置。定时任务和 /loop 在运行声明了 allowed-tools 或 hooks 的 skill 前会询问；若要无人值守，需把 Skill(name) 加到 permissions.allow。Desktop / IDE / SDK 主机里的 “Always allow” 只有在保存规则后还能再次放行同一命令时，才会单独提供一条规则。沙箱会拒绝写入已添加目录中的 .claude 设置、skills、agents、commands 和 hooks（与启动目录已有的保护一致）。隔离 worktree 会话或 agent 会被拒绝执行 git bisect run、git maintenance register|start 以及 scalar 的初始化命令。插件 MCP 包（.mcpb、.dxt）改为解压到插件目录；pluginDigests 已弃用并被忽略。此外，VS Code 增加了与终端一致的提示建议（Tab 接受，可用 promptSuggestionEnabled: false 关闭）、不创建 API key 的 Console 登录，以及组织策略拦截请求时提示用 /rewind 改写或 /clear。本机未升级验证。",
+      "why_useful": "这是一次带安全修复和默认权限收紧的更新：还在用沙箱自动放行 Bash、定时 skill 或只读 git 的人，升级后行为会变，需要先看自己的允许规则。",
+      "try_it": "升级到 2.1.325。若你依赖沙箱内 Bash 自动通过，升级后会被正常询问；需要旧行为时再打开 sandbox.autoAllowBashIfSandboxed。定时 skill、额外目录里的只读 git 也要按新规则检查 permissions.allow 或 --add-dir。发行说明未展开 zstd 问题细节，本机未复现。"
+    },
+    {
+      "title": "MatrixSplat：把高维特征 3DGS 渲染映射到 GPU Tensor Core 的矩阵并行框架（论文）",
+      "url": "https://arxiv.org/abs/2611.15153",
+      "source": "arXiv",
+      "published": "2026-11-11",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "论文 MatrixSplat（arXiv:2611.15153）于 2026-11-11 提交。作者认为现有 3D Gaussian Splatting 渲染管线与现代 GPU 不够匹配：按深度排序的 alpha 合成会在每个像素上引入强串行依赖，执行以标量 FMA 为主，难以用上 Tensor Core 一类矩阵单元；在需要累积高维语义特征时，计算和显存开销会进一步上升。方法上，论文改用与顺序无关的加权累积，把特征渲染转成面向矩阵的计算，并给出三项设计：基于 tile 的 splatting，把特征累积映射到 warp 级矩阵乘加（MMA）以使用 Tensor Core；按 warp 粒度打包 Gaussian，以减轻可见性不规则并提高特征复用；以及惰性、按通道分批取特征的流水线，用来减轻共享内存压力并让访存与矩阵计算重叠。实验在 Mip-NeRF 360、LERF 和 3D-OVS 上进行。摘要给出的作者数据是：相对 3DGS 最高约 3.8×、相对 TC-GS 约 2× 加速，并称保持了渲染质量与语义精度；高维特征的 render-kernel 时间最高可降约 36.7×；接入已有快速渲染器时还能再获得 1.69–2.84×。附录表还给出在 RTX 4090、RTX 6000 Ada 和 H100 上相对 3DGS 约 2.33–2.37×、相对 FlashGS 约 2.31–2.47× 的帧率对比。以上均为论文自报结果，本机未复现。本次打开的 arXiv 摘要页与 HTML 全文未提供公开代码仓库。",
+      "why_useful": "如果你在做带语义特征的 3DGS 实时渲染，并关心 Tensor Core 利用率，这篇把 alpha 合成的串行瓶颈和矩阵化改写写得很具体，可对照自己的 tile 渲染器看是否值得借鉴。",
+      "try_it": "先读方法与实验设置，核对自己场景是彩色光栅还是高维特征累积。速度与质量数字都是作者基准，本机未复现；摘要页也未给出代码，若后续开源再在同类 GPU 上对比 3DGS / FlashGS。"
+    }
+  ]
+}
