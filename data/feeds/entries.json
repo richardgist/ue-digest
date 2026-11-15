@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T09:33+08:00",
+ "updated": "2026-11-15T09:27+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-14T09:33+08:00",
-   "last_new": 6
+   "checked": "2026-11-15T09:27+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,88 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-14T09:33+08:00",
+   "checked": "2026-11-15T09:27+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "b11740ea7618",
+   "title": "datasette-llm 0.1a11",
+   "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+   "summary": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-15T07:59+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "262b49880bf5",
+   "title": "SpaceX catches the Starship to end Flight 15",
+   "link": "https://www.spacex.com/launches/starship-flight-15",
+   "summary": "https://x.com/SpaceX/status/2121316300702056595 https://youtu.be/jHlpfNSpBmw?t=3233 Comments URL: https://news.ycombinator.com/item?id=50500963 Points: 658 # Comments: 451",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50500963",
+   "date": "2026-11-15T05:22+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "53fe36f5b9b9",
+   "title": "Lovable apps expose passport details and more than 200K private messages",
+   "link": "https://www.crissyfield.de/research/lovable-en/",
+   "summary": "Hacker News 热度:630 分,263 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50499017",
+   "date": "2026-11-15T01:43+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "078e930eea0b",
+   "title": "datasette-vega 0.7",
+   "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+   "summary": "Release: datasette-vega 0.7 A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette Lite, the live…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-15T01:09+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "dcd39242759b",
+   "title": "Italy fines Meta $887M over Android users' data access",
+   "link": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
+   "summary": "Hacker News 热度:329 分,219 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50497009",
+   "date": "2026-11-14T21:48+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "87ac7d5553b1",
+   "title": "KDE: The documentary [video]",
+   "link": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+   "summary": "Hacker News 热度:380 分,82 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50496976",
+   "date": "2026-11-14T21:43+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
+  {
+   "id": "2e58456e0e27",
+   "title": "Tech companies are trying to shift the concept of privacy again",
+   "link": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+   "summary": "Hacker News 热度:460 分,174 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50496602",
+   "date": "2026-11-14T20:45+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
+  },
   {
    "id": "083a708bd10b",
    "title": "datasette-cluster-map 0.19",
@@ -760,6 +837,17 @@
    "comments": null,
    "date": "2026-11-10T23:00+08:00",
    "first_seen": "2026-11-11T08:57+08:00"
+  },
+  {
+   "id": "94c052c3d6ce",
+   "title": "Why get an expensive Pi when I have an old phone?",
+   "link": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
+   "summary": "Hacker News 热度:504 分,280 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50440709",
+   "date": "2026-11-10T22:16+08:00",
+   "first_seen": "2026-11-15T08:57+08:00"
   },
   {
    "id": "6b43ae74a281",
@@ -5085,215 +5173,6 @@
    "first_seen": "2026-10-17T08:13+08:00"
   },
   {
-   "id": "c964e1de9b26",
-   "title": "How Soft Crunch Games built Foxy Dumplings for every platform",
-   "link": "https://unity.com/blog/foxy-dumplings-cross-platform-development",
-   "summary": "See how the team behind Foxy Dumplings built one Unity project for PC, console, and mobile, covering platform abstraction, input, profiling, and Cloud Save.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-16T08:00+08:00",
-   "first_seen": "2026-10-17T08:13+08:00"
-  },
-  {
-   "id": "e0cc4bc86ef7",
-   "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-   "link": "https://huggingface.co/blog/reflection-beam",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-16T08:00+08:00",
-   "first_seen": "2026-10-17T08:13+08:00"
-  },
-  {
-   "id": "7ac30e8d183c",
-   "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
-   "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-16T04:34+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "8ce976bc500a",
-   "title": "What I self-host",
-   "link": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
-   "summary": "Hacker News 热度:396 分,247 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50109715",
-   "date": "2026-10-16T04:23+08:00",
-   "first_seen": "2026-10-16T09:33+08:00"
-  },
-  {
-   "id": "4196cbff913c",
-   "title": "Chirp Pong",
-   "link": "https://simonwillison.net/2026/Oct/15/chirp-pong/",
-   "summary": "Tool: Chirp Pong Another game experiment - I wanted to see if it was feasible to have a two player game on two separate phones running in static HTML where the networking code uses chirps sent via the microphone. It seems to work! Build a two player competitive pong like game where two players use their phones close to each other and the game state is sent via audio noises which the web microphone API can interpret - but add graphical and gameplay twists to make it a lot more fun and intertwine…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-16T03:47+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "9d5b14376ed1",
-   "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
-   "link": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
-   "summary": "Hacker News 热度:297 分,137 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50108872",
-   "date": "2026-10-16T03:21+08:00",
-   "first_seen": "2026-10-16T14:27+08:00"
-  },
-  {
-   "id": "d25df66cdec6",
-   "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
-   "link": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
-   "summary": "Always-on agents are taking on longer, more complex enterprise workflows. A single request can involve reading a document, checking information across sources,...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-16T02:01+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "51728fcd84ed",
-   "title": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72",
-   "link": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
-   "summary": "Meta launches Muse Spark Open, a coding-optimized 816B mixture-of-experts (MoE) model with 42B active parameters and a 1M token context window. Trained on...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-16T02:00+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "0149b73b0a22",
-   "title": "Muse Spark Open",
-   "link": "https://research.meta.ai/blog/muse-spark-open",
-   "summary": "https://dev.meta.ai/resources/blog/build-with-muse-spark-ope... https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-... Comments URL: https://news.ycombinator.com/item?id=50107379 Points: 746 # Comments: 385",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50107379",
-   "date": "2026-10-16T01:47+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "ea3cd4d29a33",
-   "title": "Jev meets the Trolley Problem",
-   "link": "https://zachlandes.com/trolley-problem/",
-   "summary": "Hacker News 热度:397 分,173 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50106023",
-   "date": "2026-10-16T00:24+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "f93431ea6078",
-   "title": "Neural networks are clean",
-   "link": "https://already-clean.goodfire.com/",
-   "summary": "https://twitter.com/nickcammarata/status/2110757819427574056 Comments URL: https://news.ycombinator.com/item?id=50105647 Points: 615 # Comments: 227",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50105647",
-   "date": "2026-10-16T00:04+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "e1d964211838",
-   "title": "Krea 3 – An image model built for editing at scale",
-   "link": "https://www.krea.ai/krea-3",
-   "summary": "Hacker News 热度:289 分,90 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50105648",
-   "date": "2026-10-16T00:04+08:00",
-   "first_seen": "2026-10-16T14:27+08:00"
-  },
-  {
-   "id": "8daebafc7d3c",
-   "title": "Steam Client is now faster than Epic's new vibe coded launcher",
-   "link": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
-   "summary": "Hacker News 热度:284 分,287 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50105635",
-   "date": "2026-10-16T00:03+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "41ff4a7be6a2",
-   "title": "Celebrating 70 Years of Fortran",
-   "link": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
-   "summary": "Hacker News 热度:256 分,107 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50104726",
-   "date": "2026-10-15T23:03+08:00",
-   "first_seen": "2026-10-16T14:27+08:00"
-  },
-  {
-   "id": "07b45b1b8d74",
-   "title": "Caves of Qud: Diaspora breaks new ground by being the first early access DLC release on Steam",
-   "link": "https://www.gamedeveloper.com/pc/caves-of-qud-diaspora-breaks-new-ground-by-being-the-first-early-access-dlc-release-on-steam",
-   "summary": "The roguelike RPG is no longer in Steam Early Access, but its upcoming DLC Diaspora will be, marking untrodden ground for the in-development program.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-15T22:00+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "3e45210742df",
-   "title": "I know why the mathematicians weep",
-   "link": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
-   "summary": "Hacker News 热度:342 分,560 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50103630",
-   "date": "2026-10-15T21:44+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "0c29239b4cf4",
-   "title": "Wayland desktop for Linux with skeuomorphic design",
-   "link": "https://github.com/fyzugx/DEsk",
-   "summary": "Hacker News 热度:569 分,227 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50103338",
-   "date": "2026-10-15T21:23+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "8b3cd85dbde5",
-   "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
-   "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
-   "summary": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO The phrase \"told investors\" appears four times in this FT article, which reports on Anthropic's day of hosting investors on Wednesday. Lots of details in here from \" people with knowledge of the matter \". Key things I learned from the article: Q1 revenue (Jan/Feb/Mar) was \"about $4.8bn\" Q2 (Apr/May/Jun) was $11.5bn Q3 (Jul/Aug/Sep) was $16.8bn In Q3: $1.70 in revenue for every $1 spent on \"computing power\"…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T21:04+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "4cb672cd326f",
-   "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
-   "link": "https://libreboot.org/news/libreboot2610.html",
-   "summary": "Hacker News 热度:274 分,165 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50102923",
-   "date": "2026-10-15T20:52+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
    "id": "21dbe13f7991",
    "title": "Dev snapshot: Godot 4.8 beta 1",
    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
@@ -5303,61 +5182,6 @@
    "comments": null,
    "date": "2026-10-15T20:00+08:00",
    "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "c1251d11ff93",
-   "title": "Show HN: Unfenced – Land for sale that borders public land",
-   "link": "https://unfenced.land/",
-   "summary": "Hacker News 热度:291 分,191 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50102247",
-   "date": "2026-10-15T19:38+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "7f9b279c29bc",
-   "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
-   "link": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-   "summary": "https://www.theguardian.com/technology/2026/oct/15/israeli-f... https://www.theverge.com/tech/1011956/discover-tech-zero-cli... Comments URL: https://news.ycombinator.com/item?id=50101813 Points: 440 # Comments: 590",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50101813",
-   "date": "2026-10-15T18:43+08:00",
-   "first_seen": "2026-10-16T09:01+08:00"
-  },
-  {
-   "id": "f2c18060258b",
-   "title": "Apertus 1.5 Release Notes",
-   "link": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T17:08+08:00",
-   "first_seen": "2026-10-20T09:30+08:00"
-  },
-  {
-   "id": "af0bd42138e9",
-   "title": "Furifont, a Japanese font that shows furigana",
-   "link": "https://furifont.antfu.me/",
-   "summary": "Hacker News 热度:259 分,53 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50100994",
-   "date": "2026-10-15T16:48+08:00",
-   "first_seen": "2026-10-18T09:32+08:00"
-  },
-  {
-   "id": "ffa5b2377d15",
-   "title": "LaTeX renderer",
-   "link": "https://simonwillison.net/2026/Oct/15/latex/",
-   "summary": "Tool: LaTeX renderer Inspired by Paul Ford and Aboard Foundary's new web app Tiny Little Office , which provides a suite of web app content editors (a Word Processor, Outliner, Presentation Builder, Spreadsheet, Calculator, Drawing Tool, Diagram Maker, Animator, Calendar, and Trip Planner). Tiny Little Office's signature trick is to store all of the document data in the #fragment section of the URL, so every document created using it becomes a bookmarkable and shareable link. It also has an…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-15T10:07+08:00",
-   "first_seen": "2026-10-17T08:13+08:00"
   },
   {
    "id": "4e25e9a8ba87",
@@ -5533,28 +5357,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-16T18:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "5b819d83c7b2",
-   "title": "Dev snapshot: Godot 4.8 dev 6",
-   "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-6/",
-   "summary": "Hotfix for macOS and Android",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-16T04:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "752f103a6fbf",
-   "title": "Optimizing CPU-side Rendering Code",
-   "link": "https://godotengine.org/article/rendering-cpu-optimizations/",
-   "summary": "Optimizing CPU code is a lot of fun. Here’s how we do it",
-   "source": "Godot Engine",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-09-16T01:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
