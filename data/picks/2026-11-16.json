@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-16",
+  "items": [
+    {
+      "title": "Neural Render Proxies：用一次与灯光无关的路径采样，对固定机位场景做可微、交互式重打光",
+      "url": "https://arxiv.org/abs/2611.17185",
+      "source": "arXiv / EGSR 2026",
+      "published": "2026-11-12",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "ETH Zurich 与 DisneyResearch|Studios 等机构的 Sergio Sancho、Alexander Rath、Marco Manzi、Pascal Chang、Amit H. Bermano、Derek Nowrouzezahrai、Markus Gross 与 Marios Papas 的论文 Neural Render Proxies for Interactive and Differentiable Lighting，于 2026-11-12 提交到 arXiv（2611.17185v1，cs.GR）。页面标注该文属于 2026 年 Eurographics Symposium on Rendering（Computer Graphics Forum 第 45 卷第 4 期，编辑 I. Gkioulekas 与 A. Jarabo）。方法针对灯光环节里几何、材质和相机已固定、但每次微调灯光都要用离线渲染器重跑全图的情况：把渲染拆成一次与灯光无关的路径采样，以及之后按灯光参数计算发光。先从相机按 BSDF 重要性采样（不含 Next Event Estimation）缓存路径数据，再训练一个场景专用的轻量网络，学习从场景中任意位置到像素的光传输；推理时只随分辨率和灯光数量、参数规模变化，而不随场景与外观复杂度增长。作者写该方法可与不可微的生产渲染器配合：制作场景用 Walt Disney Animation Studios 的 CPU 渲染器 Hyperion 采集路径，学术场景则另做采集。摘要给出的交互式重打光帧率为约 30–60 Hz，并接近路径追踪参考；网络可微，因而可用图像空间编辑或生成式目标，对灯光参数做基于梯度的反求。实现基于 PyTorch 与 tiny-cuda-nn。作者在一块 RTX 5090（32 GB 显存）上报告：标准配置（680×680、512 spp、8 层×256 神经元）训练 10 万次迭代约 1 小时；Kitchen 场景（885×500）上，256/8 网络推理 9.13 ms、模型 7.4 MB，512/8 为 31.21 ms、13.3 MB。用与灯光无关的 64 spp 路径数据训练时，色调映射空间的平均 PSNR 仍比最多 1024 张图的基于图像基线高 2.8 dB。限制包括：机位与材质需固定；训练后不能再改物体间的非物理衰减或灯光独占（分层 NRP 只能近似后者）；遮挡腔体可能欠采样；路径数据需预载进显存。上述帧率、耗时、显存和 PSNR 均来自论文，本机未训练或复现。",
+      "why_useful": "如果你在离线制片或看重打光迭代，这是一篇把固定机位下的灯光修改从重渲染改成可交互、可反求代理的方法说明，和只讨论实时引擎或 3DGS 重建的工作不是同一件事。",
+      "try_it": "先读 https://arxiv.org/abs/2611.17185 的摘要、第 3 节方法与第 5 节评估，对照 Table 1 的推理时间/模型体积和图 5 的 2.8 dB 对比。约 30–60 Hz 和 1 小时训练都是作者在 RTX 5090 上的报告，本机未复现；代码或数据是否随论文公开，摘要页未作为主要下载项列出，需在论文或项目页自行确认。"
+    },
+    {
+      "title": "GitHub Copilot：Gemini 4 Hydrogen 已在 Chat、CLI 和 coding agent 等体验中正式可用",
+      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/",
+      "source": "GitHub Changelog",
+      "published": "2026-11-13",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "GitHub 于 2026-11-13 在 Changelog 宣布：Google 的 Gemini 4 Hydrogen（文中称为其最新 Flash 模型）已在 GitHub Copilot 中正式可用（generally available）。官方把它定位为面向快速、高效的 agent 编码、工具使用和多步工作流，并写相对 Gemini 3.8 Flash 改善了指令遵循——这是厂商说法，本机未对比。该模型在按量计费（usage-based billing）下按提供方标价计费，细节指向 Copilot 的 Models and pricing 文档。面向 Copilot Pro、Pro+、Max、Business 和 Enterprise 用户开放，可在下列体验的模型选择器中选用：Visual Studio Code、Visual Studio、Copilot CLI、GitHub Copilot coding agent、GitHub Copilot 应用、github.com、GitHub Mobile（iOS 与 Android）、JetBrains IDE、Xcode、Eclipse 以及 Copilot SDK。官方写明会逐步推送，若暂时看不到可稍后再看。Copilot Enterprise 和 Copilot Business 管理员可通过 Copilot 设置里的模型策略管理对该模型的访问；在默认模型启用（default model enablement）下，新模型会自动启用，除非管理员关闭了全局默认，或明确禁用了该模型。本机未在 Copilot 中切换或实测该模型。",
+      "why_useful": "11-13 已介绍过 Hydrogen 本身，这篇是它进入 Copilot 各客户端的正式开通说明；若你的工作流还停在 3.8 Flash，或组织关掉了默认模型启用，需要确认选择器和策略里是否已经能用。",
+      "try_it": "在已开通的 Copilot 体验里打开模型选择器，查看是否出现 Gemini 4 Hydrogen。Enterprise / Business 管理员检查是否关闭了全局默认，或是否禁用了该模型。官方写明为逐步推送，暂时看不到并不等于账户没有资格。按量计费价格以 Copilot 的 Models and pricing 文档为准，本机未核对具体单价。"
+    },
+    {
+      "title": "Qwen Code v0.27.4：Auto Mode 对风险操作需显式授权，并加入飞书/企微 webhook 与 Managed Web Terminal",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4",
+      "source": "Qwen Code（GitHub Releases）",
+      "published": "2026-11-15",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "QwenLM 于 2026-11-15 发布 Qwen Code v0.27.4（GitHub 标签发布时间 2026-11-15T07:04:40Z）。这是 0.27 稳定线上的更新，与此前已收录的 v1.0.0-preview 不是同一条发布线。发行说明 Highlights 包括：Managed Agent 会话可通过临时授权访问本地目录，并打开交互式 Managed Web Terminal，官方写不会持久化凭据或路径；可把输出发到飞书和企微 webhook，过长的托管通道回复会按顺序分段送达，而不是直接截断，若超过分段上限会显示截断提示；Auto Mode 对风险操作需要显式授权，分类器超时可由会话模型再审一次，并避免对 HTTP(S) URL 做文件系统查找，同时会明显标出 Full Access；Web Shell 的 Goals 页可合并受信任工作区的目标、显示工作区徽章，并在创建目标时指定工作区；恢复了 CLI 的 /memory 控制、持久化工作区设置，以及用于预览、提交、检查、取消和重试 Codex memory 导入的带类型 SDK API；在原生 UUID 不可用时，终端标签、网页预览、本地命令和斜杠命令仍可通过普通 HTTP 继续工作。说明写“No known breaking changes”。本机未安装或运行该版本。",
+      "why_useful": "若你仍留在 0.27 稳定线而不是 1.0 Preview，这一版改了 Auto Mode 的授权行为，并补了飞书/企微通知和托管会话里的交互终端，升级前值得先看自己的自动授权习惯会不会被拦住。",
+      "try_it": "按发行页安装或升级到 v0.27.4 后查看版本。若平时开着 Auto Mode，先确认风险操作会弹出显式授权，不要假定仍会自动放行。需要把会话结果同步到飞书或企微时，按说明配置 webhook。Managed Web Terminal 和本地目录授权仅适用于 Managed Agent 会话。上述功能本机未实测。"
+    },
+    {
+      "title": "Last Week in Unreal：ue6-main 取消编辑器进程内 cook，项目级 cook 必须改走 cook commandlet",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-nov-2-8-2026",
+      "source": "SpeedrunCI（Last Week in Unreal）",
+      "published": "2026-11-09",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "SpeedrunCI 于 2026-11-09 发布 Last Week in Unreal，汇总 2026-11-02 至 11-08 对 EpicGames/UnrealEngine 源码分支的提交。作者把该周最可能打断现有流程的变化放在 ue6-main：提交 84cd4dab 的说明是“Cooker: Remove support for cooking in the editor process（UUnrealEdEngine::CookServer，以及 ECookMode::CookOnTheFlyFromTheEditor / CookByTheBookFromTheEditor）；all project cooks must now run through the cook commandlet”。提交还写，这是接续 5.7 里把编辑器中的 CookByTheBook 弃用之后的收尾，并“deletes (without deprecation)”原先可通过 CookerSettings.bEnableCookOnTheFlyFromTheEditor 使用的编辑器内 CookOnTheFly。文中整理的仍然可用或受影响的行为包括：单个包仍可在编辑器里通过 UE::Cook::Internal::CookAsset 烹饪，但对某些类可能与项目级 cook 不一致；已保存的 Launcher 配置若使用了编辑器内 cook 模式会被重映射，并给出警告，改为在单独的 cook 进程里做 By the Book 或 On the Fly；Launch On 仍可用，但会启动单独的 cook 进程；Launcher 配置上的 OnIsCookFinished()、OnCookCanceled() 委托被删除，cooker 设置里的 bEnableBuildDDCInBackground 也被去掉。因此，依赖编辑器进程内 cook 或上述委托的插件和工具将无法编译，也没有弃用过渡期。同一周 CookIncrementalVersion 被改了三次（b7d89bd1、d6ecb330、2441c767），提交说明分别是主资产扫描规则、Shader 变化和重复主资产 ID“not picked up”，每次都会让下一轮增量 cook 失效全部包；另外 6ea64332 修了 PreSave 期间创建的对象丢失 cook 依赖的问题，复现是“cook 一个 Niagara 系统，改它的 renderer MIC 的父材质，再做增量 cook：该系统不会被重新 cook”。这是对公开源码提交的解读，不是已发布引擎版本的发行说明；文中统计该周 ue6-main 有 1,476 个提交。文章同时也介绍了当时刚公开、尚未打标签的 5.9 分支，并写 Preview 将在“下周”到来——5.9 Preview 现已发布，相关官方说明此前已另文收录，此处不重复展开。本机未同步这些提交或实际 cook。",
+      "why_useful": "如果你跟的是 ue6-main，或自己的编辑器工具、Launch 配置还在进程内 cook，这周的删除没有弃用期，需要先改到 cook commandlet，并给可能连续三次的全量 recook 留出构建容量。",
+      "try_it": "在同步到包含 84cd4dab 的 ue6-main 之前，先清点是否还有编辑器进程内的项目级 cook、自定义 Launcher 委托，或依赖 bEnableCookOnTheFlyFromTheEditor / bEnableBuildDDCInBackground 的工具。Launch On 和已保存的 profile 按提交说明会改走独立 cook 进程，但编辑器插件若直接调用了被删 API 需要改代码。增量构建农场还应留意该周三次 CookIncrementalVersion 变更。上述提交与行为均来自该文对源码的整理，本机未验证。"
+    },
+    {
+      "title": "Anthropic：自托管 Claude Managed Agents 进入私有预览，可在自有环境运行 harness、沙箱和会话历史",
+      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+      "source": "Anthropic / Claude",
+      "published": "2026-11-12",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Anthropic 于 2026-11-12 在 Claude 官网发文，宣布 Self-hosted Claude Managed Agents 进入私有预览（private beta）。Managed Agents 是一套用于构建和部署自主 agent 的可组合 API，提供 agent harness、沙箱、凭据处理和会话历史。此前托管版由 Anthropic 在 Claude Platform 上运行基础设施，随后又提供了只把沙箱放在客户环境的选项。自托管模式下，harness、沙箱、凭据和会话历史都在客户自己的云或本地环境中运行：由客户运维 Managed Agents 服务器、数据库，以及执行 shell 与文件工具的 worker。发往模型的请求可由客户选择路径，文中列出 Anthropic 直连、云厂商（Amazon Bedrock、Google 的 Agent Platform 或 Microsoft Foundry），或客户自己的网关。开发者仍使用与托管版相同的核心 API。会话历史存在客户自己的数据库里；若组织已与 Anthropic 签订零数据保留（ZDR），文中写它对发往 Claude 的请求按与其他 Messages API 调用相同的方式适用。架构说明包括：harness（调用 Claude）与沙箱（跑 agent 代码）分离，循环、会话历史和保险库密钥留在沙箱外；对 MCP 工具和受支持的 API 调用，由沙箱外的代理附加凭据，自托管时也可把凭据放进客户自己的密钥管理；可为每个环境设置允许的主机列表；每一步工具调用可经 OpenTelemetry 导出。获取途径是联系 Anthropic 客户团队申请访问，或先阅读文档。私有预览的具体资格、配额和收费，本文未给出可独立核对的公开细则。本机未申请或部署该服务。",
+      "why_useful": "若你已经在用或评估 Managed Agents，但希望代码、凭据和会话记录都留在自己的网络边界内，这是官方给出的自托管路径说明；目前仍是私有预览，需要通过客户团队申请。",
+      "try_it": "先读 https://claude.com/resources/articles/self-hosted-claude-managed-agents 和文档 https://platform.claude.com/docs/en/managed-agents/self-hosted。若有 Anthropic 客户团队，可申请 private beta。部署涉及自建服务器、数据库和 worker，模型请求还要选定 Anthropic、Bedrock、Google Agent Platform、Microsoft Foundry 或自建网关。未开通预览前无法在本机验证这些流程。"
+    }
+  ]
+}
