@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-17",
+  "items": [
+    {
+      "title": "Unity CLI 1.0：与 Pipeline 包一起退出测试，可在终端和 agent 里驱动编辑器",
+      "url": "https://unity.com/the-unity-cli-1.0-is-here",
+      "source": "Unity Blog",
+      "published": "2026-11-17",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Unity 在 Unite Tokyo 宣布，Unity CLI 与 Pipeline 包（com.unity.pipeline）已结束测试，推出 1.0。文中回顾：2026-07-15 起提供可在终端安装和管理 Editor、模块与项目的测试版二进制；Pipeline 包可让 CLI 驱动本机已打开的 Editor，供脚本或 agent 打开项目、执行命令并检查结果。最新 Unity Hub 会一并安装 CLI。官方为 Claude Code、Codex、Grok Build 和 Google Antigravity 提供插件，并在公开的 Unity skills 仓库提供同样的技能。文中给出的使用统计（未在本机独立核实）：自 7 月 20 日起，超过 35 万已登录用户累计运行超过 6 亿次命令，其中约 98% 来自编程 agent 和其他自动化。1.0 相对测试期的变化包括：`unity setup` 可安装上述官方插件；`unity skill install --all` 把技能装到本机已发现的各类 agent（文中点名 VS Code、GitHub Copilot、Qwen Code 和 OpenCode），`unity skill sync` 用于保持更新；CLI 可识别并应答 Editor 正在等待的对话框，避免远程或无人值守会话卡在看不见的弹窗；`unity build --target` 可在已打开该项目的 Editor 里构建，`unity pipeline cloud-build` 可从终端配置云构建目标；`unity vcs` 能标出场景或预制件中变更对应的资源，并可在不切换分支的情况下摘要 pull request；`unity projects create` 会为新项目加入 Pipeline 包，并可安装项目所需 Editor；`unity open --until-ready` 会等到 Editor 可以接受命令；列表与数据流的 JSON 形状统一，短选项含义一致，`--project-path` 处处可用，CI 中不会交互式提问，并可用退出码区分 Editor 忙碌、对话框阻塞或网络中断，还可按项目锁定 CLI 版本范围；`unity projects audit` 可运行 Project Auditor 并按升级、优化或 URP 等焦点写报告；提供 macOS / Linux / Windows 原生二进制及 Homebrew、winget、APT 安装，`unity self-update` 会保留最近三个版本以便回退，也可用 `unity docs cache add` 缓存离线文档。文中还写到针对安装、技能和项目关联的安全修复，使克隆下来的仓库不能用自带程序顶替正版工具；这些修复的实际效果本机未做安全审计。1.0 承诺在 1.x 内保持命令、选项和输出兼容，必须改动时会先给弃用警告并留出迁移时间。Build Server 许可现已覆盖 agent 和自动化（不只是构建）：每个实例一份许可，可在无头 Editor 或容器中运行 agent。文中预告即将提供面向 CI、构建机和 agent 的 Linux 容器化 Editor，目前尚未发布。本机未安装或运行 Unity CLI。",
+      "why_useful": "如果你已经在用编码 agent 或脚本和 Unity 打交道，这是官方把 CLI / Pipeline 定为 1.0、并承诺 1.x 兼容的说明；也能对照自己是否该升级 Hub、安装官方插件或技能。",
+      "try_it": "若已安装最新 Unity Hub，打开终端即可使用。可从 https://docs.unity.com/en-us/unity-cli 开始，或运行 `unity setup` 安装 Claude Code / Codex / Grok Build / Google Antigravity 的官方插件，再用 `unity skill install --all` 和 `unity skill sync` 给本机其他 agent 安装并更新技能。本文未在本机实际执行这些命令。"
+    },
+    {
+      "title": "Pose-based Neural Clothing：面向动画角色、可实时交互摆姿势的神经服装（SCA 2026 论文）",
+      "url": "https://arxiv.org/abs/2611.18253",
+      "source": "arXiv",
+      "published": "2026-11-13",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "DisneyResearch|Studios、ETH Zürich 与 Pixar Animation Studios 的论文《Pose-based Neural Clothing for Animated Characters》于 2026-11-13 提交 arXiv（cs.GR），注释写明已被 ACM SIGGRAPH / Eurographics Symposium on Computer Animation（SCA 2026）接收，并将发表于 Computer Graphics Forum。针对传统服装模拟速度慢、调参费时，以及现有神经服装方法多在写实人体（如 SMPL）数据上表现较好、在动画角色数据上对未见姿势泛化较差的问题，作者设计网络与训练策略，以便在实时条件下更好地泛化到未见姿势，支持交互式摆姿势。设定是面向制作流程：为单件服装、在准静态条件下训练。方法先训练变分自编码器（VAE）得到平滑且有表达力的隐空间，再逐步把 VAE 编码器从重建过渡到由姿势驱动的预测；预测同时以低维姿势参数和角色体表位移为条件。此外提出一种局部梯度直方图损失，用于减轻重建损失造成的过度平滑。论文称在制作级资产和公开数据集上，该方法能实时生成清晰真实的褶皱、平滑的大尺度垂坠，并保持时间连贯。文中测量：在 Jen’s Shirt 数据上推理速度为 212.2 FPS，实验在 NVIDIA GeForce RTX 4070Ti 上进行；还与 Maya 2025.2、Unreal Engine 5.6 以及若干已有神经方法做了误差与观感对比，并报告用户研究中 96.3% 的投票更偏向该方法。这些速度、误差和用户研究数字均来自论文，本机未复现训练或推理。碰撞处理在推理时于变形之后进行，作者称只做小幅修正。准静态假设对非常松弛、动态很大的服装仍可能吃力，文中也提到在 VTO 等数据上各方法都可能出现过平滑或高频伪影。",
+      "why_useful": "若你在做角色服装或需要在动画阶段交互查看褶皱，这是一篇面向单件服装、准静态制作流程的实时神经服装论文，并给出了与 Maya / UE 以及既有方法的对比；注意结论以作者实验为准，且未见提供可直接运行的官方代码链接。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.18253 的摘要与 PDF。文中未在摘要页给出官方代码仓库。本机未训练或运行该方法，也未核对其与 Maya 2025.2 / UE 5.6 的对比实验。"
+    },
+    {
+      "title": "Claude Code 2.1.326：Agent Teams 下可开启 Code Mode，并修正网关丢失与权限“假保存”等问题",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "source": "GitHub",
+      "published": "2026-11-16",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Claude Code 于 2026-11-16 发布 2.1.326（GitHub 发布时间 22:11 UTC，即香港时间 2026-11-17 06:11）。主要新增：现在可以在已启用 agent teams 的情况下打开 Code Mode；若你此前已经打开 Code Mode，带 teams 的会话会直接以 Code Mode 启动。启动时若 `--allowedTools`、`--disallowedTools` 或 `--tools` 里有条目看起来不像完整规则，会给出警告。管理员在会话进行中加入 `managed-mcp.json` 导致 MCP 服务器停止加载时，会说明原因。`/status` 增加一行，说明提供方或 `DISABLE_TELEMETRY` 等环境变量关闭了哪些功能。`/plugin` 与 `claude plugin list` 会在忽略格式不正确的 `plugin.json` 字段（如 author、homepage）时给出提示。可用 Ctrl+O 查看被隐藏的启动通知。空提示下会提示请求失败后该怎么做；在 Esc 可以停止子 agent 的视图里增加 “esc to stop” 脚注。默认关闭的 `OTEL_RESOURCE_INCLUDE_HOST` 可把 `host.name` 和 `host.id` 纳入 OpenTelemetry 资源属性。VS Code 新增 `claudeCode.promptSuggestions` 设置以关闭提示建议。修复方面包括：仅源路径被 `Edit` 拒绝规则覆盖时，复制该文件不再被拒绝；会删除或覆盖文件的 Bash 命令（如 `find -delete`、`cat a > b`、`sort -o`）不再在转录里被总结成搜索或读取；部分并不含 rm、且 Claude Code 无法可靠解析的命令，不再弹出误导性的 “Dangerous rm operation” 警告；后台会话在崩溃后、从另一目录重新打开后、或后台服务缺少你在 shell 里导出的 LLM 网关时，会在发起模型请求前停止，避免悄悄丢掉网关；后台服务不再因为进程号被其他用户的进程复用而结束你自己的进程（例如 SSH 登录）；`/permissions`、主对话工具提示里添加的规则，以及 `/add-dir` 的目录，在设置文件写入失败时不再显示为已保存，终端会警告并指出该文件；MCP `headersHelper` 失败或在不受信任目录未运行时，不再让其他会话因此无法加载该服务器（多数没有已存 OAuth 刷新令牌的服务器）；过深嵌套的设置值（超过 64 层）会丢弃并警告，而不再导致启动崩溃或只生效一部分。本机未安装或升级到 2.1.326，也未逐条复现这些修复。",
+      "why_useful": "若你已经在用 Claude Code 的 agent teams 或 Code Mode，或遇到过后台会话丢失网关、权限看起来保存了其实没有写入等情况，这是一份可对照升级的官方发行说明。",
+      "try_it": "升级到 2.1.326 后，可在已启用 agent teams 的会话里打开 Code Mode，并用 `/status` 查看提供方或遥测相关开关，用 Ctrl+O 查看被隐藏的启动通知。组织环境可关注会话中加入 `managed-mcp.json` 后的提示。本机未执行升级或功能验证。"
+    },
+    {
+      "title": "DIRT：用深度补全与双频段混合做无需训练的实时新视角合成（论文）",
+      "url": "https://arxiv.org/abs/2611.18340",
+      "source": "arXiv",
+      "published": "2026-11-13",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Friedrich-Alexander-Universität Erlangen-Nürnberg 的论文《DIRT: Depth-completed Image-based Rendering using Two-band Blending for Live Novel-view Synthesis》于 2026-11-13 提交 arXiv（cs.CV，交叉列出 cs.GR）。针对多数新视角合成方法需要按场景优化、难以用于拍摄过程中的实时（live / ad-hoc）合成，作者提出一种传统图像绘制路线：输入是带位姿的深度传感器观测和图像，不使用神经网络，也不做场景优化或训练。流程是：把主动传感器得到的稀疏点几何投影到目标视角的屏幕空间，在该深度缓冲上做层次化深度补全；再把若干带位姿的图像投影到该代理几何上并处理遮挡；最后用考虑频率的双频段混合，并以近似距离变换作为混合权重。因此在捕获与新视角绘制之间不必等待按场景训练，也不依赖网络对未见场景的泛化。作者在手持 RGB-D、车载 LiDAR、热成像以及低光照等设置上做了验证。实验在同一台机器上进行（Intel i9-12900、NVIDIA A5000 24 GB、64 GB 内存），主要延迟指标定义为最后一路输入传感器数据到达至合成测试视角之间的 capture-to-image 间隔，质量指标为 PSNR 与基于 AlexNet 的 LPIPS。论文称在实时重建场景上优于所比较的先前方法，在常规离线新视角基准上保持有竞争力的结果；例如 Table 3 在 LiveNVS 数据集、使用已采集的立体深度时，作者方法报告 LPIPS 0.1987、每张图 8.51 ms，对照 nvblox TSDF 融合为 0.2438 / 74.39 ms。这些数字和“优于先前方法”的判断均来自论文实验，本机未复现。该方法依赖带位姿的深度观测，不是无位姿纯 RGB 方案。",
+      "why_useful": "若你关心拍摄过程中的实时新视角合成，或手头已有 RGB-D / LiDAR 等带深度的输入，这是一篇明确不做神经网络、不做按场景优化的图像绘制方法，并给出了与若干 live / 离线基线的对比。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.18340 的摘要与 PDF。要用它需要带位姿的图像和深度观测。摘要页未给出官方代码仓库。本机未实现或复现其实验。"
+    },
+    {
+      "title": "GitHub Copilot：Claude Opus 4.8 / Opus 5 与 GPT-5.6 Terra 已于 11 月 16 日在多数体验中弃用",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/",
+      "source": "GitHub Changelog",
+      "published": "2026-11-16",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "GitHub 于 2026-11-16 发布变更说明：自当天起，Claude Opus 4.8、Claude Opus 5 和 GPT-5.6 Terra 已在多数 GitHub Copilot 体验中弃用，范围包括 Copilot Chat、行内编辑、ask / agent 模式以及代码补全。这批弃用此前已在 2026-10-15 公告。建议替代为：Claude Opus 4.8 与 Claude Opus 5 改用 Claude Opus 5.5，GPT-5.6 Terra 改用 GPT-6.1 Sol 或 GPT-6 Luna。例外：个人年度订阅的 GitHub Copilot 用户仍可使用 Claude Opus 4.8。Claude Opus 5 已从模型选择器中移除，但在已有授权访问下仍可用于运行时的拒绝回退（runtime refusal fallback）；既有的企业模型策略继续有效。在默认启用模型的情况下，建议的替代型号会自动对 Copilot Enterprise 和 Copilot Business 客户开放，除非管理员关闭了全局默认或明确禁用了该模型；若已关闭全局默认，需在 Copilot 设置的模型策略中手动启用替代型号。启用后，用户可在受支持体验的 Copilot Chat 模型选择器中看到它们。移除已弃用模型无需额外操作。本条与 11-15 精选中“12 月 14 日将下线 6 个模型”不是同一批型号。本机未登录 Copilot 核对选择器的实际显示。",
+      "why_useful": "若工作流或集成仍固定在 Opus 4.8、Opus 5 或 GPT-5.6 Terra，需要尽快改到官方建议的替代型号，并检查企业策略是否关闭了默认启用。",
+      "try_it": "打开 Copilot Chat 的模型选择器，确认工作流是否还在调用已弃用型号，并改到 Claude Opus 5.5，或 GPT-6.1 Sol / GPT-6 Luna。企业管理员若关闭了全局默认启用，需在 Copilot 设置的模型策略中打开替代型号。本机未登录账号做这一核对。"
+    }
+  ]
+}
