@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-17",
+  "items": [
+    {
+      "title": "Last Week in Unreal：5.9 Preview 1 已出，ue6-main 删除遗留光追 AO；5.8 可拣选移动端反射发黑与阴影质量崩溃修复（11/9–11/15）",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-nov-9-15-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-11-16",
+      "ue_version": "跟踪 ue6-main / 公共 5.9（5.9.0-preview-1 之后的分支头）/ 公共 5.8（仍为 5.8.4，无 5.8.5 标签）；文中对 5.8.4 源码做了 hunk 对照",
+      "summary": "Venkat S 汇总 11/9–11/15：ue6-main 1,271 个提交，公共 5.9 分支 351 个（全部在 11/9 的 5.9.0-preview-1 标签之后），ue5-main 801 个，公共 5.8 分支零提交、仍无 5.8.5 标签。ue6-main 上第二次删除遗留硬件光追 AO 这次保留（a5aad229）：相关 CVar 与 FPostProcessSettings 的 RTAO 字段改为 _DEPRECATED；同期删除实验性 D3D12 work graphs，以及 r.Lumen.HardwareRayTracing.HitLighting.DirectLighting（提交说明改为始终计算直接光）。Vulkan SM6 在 Linux 与 Windows 平台标志上打开 shader bundle dispatch（309d3020）。Worth Tracking 记录移动端默认关闭的 r.ShadowProjection.UseHardwarePCF3x3：Galaxy S25 上阴影投影从 0.54 ms 降到 0.40 ms，关闭 depth bounds（Mali 路径）时从 1.57 ms 降到 1.01 ms。对仍出货 5.8 的团队，作者对照 5.8.4-release 后建议从 ue5-main 拣选：r.ShadowQuality 在阴影投影通道在途时被降到 0 会崩溃（4a89ad4e）；移动端着色路径上，已构建 Reflection Capture 附近的金属/镜面会反射黑色，归因于 5.8 的 CL 49645640（编码 HDR 贴图创建竞态），修复引入 r.ReflectionCapture.UpdateProxyOnEncodedAllocate（默认 1，设 0 可回到 5.8 行为），但流送子关卡与 Level Instance 仍可能发黑（1685f000）。5.9 分支还从 Main 合入低档位 Virtual Shadow Map 的 Stochastic PCSS（BaseScalability 在阴影质量 0/1 使用）。作者强调“Matches 5.8.4”只表示 hunk 对得上，不保证编译，拣选后需自行构建测试。",
+      "try_points": [
+        "若 UE 5.8 移动端 Forward（或 Mobile Deferred 上前向半透明、且默认关闭 clustered reflections）里，已构建的 Reflection Capture 附近金属/镜面反黑，可按该文从 ue5-main 拣选 1685f000（作者对照已匹配 5.8.4）；CVar r.ReflectionCapture.UpdateProxyOnEncodedAllocate 默认为 1，设 0 可回到 5.8 行为。流送子关卡和 Level Instance 仍可能发黑，该提交未修。",
+        "设置菜单或 Scalability 会在运行时把 r.ShadowQuality 降到 0 的项目，可拣选 4a89ad4e（渲染线程取值并按值捕获），避免阴影投影通道在途时崩溃。",
+        "跟踪 ue6-main 的项目应清理后期处理、蓝图和 Device Profile 里的 RTAO 字段与 CVar；移动端可在测试机上打开默认关闭的 r.ShadowProjection.UseHardwarePCF3x3，对照提交里 Galaxy S25 的耗时，但不要当成 5.8 已合入的特性。"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "AMD FSR UE 插件更新至 4.1.2：FSR Upscaling 4.1.2 覆盖 RX 6000 与部分锐龙核显",
+      "url": "https://gpuopen.com/learn/amd-fsr-ue-plugin-412/",
+      "source": "AMD GPUOpen",
+      "published": "2026-11-16",
+      "ue_version": "UE 5.3 至 UE 5.8（插件与指南均如此标注）",
+      "summary": "Alexander Blake-Davies 宣布 AMD FSR Unreal Engine 插件更新到 4.1.2，把 FSR “Redstone” SDK 2.4 的更新带到 UE 5.3–5.8。ML 超分此前已覆盖 RX 7000，此版本扩展到 RX 6000（RDNA 2 独显）以及部分带 Radeon 核显的锐龙处理器（游戏本、迷你 PC 和掌机）。4.1.2 使用两套 INT8 模型并按硬件自动选择：RX 6000 与锐龙 AI Max 跑完整模型，面向更受限核显的优化模型体积不到一半；其他硬件回退到分析式 FSR 3。插件通过 FSR API 接入，已集成的游戏也可随 Adrenalin 驱动获得更新的 FSR 版本，不必每次改游戏侧。插件目前只支持 DirectX 12；SDK 2.4 里已有的 Vulkan 超分与帧生成尚未进入此插件。同期包含 FSR Frame Generation 4.0.2 与 Frame Generation Swapchain 4.0.0：在 RX 9000 上增加 Driver-Assisted Frame Pacing，需 Adrenalin 26.10.1 或更新，并配合插件默认的 OverrideSwapChainDX12=true；FSR Frame Generation 4.0.2 要求 Windows 11。Anti-Lag 2 插件同步更新到 2.0.6，可与 FSR 帧生成一起使用。配套指南写明安装包支持 UE 5.3 至 5.8。",
+      "try_points": [
+        "在 UE 5.3–5.8 的 Windows DX12 工程里，按 https://gpuopen.com/learn/ue-fsr/ 把 4.1.2 装到 Engine/Plugins/Marketplace，在 编辑 > 插件 中启用 FSR 后重启；在 RX 6000 或指南列出的锐龙核显上确认是否自动选中 ML Upscaling，其他硬件应回退到分析式 FSR 3。",
+        "若在 RX 9000 上开 Frame Generation，确认 Adrenalin ≥ 26.10.1、Windows 11，并保持 OverrideSwapChainDX12 默认为 true 以使用 Driver-Assisted Frame Pacing；需要更低延迟时可一并安装 Anti-Lag 2 2.0.6。插件目前没有 Vulkan 路径，不要用于 Android / 移动端打包。"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
