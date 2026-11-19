@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T09:06+08:00",
+ "updated": "2026-11-19T09:33+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,7 +89,7 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-19T09:06+08:00",
-   "last_new": 6
+   "checked": "2026-11-19T09:33+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-19T09:06+08:00",
+   "checked": "2026-11-19T09:33+08:00",
    "last_new": 0
   }
  },
@@ -116,7 +116,7 @@
    "id": "b1f27447c28c",
    "title": "Gemini 4 Neon",
    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
-   "summary": "Hacker News 热度:401 分,380 条评论",
+   "summary": "Hacker News 热度:419 分,398 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50552424",
@@ -160,7 +160,7 @@
    "id": "ce8ed3851d3c",
    "title": "Seven new models at scalable price-performance",
    "link": "https://microsoft.ai/news/microsoft-ignite-2026/",
-   "summary": "Hacker News 热度:441 分,305 条评论",
+   "summary": "Hacker News 热度:445 分,308 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50548021",
@@ -182,7 +182,7 @@
    "id": "2069295c6caf",
    "title": "AI agents ask better questions than KPMG accountants in audit trial",
    "link": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
-   "summary": "Hacker News 热度:345 分,153 条评论",
+   "summary": "Hacker News 热度:350 分,157 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50547777",
@@ -193,7 +193,7 @@
    "id": "e5f6c548c5b8",
    "title": "Inside Deutsche Bank",
    "link": "https://www.inside-db.com/",
-   "summary": "Hacker News 热度:548 分,188 条评论",
+   "summary": "Hacker News 热度:557 分,189 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50547620",
@@ -204,7 +204,7 @@
    "id": "97a3bfd94b53",
    "title": "Unauthenticated remote code execution in Nginx",
    "link": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
-   "summary": "https://www.cve.org/CVERecord?id=CVE-2026-123633 https://www.cve.org/CVERecord?id=CVE-2026-123007 Comments URL: https://news.ycombinator.com/item?id=50547374 Points: 1118 # Comments: 498",
+   "summary": "https://www.cve.org/CVERecord?id=CVE-2026-123633 https://www.cve.org/CVERecord?id=CVE-2026-123007 Comments URL: https://news.ycombinator.com/item?id=50547374 Points: 1131 # Comments: 502",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50547374",
@@ -248,7 +248,7 @@
    "id": "df326524b769",
    "title": "DNS resolvers are the wrong place to fight piracy",
    "link": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
-   "summary": "Hacker News 热度:588 分,219 条评论",
+   "summary": "Hacker News 热度:593 分,222 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50545958",

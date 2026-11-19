@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-19",
+  "items": [
+    {
+      "title": "Gemini 4 Neon：介于 Hydrogen 与 Carbon 之间的新模型，标价每百万 token 输入 3 美元、输出 15 美元",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "source": "Google Blog",
+      "published": "2026-11-18",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Google 于 2026-11-18 发文，推出 Gemini 4 系列新模型 Neon，定位是在日常用的 Hydrogen 与处理最难、长周期任务的 Carbon 之间，面向复杂软件工程、知识工作与科学工作流。官方标价为每百万 token 输入 3 美元、缓存输入 0.15 美元（文中称 95% 折扣）、输出 15 美元，并提供 100 万 token 上下文窗口；思考档位为 low、medium、high（默认）和 xhigh。文中写明即日起在 Google AI Studio 的 Gemini API 付费档、Gemini for business（API 或模型下拉菜单），以及付费 Google AI Pro / Ultra 用户的 Google Antigravity 与 Gemini 应用中逐步上线；面向网络安全防守方的 Fairwind Program 将在随后几天对符合条件的成员开放。文章还列出多组评测名次与分数（例如在 xhigh 档位下 Artificial Analysis Intelligence Index 总分 61、排第 3；Vals Index 70.9%、排第 2；Artificial Analysis Coding Agent Index 58.6、排第 1 等），并称内部 Antigravity 测试中伪造率是迄今最低，默认 high 档每任务成本比 Carbon 低 32%。这些评测数字、成本对比与内部测试结论均来自 Google 博文或其引用的第三方榜单，本机未调用 API，也未独立复核。",
+      "why_useful": "若你在 Gemini API、Antigravity 或 Gemini 应用里选模型，这是 Hydrogen / Carbon 之间新增加的一档：价格、上下文和上线范围写得很清楚，评测数字则需当作厂商及其引用榜单的结果来看。",
+      "try_it": "付费 Google AI Pro / Ultra 用户可在 AI Studio、Antigravity 或 Gemini 应用的模型列表中查看是否已出现 Gemini 4 Neon；开发者需使用付费档 Gemini API。本机未实际调用或对比该模型。"
+    },
+    {
+      "title": "Godot 4.8 beta 4：处理了大部分剩余发布阻断，并修复 VoxelGI 越界绘制等回归",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-4/",
+      "source": "Godot Engine",
+      "published": "2026-11-18",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Godot 于 2026-11-18 发布 4.8 beta 4（作者 Thaddeus Crews），距离 beta 3 约一周。官方称已处理大部分剩余发布阻断，因此这将是 4.8 周期最后一批 beta 之一，甚至可能是最后一次，并提醒这是报告新缺陷与回归的最后机会。本篇只覆盖 beta 3 到 beta 4 的变化，整体新特性仍以 beta 1 的亮点为准；自 beta 3 以来较相关的改动多为回归修复，包括：修正拖尾错误缩放顶点（GH-125394）、播放器节点无法处理时让音频以暂停状态启动（GH-114764）、带元数据或内嵌场景的已存场景更新文本格式版本（GH-125351）、在 Advanced Import Settings 中补上保存 .mesh 的扩展名（GH-125488）、校验并拒绝无效的动态字体导入（GH-125076）、Web 平台增加以 HTTPS 提供服务的选项（GH-124109）、修复 Windows 上 Android SDK Manager 的配置问题（GH-125319），以及修复 VoxelGI 在非均匀包围盒外的绘制（GH-112522）。发行说明写明 58 位贡献者提交了 123 项修复，构建自提交 b070e63b1。.NET（mono）构建现在要求 .NET 10.0 或更新版本，最低支持版本从 .NET 8 提高到 10。官方强调这是预发布软件，建议频繁备份或使用版本控制。本机未下载或安装 beta 4，也未复现上述修复。",
+      "why_useful": "若你在跟 4.8 测试或准备从 4.7 迁移，这是临近候选发布前的重要快照：可用来提交回归，也包含 VoxelGI、导入和 Web/Windows 工具链方面的修复；.NET 项目需确认已升到 .NET 10。",
+      "try_it": "从 https://godotengine.org/article/dev-snapshot-godot-4-8-beta-4/ 或预览版下载页获取 4.8-beta4，用副本或单独分支打开项目测试。使用 C# 时需安装 .NET 10 或更新版本。本机未执行安装或升级。"
+    },
+    {
+      "title": "DOOM-GS：面向大规模动态高斯溅射的核外训练框架，并发布 DynamicMatrixCity 数据集（论文）",
+      "url": "https://arxiv.org/abs/2611.22805",
+      "source": "arXiv",
+      "published": "2026-11-17",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Doğa Yılmaz、Jialin Zhu、Binglun Wang、He Wang 的论文于 2026-11-17 提交 arXiv（编号 2611.22805），并出现在 2026-11-18 的 cs.GR 新稿列表。作者认为既有核外（out-of-core）高斯溅射训练主要针对静态场景，而动态高斯会随时间移动且只在有限时段有效，会破坏按静态空间局部性分块和“单视图可见图元总能放入 GPU”的假设。文中提出 DOOM-GS，自称是首个专门面向大规模动态高斯溅射的核外优化方法：用时空分块与重叠感知的相机调度管理缓存与传输，并把原先只用于推理的 Gaussian Point Splatting 改成可学习渲染，使单视图关联图元超出 GPU 显存时仍能训练。因缺少合适公开基准，作者基于 MatrixCity 的 Small City 地图加入程序化行人与车辆，发布 DynamicMatrixCity，含 Corner（80 m×80 m）、Block（260 m×150 m）、District（1,870 m×1,500 m）三个尺度，每台相机 120 帧、30 fps、1920×1080。在与改成动态表示的 TideGS（Dynamic TideGS）对比中，双方均优化 2,000 万高斯、1,800 个块的 GPU 预算（约合 740 万常驻高斯）：作者报告持有相机上平均 PSNR 在 Corner / Block / District 分别为 24.93 / 23.19 / 19.35，对比基线 15.60 / 9.28 / 10.19，训练时间分别为 15.9 / 37.2 / 228.5 小时，对比 29.5 / 54.2 / 317.4 小时，峰值显存在 District 从 20.5 GB 降到 12.6 GB。与按帧训练的静态核外方法相比，作者用一个 250 万高斯的动态模型覆盖整段 120 帧，而基线是 120 个模型共 3 亿高斯，并称相对最稳定基线把 flicker 在 Corner / Block 分别降到约 1/7.1 和 1/6.3。上述“首个”、质量与耗时数字均为作者在自建合成数据上的实验结论，本机未训练、未复现；摘要与 HTML 全文未见官方代码仓库。",
+      "why_useful": "若你在做城市场景或动态 3DGS 训练时碰到显存墙，这是一篇把核外优化从静态场景扩到动态序列的论文，并附带可对照的合成数据集说明；结论以作者实验为准，且未见可直接运行的官方代码。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.22805 的摘要与 PDF，重点看第 4 节与 DynamicMatrixCity 的设定。摘要与 HTML 全文未见官方代码或项目主页。本机未训练或运行该方法，也未核对文中与 TideGS / CLM-GS 等的对比数字。"
+    },
+    {
+      "title": "Hugging Face：在 Transformers 里从 SSD 流式加载 MoE 专家，作者称 32 GB 内存可跑约 180B 的 Qwen3.8-Flash-Next",
+      "url": "https://huggingface.co/blog/moe-expert-streaming",
+      "source": "Hugging Face Blog",
+      "published": "2026-11-18",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Hugging Face 的 Tarek Ziadé 于 2026-11-18 发文，介绍如何在 Transformers 中只把 MoE 路由选中的专家从 SSD 读入有界缓存，并让缓存对现有 `grouped_mm` 看起来像普通专家库，从而不必为每种模型重写专家矩阵核。实现以 `from_pretrained` 的 `experts_offload` 选项提交为 huggingface/transformers#50717；作者写明该 API 仍在与维护者讨论，量化专家以后也可能改走另一项分层量化方案。针对 Qwen3.8-Flash-Next，文中给出的做法是：专家量化到 3 bit（磁盘约 49 GB，设备上缓存 12 GiB），稠密层用 8 bit（约 5.4 GB），另外约 51 GB 的 n-gram 嵌入表留在磁盘按需读行。作者称加载后约占 18 GiB，6K prompt 峰值 25.4 GiB，在 32 GB 的 Mac 上接近上限。在同一台 M5、相同提示、关闭 thinking / MTP / 推测草稿的设置下，作者报告优化后短解码 13.9 tok/s（Strata 0.1.60 为 14.8，约差 6%），4K prefill 228 tok/s（Strata 220），6K 文档后解码 12.4 tok/s（Strata 13.7）。作者同时写明这个速度对自己使用的编码 agent 仍然太慢，并提醒关闭浏览器等前台占用，否则 macOS 会开始换页。转换脚本与基准细节放在 Space tarekziade/moe-expert-streaming。上述速度、显存与对比数字均为作者自测，本机未转换权重，也未在 Mac 或 GPU 上复现。",
+      "why_useful": "若你想在消费级内存里用 Transformers 跑放不进统一内存的 MoE，这篇文章把专家流式加载的接口、量化和与 Strata 的差距写得很具体；需要注意 PR 接口尚未定稿，且作者自己也认为当前速度还不够交互式编码。",
+      "try_it": "可按原文从 PR 安装：`pip install \"git+https://github.com/huggingface/transformers.git@refs/pull/50717/head\"`，再对照文中的 `experts_offload` 示例加载转换后的权重。完整脚本与测量在 https://huggingface.co/spaces/tarekziade/moe-expert-streaming（若 Space 地址以文中为准）。本机未执行安装、转换或测速。"
+    },
+    {
+      "title": "Claude Code 团队谈验证：用端到端、性质测试和差异测试给 agent 可核对的完成标准",
+      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+      "source": "claude.dev Blog",
+      "published": "2026-11-16",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Anthropic 的 Addy Osmani 于 2026-11-16 在 claude.dev 发文，介绍 Claude Code 团队如何让编码 agent 用证据验证自己的改动。文中称该团队约 90% 的代码由 Claude 编写并审查；内部在结构化文件生成任务上，用独立评分器按评分表检查，比普通提示循环最多提高 10 个成功点数，难题上收益最大。作者建议优先三类测试：端到端测试（覆盖真实用户路径，较难被“单测通过但功能坏了”绕过）；性质测试（用 fast-check、Hypothesis、proptest 等生成大量输入，检查往返编码、不变量、幂等和等价性）；差异测试（在迁移场景用旧系统当 oracle，对随机输入或生产流量抽样对比，并归一化空白等无关差异）。团队实践包括：把启动模拟器或本地服务的步骤写成仓库里的 `verify` skill，在提交前让 Claude 像人一样跑一遍应用；检查失败时 Claude 最多自行修复三轮，仍失败就交给人；由代码所有者编写检查项，并从 diff 触发可靠性清单（文中称有 39 项）；审查规则从默认/基线分支读取 REVIEW.md，不允许本次改动修改评判自己的规则；提交闸门有关闭、观察和强制三档，观察档只记录本会拦截的提交以便先排除误报。约 90% 占比、评分提升和内部闸门效果均为团队自述或内部测试，本机未核实，也未在自己的仓库里套用这些流程。",
+      "why_useful": "若你已经把编码任务交给 Claude Code 或其他 agent，这篇文章把“怎样让模型自己证明做完了”写成可落地的测试类型和仓库规则，比再追一个模型版本更直接关系输出质量。",
+      "try_it": "可先在仓库的 `.claude/skills/` 下添加一个用于启动应用或测试的 `verify` skill，并规定提交前必须跑通。若要实践文中的闸门，先用观察模式记录误报，再考虑强制拦截。本机未在用户项目中创建这些文件或启用闸门。"
+    }
+  ]
+}
