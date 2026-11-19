@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-19",
+  "items": [
+    {
+      "title": "论坛：UE 5.8.4 在 Lumen 异步计算开启时，Nanite VSM 的 MicropolyRasterize 会 GPU hang（含复现统计与变通）",
+      "url": "https://forums.unrealengine.com/t/5-8-4-gpu-hang-dxgi-error-device-hung-in-nanite-micropolyrasterize-with-lumen-on-async-compute/2857439",
+      "source": "Epic 论坛",
+      "published": "2026-11-18",
+      "ue_version": "UE 5.8.4",
+      "summary": "作者 @sith_au 在 UE 5.8.4、D3D12、RTX 3090（驱动 621.24 与 617.14）上报告：工程开启 Nanite、Virtual Shadow Maps，以及软件追踪的 Lumen（r.RayTracing=0，默认 r.Lumen.DiffuseIndirect.AsyncCompute=1）时，打包 Development 冷启动约三分之一会在约 30 秒内出现 DXGI_ERROR_DEVICE_HUNG 并退出；编辑器有时也会在首个视口帧（第 2 帧）hang。Aftermath 显示当时唯一活动着色器是 MicropolyRasterize（NaniteRasterizer.usf），图形标记在 VSM 通道的 Nanite::DrawGeometry > PostPass，异步计算侧在 LumenScreenProbeGather > UpdateWorldRadianceCaches；一个 warp 在 BitStreamReader_Read_RO 的 ClusterPageData Load4 上报 Misaligned Address Error。冷启动统计：默认+驱动 621.24 为 13/44，默认+617.14 为 2/10；将 r.Lumen.DiffuseIndirect.AsyncCompute=0 或 r.RDG.AsyncCompute=0 后为 0/13；跳过启动影片为 0/7；只关 r.RDG.AsyncComputeTransientAliasing 仍有 1/8，只关 r.Nanite.Streaming.ReservedResources 仍有 2/6。原文写明尚未在空白项目上尝试，发帖时没有 Epic 回复或引擎补丁。",
+      "try_points": [
+        "若 5.8.4 + D3D12 出现随机 DXGI_ERROR_DEVICE_HUNG，先试 r.Lumen.DiffuseIndirect.AsyncCompute=0，或更彻底地设 r.RDG.AsyncCompute=0（原文这两项冷启动均为 0/13）",
+        "用 Aftermath / GPU breadcrumb 核对是否卡在 VSM 的 Nanite MicropolyRasterize，且异步计算侧同时在 LumenScreenProbeGather",
+        "不要只关 r.RDG.AsyncComputeTransientAliasing 或 r.Nanite.Streaming.ReservedResources，原文这两项仍会 hang",
+        "原文尚未在空白项目复现，需在自己工程上按同样 CVar 复测后再决定是否长期关闭异步计算"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8.4 macOS 异步删除 RDG 图时，Nanite Materials 更新器会写入下一帧 FSceneCullingBuilder 并触发断言（含已验证变通）",
+      "url": "https://forums.unrealengine.com/t/data-race-in-async-rdg-graph-deletion-nanite-materials-fupdater-end-writes-into-the-next-frames-fscenecullingbuilder-check-uploaddataproxy-nullptr-rendererprivateutils-h-317-ue-5-8-4-macos/2857163",
+      "source": "Epic 论坛",
+      "published": "2026-11-18",
+      "ue_version": "UE 5.8.4",
+      "summary": "作者 @stfrancisk 在未修改的 UE 5.8.4 启动器构建（CL 58902052）打包 Development 游戏中，于 macOS 27、Apple Silicon、Metal（SF_METAL_SM6）上遇到偶发致命断言：UploadDataProxy == nullptr，位置 Runtime/Renderer/Private/RendererPrivateUtils.h:317（TBufferScatterUploader::Reserve）。作者判断根因是引擎数据竞争：上一帧的异步 RDG 图删除器在 Nanite::FMaterialsSceneExtension::FUpdater::End() → SyncAllTasks() 中等待场景常驻任务句柄时，渲染线程已在为下一帧替换这些句柄；FTaskBase::AddPrerequisites 在取引用前对已释放内存做 PushIfNotClosed，该块（MallocBinned3 的 512 字节桶）约 94% 的帧会被下一个 FSceneCullingBuilder 复用，错写正好落在 UploadDataProxy（块内偏移 0x118），随后 Reserve() 断言。12 份崩溃报告里都有工作线程停在 FRDGBuilder::FAsyncDeleter 等待路径。用调试器强制线程交错可稳定复现（2/2）。r.SceneCulling.Async.Update=0 无法阻止。已验证变通是同时设置 r.RDG.ParallelDestruction=0 与 r.RDG.ParallelExecute=1：此时 FSceneExtensionsUpdaters::End() 只在渲染线程同步执行（1322/1322 帧），强制交错无法再构成（2105 帧内 0 次工作线程命中）；只关 ParallelDestruction 而把 ParallelExecute 留在 2 不够，删除器在 1403/1405 帧仍异步。作者在其场景测得渲染线程约 +0.04 ms。发帖时没有 Epic 回复；作者提到 5.8.3 macOS/Metal 上有相同调用栈的社区报告（帖 2835424）。",
+      "try_points": [
+        "若 5.8.4 macOS/Metal 打包 Development 出现 RendererPrivateUtils.h:317 的 UploadDataProxy == nullptr，同时设置 r.RDG.ParallelDestruction=0 和 r.RDG.ParallelExecute=1",
+        "不要只关 r.RDG.ParallelDestruction 却把 r.RDG.ParallelExecute 留在 2，原文此时删除器在 1403/1405 帧仍走异步",
+        "不要指望 r.SceneCulling.Async.Update=0，原文写明这无法阻止该断言（关了后断言改在渲染线程触发）",
+        "该变通在原文场景约增加 0.04 ms 渲染线程开销；可按作者给出的调试器交错步骤在本地确认是否还能复现"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
