@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T09:33+08:00",
+ "updated": "2026-11-20T08:58+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-19T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-20T08:58+08:00",
+   "last_new": 3
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-19T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-20T08:58+08:00",
+   "last_new": 1
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-19T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-20T08:58+08:00",
+   "last_new": 3
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-19T09:33+08:00",
-   "last_new": 0
+   "checked": "2026-11-20T08:58+08:00",
+   "last_new": 11
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,176 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-19T09:33+08:00",
+   "checked": "2026-11-20T08:58+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "397a14fbcc71",
+   "title": "PostgreSQL 19 Released",
+   "link": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "summary": "PostgreSQL 19 Released Most years PostgreSQL ships a new release in September, but this year's release came two months later thanks mainly to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse. This release was definitely worth the wait. My favorite new feature is this one: For applications that send reads to standbys, PostgreSQL 19 adds \"read-your-writes\" consistency with the new WAIT FOR LSN command. A session on a…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-20T04:43+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "5e942a0578a4",
+   "title": "Reducing Rollout Bottlenecks in Reinforcement Learning with NVIDIA Dynamo",
+   "link": "https://developer.nvidia.com/blog/reducing-rollout-bottlenecks-in-reinforcement-learning-with-nvidia-dynamo/",
+   "summary": "Reinforcement learning (RL) uses rewards to train models to solve problems and complete tasks more successfully. Inference drives this process. Workers generate...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-20T04:28+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "bb0e5efb5d05",
+   "title": "Godot Showreel 2026",
+   "link": "https://godotengine.org/article/godot-showreel-2026/",
+   "summary": "The Godot 2026 showreel is out! We're so grateful for every submission, vote, and support from our community.",
+   "source": "Godot Engine",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-20T02:00+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "5dce429552ea",
+   "title": "Claude solves two open problems in the physics of black holes",
+   "link": "https://www.anthropic.com/research/claude-black-hole-physics",
+   "summary": "Hacker News 热度:362 分,163 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50563148",
+   "date": "2026-11-20T01:30+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "d11338b5a123",
+   "title": "Pancreatic cancer halted by virus injection in three patients",
+   "link": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+   "summary": "https://archive.ph/2Et0x Comments URL: https://news.ycombinator.com/item?id=50563066 Points: 522 # Comments: 74",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50563066",
+   "date": "2026-11-20T01:25+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "c6c8f53811c3",
+   "title": "Anthropic’s Nasdaq debut",
+   "link": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+   "summary": "Hacker News 热度:864 分,1679 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50562754",
+   "date": "2026-11-20T01:02+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "c5825bf8ac99",
+   "title": "Enabling Real-Time AI for Scientific Instruments with GPU-Native Data Acquisition",
+   "link": "https://developer.nvidia.com/blog/enabling-real-time-ai-for-scientific-instruments-with-gpu-native-data-acquisition/",
+   "summary": "In science and industry, analyzing sensor measurements in real time can enable AI to adjust processes, guide experiments, and search for better operating...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-20T01:00+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "f55cbc1d0bf4",
+   "title": "Build Tool-Calling Parsers in Rust with AI Agents",
+   "link": "https://developer.nvidia.com/blog/build-tool-calling-parsers-in-rust-with-ai-agents/",
+   "summary": "A tool call can arrive in pieces, an argument can be cut short, or model-specific markup can leak into the answer. A frontend parser turns that output, received...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-20T00:30+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "a3d213ab8cf1",
+   "title": "UK government forced to admit it issued Apple a secret encryption order",
+   "link": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
+   "summary": "Hacker News 热度:477 分,203 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50562113",
+   "date": "2026-11-20T00:21+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "30db966fa55d",
+   "title": "Someone reported java4shell bug in September 2026",
+   "link": "https://github.com/openjdk/jdk/pull/32781",
+   "summary": "Hacker News 热度:354 分,91 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50558906",
+   "date": "2026-11-19T19:47+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "5cb8e8d61277",
+   "title": "How the European Commission rolled out Matrix to more than 40k staff",
+   "link": "https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/",
+   "summary": "Hacker News 热度:656 分,313 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50558533",
+   "date": "2026-11-19T18:58+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "6c45b55d112c",
+   "title": "What's New in PHP 8.6",
+   "link": "https://www.php.net/releases/8.6/en.php",
+   "summary": "Hacker News 热度:272 分,126 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50557870",
+   "date": "2026-11-19T17:27+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "f6ba1c49eb9c",
+   "title": "Distributed, high-performance blob storage on SQLite",
+   "link": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/",
+   "summary": "Hacker News 热度:257 分,69 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50557537",
+   "date": "2026-11-19T16:39+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "843c19afde46",
+   "title": "Ruby2ßhell: Pre-authentication RCE on stock Rails",
+   "link": "https://verialabs.com/ruby2shell/",
+   "summary": "Hacker News 热度:380 分,161 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50556287",
+   "date": "2026-11-19T13:09+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
+  {
+   "id": "d4283acee0fe",
+   "title": "llm-gemini 0.38",
+   "link": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+   "summary": "Release: llm-gemini 0.38 Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. The Neon announcement pretends that Argon doesn't…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-19T07:59+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
+  },
   {
    "id": "b1f27447c28c",
    "title": "Gemini 4 Neon",
@@ -144,6 +309,17 @@
    "comments": null,
    "date": "2026-11-19T02:53+08:00",
    "first_seen": "2026-11-19T09:00+08:00"
+  },
+  {
+   "id": "e0a91645e51e",
+   "title": "datasette-arrows 0.1a0",
+   "link": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+   "summary": "Release: datasette-arrows 0.1a0 Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature without…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-19T01:09+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
   },
   {
    "id": "489dc77d699f",
@@ -232,6 +408,17 @@
    "comments": null,
    "date": "2026-11-18T23:00+08:00",
    "first_seen": "2026-11-19T09:00+08:00"
+  },
+  {
+   "id": "3def604a6d93",
+   "title": "Nintendo takes Picofly firmware down from GitHub [video]",
+   "link": "https://www.youtube.com/watch?v=-TLCGUpoD6c",
+   "summary": "Hacker News 热度:253 分,98 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50547048",
+   "date": "2026-11-18T22:56+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
   },
   {
    "id": "e7363487ddbc",
@@ -639,6 +826,17 @@
    "comments": "https://news.ycombinator.com/item?id=50519354",
    "date": "2026-11-17T00:23+08:00",
    "first_seen": "2026-11-17T08:51+08:00"
+  },
+  {
+   "id": "2ae83a398e27",
+   "title": "Garage Door Spam",
+   "link": "https://blog.harrison.page/garage-door-spam/",
+   "summary": "Hacker News 热度:737 分,310 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50519231",
+   "date": "2026-11-17T00:13+08:00",
+   "first_seen": "2026-11-20T08:58+08:00"
   },
   {
    "id": "3726a1bcbe28",
@@ -5173,237 +5371,6 @@
    "first_seen": "2026-10-22T09:27+08:00"
   },
   {
-   "id": "a92261b1c869",
-   "title": "Rethinking the funnel: where mobile gaming really fits in the marketing mix",
-   "link": "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers",
-   "summary": "Discover why industry leaders are rethinking the marketing funnel. Learn how mobile gaming ads deliver full-funnel results from brand awareness to conversion.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-21T08:00+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "67479244caca",
-   "title": "eMudhra Intermediate CA Compromise",
-   "link": "https://simonwillison.net/2026/Oct/20/emudhra-certificates/",
-   "summary": "eMudhra Intermediate CA Compromise This is very, very bad news: The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores. Any software that bundles a list of trusted certificates needs to be updated. This site is tracking software updates via this GitHub repository - Linux distros need to update their ca-certificates packages. In Python world uv…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-21T07:50+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "3f45ff5bf487",
-   "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
-   "link": "https://simonwillison.net/2026/Oct/20/battledrones/",
-   "summary": "My latest vibe coded game experiment is a Command & Conquer style RTS (Real Time Strategy) game called Battle Drones ( play it here ). Unlike my previous experiments , this one is actually fun to play . I'm somewhat embarrassed to admit that I got there by telling Claude to \"Make it a LOT more fun\". It also supports multiplayer between nearby devices using audio to synchronize game state! Here's what I've built so far, and some of the things I learned along the way. Battle Drones How I built…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-21T03:34+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "5e7f2848f402",
-   "title": "Fuse Games CEO breaks down codev framework for Star Wars: Galactic Racer",
-   "link": "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer",
-   "summary": "A model for making the most of distributed development.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-21T02:39+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "ba1f87629d94",
-   "title": "Show HN: SimCity, but with Permits",
-   "link": "https://permit.petercai.com/",
-   "summary": "Hacker News 热度:624 分,312 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50170593",
-   "date": "2026-10-21T02:29+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "24909601d2df",
-   "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
-   "link": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-21T02:17+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "f13958efbded",
-   "title": "What shall I teach my son?",
-   "link": "https://stevekrouse.com/ends",
-   "summary": "Hacker News 热度:298 分,364 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50169707",
-   "date": "2026-10-21T01:25+08:00",
-   "first_seen": "2026-10-21T09:28+08:00"
-  },
-  {
-   "id": "9543205b20d4",
-   "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-   "link": "https://github.com/google-pytorch/torch_tpu",
-   "summary": "Hacker News 热度:278 分,64 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50169053",
-   "date": "2026-10-21T00:40+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "f1aea4a6bb2d",
-   "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
-   "link": "https://huggingface.co/blog/allenai/fairstress",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-21T00:09+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "e267c7cec9c0",
-   "title": "Voxtral 3",
-   "link": "https://mistral.ai/news/voxtral-3/",
-   "summary": "Hacker News 热度:551 分,145 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50168396",
-   "date": "2026-10-21T00:02+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "50ceffb028a3",
-   "title": "Innersloth co-founder warns devs: 'there are some very bad deals out there'",
-   "link": "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
-   "summary": "'There are some truly abysmal deals for games that do not deserve that.'",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-21T00:01+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "d8dbefc9c5b8",
-   "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
-   "link": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-20T23:19+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "242d7e434921",
-   "title": "Griffin Gaming Partners, Entertainment 360 jointly unveil production company Hitpoint Entertainment",
-   "link": "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
-   "summary": "A prominent game industry fund and Hollywood talent agency are teaming up to adapt games for TV and film.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-20T23:10+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "6adf7728c3b8",
-   "title": "Facebook Pages require paid subscription to post more than two links per month",
-   "link": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
-   "summary": "Hacker News 热度:417 分,375 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50167536",
-   "date": "2026-10-20T23:06+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "bab1f618a561",
-   "title": "Ofcom concedes defeat in 4chan case",
-   "link": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
-   "summary": "Hacker News 热度:345 分,262 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50167028",
-   "date": "2026-10-20T22:30+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "18ed2e81a08b",
-   "title": "EMudhra Intermediate CA Compromise",
-   "link": "https://emudhra.we-have-a-problem.com/",
-   "summary": "Hacker News 热度:697 分,346 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50166579",
-   "date": "2026-10-20T21:58+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "3a33f8858484",
-   "title": "How I got over 300 Tor exit nodes removed",
-   "link": "https://kaba.cx/posts/20261020_Tor/",
-   "summary": "Hacker News 热度:334 分,79 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50166257",
-   "date": "2026-10-20T21:39+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "78126453b331",
-   "title": "Tsrs: A Port of TypeScript to Rust",
-   "link": "https://blog.cloudflare.com/typescript-rust-port/",
-   "summary": "Hacker News 热度:358 分,175 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50165953",
-   "date": "2026-10-20T21:18+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "005e1d297d6a",
-   "title": "Apple broke an essential presentation feature of iPads",
-   "link": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
-   "summary": "Hacker News 热度:507 分,264 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50165208",
-   "date": "2026-10-20T20:17+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "c3ba43471c5e",
-   "title": "Google Cloud outage affects almost all banking and other operations in Europe",
-   "link": "https://www.neowin.net/news/google-cloud-outage-takes-down-hsbc-revolut-bank-of-scotland-llyods-equifax-more/",
-   "summary": "Hacker News 热度:351 分,175 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50163961",
-   "date": "2026-10-20T18:26+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
-   "id": "064def2e4bc3",
-   "title": "DeepInfer: High-performance inference framework for DeepSeek models",
-   "link": "https://github.com/deepseek-ai/DeepInfer",
-   "summary": "Hacker News 热度:2160 分,839 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50163277",
-   "date": "2026-10-20T17:08+08:00",
-   "first_seen": "2026-10-21T09:00+08:00"
-  },
-  {
    "id": "e143b14d2f3e",
    "title": "Graphics Programming weekly - Issue 459 - October 18th, 2026",
    "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-459/",
@@ -5566,28 +5533,6 @@
    "topic": "图形渲染",
    "comments": null,
    "date": "2026-09-27T12:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "969056aabaca",
-   "title": "TT Games brings Gotham City to life in LEGO Batman: Legacy of the Dark Knight",
-   "link": "https://www.unrealengine.com/developer-interviews/tt-games-brings-gotham-city-to-life-in-lego-batman-legacy-of-the-dark-knight",
-   "summary": "We caught up with TT Games to find out how UE5 features such as World Partition, the Gameplay Ability System, and more helped them fulfill their vision for an open world Gotham City in LEGO Batman: Legacy of the Dark Knight .",
-   "source": "Unreal Engine 官方",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-21T08:00+08:00",
-   "first_seen": "2026-10-12T11:59+08:00"
-  },
-  {
-   "id": "7d4c29816e1e",
-   "title": "Graphics Programming weekly - Issue 456 - September 20th, 2026",
-   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-456/",
-   "summary": "Realtime Raytracing in Bevy 0.20 (Solari) announces a rewrite of Bevy’s realtime pathtracer for the upcoming release introduces unified ReSTIR that merges direct and indirect lighting into a single set of reservoirs discusses why ReSTIR is disabled by default in favor of relying more on the denoiser wayback-archive Introducing WebGPU-Bench: A WebGPU Microbenchmark introduces a suite of 71 micro-benchmarks for measuring WebGPU costs across devices covers arithmetic throughput, memory access…",
-   "source": "Jendrik Illner(Graphics Programming Weekly)",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-09-20T12:00+08:00",
    "first_seen": "2026-10-12T11:59+08:00"
   },
   {
