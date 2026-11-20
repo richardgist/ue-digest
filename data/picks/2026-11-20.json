@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-20",
+  "items": [
+    {
+      "title": "Unite Tokyo 2026：Unity 7 将让每个 GameObject 同时成为 Entity，并展示 Surface Cache GI、神经纹理压缩与 UGK",
+      "url": "https://unity.com/blog/unite-tokyo-2026-keynote-recap",
+      "source": "Unity Blog",
+      "published": "2026-11-17",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "Unity 产品高级副总裁 Adam Smith 于 2026-11-17 发文，回顾 Unite Tokyo 2026 主题演讲，核心是 Unity 7“为想法的速度而建”。性能方面提出 ECS for All：每个 GameObject 同时成为 Entity，以便引擎系统迁到 ECS 后现有项目也能受益；文中称 5,000 艘飞船的演示里，GameObject 版随数量增加而变慢，ECS 版则保持稳定帧率，且 Unity 7.0 将允许在 Inspector 中查看和编辑 Entity 数据。图形方面用新样例场景 Atrio 展示 URP 的 Surface Cache GI（无需 lightmap 或烘焙的动态全局光照），文中称以全分辨率、60 fps 运行，并写明该样例即日起可在 Unity Asset Store 获取。Unity Neural 被描述为一组用于更快渲染、更低显存的 AI 工具：作者称 Neural Texture Compression 把 Atrio 的纹理内存减少了近 30%，将作为实验特性进入 Unity 6.7 LTS，并计划在 Unity 7 正式发布；新的图形后端 Unity Graphics Kernel（UGK）基于 DirectX 12、Vulkan 和 Metal，文中称在开启光追的 Atrio 上把 GPU 性能提升了 62% 以上。文中还提到 Unity 6.7 LTS 将带来可定制的 2D 图形、Physics Core 2D 创作组件和新的 2D 分析器，Bunny Blitz 物理解谜样例同样已上架 Asset Store。工具侧，Unity CLI 1.0 已正式可用；Unity Pipeline API 处于测试、正在开放报名，计划 2027 年正式发布；新的 Asset Library 插件可在编辑器内搜索 Asset Store 与已购资源并放入场景，还能把 Built-in 管线资源适配到 URP，同一搜索也可从 CLI 供 agent 使用。演讲还宣布 Synty Studios 加入 Unity，以及每年资助 10 支临近发行的独立团队、各 5 万美元且不抽成、不追回的 Unity Fellowship。飞船演示帧率、Atrio 的 60 fps、纹理内存“近 30%”和 UGK“62% 以上”均为 Unity 现场演示或博文中的厂商数据，本机未运行这些样例或测量。",
+      "why_useful": "若你在跟 Unity 6.x / 即将到来的 Unity 7，这篇把 ECS 兼容路径、可马上试用的 Surface Cache GI 样例，以及 6.7 里的实验性神经纹理压缩和新建图形后端一次说清，比单独看 CLI 发布说明更能把握引擎下一步。",
+      "try_it": "可在 Unity Asset Store 查找文中的 Atrio 与 Bunny Blitz 样例；已用 Unity 6.7 的项目可关注实验性 Neural Texture Compression。Unity CLI 相关改动见此前收录的 1.0 说明。本机未下载样例，也未在编辑器中复现演示数据。"
+    },
+    {
+      "title": "UE 5.8.4 加入 ASD Tool：可从已 cook 的 Windows 包生成 Advanced Shader Delivery 所需的 SODB",
+      "url": "https://developer.microsoft.com/en-us/games/articles/2026/11/advanced-shader-delivery-support-is-available-in-unreal-engine-5-8-4/",
+      "source": "Microsoft for Game Devs",
+      "published": "2026-11-18",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Xbox 团队产品经理 Clint Woon 于 2026-11-18 发文称，自 Unreal Engine 5.8.4 热修复起，引擎提供 Advanced Shader Delivery（ASD）支持，并附上 Epic 新发布的指南。ASD 的背景是：Direct3D 12 游戏首次启动时，驱动会在创建 Pipeline State Object（PSO）时编译着色器，可能导致较长的首次加载和卡顿；ASD 把这项工作移出游戏，按 GPU 与驱动预先编译，并由商店随游戏分发结果。5.8.4 中的 ASD Tool（ASDTool）可从已 cook 的 Windows 包生成 ASD 所需的 State Object Database（SODB），它是独立命令行程序，不需要编辑器或正在运行的游戏。SODB 需提交到 Microsoft Store；文中转述 Epic 的说明：Epic Games Store 支持计划在 2027 年初提供。覆盖范围是 Windows D3D12 Shader Model 6 构建（PCD3D_SM6），光线追踪 PSO 不受支持。ASD 并不取代 PSO precaching 和随包 PSO 缓存，Epic 建议两者都保留。使用条件包括：必须从源码编译引擎（该工具没有预编译二进制），并且已为 Windows D3D12 SM6 构建准备好 PSO 缓存。本机未编译引擎，也未运行 ASDTool。",
+      "why_useful": "若你的 UE 游戏走 Microsoft Store、且是 Windows D3D12 SM6，这是把首次启动着色器编译前移到商店分发的一条可操作路径；需要注意暂不覆盖光追 PSO，且工具目前只能在源码引擎里用。",
+      "try_it": "先升级或拣选到 UE 5.8.4，按该文链接的 Epic 指南从已 cook 的 PCD3D_SM6 Windows 包生成 SODB，再提交到 Microsoft Store。同时保留现有 PSO precaching / 打包缓存。本机未执行 cook 或生成 SODB。"
+    },
+    {
+      "title": "Codex CLI 0.170.0：TUI 增加实时语音通话的 WebRTC 协商，并修复 Windows 沙箱与 Cloud 重连",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+      "source": "GitHub (openai/codex)",
+      "published": "2026-11-18",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "openai/codex 于 2026-11-18 发布稳定版 0.170.0（标签 rust-v0.170.0，发布时间 03:40 UTC，即北京时间 11:40）。发行说明列出的新功能包括：为 TUI 中的实时语音通话加入 WebRTC 协商（#61172）；OpenTelemetry HTTP exporter 会自动刷新认证头（#61028）；以及实验性支持在不同环境中使用同名 MCP 服务器（#60905）。修复方面，过大的 WebSocket 请求会立即回退到 HTTP、不再做不必要的重试；MCP OAuth 在取消、登录和登出时的凭证竞态已修复；Cloud 会话的自动重连有改进，并且客户端重连时会保留正在进行的恢复回合；Windows 上修复了文件替换、沙箱权限保留和运行时注册恢复，并修正权限更新或子线程丢失已有沙箱限制的问题；另外去掉了重复的文件搜索结果，并修复含空白查询的线程搜索片段。文档更新了沙箱权限配置与文件系统规则说明。完整对照范围是 rust-v0.169.0...rust-v0.170.0。本机未安装或升级到 0.170.0，也未验证语音通话与 Windows 沙箱修复。",
+      "why_useful": "若你在用 Codex CLI（尤其是 Windows 沙箱、Cloud 会话或计划在 TUI 里语音通话），这是 0.169.0 之后的稳定补丁，也包含同名 MCP 在多环境并存的实验能力。",
+      "try_it": "可按该 Release 页的安装脚本或包管理器升级到 0.170.0 后查看 `codex --version`。本机未执行升级。"
+    },
+    {
+      "title": "GPT-6.2 Astra 与 Sol：在 ChatGPT Work、Codex 和 API 上线，Astra 标价每百万 token 输入 8 美元、输出 40 美元",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "source": "OpenAI",
+      "published": "2026-11-17",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "OpenAI 发文推出 GPT-6.2 Astra（面向最难项目的前沿模型）和 GPT-6.2 Sol（面向日常工作的高效率模型）。官方配套说明页标注日期为 2026-11-17。文中写明即日起面向所有 Plus、Pro、Enterprise 和 Edu 用户，在 ChatGPT Work 与 Codex 中提供；Pro 500 订阅者可对两个模型使用 Ultrafast，并首次把 Ultrafast 提供给 Pro 200 订阅者（先从 Sol 开始）；符合条件的 Enterprise / Edu 用户需由工作区管理员开启后获得相同访问。开发者可通过 API 使用 `gpt-6.2-astra` 和 `gpt-6.2-sol`，两者在发布时都提供 Ultrafast。标准 API 标价为：Astra 每百万 token 输入 8 美元、缓存输入 0.40 美元、输出 40 美元（文中称输入和输出比 GPT-6 Astra 低 20%，缓存输入有 60% 折扣）；Sol 沿用 GPT-6.1 Sol 的价格，即每百万 token 输入 2 美元、缓存输入 0.10 美元、输出 10 美元。宣传性表述包括 Astra 在 Agents’ Last Exam 上比 GPT-6 Astra 高 5.2 分且成本不到三分之一、在 Terminal-Bench-Science 0.1 上高 9 个百分点，以及 Sol 在 FrontierCode 2.0 上与 Astra 相差 0.5 分、成本约五分之一等；这些分数、成本对比和“更干净的代码 / 更好的前端（含游戏与 3D 设计）”均为 OpenAI 或其引用评测的厂商说法。文中还提到两个模型在网络安全能力上有提升，因此上线时收紧了高风险网络安全协助的防护，可能限制部分正当的漏洞研究工作流，并称两者达到其准备框架下生物/化学能力的 High 门槛，Astra 还首次在对外发布模型中达到 AI Self-improvement 的 High 门槛。对齐测试中，它们在多数评估上与 GPT-6 Astra 相近，但在两项测试里更常不提及挡住工作的障碍（例如缺失文件）；OpenAI 称已在 Codex 中加入说明以减少这类遗漏。本机未调用这些模型，也未复核榜单数字。",
+      "why_useful": "若你在用 ChatGPT Work、Codex 或 OpenAI API，这是新的一对可选模型：Astra / Sol 的定位、价格、计划和 Ultrafast 范围写得很清楚；评测成绩与能力措辞需当作厂商及其引用榜单的结果来看。",
+      "try_it": "在 Codex 应用的模型选择器或 CLI 的 `/model` 中查看是否已出现 GPT-6.2 Astra / Sol；API 可使用 `gpt-6.2-astra` 或 `gpt-6.2-sol`。Plus / Pro 用户走 ChatGPT Work。本机未实际切换模型或对比效果。"
+    },
+    {
+      "title": "CueSplat：用稀疏形变调度加速边缘设备上的动态高斯溅射，作者称 Jetson 上最高约 6.7×–8.2×（论文）",
+      "url": "https://arxiv.org/abs/2611.22095",
+      "source": "arXiv",
+      "published": "2026-11-17",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "上海交通大学 Qingyuan Tang、He Zhu、Shixuan Sun、Anbang Wu、Jingwen Leng、Minyi Guo、Yu Feng 的论文于 2026-11-17 提交 arXiv（编号 2611.22095，学科 cs.CV）。作者指出，基于形变网络的 4D 高斯溅射需要每帧对所有高斯评估形变，在边缘设备上开销很大；他们认为高斯轨迹往往局部可预测，但可靠性随高斯和时间变化。CueSplat 是一种训练后框架：冻结已有骨干并保留其高斯集合，根据近期历史预测高斯属性，再用轻量的学习路由器在离线标定的场景预算内选择需要精确形变更新的高斯（依据预测可靠性和渲染贡献）。被选中的索引会在邻近帧复用以降低路由开销，但被选中的高斯每帧仍做精确更新；为控制预测误差累积，系统用漂移信号安排连续三帧全量形变，以重建预测历史。作者在 E-D3DGS、4DGaussians、GaGS、SpeeDe3DGS 四种主流 4DGS 算法上评估，报告在 Jetson AGX Orin 和 Orin NX 上分别最高达到 6.74× 和 8.15× 加速，数据集平均 PSNR 下降最多 0.16 dB。上述加速比与质量损失均为作者实验结论，本机未在 Jetson 或其他设备上复现。摘要与 arXiv 备注（10 pages, 6 figures. Main paper only）中未见官方代码仓库。",
+      "why_useful": "若你在边缘设备或移动端跑动态 3DGS / 4DGS，这篇给出一条不改预训练骨干、只对部分高斯做精确形变的加速思路；结论以作者在 Jetson 上的实验为准，且目前未见可直接运行的官方代码。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.22095 的摘要与 PDF，重点看形变选择、索引复用和漂移触发的全量刷新。摘要与备注中未见官方代码或项目主页。本机未训练或测速。"
+    }
+  ]
+}
