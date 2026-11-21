@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T09:28+08:00",
+ "updated": "2026-11-21T09:31+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-20T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-11-21T09:31+08:00",
+   "last_new": 1
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-20T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-11-21T09:31+08:00",
+   "last_new": 2
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-20T09:28+08:00",
+   "checked": "2026-11-21T09:31+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,17 +89,17 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-20T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-11-21T09:31+08:00",
+   "last_new": 3
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
    "topic": "AI 工具",
-   "ok": false,
-   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+   "ok": true,
+   "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-20T09:28+08:00",
-   "last_new": 11
+   "checked": "2026-11-21T09:31+08:00",
+   "last_new": 10
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,209 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-20T09:28+08:00",
-   "last_new": 0
+   "checked": "2026-11-21T09:31+08:00",
+   "last_new": 2
   }
  },
  "entries": [
+  {
+   "id": "f8b92555d99d",
+   "title": "Inkling 2 Mini",
+   "link": "https://thinkingmachines.ai/news/inkling-2-mini/",
+   "summary": "Hacker News 热度:647 分,104 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50581260",
+   "date": "2026-11-21T04:12+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "e41553a2492f",
+   "title": "Quoting Ravi Vakil",
+   "link": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
+   "summary": "Alessandro Masullo has a proposed proof of [Generalized Riemann Hypothesis], and Brian Conrad has been looking closely at it for months and gave extensive feedback which is being incorporated, and it is so far looking good. It is all human, with no AI. The hope was to bring Alessandro to Stanford for a year to polish the writing and then announce it after running it by enough people. Now it seems best to put out the current draft. — Ravi Vakil , Hurried Announcement: Alessandro Masullo GRH…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-21T03:21+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "829bae4301c9",
+   "title": "Hurried Announcement: Alessandro Masullo GRH",
+   "link": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
+   "summary": "Hacker News 热度:1529 分,695 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50579568",
+   "date": "2026-11-21T02:33+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "20a2a1800bd2",
+   "title": "We promoted developers into architects without informing them",
+   "link": "https://manidoraisamy.com/developer-to-architect.html",
+   "summary": "Hacker News 热度:289 分,179 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50579331",
+   "date": "2026-11-21T02:17+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "91eff5a67a71",
+   "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+   "link": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+   "summary": "Hacker News 热度:334 分,139 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50578358",
+   "date": "2026-11-21T01:21+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "fa3cdc99c8af",
+   "title": "Quoting Levent Alpöge",
+   "link": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+   "summary": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have also formalized the arguments without assumptions. It is natural to feel that this is an end, in my case a loss of a principal guiding light, but what I saw during the course of progress so amazed me that I believe it is one…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-21T00:30+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "5137d27ea569",
+   "title": "Language Models Can Rewrite Their Own Weights",
+   "link": "https://arxiv.org/abs/2611.21885",
+   "summary": "Hacker News 热度:335 分,108 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50577265",
+   "date": "2026-11-21T00:29+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "d776a0b72973",
+   "title": "Finite-time blow-up for the Navier–Stokes equations",
+   "link": "https://github.com/tristanbuckmaster/navier-stokes/",
+   "summary": "Hacker News 热度:257 分,82 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50576232",
+   "date": "2026-11-20T23:34+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "5f509172a58a",
+   "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+   "link": "https://alpo.ge/remark.pdf",
+   "summary": "Hacker News 热度:2345 分,1585 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50574968",
+   "date": "2026-11-20T22:16+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "c68595a7dab2",
+   "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+   "link": "https://architectlabs.com/blog/frostbite",
+   "summary": "Hacker News 热度:621 分,326 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50572503",
+   "date": "2026-11-20T18:01+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "11860c684375",
+   "title": "If you can't explain something in simple terms, you don't understand it (2017)",
+   "link": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+   "summary": "Hacker News 热度:621 分,290 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50572355",
+   "date": "2026-11-20T17:43+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "9a5c17e015f9",
+   "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+   "link": "https://signal.org/blog/protecting-your-privacy/",
+   "summary": "Hacker News 热度:504 分,301 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50572348",
+   "date": "2026-11-20T17:42+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "10ccd3813e57",
+   "title": "Token fraud is here and it’s BAD (YouTube)",
+   "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+   "summary": "Token fraud is here and it’s BAD (YouTube) Claire Vo runs ChatPRD , an AI platform that helps product managers \"turn an idea into a spec\". The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. In this YouTube video (see also the accompanying Twitter post ) Claire describes the flood of token fraud she has seen from groups abusing the product's free trial, sometimes just to get free AI usage but often to resell tokens or run other…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-20T10:49+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "f96bcdfa0e97",
+   "title": "An update on Blueprints and the path to UE6",
+   "link": "https://www.unrealengine.com/news/an-update-on-blueprints-and-the-path-to-ue6",
+   "summary": "UE6 projects won’t include Blueprints or the Actor Gameplay Framework. Gameplay will be built in Verse and on the new Scene Graph framework. Epic Games’ EVP of Development Marcus Wassmer explains why, and what it means for your UE5 project.",
+   "source": "Unreal Engine 官方",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-20T08:00+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "fd5eebd46c47",
+   "title": "Where 3D meets the real world: highlights from Unity Industry Summit Munich 2026",
+   "link": "https://unity.com/blog/unity-industry-summit-munich-2026-recap",
+   "summary": "Unity Industry Summit 2026 recap: customer sessions from Mazda to Lufthansa, an F1 simulator, 13 demo stations, and talks on AI agents, robotics, and 3D data.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-20T08:00+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "a1ffa7842909",
+   "title": "Phone or computer? How to plan your video game controls",
+   "link": "https://unity.com/blog/video-game-controls-phone-or-computer",
+   "summary": "Plan video game controls for phone and computer in six steps, from mapping actions to testing on real devices, before your first Unity Spark prompt.",
+   "source": "Unity Blog",
+   "topic": "游戏开发",
+   "comments": null,
+   "date": "2026-11-20T08:00+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "a4f31a72ec57",
+   "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+   "link": "https://huggingface.co/blog/inkling2mini",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-20T08:00+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "daa5ed95b3ec",
+   "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+   "link": "https://huggingface.co/blog/harness-adapters-at-scale",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-20T08:00+08:00",
+   "first_seen": "2026-11-21T09:31+08:00"
+  },
   {
    "id": "397a14fbcc71",
    "title": "PostgreSQL 19 Released",
@@ -5116,259 +5314,6 @@
    "comments": null,
    "date": "2026-10-22T08:00+08:00",
    "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "85db1723e1d4",
-   "title": "Meeting you where you work: Inside 200M+ Unity CLI events",
-   "link": "https://unity.com/blog/unity-cli-usage-data-ai-coding-agents",
-   "summary": "Unity CLI usage data from 200 million events: 98% of runs come from AI coding agents and automation. See the top commands, agents, and where it’s used.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-22T08:00+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "2a872d852bb6",
-   "title": "Skipping domain reload: faster iteration using the MethodReload feature",
-   "link": "https://unity.com/blog/skipping-domain-reload-faster-iteration-using-the-methodreload-feature",
-   "summary": "Stop waiting on domain reloads! Learn how MethodReload speeds up Unity iteration time, explore its limitations, and compare it to existing hot reload tools.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-22T08:00+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "54b2d3624112",
-   "title": "Railway Security Disclosure",
-   "link": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
-   "summary": "Hacker News 热度:296 分,141 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50188228",
-   "date": "2026-10-22T05:58+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "069c7539a505",
-   "title": "Physicists trap a single antimatter particle for a month",
-   "link": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
-   "summary": "Hacker News 热度:277 分,80 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50186450",
-   "date": "2026-10-22T03:40+08:00",
-   "first_seen": "2026-10-25T09:25+08:00"
-  },
-  {
-   "id": "b6b7083a4edc",
-   "title": "Claude Duet",
-   "link": "https://claude.com/product/claude-duet",
-   "summary": "Hacker News 热度:312 分,270 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50186037",
-   "date": "2026-10-22T03:14+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "0545bc85c7bb",
-   "title": "EA closes Mass Effect, Dragon Age creator BioWare after 30 years of game development",
-   "link": "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development",
-   "summary": "EA is reportedly laying off 400 employees, 50 of whom were the remaining staffers at BioWare.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-22T02:57+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "d356a993bca7",
-   "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
-   "link": "https://simonwillison.net/2026/Oct/21/php-security-release/",
-   "summary": "Today's PHP Security Release, and How We're Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night, thanks to a leak in the coordinated disclosure process. This post from the PHP Foundation explain what went so wrong: On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T02:41+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "83abfc8ab2ee",
-   "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
-   "link": "https://huggingface.co/blog/nvidia/kumo-relational",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T02:26+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "9b87a6877c10",
-   "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-   "link": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
-   "summary": "https://nmdoj.gov/press-release/the-new-mexico-department-of... Comments URL: https://news.ycombinator.com/item?id=50184820 Points: 365 # Comments: 221",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50184820",
-   "date": "2026-10-22T01:45+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "200c8b2b86cf",
-   "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-   "link": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T01:35+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "601e8d84a471",
-   "title": "EA is shutting down BioWare",
-   "link": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
-   "summary": "Hacker News 热度:515 分,312 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50184586",
-   "date": "2026-10-22T01:29+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "829408463039",
-   "title": "Panache — RTS Belle Époque pour mobile",
-   "link": "https://simonwillison.net/2026/Oct/21/panache/",
-   "summary": "Panache — RTS Belle Époque pour mobile Well this is delightful: I released Battle Drones yesterday under an Apache 2.0 License and there's already a French language fork which reskins the game to take place in steampunk 1900s France and adds an animated intro! Panache est un jeu de stratégie en temps réel pour mobile et navigateur, dans la France de la Belle Époque (vers 1900) : dirigeables, Fardiers à vapeur, Creusot cuirassés, automates en képi, Gargantua la forteresse marchante — et beaucoup…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T00:25+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "bffc50ba1c84",
-   "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
-   "link": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T00:04+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "4f8ce75be8be",
-   "title": "Today's PHP security release, and how we're strengthening security",
-   "link": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
-   "summary": "Related ongoing thread: PHP 8.2.35 - https://news.ycombinator.com/item?id=50180873 (links to more at https://news.ycombinator.com/item?id=50184935 ) Comments URL: https://news.ycombinator.com/item?id=50182987 Points: 677 # Comments: 334",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50182987",
-   "date": "2026-10-21T23:48+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "306ae3469f9d",
-   "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-   "link": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-21T22:58+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "c569e552211e",
-   "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-   "link": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
-   "summary": "Hacker News 热度:359 分,45 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50181136",
-   "date": "2026-10-21T22:01+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "6eb8fed2215f",
-   "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-   "link": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-   "summary": "Hacker News 热度:434 分,139 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50181114",
-   "date": "2026-10-21T22:00+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "7eed83d368f6",
-   "title": "PHP 8.2.35",
-   "link": "https://github.com/php/php-src/releases/tag/php-8.2.35",
-   "summary": "Related ongoing thread: Today's PHP security release, and how we're strengthening security - https://news.ycombinator.com/item?id=50182987 Comments URL: https://news.ycombinator.com/item?id=50180873 Points: 969 # Comments: 533",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50180873",
-   "date": "2026-10-21T21:45+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "6649c02dda9a",
-   "title": "Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search",
-   "link": "https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search/",
-   "summary": "Protein design is a search problem. Choose amino acids for an eight-residue protein sequence and more than 25 billion combinations are possible. Choose amino...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-21T20:30+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "3bad9f77f384",
-   "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
-   "link": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
-   "summary": "An AI agent can complete its assignment and still cross a security boundary. Recent incidents show that agents can circumvent security controls while using...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-21T17:52+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "211ed57d9a49",
-   "title": "How NVIDIA OpenShell Reference Architecture Secures and Governs AI Agent Workloads at Scale",
-   "link": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/",
-   "summary": "Autonomous agents can work for hours on complex tasks, accessing files, tools, the internet, and spawning other agents to collaborate with. Executing complex...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-21T17:50+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "f887aba99227",
-   "title": "Developing an AI Factory Digital Twin with an Agent-Assisted Workflow",
-   "link": "https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow/",
-   "summary": "Building an AI factory digital twin requires developers to bring site plans, equipment assets, and engineering requirements into a consistent model that teams...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-21T17:38+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
-  },
-  {
-   "id": "45a07969155a",
-   "title": "Achieve Productive AI Capacity Faster and More Predictably with NVIDIA DSX POD",
-   "link": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/",
-   "summary": "AI factories turn energy into intelligence. But before an AI workload can produce its first token, operators must bring an interconnected system of compute,...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-21T17:35+08:00",
-   "first_seen": "2026-10-22T09:27+08:00"
   },
   {
    "id": "e143b14d2f3e",
