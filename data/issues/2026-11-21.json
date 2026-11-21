@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-21",
+  "items": [
+    {
+      "title": "论坛：UE 5.8/5.9 摄像机切镜帧上，TSR 未写入的 mip 1 会让 Tonemap 采到过期画面（含修复建议）",
+      "url": "https://forums.unrealengine.com/t/tsr-output-srv-exposes-unwritten-mip-1-on-camera-cut-frames-tonemap-samples-stale-data-5-8-main/2854936",
+      "source": "Epic 论坛",
+      "published": "2026-11-13",
+      "ue_version": "UE 5.8 / 5.9",
+      "summary": "作者 @Michael.Edwards 报告：在开启 TSR、运动模糊且 r.MotionBlur.HalfResInput=1（默认）时，摄像机切镜的那一帧画面边缘会出现一帧旧画面残影；把抗锯齿改成非 TSR，或设 r.MotionBlurQuality=0，残影会消失。根因是 5.8 起 TSR 会为运动模糊预过滤分配半分辨率 mip 1，但写入与分配是分开的：PassInputs.bGenerateOutputMip1 决定分配，还要加上 PassConfig.MotionBlurValidInCurrentFrame 才写入。切镜帧上 View.bCameraCut 或 View.bPrevTransformsReset 会使 MotionBlurValidInCurrentFrame 为假，于是 mip 1 仍占用池化纹理里的旧内容（常常是另一台摄像机的画面），输出 SRV 却覆盖两个 mip。切镜帧会跳过运动模糊，Tonemap 直接采样 TSR 输出；色差等会放大 UV 的导数 LOD，在屏幕边缘把过期的 mip 1 混进来。作者用 RenderDoc 确认切镜帧上 TSR.History.Color 的 mip 1 是旧帧，下一帧 mip 1 被重新写入后画面恢复。建议在未写入 mip 1 时把输出 SRV 限制为 mip 0，或在已分配时始终写入 mip 1，或让 Tonemap 用 SampleLevel(..., 0)。原文询问是否已在后续改动中修复、能否进 5.8.x 热修或 5.9；发帖时没有 Epic 回复。平台为 Windows。",
+      "try_points": [
+        "用 Sequencer 切镜或 SetGameCameraCutThisFrame，在差异很大的两个机位之间切换，并打开 TSR、运动模糊、默认的 r.MotionBlur.HalfResInput=1，再加上一点色差，观察切镜那一帧边缘是否闪过旧画面",
+        "对照把抗锯齿改成非 TSR，或设 r.MotionBlurQuality=0，确认残影是否消失",
+        "源码工程可按帖中建议：在不写入 mip 1 的帧把 History / SceneColor 的输出 SRV 限制为 mip 0；也可尝试在已分配时始终写入 mip 1，或让 Tonemap 用 SampleLevel(..., 0) 后再对比切镜帧"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 部分 Masked 材质会忽略 Opacity Mask（bCanMaskedBeAssumedOpaque 被置真）",
+      "url": "https://forums.unrealengine.com/t/opacity-mask-is-broken-in-some-masked-materials-in-5-8/2854782",
+      "source": "Epic 论坛",
+      "published": "2026-11-12",
+      "ue_version": "UE 5.8（原文实测 5.8.3 / 5.8.4）",
+      "summary": "作者 @lyaflora 在空白项目中复现：复制引擎自带的 Niagara 默认精灵材质 DefaultSpriteMaterial（Engine/Niagara/DefaultAssets），把 Blend Mode 改为 Masked，并把 Opacity Mask 设为 0 后，预览网格仍完全可见，像是 Opacity Mask 为 1。作者发现出问题的材质里 bCanMaskedBeAssumedOpaque 为真，生成的 HLSL 里 PixelMaterialInputs.OpacityMask 在多处被写成 1.0f。按另一帖提供的 C++ 修复函数跑完后，该标志会变为假、HLSL 也暂时正确，但预览外观仍不变；一旦再改材质并 Apply，标志又会被重置为真，HLSL 再次写错。给该故障材质做实例、并在实例上把 Blend Mode 设为 Masked，实例侧可以正常工作，父材质仍然是坏的。作者试过关闭 Substrate、改 GBuffer Format 等项目设置，都没有解决问题。原文指向一篇关于 5.8.1 旧材质忽略 Opacity Mask 与 AO 的相关帖，发帖时没有 Epic 回复。平台为 Windows。",
+      "try_points": [
+        "在 5.8.3 / 5.8.4 空白项目里复制 DefaultSpriteMaterial，改成 Masked 并把 Opacity Mask 设为 0，看预览网格是否仍完全可见",
+        "对出问题的材质做实例，只在实例上把 Blend Mode 设为 Masked，确认实例是否已恢复正确裁剪，同时父材质是否仍忽略 Opacity Mask",
+        "若要查源码路径，可对照材质的 bCanMaskedBeAssumedOpaque 以及生成 HLSL 里 OpacityMask 是否被写成 1.0f；帖中提到的 C++ 修复函数只能暂时改掉标志，Apply 后还会被重置，且作者观察预览外观仍不变"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.9 同时开启 LumenPT、MegaLights 与 World Cache 会在全局着色器编译阶段失败",
+      "url": "https://forums.unrealengine.com/t/lumenpt-crash-most-likely-issues-with-megalight/2854350",
+      "source": "Epic 论坛",
+      "published": "2026-11-12",
+      "ue_version": "UE 5.9",
+      "summary": "作者 @John70176162 报告：在 UE 5.9 的 DefaultEngine.ini 里启用 LumenPT，并同时打开 MegaLights 与 World Cache 后重启工程，启动画面阶段就会因全局着色器编译失败而崩溃。致命错误来自 ShaderCompilerEditor.cpp，平台为 PCD3D_SM6，共 6 个错误。帖中贴出的报错包括：MegaLightsShading.ush 中 UnpackSubstrateHeaderIn 与 SubstrateDeferredLighting 没有匹配的函数重载；LumenPTInitialSampling.usf 中 FMegaLightsMaterial 没有名为 GBuffer 的成员（FLumenPTInitialSamplingRGS、FLumenPTVisualizeHardwareRayTracingRGS 等 permutation 都会受影响）。调试信息被写到项目 Saved/ShaderDebugInfo 下对应全局着色器目录。发帖时没有给出已验证的变通，也没有 Epic 回复。平台为 Windows。该组合仍属 5.9 预览期能力，建议先在项目副本上验证。",
+      "try_points": [
+        "若要在 5.9 上试用 LumenPT，先用项目副本，并避免同时打开 MegaLights 与 World Cache 后再重启编辑器",
+        "若启动就在 splash 阶段报 ShaderCompilerEditor 的全局着色器错误，先查看 Saved/ShaderDebugInfo 里 FLumenPTVisualizeHardwareRayTracingRGS / FLumenPTInitialSamplingRGS 的日志，对照是否出现 UnpackSubstrateHeaderIn、SubstrateDeferredLighting 或 FMegaLightsMaterial.GBuffer 报错",
+        "在问题修复前，不要把“LumenPT + MegaLights + World Cache”当作可在主工程默认开启的组合"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
