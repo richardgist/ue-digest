@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-22",
+  "items": [
+    {
+      "title": "Epic：UE6（含 Early Access）将不含 Blueprints 与 Actor 玩法框架，改用 Verse 与 Scene Graph",
+      "url": "https://www.unrealengine.com/news/an-update-on-blueprints-and-the-path-to-ue6",
+      "source": "Unreal Engine 官方",
+      "published": "2026-11-20",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "Epic Games 开发执行副总裁 Marcus Wassmer 于 2026-11-20 在 Unreal Engine 官网发文《An update on Blueprints and the path to UE6》（页面显示 November 20, 2026；官方 RSS 标注 published 为 2026-11-20 00:00:00 GMT）。文章写明：UE6（包括 UE6 Early Access）将不包含 Blueprints 与 Actor Gameplay Framework，玩法将在 Verse 和新的 Scene Graph 框架上构建。作者回顾，今年 6 月曾表示 Blueprints 与 Actor 会在 UE6 Early Access 和 6.0 中并存，以便 UE5 项目在 Scene Graph 成熟时逐步升级；此次改口的理由是“近期 AI 能力的进展”。文中写到，Epic 预期 AI 将大幅帮助把 UE5 项目转到 UE6，“哪怕还不能让这一过程完全自动”，并称这样可以按时（或更早）交付 UE6，同时满足其设计目标：新的数据模型、Verse 优先的架构、模块化，以及 AI 可操作性。上述“大幅帮助 / 完全自动 / 按时或更早交付”均为官方预期，并非已完成的迁移结果。关于成本，文章引用 Epoch AI 的“任务成本同比下降 13 倍”并认为趋势会持续甚至加速，从而在 UE 6.0 面世时转换成本会较为有限；该倍数与成本判断均来自文中引用和推测，本栏未核对 Epoch AI 原文。Fortnite 方面，作者称大约两周前用 AI 尝试把 Battle Royale 的全部 Blueprint 转成 Verse：该工作原先预计要数年，但现在已有一个可运行的 Fortnite 原型，在移植超过 20,000 个 Blueprint 后约有 300 万行 Verse 代码；团队仍在迭代，以验证性能、内存占用和架构。这是 Epic 自己的实验陈述，本栏未见到独立复现。文章明确：是否继续把项目留在 UE5 由开发者自己决定，不必等到 UE6 才能使用更多 AI 工具。Epic 已开始把为 UE6 做的 AI 工具带回 UE5，首先出现在 UE 5.9 MegaJam Preview，并列了四项：扩大的编辑器 Python 脚本访问、MCP 改进（把首选模型接到编辑器并直接在项目里工作）、把 Web 作为目标平台、以及 Unreal Canvas（生成资产，并把编辑器内容、引用和反馈并排、保持可更新和可控）。文中还称 UE 5.9 的相当一部分（包括大部分 Web 平台工作）是用 AI agent 做的，并表示在开发 UE6 期间会继续针对 UE5 做有针对性的功能、修复和支持。5.9 预览的渲染与动画更新见文内链到的发行说明；本栏未安装或验证 5.9 Preview。",
+      "why_useful": "若你的项目重度依赖 Blueprint 或 Actor 玩法框架，这篇是 Epic 对 UE6 路线的正式更正：并存方案被收回，迁移被押在 AI 转换上；可先评估是否留在 UE5，并在 5.9 Preview 里看 MegaJam 带回的 Python / MCP / Web / Canvas 工具。Fortnite 原型与自动转换仍是官方实验和预期，不宜当作已落地的迁移方案。",
+      "try_it": "阅读原文 https://www.unrealengine.com/news/an-update-on-blueprints-and-the-path-to-ue6，并对照文内“Road to UE6”旧文和 5.9 Preview 发行说明 https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5-9-release-notes。若要试用文中提到的 5.9 MegaJam Preview 能力，需自行安装对应预览版并按发行说明验证；本机未安装。"
+    },
+    {
+      "title": "AGSR：用收缩投影协方差的多孔径渲染，给预训练 3DGS 做推理时超分（论文）",
+      "url": "https://arxiv.org/abs/2611.25934",
+      "source": "arXiv",
+      "published": "2026-11-19",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Ayman Alkhateeb、Hadi Amirpour、Christian Timmerer（Alpen-Adria-Universität Klagenfurt）的论文于 2026-11-19 提交 arXiv（编号 2611.25934）。作者认为 3D Gaussian Splatting 的光栅化会通过每个图元的投影协方差衰减细尺度结构，并在推理时收缩这些投影协方差，以缓解有限高斯足迹带来的等效带宽限制，从而得到多孔径渲染。据此提出 AGSR（Aperture-Guided Super-Resolution）：在推理阶段逐步融合多孔径渲染，用不确定性引导的特征聚合，以及透射率、深度等几何条件；它作为插件增强已训练好的 3DGS 模型，底层高斯表示保持冻结。实验在 Mip-NeRF 360 上进行，并对训练图像按 tf∈{2,4,8} 下采样得到不同质量的 3DGS，再评估 2× 与 4× 超分。论文报告：在 2×、tf=8 时，AGSR 相对双三次上采样将 PSNR 提高 1.69 dB、SSIM 提高 0.039，相对直接以目标分辨率光栅化的 Native 3DGS 提高 4.34 dB PSNR（表 II：AGSR 25.49 / 0.764 / 0.349，Bicubic 23.80 / 0.725 / 0.358，Native 21.15 / 0.631 / 0.437）。在 4×、tf=8 时，AGSR 的 SSIM 为 0.766、LPIPS 为 0.360。作者也写明：在低退化 tf=2、2× 时，微调后的 SAFMN 在 SSIM（0.830 vs 0.827）和 LPIPS（0.281 vs 0.287）上略优于 AGSR。复杂度方面，网络约 21K–139K 参数；表 I 在 NVIDIA RTX A6000、batch size 1、目标 Full HD（含 3DGS 光栅化与网络推理）上测得：2× 在 3 个融合阶段时 FP32/FP16 为 22/27 FPS，4× 因输入分辨率更低，3 阶段为 64/76 FPS。这些指标均为论文实验数据，本机未复现。arXiv 摘要页未见 Comments 字段，也未见官方代码仓库或项目主页。",
+      "why_useful": "若你在用已经训好的 3DGS 做新视角合成，又希望在不加密集高斯的前提下提高输出分辨率，这篇给出一条推理时插件式超分思路，并报告了在表示质量变差时收益更明显；结论以作者实验为准，目前未见可直接运行的官方代码。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.25934 的摘要与 PDF，重点看协方差收缩的多孔径渲染、不确定性融合，以及表 I 的帧率和表 II 在不同 tf 下的对比。摘要页未见官方代码或项目主页。本机未训练或渲染。"
+    },
+    {
+      "title": "Codex CLI 0.171.0：默认打开 TUI workspace，目录加入 GPT-6.2 Sol / Astra，并支持远程 exec",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+      "source": "GitHub",
+      "published": "2026-11-20",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "OpenAI 在 GitHub 发布了 Codex CLI 0.171.0（标签 rust-v0.171.0，发布时间 2026-11-20T00:44:47Z）。新功能包括：把 GPT-6.2 Sol 与 Astra 加入模型目录，并以 Sol 作为目录的默认选项；默认启用 TUI workspace，可在主对话旁提供可搜索的文档预览、图片预览和子代理 transcripts；为非 Vim 的提示编辑器增加可配置的撤销/重做快捷键，并可恢复附件和大段粘贴；新增 `codex exec --remote`，可在已有的 app server 上启动或恢复非交互会话；TUI 中新增 `/rc` 与 `/remote`，用于管理本机远程控制并显示设备配对码；在启用 `tui_extensions_statusline` 时，可通过 `/statusline` 选择或编写自定义 MCP 状态行。修复方面，发布说明列出：切换或恢复会话时保留草稿、排队的后续输入和被打断的输入及其原线程；更换工作目录时保留权限配置；避免迟到的完成事件取消较新一轮的审批；在引导进行中的回合时保留聚合 diff 中的先前提交编辑；修复滚动插入杂字符、输入光标跳动，以及用过期终端尺寸重绘；并修复企业 MCP 登录在身份提供方只签发不含 refresh token 的 ID token 时失败的问题。发布说明还提到将源码构建与发布工具链更新到 Rust 1.99.1。完整变更见 rust-v0.170.0...rust-v0.171.0。上述行为以发布说明为准，本机未安装或验证该版本。升级后 TUI workspace 会变为默认布局，而不只是给曾经手动开启的人使用。",
+      "why_useful": "若你在用 Codex CLI，这版把 TUI workspace 改为默认，并把 GPT-6.2 Sol / Astra 写进目录（Sol 为默认选型）；需要把非交互任务接到已有 app server，或在终端里做设备配对和远程控制时，也可以看 `codex exec --remote` 与 `/rc`、`/remote`。",
+      "try_it": "按官方发布页升级，例如 `npm install -g @openai/codex@0.171.0`（以你现有安装方式为准）。升级后注意默认打开的 TUI workspace 布局变化；远程会话可查阅 `codex exec --remote` 与 TUI 的 `/rc`、`/remote`。本机未安装该版本。"
+    },
+    {
+      "title": "Hugging Face：为特定 agent 框架训练 LoRA harness adapter，提升准确率并减少工具调用",
+      "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "source": "Hugging Face",
+      "published": "2026-11-20",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Lewis Tunstall 于 2026-11-20 在 Hugging Face 博客发布《Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost》。文章的核心做法是：冻结基座模型，在目标 agent 框架（harness）内部用强化学习训练定制 LoRA，使模型适应该框架及其任务分布。作者为 Qwen3.8-27B 分别给 pi、Hermes Agent 和 OpenCode 训练了一个 adapter，训练与 rollout 在 Hugging Face Jobs 上用 TRL 的 `AsyncGRPOTrainer`、OpenEnv 和 Harbor 完成；最终镜像里的框架版本写明为 Pi 1.5.2、OpenCode 2.2.7、Hermes Agent v0.22.6。文首示例称，Qwen3.8-27B 在 pi 框架下的 Terminal-Bench 2.1 分数为 39%、平均每任务约 2.9K token，加上 adapter 后为 55% pass@1、平均约 1.5K token，作者将其主要归因于更少推理、更少工具调用和更高的一次成功率。后文还报告：三个专用 adapter 在各自框架下、两个基准上都超过基座模型。在 SWE-bench Pro（hard 51）上，pi 从 39.2% 升到 64.7%（+25.5 分：新解 15 题、丢失 2 题，p=0.002），Hermes 从 29.4% 升到 43.1%。在两边都能解出的任务上，adapter 在 SWE-bench Pro 上少 56%–72% 的工具调用，在 Terminal-Bench 2.1 上少 53%–70%。三个 LoRA 还被合并成一个可在 pi、Hermes Agent 与 OpenCode 下不变运行的 super-adapter。作者同时做了交叉和域外检查：例如把 pi 的 adapter 放到 OpenCode / Hermes 下评估，以及在 AutomationBench 自带 agent loop（不是这三套框架）上跑 300 个任务，结果显示 adapter 与基座接近，差异被作者视为噪声范围内。adapter、GGUF、RL 任务和 safeagents 插件可通过文中的 Hugging Face collection 浏览。上述分数与效率数字均为文章报告的实验结果，本机未复现训练或评测。",
+      "why_useful": "若你已经选定了 Pi、OpenCode 或 Hermes 一类 agent 框架，又想在不换基座模型的前提下提高正确率、减少工具调用和 token，这篇给出可复用的 RL-LoRA 配方和公开产物；成效以作者在其任务分布上的评测为准，换框架或换任务时需要自己验证。",
+      "try_it": "阅读 https://huggingface.co/blog/harness-adapters-at-scale，再打开文中的 Hugging Face collection 查看各框架的 adapter、GGUF 和 RL 任务。若要复现训练，按文中 TRL `AsyncGRPOTrainer`、OpenEnv 与 Harbor 的 Jobs 流程进行。本机未训练或评测这些 adapter。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T09:03+08:00",
+ "updated": "2026-11-22T09:36+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-22T09:03+08:00",
-   "last_new": 2
+   "checked": "2026-11-22T09:36+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-22T09:03+08:00",
-   "last_new": 8
+   "checked": "2026-11-22T09:36+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-22T09:03+08:00",
+   "checked": "2026-11-22T09:36+08:00",
    "last_new": 0
   }
  },
@@ -127,7 +127,7 @@
    "id": "0f3790d718f0",
    "title": "Inkling-2-Mini in 5.4 GB Memory",
    "link": "https://github.com/ShinMegamiBoson/lookatmyquant",
-   "summary": "Hacker News 热度:340 分,91 条评论",
+   "summary": "Hacker News 热度:348 分,91 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50591853",
@@ -138,7 +138,7 @@
    "id": "e5d1a1e0941b",
    "title": "Lean verification of the Riemann Hypothesis",
    "link": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-   "summary": "Hacker News 热度:805 分,643 条评论",
+   "summary": "Hacker News 热度:820 分,662 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50589618",
@@ -149,7 +149,7 @@
    "id": "d588edeb67e6",
    "title": "Detonating a pile of lead azide",
    "link": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
-   "summary": "Hacker News 热度:506 分,339 条评论",
+   "summary": "Hacker News 热度:515 分,345 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50588982",
@@ -160,7 +160,7 @@
    "id": "411dbf6effed",
    "title": "My monitor was cutting my download speed by 75%",
    "link": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-   "summary": "Hacker News 热度:469 分,225 条评论",
+   "summary": "Hacker News 热度:482 分,231 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50587875",
@@ -182,7 +182,7 @@
    "id": "2678cdde9e63",
    "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
    "link": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
-   "summary": "Hacker News 热度:548 分,133 条评论",
+   "summary": "Hacker News 热度:583 分,140 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50582069",
@@ -193,7 +193,7 @@
    "id": "f8b92555d99d",
    "title": "Inkling 2 Mini",
    "link": "https://thinkingmachines.ai/news/inkling-2-mini/",
-   "summary": "Hacker News 热度:1377 分,280 条评论",
+   "summary": "Hacker News 热度:1384 分,280 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50581260",
@@ -215,7 +215,7 @@
    "id": "829bae4301c9",
    "title": "Hurried Announcement: Alessandro Masullo GRH",
    "link": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
-   "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968 Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 2388 # Comments: 1157",
+   "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968 Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 2389 # Comments: 1160",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50579568",
@@ -281,7 +281,7 @@
    "id": "546f34c7b3ad",
    "title": "Why there are still no non-WebKit browsers on iOS",
    "link": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
-   "summary": "Hacker News 热度:472 分,263 条评论",
+   "summary": "Hacker News 热度:480 分,269 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50575644",
@@ -952,7 +952,7 @@
    "id": "0b1cd7592844",
    "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
    "link": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
-   "summary": "Hacker News 热度:731 分,234 条评论",
+   "summary": "Hacker News 热度:745 分,239 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50532613",
