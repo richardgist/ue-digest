@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T09:31+08:00",
+ "updated": "2026-11-22T09:03+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-21T09:31+08:00",
-   "last_new": 1
+   "checked": "2026-11-22T09:03+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-21T09:31+08:00",
-   "last_new": 2
+   "checked": "2026-11-22T09:03+08:00",
+   "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-21T09:31+08:00",
+   "checked": "2026-11-22T09:03+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-21T09:31+08:00",
-   "last_new": 3
+   "checked": "2026-11-22T09:03+08:00",
+   "last_new": 2
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-21T09:31+08:00",
-   "last_new": 10
+   "checked": "2026-11-22T09:03+08:00",
+   "last_new": 8
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,16 +107,93 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-21T09:31+08:00",
-   "last_new": 2
+   "checked": "2026-11-22T09:03+08:00",
+   "last_new": 0
   }
  },
  "entries": [
   {
+   "id": "bfd1a10b08c9",
+   "title": "Muru",
+   "link": "https://simonwillison.net/2026/Nov/21/muru/",
+   "summary": "Muru Graham Dumpleton started mod_wsgi 20 years ago, and has been thinking about the ideal way to serve Python web applications in production ever since. Muru is his new, AI-assisted Rust server that aims to provide the best possible tools for running ASGI and WSGI Python apps both in development and production. As he did with wrapture , he's been publishing an extraordinarily detailed account of the project as he works on it - as part of his development process. Here's everything he's…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-22T07:56+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "0f3790d718f0",
+   "title": "Inkling-2-Mini in 5.4 GB Memory",
+   "link": "https://github.com/ShinMegamiBoson/lookatmyquant",
+   "summary": "Hacker News 热度:340 分,91 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50591853",
+   "date": "2026-11-22T02:02+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "e5d1a1e0941b",
+   "title": "Lean verification of the Riemann Hypothesis",
+   "link": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+   "summary": "Hacker News 热度:805 分,643 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50589618",
+   "date": "2026-11-21T22:36+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "d588edeb67e6",
+   "title": "Detonating a pile of lead azide",
+   "link": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+   "summary": "Hacker News 热度:506 分,339 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50588982",
+   "date": "2026-11-21T21:23+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "411dbf6effed",
+   "title": "My monitor was cutting my download speed by 75%",
+   "link": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+   "summary": "Hacker News 热度:469 分,225 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50587875",
+   "date": "2026-11-21T18:36+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "ca9094c1bd2d",
+   "title": "Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?",
+   "link": "https://news.ycombinator.com/item?id=50583761",
+   "summary": "I'm Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can't find a job, within those 2 years, I pretty much spent my savings that I've saved through years, maybe have 4-5 months left to support my household. Currently, I tutor math and probably about to start working as manager in pizzaria. In Jan 2025, I quit from a mid-size insurance tech company(1000+) after working there for…",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50583761",
+   "date": "2026-11-21T07:18+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
+   "id": "2678cdde9e63",
+   "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+   "link": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+   "summary": "Hacker News 热度:548 分,133 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50582069",
+   "date": "2026-11-21T05:03+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
    "id": "f8b92555d99d",
    "title": "Inkling 2 Mini",
    "link": "https://thinkingmachines.ai/news/inkling-2-mini/",
-   "summary": "Hacker News 热度:647 分,104 条评论",
+   "summary": "Hacker News 热度:1377 分,280 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50581260",
@@ -138,7 +215,7 @@
    "id": "829bae4301c9",
    "title": "Hurried Announcement: Alessandro Masullo GRH",
    "link": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
-   "summary": "Hacker News 热度:1529 分,695 条评论",
+   "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968 Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 2388 # Comments: 1157",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50579568",
@@ -201,6 +278,17 @@
    "first_seen": "2026-11-21T09:31+08:00"
   },
   {
+   "id": "546f34c7b3ad",
+   "title": "Why there are still no non-WebKit browsers on iOS",
+   "link": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
+   "summary": "Hacker News 热度:472 分,263 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50575644",
+   "date": "2026-11-20T23:03+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
+  },
+  {
    "id": "5f509172a58a",
    "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
    "link": "https://alpo.ge/remark.pdf",
@@ -243,6 +331,17 @@
    "comments": "https://news.ycombinator.com/item?id=50572348",
    "date": "2026-11-20T17:42+08:00",
    "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "187df28c97c8",
+   "title": "llm-gemini 0.38.1",
+   "link": "https://simonwillison.net/2026/Nov/20/llm-gemini/",
+   "summary": "Release: llm-gemini 0.38.1 Gemini 4 Carbon only supports low , medium and high reasoning levels - but Gemini 4 Hydrogen and Gemini 4 Neon both have an extra xhigh level. I missed that when I added those models to the llm-gemini plugin, which is now fixed in this dot release. The xhigh setting for Hydrogen makes a significant difference. I updated my Gemini 4 comparison grid - note how Hydrogen at high used 5,311 output tokens and cost 3.99 cents, but the same model at xhigh used 31,477 output…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-20T11:01+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
   },
   {
    "id": "10ccd3813e57",
@@ -848,6 +947,17 @@
    "comments": "https://news.ycombinator.com/item?id=50532849",
    "date": "2026-11-17T23:38+08:00",
    "first_seen": "2026-11-18T09:35+08:00"
+  },
+  {
+   "id": "0b1cd7592844",
+   "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
+   "link": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
+   "summary": "Hacker News 热度:731 分,234 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50532613",
+   "date": "2026-11-17T23:22+08:00",
+   "first_seen": "2026-11-22T09:03+08:00"
   },
   {
    "id": "a264df964f3d",
@@ -4973,336 +5083,6 @@
    "comments": "https://news.ycombinator.com/item?id=50207910",
    "date": "2026-10-23T20:28+08:00",
    "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "442270c4bd29",
-   "title": "Does Your Model Run on AWS Trainium? Look It Up",
-   "link": "https://huggingface.co/blog/torch-neuronx-model-support",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-23T08:00+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "df9a93c446f8",
-   "title": "Video game UX and UI basics: How games talk to players",
-   "link": "https://unity.com/blog/video-game-ui-ux-basics",
-   "summary": "A beginner’s guide to how enemy AI works in video games: states, senses, telegraphed attacks, and boss phases, plus how designers keep enemies fair and fun.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-23T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "0d6cfc3f69d0",
-   "title": "Docker is weird",
-   "link": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
-   "summary": "Hacker News 热度:369 分,184 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50202681",
-   "date": "2026-10-23T07:45+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
-  },
-  {
-   "id": "b9c2471b6fee",
-   "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-   "link": "https://edjefferson.com/localwiki/",
-   "summary": "Hacker News 热度:1548 分,243 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50202285",
-   "date": "2026-10-23T07:01+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "ca664c9883d6",
-   "title": "LLMs are making formal software verification feasible at a much larger scale",
-   "link": "https://www.anthropic.com/research/formal-verification",
-   "summary": "Hacker News 热度:292 分,160 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50202217",
-   "date": "2026-10-23T06:54+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
-  },
-  {
-   "id": "58c7f4d11674",
-   "title": "Canadians are running out of time to oppose Bill C-22",
-   "link": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
-   "summary": "Hacker News 热度:331 分,167 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50202114",
-   "date": "2026-10-23T06:43+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "1b261e3caa9e",
-   "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-   "link": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-23T06:24+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "d4d2c11eb2c0",
-   "title": "Jared Kushner Hacked Phone Reveals Secret Negotiations, Millions in Transactions",
-   "link": "https://www.vanityfair.com/story/jared-kushner-hacked-phone-secret-negotiations",
-   "summary": "Hacker News 热度:299 分,122 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50201259",
-   "date": "2026-10-23T05:24+08:00",
-   "first_seen": "2026-10-23T09:01+08:00"
-  },
-  {
-   "id": "7e7d2324869f",
-   "title": "Opinion: Why words matter when we prioritize 'core teams' in game development",
-   "link": "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs",
-   "summary": "How we describe game development will inevitably shape our processes.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-23T04:33+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "6a1273330afa",
-   "title": "Blaise Pascal invented fixed route public transport (2024)",
-   "link": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
-   "summary": "Hacker News 热度:261 分,136 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50200152",
-   "date": "2026-10-23T03:52+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "462941766bf8",
-   "title": "DE STAAT - FREEDOM (Official Music Video)",
-   "link": "https://simonwillison.net/2026/Oct/22/de-staat-freedom/",
-   "summary": "DE STAAT - FREEDOM (Official Music Video) OK well this is a first for me... at 00:44 in this new music video by Dutch alternative rock band De Staat : The visual effects are credited to Matties Grooten of Fake it or Leave it . Via flir on Hacker News Tags: music , ai , generative-ai , pelican-riding-a-bicycle",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-23T03:42+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "5107c05a5a62",
-   "title": "Donating Agent Skills to the Agentic AI Foundation",
-   "link": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
-   "summary": "Donating Agent Skills to the Agentic AI Foundation News today from Anthropic: We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, which we co-founded with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP). I'm pleased to note I called this one last December , when Anthropic first declared skills to be an \"open standard\": I…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-23T02:09+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "7cdc17c19251",
-   "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-   "link": "https://github.com/NVIDIA/OpenShell",
-   "summary": "Hacker News 热度:371 分,187 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50198675",
-   "date": "2026-10-23T01:44+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "4a1ad0a6f5a8",
-   "title": "How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage",
-   "link": "https://developer.nvidia.com/blog/how-to-read-data-into-gpu-memory-in-python-with-nvidia-gpudirect-storage/",
-   "summary": "GPU applications are processing ever-growing datasets with increasingly powerful accelerators. According to the 2025 Stanford AI Index, compute for notable AI...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-23T00:39+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "75f21848268d",
-   "title": "Getting ready to operate GNU Taler in Germany",
-   "link": "https://www.taler.net/en/news/2026-13.html",
-   "summary": "Hacker News 热度:261 分,105 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50197404",
-   "date": "2026-10-23T00:14+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
-  },
-  {
-   "id": "d357653ad528",
-   "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
-   "link": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-23T00:11+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "ab26d40a7dbf",
-   "title": "Every AI model has the same \"controversial\" take on humans",
-   "link": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
-   "summary": "Hacker News 热度:355 分,384 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50197313",
-   "date": "2026-10-23T00:08+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
-  },
-  {
-   "id": "98a2e8dc330c",
-   "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
-   "link": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/",
-   "summary": "AI developers aren’t just running a single model anymore—they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-23T00:00+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "5a7ee4c219c4",
-   "title": "Quoting Armin Ronacher",
-   "link": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
-   "summary": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins. — Armin Ronacher Tags: security , generative-ai , armin-ronacher , ai , ai-security-research , llms",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T23:34+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "751ea67e39b3",
-   "title": "Run full iOS 16.5 firmware on Android Devices",
-   "link": "https://github.com/oosexgang/hackios-xnu-kernel",
-   "summary": "https://hackios-web.vercel.app/en Comments URL: https://news.ycombinator.com/item?id=50196718 Points: 399 # Comments: 137",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50196718",
-   "date": "2026-10-22T23:26+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "2de9f56ae06f",
-   "title": "VR pioneer Owlchemy Labs jumps to XR for its next release",
-   "link": "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
-   "summary": "Owlchemy Labs' new game Hyper Visor will be a launch title for HTC's XREAL Aura headset.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-22T22:37+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "c39c9039abab",
-   "title": "Quad9 to exit France",
-   "link": "https://quad9.net/news/blog/au-revoir-france/",
-   "summary": "Hacker News 热度:1135 分,391 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50195959",
-   "date": "2026-10-22T22:32+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "63d52acec1ea",
-   "title": "What’s getting pwned right now",
-   "link": "https://pwn.watch/",
-   "summary": "Hacker News 热度:340 分,159 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50195543",
-   "date": "2026-10-22T22:08+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "d2039dacc238",
-   "title": "eMudhra to exit global SSL/TLS certificate business",
-   "link": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
-   "summary": "Hacker News 热度:1015 分,671 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50195110",
-   "date": "2026-10-22T21:33+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "ac50d075fd00",
-   "title": "Woman faces six years in prison over Cash App account she never opened",
-   "link": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
-   "summary": "Hacker News 热度:488 分,499 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50194833",
-   "date": "2026-10-22T21:11+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "1e5acfae400c",
-   "title": "Xbox wants you to pay 24 to 40 cents per hour to stream games you bought",
-   "link": "https://arstechnica.com/gaming/2026/10/xbox-wants-you-to-pay-24-to-40-cents-per-hour-to-stream-games-you-already-bought/",
-   "summary": "Hacker News 热度:280 分,243 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50194009",
-   "date": "2026-10-22T19:42+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
-  },
-  {
-   "id": "cf2457bd3ac7",
-   "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
-   "link": "https://news.ycombinator.com/item?id=50193416",
-   "summary": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 & CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload. I am truly sorry. I take full responsibility for my actions. It was not remotely my intention to cause any of the subsequent side effects. At the time of posting, I didn't know about any embargo. My contact had told me there was no embargo, and her contact had told her…",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50193416",
-   "date": "2026-10-22T18:11+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "b69ed433fdeb",
-   "title": "Jailbreaking the Switch 2",
-   "link": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
-   "summary": "Hacker News 热度:714 分,250 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50192536",
-   "date": "2026-10-22T16:01+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "b600f6ebddd7",
-   "title": "Ensemble forecasting with IBM Granite time-series models",
-   "link": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-22T15:51+08:00",
-   "first_seen": "2026-10-23T08:03+08:00"
-  },
-  {
-   "id": "7dbfe4927012",
-   "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-   "link": "https://simedw.com/2026/10/21/world-model-terminal/",
-   "summary": "Hacker News 热度:613 分,184 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50190363",
-   "date": "2026-10-22T10:18+08:00",
-   "first_seen": "2026-10-23T15:11+08:00"
   },
   {
    "id": "a4fb6ae9fb25",

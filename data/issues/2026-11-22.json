@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-22",
+  "items": [
+    {
+      "title": "论坛：UE 5.7.4 / 5.8.4 里 AlphaHoldout 会留下黑色剪影，分离半透明并给接收材质加微弱 IOR 后可挖洞",
+      "url": "https://forums.unrealengine.com/t/alphaholdout-shows-a-black-silhouette-in-ue-5-7-4-and-5-8-4/2859251",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-19",
+      "ue_version": "UE 5.7.4 / 5.8.4（原文在 5.8.4 上验证了变通）",
+      "summary": "作者 @caste117 想在编辑器视口里用 AlphaHoldout 给半透明平面挖洞，直接看到后面的不透明墙和地面。他先在 UE 5.7.4 遇到问题，随后在 5.8.4、Deferred、DX12、SM6 上复现。测试场景是一块橙色半透明平面前放一个 AlphaHoldout 立方体，平面后再放不透明墙；两种材质都是 Unlit、Before DOF、Opacity = 1，平面的 Translucency Sort Priority 为 0、立方体为 1，并且已打开 Alpha Output 与 Support Primitive Alpha Holdout (Deferred)。当平面的 Refraction Method 为 None 时，立方体只会留下黑色剪影。他在 5.8.4 上把平面的 Refraction Method 改成 Index Of Refraction、IOR 设为 1.01，并在 Output Log 执行 r.SeparateTranslucency 1 与 r.Translucency.StandardSeparated 1 后，可以看到墙和地面从挖洞处透出；若把 r.Translucency.StandardSeparated 改回 0，或把折射方法改回 None，黑色剪影会回来。文档里的 AlphaHoldout 小节只写了背景应从洞中透出，没有提到这两条控制台变量或 distortion pass。作者还指向更早的帖子：该效果在 5.4 可用，5.5 / 5.6 已出现同样的黑色剪影。他询问版本之间行为是否改过，以及在接收材质保持 Refraction Method = None 时有没有官方支持的做法，因为并不需要折射，也不想只为挖洞多开一个渲染通道。发帖时还没有回复。",
+      "try_points": [
+        "若在 5.7 / 5.8 的 Deferred 视口里用 AlphaHoldout 挖洞却只看到黑色剪影，先确认已打开 Alpha Output 与 Support Primitive Alpha Holdout (Deferred)，并把挖洞物体的 Translucency Sort Priority 设得比接收半透明表面更高",
+        "按原文在 5.8.4 上验证过的变通：给接收半透明材质把 Refraction Method 设为 Index Of Refraction、IOR 1.01，再执行 r.SeparateTranslucency 1 与 r.Translucency.StandardSeparated 1，看挖洞处是否能透出后面的不透明物体",
+        "这是发帖人自己验证的变通，不是官方推荐路径；若把 StandardSeparated 关掉或把折射方法改回 None，黑色剪影会回来。若项目不能接受额外的折射 / 分离半透明通道，先不要把这套组合当成最终方案"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：开启 Nanite Tessellation 后，硬件光追阴影对不齐置换后的表面（社区解释原因）",
+      "url": "https://forums.unrealengine.com/t/when-will-ray-traced-shadows-match-geometry-displaced-by-nanite-tessellation/2859830",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-20（提问）；2026-11-21（社区答复）",
+      "ue_version": "UE 5.6 / 5.8（提问者所用；答复未声称已在某版本修复）",
+      "summary": "作者 @HN1214 报告：在 UE 5.6 / 5.8 上使用 Lumen 与硬件光线追踪时，打开 Nanite Tessellation 后能看到网格上的置换，但光线追踪阴影对不齐置换后的表面。这个问题在侧光特写镜头里尤其明显，对影视镜头很关键。他询问更新的引擎版本是否已修复，若仍在开发则目标版本是什么。次日 @glitchered 给出社区技术解释（并非 Epic 官方答复）：Nanite 置换是实时变换的可视几何，而光线追踪依赖放进加速结构（BVH）里、预先变换好的静态或“动态”几何；Nanite 细节太多，难以即时重建 BVH，因此会使用更低分辨率的代理 BVH，这份代理不会为虚拟置换后的几何计算正确阴影，所以对不齐。答复认为这需要较长时间才能解决，帖中没有给出已验证的变通，也没有官方修复或目标版本。",
+      "try_points": [
+        "若在 Lumen + 硬件光追下用 Nanite Tessellation 拍侧光特写，先单独检查光追阴影是否贴合置换后的表面；对不齐时，按该帖的社区解释，更可能是代理 BVH 的已知限制，而不一定是项目设置错误",
+        "帖中没有 Epic 确认，也没有目标修复版本或已验证变通；在阴影接触必须严格跟置换对齐的镜头里，不要默认指望 Tessellation 与硬件光追阴影已经一致"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
