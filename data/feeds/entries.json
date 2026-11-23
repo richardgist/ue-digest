@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T09:02+08:00",
+ "updated": "2026-11-23T09:30+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-23T09:02+08:00",
-   "last_new": 1
+   "checked": "2026-11-23T09:30+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-23T09:02+08:00",
-   "last_new": 5
+   "checked": "2026-11-23T09:30+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,7 +107,7 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-23T09:02+08:00",
+   "checked": "2026-11-23T09:30+08:00",
    "last_new": 0
   }
  },
@@ -127,7 +127,7 @@
    "id": "aa8da62256d6",
    "title": "What Happened to Silicon Valley?",
    "link": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
-   "summary": "Hacker News 热度:385 分,218 条评论",
+   "summary": "Hacker News 热度:407 分,234 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50602947",
@@ -138,7 +138,7 @@
    "id": "8918d9202a21",
    "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
    "link": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
-   "summary": "Hacker News 热度:326 分,147 条评论",
+   "summary": "Hacker News 热度:340 分,152 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50602843",
@@ -149,7 +149,7 @@
    "id": "bd545a438b27",
    "title": "Perplexity and Intelligence",
    "link": "https://openai.com/index/perplexity-and-intelligence/",
-   "summary": "Hacker News 热度:464 分,320 条评论",
+   "summary": "Hacker News 热度:474 分,329 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50601525",
@@ -160,7 +160,7 @@
    "id": "61f5e6c643e6",
    "title": "Show HN: I built a game where you are an LLM's subagent",
    "link": "https://github.com/gulivan/worker755",
-   "summary": "Hacker News 热度:265 分,60 条评论",
+   "summary": "Hacker News 热度:269 分,62 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50599762",
@@ -171,7 +171,7 @@
    "id": "c6b3ff37478e",
    "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
    "link": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-   "summary": "Hacker News 热度:1180 分,675 条评论",
+   "summary": "Hacker News 热度:1189 分,677 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50596133",
@@ -4994,17 +4994,6 @@
    "topic": "AI 工具",
    "comments": null,
    "date": "2026-10-24T11:59+08:00",
-   "first_seen": "2026-10-25T09:25+08:00"
-  },
-  {
-   "id": "a2fa1fdbff72",
-   "title": "Twelve years of distributed SQLite",
-   "link": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
-   "summary": "Hacker News 热度:365 分,62 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50217500",
-   "date": "2026-10-24T09:16+08:00",
    "first_seen": "2026-10-25T09:25+08:00"
   },
   {
