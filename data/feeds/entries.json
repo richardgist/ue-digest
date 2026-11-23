@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T09:36+08:00",
+ "updated": "2026-11-23T09:02+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-22T09:36+08:00",
-   "last_new": 0
+   "checked": "2026-11-23T09:02+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-22T09:36+08:00",
-   "last_new": 0
+   "checked": "2026-11-23T09:02+08:00",
+   "last_new": 5
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,77 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-22T09:36+08:00",
+   "checked": "2026-11-23T09:02+08:00",
    "last_new": 0
   }
  },
  "entries": [
+  {
+   "id": "7b2cf0fa9c6a",
+   "title": "Select Styling Specimens",
+   "link": "https://simonwillison.net/2026/Nov/22/select-styling/",
+   "summary": "Tool: Select Styling Specimens I got frustrated at how HTML boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of the ways a select box can be styled, I plan to take screenshots in every desktop and mobile browser After some experimentation I've decided my favorite CSS for select boxes is this: select { appearance : none …",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-23T03:45+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
+  {
+   "id": "aa8da62256d6",
+   "title": "What Happened to Silicon Valley?",
+   "link": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+   "summary": "Hacker News 热度:385 分,218 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50602947",
+   "date": "2026-11-23T03:20+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
+  {
+   "id": "8918d9202a21",
+   "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+   "link": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+   "summary": "Hacker News 热度:326 分,147 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50602843",
+   "date": "2026-11-23T03:10+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
+  {
+   "id": "bd545a438b27",
+   "title": "Perplexity and Intelligence",
+   "link": "https://openai.com/index/perplexity-and-intelligence/",
+   "summary": "Hacker News 热度:464 分,320 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50601525",
+   "date": "2026-11-23T01:06+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
+  {
+   "id": "61f5e6c643e6",
+   "title": "Show HN: I built a game where you are an LLM's subagent",
+   "link": "https://github.com/gulivan/worker755",
+   "summary": "Hacker News 热度:265 分,60 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50599762",
+   "date": "2026-11-22T21:56+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
+  {
+   "id": "c6b3ff37478e",
+   "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+   "link": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+   "summary": "Hacker News 热度:1180 分,675 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50596133",
+   "date": "2026-11-22T12:04+08:00",
+   "first_seen": "2026-11-23T09:02+08:00"
+  },
   {
    "id": "bfd1a10b08c9",
    "title": "Muru",
@@ -4940,149 +5006,6 @@
    "comments": "https://news.ycombinator.com/item?id=50217500",
    "date": "2026-10-24T09:16+08:00",
    "first_seen": "2026-10-25T09:25+08:00"
-  },
-  {
-   "id": "315286187e70",
-   "title": "Birdwatching rewires the brain and slows cognitive decline",
-   "link": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
-   "summary": "Hacker News 热度:509 分,199 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50215997",
-   "date": "2026-10-24T06:04+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "a9380d6cca87",
-   "title": "Quick Study",
-   "link": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
-   "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection , with no external libraries beyond Google Fonts. Tags: tools",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-24T05:35+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "aa9706009567",
-   "title": "Introducing Kimi K3.1 Pro",
-   "link": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
-   "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own benchmarks show…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-24T03:40+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "8d6a946b6958",
-   "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
-   "link": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
-   "summary": "Hacker News 热度:276 分,144 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50214218",
-   "date": "2026-10-24T03:34+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "223d4028074f",
-   "title": "GameMaker's GMRT runtime will soon be free for all developers",
-   "link": "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
-   "summary": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-24T01:51+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "f353c9a11218",
-   "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2",
-   "link": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/",
-   "summary": "The Global Performance Tuner is a feature for automatic performance tuning released in NVIDIA TensorRT 11.1. It provides automatic, accuracy-aware and...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-24T01:27+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "900caa3909a9",
-   "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 1",
-   "link": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1/",
-   "summary": "Deploying a trained neural network involves more than translating each operator into a GPU kernel. It is a compilation problem with many legitimate answers. For...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-24T01:27+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "a414001e9e8e",
-   "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-   "link": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-   "summary": "https://www.kimi.com/code/docs/en/kimi-code/models.html https://artificialanalysis.ai/models/kimi-k3-1-pro https://www.modelcompare.ai/blog/china-open-source-ai Comments URL: https://news.ycombinator.com/item?id=50212065 Points: 723 # Comments: 458",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50212065",
-   "date": "2026-10-24T00:59+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "81325c0b23fc",
-   "title": "Today, we hacked what we'd set out to hack: the iPhone",
-   "link": "https://blog.calif.io/p/iphone",
-   "summary": "Hacker News 热度:747 分,501 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50211474",
-   "date": "2026-10-24T00:21+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "57eca9a71eff",
-   "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
-   "link": "https://huggingface.co/blog/allenai/litpivot",
-   "summary": "",
-   "source": "Hugging Face Blog",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-24T00:15+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "d227b515c4f5",
-   "title": "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation",
-   "link": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/",
-   "summary": "Teaching a robot to navigate an obstacle course requires more than a walking policy. It must perceive its surroundings, maintain balance, and adjust its actions...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-23T22:58+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
-  },
-  {
-   "id": "fe70ea1bbf25",
-   "title": "Start Doing Graph Theory",
-   "link": "https://vertex.degree/",
-   "summary": "Hacker News 热度:574 分,125 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50208960",
-   "date": "2026-10-23T21:49+08:00",
-   "first_seen": "2026-10-29T09:02+08:00"
-  },
-  {
-   "id": "ceb8361e36bb",
-   "title": "Apple Music 404 Not Found",
-   "link": "https://music.apple.com/this-url-doesnt-exist",
-   "summary": "https://www.macrumors.com/2026/10/23/apple-music-has-a-hidde... Comments URL: https://news.ycombinator.com/item?id=50207910 Points: 591 # Comments: 191",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50207910",
-   "date": "2026-10-23T20:28+08:00",
-   "first_seen": "2026-10-24T09:57+08:00"
   },
   {
    "id": "a4fb6ae9fb25",

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-23",
+  "items": [
+    {
+      "title": "论坛：UE 5.8 在 GI 可扩展性为 Low 或 Medium 时，游戏进程里 Lumen 漫反射会变成 0",
+      "url": "https://forums.unrealengine.com/t/5-8-lumen-diffuse-is-zero-in-game-processes-at-gi-scalability-low-or-medium/2859838",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-21（诊断日期写为 2026-11-15）",
+      "ue_version": "UE 5.8（源码构建，GitHub 5.8 分支提交 f97cae4acf019789ed431e0ac28d47e15422784c）",
+      "summary": "作者 @FrankieDcreator 报告：在源码构建的 UE 5.8（Windows 11、RTX 5070）上，把 GI 可扩展性设为 Low 或 Medium 后，打包或游戏进程里 Lumen 漫反射为 0，Lumen GI 消失；提高到更高品质后，Lumen GI 会恢复。他在 2026-11-15 用一张诊断关卡隔离了这个问题，并询问这是否为 5.8 的预期可扩展性行为，以及在不把品质强制提到 Epic 或 Cinematic 的前提下，怎样配置才能让打包/游戏运行仍保留 Lumen GI。发帖时还没有回复，帖中也没有给出已验证的变通或官方说明。",
+      "try_points": [
+        "若 5.8 打包或独立游戏进程里 Lumen GI 突然没了，先单独把 GI 可扩展性从 Low/Medium 调到更高档，看漫反射是否恢复；按原文，编辑器里用诊断关卡也能复现这一差异",
+        "发帖时没有 Epic 答复，也没有确认这是预期行为还是缺陷；在依赖 Low/Medium 档做主机或低配的项目里，不要默认以为这两档仍会给出降低质量的 Lumen GI，先在打包流程里实测"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：正交相机 + VSM 切图时，渲染线程会对正在销毁的世界做物理查询（已验证关掉 r.Ortho.VSM.RayCastViewOrigin）",
+      "url": "https://forums.unrealengine.com/t/ue-5-6-1-ue5-main-crash-on-level-travel-fvirtualshadowmapclipmap-does-a-game-world-line-trace-from-a-render-task-racing-uworld-teardown-chaos-lock-leaked-islocked-assert/2853526",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-10",
+      "ue_version": "UE 5.6 / 5.7 / 5.8（作者写代码在 ue5-main 上仍未改）",
+      "summary": "作者 @AlexandreStAmant 报告：在没有 ViewTarget 的正交相机（例如独立 CameraActor）上启用 Virtual Shadow Maps 和可移动方向光时，FVirtualShadowMapClipmap 构造函数会在渲染任务 FGatherShadowPrimitivesPrepareTask 里调用 UWorld::LineTraceSingleByObjectType()，由默认开启的 r.Ortho.VSM.RayCastViewOrigin 控制。这条物理查询没有和游戏线程同步。切图时游戏线程会在 LoadMap → TrimMemory → GC → UWorld::FinishDestroy 中销毁旧世界和 FChaosScene，渲染任务仍可能在查询它。他们遇到的崩溃是：渲染工作线程在场景查询里拿到 Chaos 求解器的外部数据读锁后进入崩溃处理却仍持有该锁，游戏线程随后销毁求解器并触发 Assertion failed: !IsLocked()（“Destroying a lock that is still held!”）。作者写这段代码在 5.6、5.7、5.8 和当时的 ue5-main 中都还在（VirtualShadowMapClipmap.cpp，5.8 约第 283 行），CVar 默认仍为 true。复现条件是场景里有正在模拟的刚体，并在打包的 Win64/D3D12 Development 构建里循环 OpenLevel；他们大约每 50 次切图出现一次。建议的修复是把视点估计改到游戏线程再经 FSceneView 传入，或至少在修复前把该 CVar 默认改为 false。已验证的变通是在 [SystemSettings] 里设置 r.Ortho.VSM.RayCastViewOrigin=0，以关闭这条渲染侧射线。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若项目用正交相机（且没有 ViewTarget）加上 VSM 与可移动方向光，并在切图时偶发 Chaos 锁断言或渲染线程卡在 LineTraceSingleByObjectType，可按原文已验证的变通，在 SystemSettings 里把 r.Ortho.VSM.RayCastViewOrigin 设为 0，确认是否不再走这条渲染侧物理查询",
+        "关闭该 CVar 会牺牲正交 VSM 用射线估计视点原点的行为；这不是官方修复，源码构建若要彻底解决，原文建议把视点估计改到游戏线程再传入视图矩阵"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：开启硬件光追后，切图时 ComputeViewExtension::GetFlags() 会在渲染线程空解引用 UWorld（含补丁建议）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-2-render-thread-crash-null-uworld-deref-in-fcomputeviewextension-getflags-during-map-travel-with-hw-ray-tracing/2853527",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-10",
+      "ue_version": "UE 5.8.2（作者写截至 2026 年 11 月 ue5-main 仍未改）",
+      "summary": "同一作者 @AlexandreStAmant 另报：在开启 r.RayTracing 且启用 ComputeFramework 插件的 5.8.2 源码构建（Win64/D3D12，打包 Development）里，切图时渲染线程会在 FComputeViewExtension::GetFlags() 里对空 UWorld 解引用，出现读取地址 0x258 的访问违例。原因是该函数先用 TWeakObjectPtr 的 IsValid() 检查世界，再用 operator-> 取 Scene；这两次会分别解析弱指针。LoadMap 时游戏线程可能正在销毁旧世界，两次解析之间世界失效，第二次 Get() 返回空指针后访问 WorldPtr->Scene 就会崩溃。PostTLASBuild_RenderThread() 也用了同样写法。作者还指出可变成员 ComputeWorkers 被当作临时缓冲，多个 view family 并发调用时并不线程安全。他认为这条路径来自 2026-03-26 的提交 344f81b（“[PCG] Add engine infrastructure for PCG GPU inline ray tracing”）。复现是在三张小地图之间循环 OpenLevel，大约每 3–4 秒一次；他们跑了约 9 小时、700 次 LoadMap 后才撞上，竞争窗口很窄。建议的修复是不要在渲染线程碰 UWorld，改为把 FSceneInterface* 传给扩展并缓存，并用局部数组替换那个可变成员。变通是设 r.RayTracing=False，因为 FDeferredShadingSceneRenderer 里两处 GetFlags() 调用都在 IsRayTracingEnabled() 之后。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 5.8 打包游戏在开启硬件光追后，长时间循环切图会在 GetFlags() / SetupRayTracingRenderingData 崩溃，先对照原文看崩溃时是否正逢旧世界 BeginTearingDown",
+        "临时规避可按原文关掉 r.RayTracing；源码项目可按帖中补丁建议，把 FSceneInterface* 缓存进 FComputeViewExtension，避免渲染线程再解引用可能已被销毁的 UWorld。这是作者建议，不是官方合入的修复"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
