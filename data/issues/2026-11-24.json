@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-24",
+  "items": [
+    {
+      "title": "论坛：UE 5.8.4 在 GPU 高负载下，Lumen 异步表面缓存光照会把辐射度染成闪烁色块（关掉 r.LumenScene.Lighting.AsyncCompute 可消除）",
+      "url": "https://forums.unrealengine.com/t/lumen-bounce-unstable/2861034",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-23",
+      "ue_version": "UE 5.8.4（Launcher，CL 58902052）",
+      "summary": "作者 @NemesisDXB 报告：在 UE 5.8.4、DX12/SM6、默认 Epic 档的 Lumen GI 与 Lumen 反射、并开启 Nanite 与 Virtual Shadow Maps 的情况下，把 GPU 负荷推到接近满载后，一旦打乱帧节奏（实时视口下把鼠标划过 Scene Outliner 即可，不必进 PIE），整面墙和屋顶会以绿、蓝、红、紫、橙等纯色块闪烁或频闪；节奏稳定后会暂时恢复，再次扰动又出现。硬件与软件 Lumen 都能复现。他们的例子是约 40 个带壳层毛发、26.6 万顶点的蒙皮网格，把 RTX 5070 Ti 推到约 96%；同一问题也会在大型开放世界关卡里经过长时间编辑后慢慢出现。逐项开关的结果是：r.LumenScene.Lighting.AsyncCompute 0、r.Lumen.AsyncCompute 0、r.LumenScene.Radiosity 0、r.Lumen.DiffuseIndirect.Allow 0，或把 t.MaxFPS 设为 30（让 GPU 有空闲）都能消除；r.RDG.AsyncCompute 0 无效。r.Lumen.Visualize 13 能在表面缓存间接光里看到这些色块。作者据此认为问题出在异步场景光照 / 辐射度路径的顺序或同步，而不是计算队列本身；显存约 9.8/16 GB，没有驻留警告。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 5.8.4 在 GPU 接近满载时出现整面闪纯色（而不是普通亮度抖动），先设 r.Lumen.Visualize 13 看表面缓存间接光是否已有色块；再按原文单独关掉 r.LumenScene.Lighting.AsyncCompute，确认是否消失。原文明确写了只关 r.RDG.AsyncCompute 不够",
+        "这是作者在编辑器视口里验证的变通，不是官方合入的修复；关掉异步场景光照可能换回部分同步开销。也可用 t.MaxFPS 30 对照：若只有 GPU 吃满时才出现，更像是这条异步路径的时序问题"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "Last Week in Unreal（11/16–11/22）：ue6-main 将传统光追阴影标为弃用，并给移动端放开 Render Command Pipe",
+      "url": "https://speedrun.ci/en/blog/last-week-in-unreal-nov-16-22-2026",
+      "source": "SpeedrunCI",
+      "published": "2026-11-23",
+      "ue_version": "ue6-main / 公开 5.9 分支（文中称 5.8 本周无提交，仍为 5.8.4）",
+      "summary": "SpeedrunCI 在 2026-11-23 发布的周报统计：11 月 16–22 日 ue6-main 有 1,595 个提交（其中渲染 131 个），公开 5.9 分支 322 个，ue5-main 另有 640 个，5.8 分支本周无提交、也没有 5.8.5 标签。渲染方面，ue6-main 把传统光追阴影标记为弃用，提交说明写“This feature is deprecated by Megalights”；新增只读 CVar r.RayTracing.Shadows.Supported，默认仍为 true，因此目前行为还不变，项目设置则改名为“Ray Traced Shadows (Deprecated)”（47ad9ec9）。新平台标志 bSupportsNaniteRayTracing 允许“在 Nanite 光追太慢、不宜使用的平台上跳过编译相关着色器”，本次 diff 为 Windows、Linux 和 Mac 打开了它（d283815e）；文中提醒：未设置该标志的平台上，若把 r.RayTracing.Nanite.Mode 设为 1 或 2，会回退到 fallback 网格并打出 LogNanite 警告，而默认模式本来就用 fallback 网格。移动端不再被强制 r.RenderCommandPipeMode 0，Android、iOS 和 Switch 改为 mode 1，并写明在 Switch 版《Fortnite》上测得 Game Thread 与 Render Thread 各约 -0.2ms（7a8b450c）。5.9 分支上，Preview 2 里关掉 Virtual Shadow Map 投影数据 uniform buffer 的改动仍在 Preview 2 中；本周又在“UBO 平台且未使用 one-pass projection”时重新启用该 buffer（f615c07d）。",
+      "try_points": [
+        "若在跟 ue6-main：先确认目标平台是否设置了 bSupportsNaniteRayTracing；未设置时不要把 r.RayTracing.Nanite.Mode 调到 1 或 2 还指望编译 Nanite 光追着色器，按原文会回退到 fallback 网格",
+        "移动端或 Switch 源码构建可对照 r.RenderCommandPipeMode，看 Android/iOS/Switch 是否已是 mode 1，并用 Game Thread / Render Thread 时间验证文中那组 -0.2ms 是否在自己的项目里出现。这是 Fortnite on Switch 的测量，不是通用保证",
+        "若在测 5.9 Preview 2 的 VSM 性能，按原文要把分支 head 上“非 one-pass projection 的 UBO 平台重新启用投影数据 uniform buffer”的后续改动一并对照，不要只拿 Preview 2 的关闭状态当最终行为"
+      ],
+      "topics": [
+        "渲染",
+        "移动端"
+      ]
+    },
+    {
+      "title": "论坛：Scene Capture 2D 把帧率打到约 1/2–1/3，可用 HiddenActors / 按需捕获来限制第二视角开销",
+      "url": "https://forums.unrealengine.com/t/scene-capture-2d-significantly-reduces-fps/2856867",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-16（提问）；2026-11-17（社区答复）",
+      "ue_version": "原文未标注",
+      "summary": "作者 @gray182800 把 Scene Capture 2D 当作载具上的远程摄像头，并把画面显示在车内 Widget 上，结果帧率大约降到原来的 1/2 到 1/3（随关卡而变）。他已把捕获帧率从游戏帧率降到 25（再低会影响玩法），分辨率从 1024×1024 降到 512×512（再低难以游玩），并附上了开启与关闭捕获的 trace 截图。社区答复 @ImYourBeast 指出：第二次完整场景渲染差不多就是这个量级的开销；可以把车外世界以外的对象放进 HiddenActors，或只用 ShowOnlyActors 列出远程视角需要的网格，然后关闭 bCaptureEveryFrame，改为按接近 25Hz 的计时器、只在远程视角真正需要的频率上捕获。",
+      "try_points": [
+        "若载具监控或类似第二视角把帧率打掉一半以上，先不要只靠降分辨率：按答复把无关 Actor 放进 HiddenActors，或改用 ShowOnlyActors 只画远程视角需要的网格，再量一次 stat unit / Insights",
+        "关闭 bCaptureEveryFrame，改成按远程画面所需频率（原文是接近 25Hz 的计时器）捕获。这是社区建议，发帖时没有 Epic 答复，也没有给出具体耗时数字"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
