@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-24",
+  "items": [
+    {
+      "title": "TSIR：用可光线追踪的三角形溅射做两阶段逆渲染，重建可重打光资产（论文）",
+      "url": "https://arxiv.org/abs/2611.27030",
+      "source": "arXiv",
+      "published": "2026-11-20",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Westlake / 浙江大学 / 清华 / 阿里达摩院等作者在 arXiv 发布论文 TSIR（提交于 2026-11-20）。文中指出，重叠的高斯图元会让表面恢复变难，光线传输也需要多层遍历与合成。TSIR 是两阶段逆渲染：第一阶段得到不透明的 triangle splat，并学习顶点着色法线；第二阶段直接在这些表面上做光线追踪，用蒙特卡洛积分估计材质，计入直接光照与间接反射，以减少对多层合成的依赖。作者还给出一种抗锯齿，用来压三角形边界伪影。在 Synthetic4Relight 与 TensoIR Synthetic 上（各四个场景平均），作者报告：Synthetic4Relight 的新视角 / 反照率 / 重打光 PSNR 分别为 40.78 / 35.10 / 36.99，高于所比较的 NvDiffRec、GS-IR、IRGS、GeoSplatting 等；TensoIR 上新视角与重打光 PSNR 为 37.10 与 32.75、法线 MAE 为 3.65°，同样高于这些基线，但反照率 PSNR（34.43）低于 TensoIR 方法本身的 34.86。重打光效率方面，作者在 TensoIR 的 Hotdog、bridge 环境、800×800 上测得 TSIR 为 14.02 FPS、重打光 PSNR 31.24 dB，并写这超过 IRGS 的 0.46 FPS 三十倍以上（两边都用每像素 768 条光照射线）。抗锯齿质量被写为接近超采样（TensoIR 新视角 PSNR 37.10，对 SSAA 的 37.18），且比超采样更高效。以上数字与对比均为论文结果，本机未复现，也未核对该效率表所用 GPU。",
+      "why_useful": "若你关心从多视图照片还原可重打光资产，这篇给出一条不走多层高斯遍历、而用opaque triangle splat 做光线追踪 PBR 的路径，并附上与 IRGS / GS-IR 等的质量与帧率对比。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.27030 的摘要、第 4–5 节与表 1–2。文中未在摘要处给出官方代码仓库。本机未实现或复现实验。"
+    },
+    {
+      "title": "Streaming-AAA：作者称在两块 A800 上以 1080p、43 FPS、198 ms 延迟流式生成可玩的 3A 游戏视频（论文）",
+      "url": "https://arxiv.org/abs/2611.26040",
+      "source": "arXiv",
+      "published": "2026-11-19",
+      "category": "前沿",
+      "direction": "游戏开发",
+      "summary": "腾讯 AIPD 作者在 arXiv 发布 Streaming-AAA（首发 2026-11-19，v2 于 2026-11-20）。这是面向可控制、可无限时长的 3A 游戏视频生成框架，主要针对《原神》。作者写系统由三部分构成：为高分辨率解码重设计的视频 VAE；用 diffusion forcing 预训练并拉长时序训练窗口；以及后训练蒸馏与记忆压缩。实现细节写明：为提高吞吐，扩散模型与 VAE 解码器部署在两块独立的 NVIDIA A800 上做流水线，去噪步数为 2。作者报告在该设置下可生成 1080p 游玩视频，帧率为 43.0 FPS，端到端（动作到像素）延迟 198 ms——由扩散 93 ms、VAE 解码 58 ms，再加上动作可能在半步中途到达而计入的 0.5 步扩散（93×1.5+58）得出。表 2 用 VBench（custom_input，科目一致性、背景一致性、运动平滑、成像质量，在两个评估标题上平均）对比 Lingbot、YUME、Matrix Game 3.0、HY-World1.5：作者报告本方法在科目/背景一致性、成像质量与平均分（0.832）上最高，运动平滑 0.982 略低于 HY-World1.5 的 0.988；对比方法分辨率为 480p 或 720p，帧率约 2.1–6.7 FPS、延迟约 6.6–11.3 秒，硬件设置并不统一（例如 Lingbot 写的是 8 GPU 上 2.6 FPS）。作者还展示连续游玩约一小时的结果，但局限里写明模型主要针对单一游戏、对未见环境与机制的泛化有限。以上速度、延迟、榜分数与“更可玩”等均为作者评测，本机未复现。项目页：https://streamingaaa.github.io/ 。",
+      "why_useful": "若你在看可交互的游戏世界模型或玩法视频生成，这篇把 1080p、帧率和动作延迟放在同一张表里对比，并写清是两块 A800 流水线、且目前主要适配《原神》。",
+      "try_it": "先看 https://arxiv.org/abs/2611.26040 与项目页 https://streamingaaa.github.io/ 的视频和表 2。把 43 FPS / 198 ms 当作作者在双 A800 流水线上的测量，而不是单卡或消费级显卡数字。本机未运行该系统。"
+    },
+    {
+      "title": "Codex CLI 0.172.0：搜索结果可跳转到线程，斜杠命令支持 Tab 补全，并可按工具设置审批审阅者",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+      "source": "GitHub",
+      "published": "2026-11-24",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "OpenAI 在 GitHub 发布了 Codex CLI 0.172.0（标签 rust-v0.172.0，发布时间 2026-11-24T00:03:55Z）。新功能包括：可从搜索结果和 transcripts 中的线程链接跳转到已保存对话以及嵌套的子代理；对受支持的斜杠命令按 Tab 补全参数（例如 `/mcp lo` 补全为 `/mcp login`）；在 agent command center 里用 Shift+Up / Shift+Down 在任务组之间跳转；带有缓存工具列表的可选 stdio MCP 服务器，默认改为第一次调用工具时再启动；可在 `config.toml` 里为单个已连接的 app 工具设置 approval reviewer；app-server 客户端可在设置或登录时选择 Amazon Bedrock Runtime。修复方面，发布说明列出：`codex exec resume` 会恢复已保存的沙箱权限、工作目录和 workspace roots（除非显式覆盖）；远程会话在客户端与服务器操作系统不同时保留工作目录、workspace roots 与可写路径；流式响应里一旦出现供应商错误会立刻报告，并标明触达的是哪一项 API 花费上限；打断父回合时会为下一回合保留子代理已排队的回复；以及用 PageUp / PageDown 阅读并提交高于终端答题区的选项，Cloud 回复在历史加载完成后会就地更新以保持顺序。文档方面，附带的 `openai-docs` skill 补充了迁移到 GPT-6.2 Astra 与 Sol 的说明。Chores 写明 Code Mode 现在对所有宿主连接改走 gRPC，`code_mode_host_grpc` 设置已弃用。完整对照见 rust-v0.171.0...rust-v0.172.0。上述行为以发布说明为准，本机未安装或验证该版本。",
+      "why_useful": "若你已在用 Codex CLI 0.171.0，这是今天的稳定版：终端里检索和斜杠命令更好用，也可按工具配置审批，并修了 resume / 跨系统远程会话和花费上限提示。",
+      "try_it": "按官方发布页升级，例如 `npm install -g @openai/codex@0.172.0`（以你现有安装方式为准），然后运行 `codex --version`。若使用可选的 stdio MCP 或 Code Mode，注意默认改为首次调用再启动 MCP，以及 Code Mode 一律走 gRPC。本机未安装该版本。"
+    },
+    {
+      "title": "Claude Code 2.1.331：终端会话在 Bedrock 等平台支持 Code Mode，并修复本地 MCP 长时间挂起",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+      "source": "GitHub",
+      "published": "2026-11-23",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Anthropic 在 GitHub 发布了 Claude Code v2.1.331（发布时间 2026-11-23T21:34:41Z）。新功能包括：在 Amazon Bedrock、Google Cloud 的 Agent Platform、Microsoft Foundry 以及 Claude Platform on AWS 上，终端会话也可使用 Code Mode；Claude apps gateway 新增 `oidc.groups_jsonpath`，用 RFC 9535 JSONPath 的一个小子集从对象列表中读取 groups；`claude doctor` 增加 API 连通性一节，报告能否访问 API、HTTP 状态或错误，或说明为什么没做测试；语音点按听写在 15 秒未识别到语音或达到 2 分钟上限后自行停止时会给出提示；可用 `CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` 在会截断压缩响应的代理后请求未压缩输出（发布说明写目前不建议用于自托管 runner 或 Remote Control）；插件清单新增 `optionalDependencies`，可随列出它的插件一起安装，并单独禁用或卸载。修复方面，发布说明列出：某些本地或 WebSocket 服务器返回畸形回复时，MCP 工具调用可能挂起最长约 30 分钟；`/compact` 与自动压缩在摘要引用某些 XML 标签时可能丢掉部分对话摘要；云会话中的回合与子代理失败，或在其他环境长回复超时（回复在模型仍在思考时静默），现在会重试一次该请求；以及中断或失败的插件更新可能留下不完整插件目录、导致之后缺少 skills 等组件。此外还修了 `/install-github-app`、窄窗口下的 `/diff` 与 `/bug`、Remote Control 消息位置、以及 Windows 上 FAT32 / exFAT 在部分插件会话中每次写文件都要授权等问题。VS Code 侧则改进了面板启动、远程窗口与空闲后再回复的速度，并把接受建议 diff 改为需先点到或键入到右侧提案区。上述行为以发布说明为准，本机未安装或验证该版本。",
+      "why_useful": "若你在用 Claude Code，这版把 Code Mode 扩到 Bedrock 等终端会话，并修了本地 MCP 长时间挂起、压缩丢摘要和插件更新残留不完整目录等实际问题。",
+      "try_it": "按你现有安装方式升级到 2.1.331。升级后可用 `claude doctor` 查看新增的 API 连通性一节。若终端走 Bedrock / Agent Platform / Foundry / Claude Platform on AWS，可留意 Code Mode 是否已可用。本机未安装该版本。"
+    },
+    {
+      "title": "Hugging Face：如何搭建并维护一套智能体评测（八步指南）",
+      "url": "https://huggingface.co/blog/agentic-evals",
+      "source": "Hugging Face",
+      "published": "2026-11-23",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Hugging Face 于 2026-11-23 发文，介绍如何搭建和维持一套智能体（agentic）评测。文章把评测分成问答、智能体、多智能体团队/集群三个阶段，并聚焦智能体评测：任务、agent harness、钉死的环境、一次 rollout、verifier，以及留下的 trace。文中引用一项对 Terminal-Bench 的审计：固定模型、只改 agent harness，准确率最多相差 29.9 个百分点；并称目前 98.2% 的模型基准分数只由单方报告。作者给出八步流程：明确要验证的主张、找到任务、先原样跑通、再改编、检查评测、阅读 traces、报告分数、比较模型。示例是把 Terminal-Bench 2 中的 raman-fitting 任务放到开源评测框架 Harbor 上，用 Terminus-2 作为终端 agent harness，并列出改编前应检查的 instruction、容器镜像、参考解与 verifier。文中还讨论基准出错时如何发现和修正，以及各组件应公开或受控审阅的范围。Hub 规模（约 3500 个评测榜、过去一年评测数据集增至约 17000 等）以及上述审计与百分比数字，均为文中引用或 Hugging Face 自己的统计，本机未复核。",
+      "why_useful": "若你要给编码或工具型 agent 做内部评测，这篇把“先复用开源任务和钉死的环境、再改领域细节，并用 traces 检查分数是否站得住”写成了可跟做的步骤，也提醒 harness 本身就能大幅改变分数。",
+      "try_it": "按文中第 2 节与附录 A，从 Terminal-Bench 2 的现成任务和 Harbor 起步，先原样跑通再改编。改编前对照文中表 2 检查任务说明、环境镜像、参考解和 verifier。本机未实际跑该示例。"
+    }
+  ]
+}

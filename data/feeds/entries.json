@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T08:58+08:00",
+ "updated": "2026-11-24T09:29+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,8 +8,8 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 1
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   },
   "NVIDIA Technical Blog": {
    "url": "https://developer.nvidia.com/blog/feed/",
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 3
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,8 +62,8 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 2
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   },
   "Game Developer": {
    "url": "https://www.gamedeveloper.com/rss.xml",
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-24T08:58+08:00",
+   "checked": "2026-11-24T09:29+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 3
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 10
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-24T08:58+08:00",
-   "last_new": 2
+   "checked": "2026-11-24T09:29+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -149,7 +149,7 @@
    "id": "277e19bbb043",
    "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
    "link": "https://arm.jonpalmisc.com/",
-   "summary": "Hacker News 热度:818 分,163 条评论",
+   "summary": "Hacker News 热度:834 分,167 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50617499",
@@ -160,7 +160,7 @@
    "id": "f942eb41ae40",
    "title": "Apple removed my open-source app from EU App Stores after 9 years",
    "link": "https://github.com/glushchenko/fsnotes/discussions/2056",
-   "summary": "Hacker News 热度:493 分,106 条评论",
+   "summary": "Hacker News 热度:511 分,110 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50616933",
@@ -182,7 +182,7 @@
    "id": "545935d111eb",
    "title": "Kagi Mail (public beta)",
    "link": "https://blog.kagi.com/kagi-mail-public-beta",
-   "summary": "Hacker News 热度:340 分,265 条评论",
+   "summary": "Hacker News 热度:354 分,267 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50615481",
@@ -204,7 +204,7 @@
    "id": "bccf72c112d7",
    "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
    "link": "https://twitter.com/ylecun/status/2124550037912920090",
-   "summary": "Hacker News 热度:1070 分,612 条评论",
+   "summary": "Hacker News 热度:1128 分,631 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50615308",
@@ -215,7 +215,7 @@
    "id": "46c7ac1f777c",
    "title": "Ladybird is now in alpha",
    "link": "https://ladybird.org/posts/alpha/",
-   "summary": "Hacker News 热度:1364 分,323 条评论",
+   "summary": "Hacker News 热度:1414 分,330 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50614249",
@@ -226,7 +226,7 @@
    "id": "e885858411c9",
    "title": "Nvidia Reinstates Jensen Huang as CEO",
    "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
-   "summary": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-j... https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress... Comments URL: https://news.ycombinator.com/item?id=50611576 Points: 2016 # Comments: 3089",
+   "summary": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-j... https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress... Comments URL: https://news.ycombinator.com/item?id=50611576 Points: 2073 # Comments: 3125",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50611576",
@@ -237,7 +237,7 @@
    "id": "3035c6afb7d8",
    "title": "Nospeaker ─ Make your MacBook's trackpad talk using its haptic motor",
    "link": "https://github.com/os6/nospeaker",
-   "summary": "https://x.com/codycollier/status/2124505859883716918 Comments URL: https://news.ycombinator.com/item?id=50610318 Points: 270 # Comments: 162",
+   "summary": "https://x.com/codycollier/status/2124505859883716918 Comments URL: https://news.ycombinator.com/item?id=50610318 Points: 276 # Comments: 162",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50610318",
@@ -248,7 +248,7 @@
    "id": "0db9893a313d",
    "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
    "link": "https://z.ai/blog/glm-5.4",
-   "summary": "Hacker News 热度:1039 分,338 条评论",
+   "summary": "Hacker News 热度:1049 分,345 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50609685",
@@ -259,7 +259,7 @@
    "id": "c9cb73e7d082",
    "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
    "link": "https://spelunkr.tv",
-   "summary": "Hacker News 热度:935 分,161 条评论",
+   "summary": "Hacker News 热度:941 分,161 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50606192",
@@ -446,7 +446,7 @@
    "id": "b6144f452438",
    "title": "Spacecraft reaches Mercury on second-ever mission to enter its orbit",
    "link": "https://www.theguardian.com/science/2026/nov/20/spacecraft-mercury-second-ever-mission-orbit-bepicolombo",
-   "summary": "Hacker News 热度:289 分,92 条评论",
+   "summary": "Hacker News 热度:295 分,92 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50587439",
