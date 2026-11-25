@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    {
+      "title": "LMnOP：用 leave-many-out 重要性修剪 3D 高斯溅射，高比例删除后无需微调仍多数指标领先（论文）",
+      "url": "https://arxiv.org/abs/2611.30102",
+      "source": "arXiv",
+      "published": "2026-11-23",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "MOBILTECH 与庆熙大学作者在 arXiv 发布 LMnOP（提交于 2026-11-23）。文中指出，3DGS 场景常需数百万个高斯，存储与绘制成本高；常见的 leave-one-out 重要性是单独去掉一颗高斯时的损失增量，在高修剪比例下会漏掉“单独看冗余、一起看却必要”的高斯。LMnOP 改为估计 leave-many-out 重要性：其他高斯也被随机去掉时，再去掉某一颗所带来的平均损失增量。作者给出像素颜色在随机删除下的均值与方差的闭式计算，据此近似重要性，而不必抽样删除模式；再按重要性更新每颗高斯的保留概率，最后一次性修剪。三个数据集（Mip-NeRF360、Deep Blending、Tanks & Temples）在 90% 与 99% 删除、且修剪后不微调的对比中，作者报告 LMnOP 在 18 项指标里有 16 项最好；SSIM 与 LPIPS 在全部 13 个场景上都优于 GaussianPOP。两个例外是 90% 删除时 Deep Blending 与 Tanks & Temples 的 PSNR，GaussianPOP 更高（分别为 27.69 对 27.22、20.81 对 20.15）。在 Mip-NeRF360 上，相对 GaussianPOP 的 PSNR 优势从 90% 删除时的 0.45 dB 扩大到 99% 时的 1.15 dB（99% 时 LMnOP 为 16.53 dB，GaussianPOP 为 15.38 dB）。耗时方面，作者在 Mip-NeRF360 上测得 LMnOP 每场景 19.5 分钟（90%）和 17.0 分钟（99%），GaussianPOP 为 0.9 与 0.6 分钟。另用 5,000 步微调 90% 删除后的 Mip-NeRF360 模型后，作者称 LMnOP 在 PSNR、SSIM、LPIPS 上仍最好。以上数字与对比均为论文结果，本机未复现；文中未见官方代码仓库。",
+      "why_useful": "若你要把已训练的 3DGS 场景压到更少高斯以降低存储和绘制开销，这篇把高比例修剪时“一起删除才显出重要性”的问题写清楚了，并给出与 GaussianPOP 等在 90%/99% 删除下的质量与耗时对比。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.30102 的摘要、第 4–5 节与表 1。把 90%/99% 删除后的指标当作论文评测，并注意该方法比 GaussianPOP 慢一个数量级。本机未实现或复现实验。"
+    },
+    {
+      "title": "Godot 4.8 beta 5：官方称为本周期很可能最后一次 beta，主要修复回归，并修正 MetalFX 时间上采样抖动",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-5/",
+      "source": "Godot Engine",
+      "published": "2026-11-24",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Godot 于 2026-11-24 发布 4.8 beta 5（构建自提交 a661dfdbc）。官方写道，距离 beta 4 不到一周就已解决全部剩余发布阻断，并想在进入 Release Candidate 之前再出一次 beta，因此称这是 4.8 周期“很可能最后一次”开发快照。本篇只覆盖 beta 4 到 beta 5 的改动，整体 4.8 新特性仍以 beta 1 介绍为准。亮点多为回归修复，包括：CanvasLayer 编辑器工作区无法切换；进程关闭时 Trail3D 不更新；PulseAudio 上麦克风输入延迟降到与输出相同；C# 翻译插件改为标准注册以免覆盖用户插件；Find in Files 未复制过滤器；脚本编辑器内部类方法的重写指示相对于父类；继续执行时显示 Game dock；镜像名称未被翻译提取脚本拾取；回退了 Linux 上的 Feral GameMode 集成；以及 Metal 上 MetalFX 时间上采样的抖动偏移单位与符号。changelog 写有 32 位贡献者提交了 54 项修复。下载说明中，.NET 构建（mono）的最低支持版本从 .NET 8 改为需要 .NET 10.0 或更新。这是预发布软件，官方仍提醒备份或使用版本控制。本机未安装或验证该快照。",
+      "why_useful": "若你在跟 4.8 测试，这是官方称为很可能最后一次 beta：发布阻断已清，并修了 MetalFX 时间上采样抖动、CanvasLayer 工作区切换和 Trail3D 等回归，适合在 RC 前再跑一轮项目验证。",
+      "try_it": "从 https://godotengine.org/article/dev-snapshot-godot-4-8-beta-5/ 下载对应平台的 4.8 beta 5。若使用 C#/.NET 构建，需先准备 .NET 10.0 或更新版本。建议在副本或版本控制下测试，并对照自 beta 4 以来的交互式 changelog。本机未安装该版本。"
+    },
+    {
+      "title": "Claude Ship：可在 GitHub 上审 PR、修 CI，并按仓库策略决定是否批准（Team/Enterprise，部分功能为 beta）",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "source": "Anthropic",
+      "published": "2026-11-23",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Anthropic 于 2026-11-23 发文介绍 Claude Ship（文中写“即日起以 beta 提供”）。它由已正式可用的 Code Review，以及仍处 beta 的 PR Steward 与 Claude Approvals 组成，用于在 GitHub 上把 pull request 走过审阅、修复和批准决定。Code Review 可从多角度审查并发布发现，并提供 Quick / Standard / Deep 三档；PR Steward 处理失败的 CI、合并冲突以及来自 Code Review、其他工具或同事的反馈，但不设计为批准或合并 PR，每次推送后会说明改了什么以及如何撤销，也可用 @claude 指令或 @claude stop。Claude Approvals 读取仓库里的策略文件，在策略允许时自行批准常规改动，或要求更深的人工签署；官方建议多数客户先开 observe-only 模式，再把它纳入分支保护。开发者可在 Claude Code 里用新的 /ship 命令：推送并开 PR、审阅，并跟进反馈与失败检查；/ship 自当日起在 Claude Code 与桌面应用中逐步推出，最终能否合并仍取决于开发者权限和仓库分支规则。管理员可按仓库打开 Code Review 与 PR Steward，配置审阅级别、触发时机和花费上限。适用范围：Claude Team 与 Enterprise，且仓库在 GitHub 上。用量按 token 计费，可能增加组织成本；Claude Approvals 无基础费用，但策略中的分类器按 token 计费，且策略若使用 Claude 的审阅会触发一次计费的 Code Review（observe 模式也一样）。运行 /ship 计入常规 Claude Code 用量。Zero Data Retention、HIPAA 配置或客户管理加密密钥的组织不可用。文中还提到符合条件的 Enterprise 组织可在领取后 30 天内使用至少 10,000 美元 Claude Ship 积分，须在 2027-01-15 前领取，条款适用——这是厂商优惠。另称 Claude Code 团队在把 Claude 的审阅作为更广流程一层时，6 月至 9 月已合并 PR 数量增加一倍以上、被回退比例下降超过 40%；该数字为 Anthropic 自己的团队统计，本机未复核，也未实际使用 Claude Ship。",
+      "why_useful": "若你已在用 Claude Code 写代码，这篇把开 PR 之后的审阅、修 CI 和按仓库策略批准写成一套可逐步打开的流程，并写清了 beta 范围、GitHub/套餐限制和计费方式。",
+      "try_it": "更新 Claude Code 后，在你有权限的 GitHub 仓库里试用 /ship（需 Team 或 Enterprise，且该功能仍在滚动推出）。若要在整个仓库自动运行，先按官方设置指南打开 Code Review，再为单个仓库加 PR Steward，并把批准策略先放在 observe 模式。本机未实际运行 /ship。"
+    },
+    {
+      "title": "Simon Willison：回顾过去一年 LLM 的三个拐点，并写到模型开始能做 3D 建模和把游戏改得更好玩",
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "source": "Simon Willison",
+      "published": "2026-11-24",
+      "category": "前沿",
+      "direction": "AI 工具",
+      "summary": "Simon Willison 于 2026-11-24 发文，整理他几周前在 AI Engineer Code Summit 主题演讲里提出的观点：过去十二个月里，LLM 与编码智能体出现过三个能力拐点。第一是 2025 年 11 月：他认为 Claude Opus 4.5 是自己第一次觉得 Claude Code 的默认结果通常就对、不必频繁纠正的模型，同期 GPT-5.1 系列对 Codex 也有类似效果。第二是 2026 年 6–7 月的“Fable 级”模型：以 Claude Fable 5 为代表，特点是给定目标和合适工具后会主动推进；他目前把 Claude Fable 5 / 5.1 / 5.2、Claude Opus 5.5（他称为“便宜的 Fable”）、GPT-6 Astra，以及可能的 Gemini 4 Neon 归入这一档。第三是 2026 年 9–10 月：他观察到前沿模型在 Blender 或 Three.js 上能做出可信的 3D 模型，并且 Claude Opus 5.5（文中写发布于 2026-09-22）是他第一次觉得模型“懂好玩”的例子——他让其对一款偏 Command & Conquer 风格的 RTS 执行“还不够好玩，把它改得有趣得多”，称模型在约 12 小时试玩与再平衡后，游戏从乏味变为能长时间玩下去。文中也写他仍在判断 Fable 5.2 算不算新的拐点。以上均为作者的个人观察与使用经验，不是受控评测，本机未复核其示例项目或会议演示。",
+      "why_useful": "若你在用编码智能体做工具或小游戏，这篇把“可靠日常写代码 / 主动用工具推进 / 开始能做 3D 与可玩性”分成三个可对照的时间点，并明确这些判断来自作者自己的使用，而不是榜单分数。",
+      "try_it": "阅读 https://simonwillison.net/2026/Nov/24/llm-inflection-points/ ，可对照文中三个阶段看自己的工作流卡在哪一步。文中的游戏与 3D 例子是作者经验，不代表换一个项目也会得到同样结果。"
+    }
+  ]
+}
