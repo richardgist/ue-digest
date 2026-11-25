@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    {
+      "title": "论坛：UE 5.8.4 关卡加载后前几帧，Nanite VSM 的 NodeAndClusterCull 会与异步 Lumen 竞态并 GPU hang（先关 r.Lumen.DiffuseIndirect.AsyncCompute 可避免）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-4-dxgi-device-hung-in-nanite-vsm-nodeandclustercull-racing-async-lumen-in-first-frames-after-level-load-engine-only-repro-likely-ue-230827/2861353",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-24",
+      "ue_version": "UE 5.8.4（二进制发行版，CL 58902052）",
+      "summary": "作者 @Byykt 报告：在 UE 5.8.4、D3D12/SM6、RTX 4090（驱动 621.24）上，编辑器在关卡加载后的前几帧会出现 DXGI_ERROR_DEVICE_HUNG。NVIDIA Aftermath 指向 Virtual Shadow Map 的 Nanite 剔除着色器 NodeAndClusterCull（偶发 CullPerPageDrawCommandsCs），同时异步计算队列上正在跑 Lumen 漫反射间接光。复现工程只用引擎内容：平坦 Landscape（6 个绘制层）、108 个生成的 Nanite 静态网格、方向光 VSM、天空光，以及一个空的流送子关卡；加载第 0 帧日志里会出现 ULevelStreaming::RequestLevel 刷新异步加载。冷启动编辑器时，原工程约 2/15 次 hang；去掉 Landscape 降到 0/15，去掉空子关卡降到 1/30。已验证的变通是：启动时设 r.Lumen.DiffuseIndirect.AsyncCompute=0，等渲染满 3 帧后再改回 1，结果为 0/30，对照未使用变通时 8/30。作者认为这像是加载后前几帧里，Nanite VSM 剔除与异步 Lumen 之间缺了依赖或同步。发帖时还没有 Epic 答复；作者把它与仍影响 5.8.4、目标修复标为 6.0 的 UE-230827（已被标为 Duplicate）联系起来，并提供了可公开下载的最小复现工程与 Aftermath 附件。这与 11 月 19 日已收录的 MicropolyRasterize hang 不是同一条报告：本次故障着色器是 NodeAndClusterCull，且明确发生在加载后的第 0–2 帧。",
+      "try_points": [
+        "若 5.8.4 在关卡刚打开的前几帧出现 DXGI_ERROR_DEVICE_HUNG，且 Aftermath / GPU breadcrumb 停在 RenderVirtualShadowMaps(Nanite) 的 NodeAndClusterCull，可按原文先设 r.Lumen.DiffuseIndirect.AsyncCompute=0，渲染满 3 帧后再改回 1，对照 hang 是否消失",
+        "原文提供了只用引擎内容的最小工程。对照时注意：去掉 Landscape 或空流送子关卡会明显降低复现率，Aftermath 调试参数也会提高 hang 频率。这是作者验证的变通，不是官方合入的修复；5.8.4 仍被列为受影响"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8.4 在 Vulkan 下，32768 宽的 VSM 图集让体素化 Nanite 树丢失投影",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-4-vulkan-voxelized-nanite-trees-lose-shadows-with-a-32768-wide-vsm-atlas/2861469",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-24",
+      "ue_version": "UE 5.8.4（CL 58902052）",
+      "summary": "作者 @EK_Studio 报告：在 UE 5.8.4 中，开启 Nanite Foliage 与 Virtual Shadow Maps 并保留 VSM cache 时，Shape Preservation 设为 Voxelize 的静态 Nanite 树会在物理 VSM 图集宽为 32768 像素时丢失全部或部分投影；树本身仍可见，同场景里的普通网格投影正常。问题先在 Linux/Vulkan 打包版出现，后又在 Windows/Vulkan 编辑器里复现（Windows 对照硬件为 RTX 4080 Laptop，驱动 610.91）。用 r.DumpRenderTargetPoolMemory 确认 Shadow.Virtual.PhysicalPagePool 为 32768 宽后，整棵树的影子会消失，或相邻几棵树的影子被切成矩形缺口。两次本地运行都使用 256 MiB 的 R32_UINT 池、两层 array；把 Vulkan Profiles 层的 maxImageDimension2D 报成 16384 后，同一容量的池变为 16384×2048，丢失的影子会回来。作者指出 NaniteRasterizer.usf（CL 58902052，约 1279、1309–1313、1688 行）里，GroupSourceLaneAndPixelPos 把 lane 索引、X、Y 分别打进 5、14、13 位，而单页 VSM 路径使用的是物理图集坐标；例如 (16384, 0) 会被解码成 (0, 1)。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 Vulkan 下只有体素化 Nanite 树丢影、普通网格正常，先跑 r.DumpRenderTargetPoolMemory，看 Shadow.Virtual.PhysicalPagePool 是否为 32768 宽",
+        "对照时按原文把 Vulkan 的 maxImageDimension2D 限制到 16384，确认同一 256 MiB 池变成 16384×2048 后影子是否恢复。根因指向 14 位 X 坐标装不下 32768 宽图集；这是作者的源码分析和对照实验，不是官方合入的修复，也没有给出可直接改的引擎 CVar"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：Launcher 版 UE 5.8 无法做 iOS Metal SM6；METAL_SM5_IOS 未声明 GPU Scene，Nanite 回退网格会画成大平面",
+      "url": "https://forums.unrealengine.com/t/launcher-ue-5-8-cannot-build-ios-metal-sm6-no-metal-shader-converter-in-ios-metalrhi-cannot-target-ios-metal-sm6-metal-sm5-ios-draws-meshes-as-flat-planes/2861511",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-24",
+      "ue_version": "UE 5.8（Epic Games Launcher 安装版，Windows 宿主 + 远程 Mac 打包）",
+      "summary": "作者 @NearBison6274 在 iPad Air（M4，iPadOS 26）上报告了 Launcher 版 UE 5.8 的两处 iOS 问题。其一：要开 METAL_SM6_IOS 需要 bindless，也就需要 Apple 的 Metal Shader Converter；但 Launcher 的 iOS 组件不附带 Engine/Binaries/ThirdParty/Apple/MetalShaderConverter/IOS/libmetalirconverter.embeddedframework.zip。就算手工放入 Metal Shader Converter 4.0 beta 3 的 iOS 库，预编译的 iOS MetalRHI 也是在未定义 METAL_USE_METAL_SHADER_CONVERTER 的情况下编出来的（目标文件里没有 IRMakeTextureResident / IRCompilerCreate），安装版又不能重编该模块，因此 Launcher 引擎在 iOS 上完全无法使用 Lumen。其二：Engine/Config/IOS/DataDrivenPlatformInfo.ini 里，[ShaderPlatform METAL_SM5_IOS] 没有 bSupportsGPUScene=true（Mac 的 SM5 平台有这项）。结果是开启 Nanite 的静态网格走 fallback 时，会在关卡里画成巨大的“漂浮平面”；在该节补上 bSupportsGPUScene=true 后，作者已在真机上确认平面消失。作者还写到：若同时关掉 r.AllowStaticLighting，iOS SM5 渲染器就没有间接光，基于 Lumen 的 PC 项目很难在 M 系列 iPad 上接近原貌。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 iOS 真机上 Nanite 网格（走 fallback）变成巨大平面，先检查 Engine/Config/IOS/DataDrivenPlatformInfo.ini 的 [ShaderPlatform METAL_SM5_IOS] 是否缺少 bSupportsGPUScene=true；按原文补上这一行后，作者已在 M 系列 iPad 上验证平面消失。注意 Launcher 的 Verify / 引擎更新会把该文件改回去，安装版许可证通常也不能把引擎改动打进发行包",
+        "若目标是 iOS 上的 Metal SM6 / Lumen：按原文，Launcher 安装版即使手工补上 Metal Shader Converter 也没用，因为预编译 iOS MetalRHI 没编进转换器路径；需要源码构建，或等待官方把 iOS 转换器框架和对应 MetalRHI 一并提供。这是作者的分析，不是官方说明"
+      ],
+      "topics": [
+        "移动端",
+        "渲染"
+      ]
+    }
+  ]
+}
