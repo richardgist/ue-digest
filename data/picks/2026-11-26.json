@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-26",
+  "items": [
+    {
+      "title": "HiGS：用分层 tile 架构加速可微 3D 高斯溅射的渲染与重建（论文）",
+      "url": "https://arxiv.org/abs/2611.31918",
+      "source": "arXiv",
+      "published": "2026-11-24",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "NVIDIA 研究员的论文 HiGS（Hierarchically Tiled Gaussian Splatting）于 2026-11-24 挂上 arXiv。作者指出，现有 3DGS 管线把同一个屏幕 tile 同时当作分区、光栅化和并行工作的单位，最密的 tile 会拖慢整帧。HiGS 把高斯按粗粒度 macro-tile 分区，在其中的细渲染 tile 上光栅化，并以有界、按深度排序的 batch 作为工作单元，密集区域改发更多 batch，而不是拉长单个单元。同一套 batch 也用于重建：合成提供透射率与颜色，使各 batch 可独立反传；作者还将优化器融合进反向传播，直接更新的参数与动量减半，并推迟当前视图外的外观更新。作者在一块 NVIDIA RTX PRO 6000 Blackwell 上报告：对已公开的 3DGS 预训练模型，Mip-NeRF 360 七个场景的渲染吞吐量为 1080p 2756 FPS、4K 1533 FPS（由表中各场景中位帧时间的均值换算），相对 gsplat 为 5.1× / 5.6×，并快于文中所有已发表对照方法；在 13 个常用场景上，重建比次快方法快 2.3×–3.0×、比 gsplat 快 5.9×–7.3×，显存约为其中最省方法的 1/1.9，数据集平均 PSNR 与对照方法相当，且使用精确的前到后 alpha 合成。附录写明源码将在正式发表后公开。以上数字均为作者评测，本机未复核，目前也未见独立代码仓库。",
+      "why_useful": "如果你在跟 3DGS 的实时渲染或训练成本，这篇把“分区 / 光栅化 / 并行工作不必共用同一个 tile”写清楚了，并给出了在高端 Blackwell GPU 上相对 gsplat 等公开实现的对照数字。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.31918 。附录写明实现源码将在发表后公开，目前不能按仓库复现；文中数字是作者在 RTX PRO 6000 Blackwell 上的结果，换卡或换场景不一定能得到同样速度。"
+    },
+    {
+      "title": "Unity：CLI 可让编码智能体搜索并导入 Asset Store 资源，也可调用 AI 生成器",
+      "url": "https://unity.com/blog/unity-asset-store-ai-generators-coding-agents",
+      "source": "Unity Blog",
+      "published": "2026-11-23",
+      "category": "效率",
+      "direction": "游戏开发",
+      "summary": "Unity 于 2026-11-23 发文称，Unity CLI 现可让 Claude Code、Codex、Grok Build、Google Antigravity 等编码智能体直接搜索、下载并把 Unity Asset Store 资源导入工程；也可通过 CLI 使用 60 余种 AI 资源生成器（精灵、3D 模型、音效等），报价免费，生成文件会记录所用模型、提示词和花费。同期发布的 Asset Library 插件配合 CLI，可从免费资源包或已拥有的资源包中只取单个 prefab，而不必下载整个包，并展示三角面数、动画绑定等原先商店页未提供的信息。文中写明：Asset Store 的 CLI 与 AI Generators 的 CLI 均处于 open beta；免费资源的 Asset Store CLI 对所有人开放，AI Generators 包含在 Unity 付费计划中，并使用计划附带的积分。登录沿用已有 Unity ID。以上为厂商公告，本机未实际运行这些 CLI 命令。",
+      "why_useful": "若你在 Unity 项目里用编码智能体搭场景或补占位资源，这条把“在终端里搜商店、只下单个资源、找不到再报价生成”接到了现有 Unity CLI，不必另开一套账号流程。",
+      "try_it": "先读原文，再按官方文档安装与试用：Asset Library 入门 https://docs.unity.com/en-us/asset-store/asset-library/introduction ，AI Generators CLI https://docs.unity.com/en-us/ai/generators-cli 。两者都是 open beta；免费资源对所有人开放，生成器走付费计划积分。本机未运行这些命令。"
+    },
+    {
+      "title": "NVIDIA：游戏开发月度更新，含 UE 5.9 Preview 的 Kimodo 动画、RTX 工具与 Nsight agent 接口",
+      "url": "https://developer.nvidia.com/blog/whats-new-for-game-developers-ai-animation-and-rtx-tools/",
+      "source": "NVIDIA Technical Blog",
+      "published": "2026-11-24",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "NVIDIA 技术博客于 2026-11-24 发布游戏开发月度汇总（作者 Phillip Singh）。文中介绍：Gaijin 在访谈里说明如何把 DLSS 5 与 3D-Guided Neural Rendering 接入 War Thunder 的 Dagor 引擎，并调整色彩管理（在 sRGB 下评估后再映回线性 HDR）；NVIDIA 称 Kimodo 是接入 Unreal Engine 5.9 Preview 引导动画框架的首个模型，可在 Sequencer 里用文本提示、样条路径和关键帧目标姿态生成角色运动。同文还列出多条 SDK / 工具更新：In-Game Inferencing SDK 1.8（加固 RTX Spark 支持、更新 llama.cpp 与 whisper.cpp、经 whisper.cpp 支持 Parakeet ASR、加入 Vulkan priority API）；RTX Dynamic Illumination 3.2（为 ReSTIR DI 空间重采样加入分层低差异采样、fallback sample，并增强 reservoir 可视化）；Real-Time BVH Viewer 1.0（可在独立窗口查看运行中的 D3D12 / Vulkan 加速结构，也可用附带 sampler 挂到已有进程）；RTX Path Tracing 1.9（九步入门示例，主路径追踪器默认集成 SHaRC）；RTX Global Illumination 2.9（增加 D3D12 / Vulkan 的 Shader Execution Reordering 支持）；以及 Nsight Graphics 2026.4 与 Nsight Systems 2026.6（支持分析 DLSS Frame Generation，并提供 Nsight Graphics MCP server 等给智能体用的接口）。文中部分效果描述来自合作厂商访谈或 NVIDIA 自身表述，本机未下载或实测这些 SDK。",
+      "why_useful": "若你在 UE 或自研引擎里跟光追、ReSTIR、路径追踪或局内推理，这篇把本月可下载的 SDK 和调试器列在一起，也提到 5.9 Preview 里可在 Sequencer 中试用 Kimodo。",
+      "try_it": "阅读 https://developer.nvidia.com/blog/whats-new-for-game-developers-ai-animation-and-rtx-tools/ ，再按文中链接打开对应 GitHub 或 Nsight 下载页。Kimodo 目前写的是 UE 5.9 Preview；合作厂商对画面效果的评价是访谈表述，不代表换项目也会得到同样结果。"
+    },
+    {
+      "title": "Claude Code 2.1.332：可从 MCP 服务器加载 skills（beta），并增加 PreSkillShellCommand hook",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "source": "GitHub (anthropics/claude-code)",
+      "published": "2026-11-25",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "Anthropic 于 2026-11-25 发布 Claude Code 2.1.332。新功能包括：可从 MCP 服务器加载 skills（beta），在 `/` 菜单中显示为 `server:skill`，其余 skills 仍用原名；新增 `PreSkillShellCommand` hook 事件，可在加载时拒绝某个 skill 或命令里的内联 shell 命令（在 2.1.331 及更早版本中，若设置文件写了该事件名，启动时会弹出对话框）；跨会话被暂挂的消息提示增加 “Always deliver”；当一条被标记的消息显示当前会话在用不同模型时，页脚会一直提示，直到用 `/model` 选择。修复方面包括：`claude auth login` 在 claude.ai 登录未能保存时不再误报 “Login successful.”（改为以退出码 1 结束并提示检查残留锁文件或磁盘已满等情况）；Read、@ 引用和压缩在无人写入的命名管道上不再挂起（例如被锁住的 secrets manager 挂载的 `.env`，现在 20 秒后失败）；以及本地 / SSE MCP、hook 输出过长、反复自动压缩失败后出现 “Prompt is too long” 等多处卡死问题。以上摘自官方 Release notes，本机未安装该版本验证。",
+      "why_useful": "若你已经在用 Claude Code 和 MCP，这次可以直接试用服务器下发的 skills，并用新 hook 拦住 skill 里夹带的 shell 命令；若干长时间卡住的修复也值得升级。",
+      "try_it": "查看 https://github.com/anthropics/claude-code/releases/tag/v2.1.332 后升级到 2.1.332，在 `/` 菜单里确认 MCP skills 是否以 `server:skill` 出现。MCP skills 仍标为 beta；本机未安装该版本。"
+    }
+  ]
+}
