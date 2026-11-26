@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-26",
+  "items": [
+    {
+      "title": "论坛：UE 5.8 开启 Substrate 后，Static Switch 经 Reroute 接到材质函数非首个 Substrate 输出时会报 Material information is invalid，Cook 失败",
+      "url": "https://forums.unrealengine.com/t/5-8-substrate-material-information-is-invalid-when-a-static-switch-input-goes-through-a-named-reroute-to-a-non-first-output-of-a-material-function/2873174",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-25",
+      "ue_version": "UE 5.8",
+      "summary": "作者 @Eel_I_Fukunaka 报告：在项目开启 Substrate 的前提下，若材质的 Front Material 由 Static Switch（或 Static Switch Parameter、Quality Switch、Shading Path Switch）驱动，且其中一路输入经过 Named Reroute 或普通 Reroute，再指向材质函数的第 2 个及以后的 Substrate 输出脚，加载时会打出 LogMaterial: Error: Material information is invalid，Cook 以 ExitCode=25（Error_UnknownCookFailure）失败。编辑器视口里该材质仍能编译并正常显示。复现步骤是：做一个多输出材质函数（输出 0、1 为标量，输出 2 为 Substrate Slab BSDF），把 Named Reroute Declaration 接到输出 2，再把该 reroute 的 Usage 接到 Static Switch 的 B，True 侧接任意 Substrate BSDF，最后把 Switch 接到 Front Material；保存后重新打开编辑器或执行 Cook 即可看到错误。作者定位到 UMaterialExpressionStaticSwitch::IsResultSubstrateMaterial 会跟着 reroute 找到材质函数调用，却检查 reroute 自己的 OutputIndex（0）而不是追踪后的 OutputIndex（2），因而把错误的输出脚当成非 Substrate；同一模式还出现在 StaticSwitchParameter、QualitySwitch、ShadingPathSwitch 以及 GatherSubstrateMaterialInfo 里。SubstrateHorizontalMixing 等节点已经使用追踪后的 OutputIndex，因此不受影响。平台写的是 Windows。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 5.8 + Substrate 材质在编辑器里看起来正常，但加载日志出现 Material information is invalid、Cook 失败，先检查 Static Switch（及 Quality / Shading Path Switch）的输入是否经过 reroute，且 reroute 是否接到材质函数的非首个 Substrate 输出",
+        "按原文的变通：把材质函数的 Substrate 输出直接接到 Switch，不要经过 reroute；或者把该 Substrate 输出改到函数的第一个输出（index 0）",
+        "若你维护引擎源码，作者建议在 IsResultSubstrateMaterial / GatherSubstrateMaterialInfo 里改用 GetTracedInput() 之后的 OutputIndex，并同样改 StaticSwitchParameter、QualitySwitch、ShadingPathSwitch。这是作者的补丁建议，不是官方合入的修复"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：免费 MIT 许可的 UE 5.9 Substrate 实时衍射光栅（全息箔）材质，已和 Blender Cycles 做逐像素对照",
+      "url": "https://forums.unrealengine.com/t/free-mit-real-time-diffraction-grating-holographic-foil-material-for-ue-5-9-substrate-validated-against-cycles/2860944",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-23",
+      "ue_version": "UE 5.9",
+      "summary": "作者 @zyyyyyc 把 Blender Guru 的 Balanced 衍射光栅着色器移植到 UE 5.9 的 Substrate，并以 MIT 许可开源（仓库 https://github.com/yichenzhu56/DiffractionGrating-UE）。光栅被建成 30 个倾斜各向异性高光瓣（6 个衍射级次 × 5 个波长）；因 Substrate 每像素最多 4 个 closure，推荐的混合材质 M_DiffractionHybrid 把环境部分在材质里对 Sky Light 立方体贴图评估全部 30 瓣（每瓣 5 次采样）并以自发光输出，直接光则用 4 个 Substrate Slab 覆盖 ±1 级次的两组颜色，并带阴影。为避免重复计算，材质 AO=0，且要求后期体积的 Lumen Max Roughness To Trace=0.2（低于默认 SlabRoughness 0.21）。作者用同一张 HDR 探针、三台 Blender 相机对照 Cycles：混合材质的逐像素相对误差为 0.15–0.20，亮度 96–100%，色彩鲜艳度 97–100%，开启 Lumen 时帧间噪声 0.03%。仓库还提供仅 4 个 Slab 的版本（约损失三分之二色彩）和 Unlit 参考版。要求 Windows、DX12、SM6，以及已开启 Adaptive GBuffer、每像素 4 个 closure 的 Substrate；硬件光追仅路径追踪分支需要。作者写明环境部分约每像素 150 次立方体采样，尚未做性能分析，因而并不便宜；路径追踪输出也还未与 Cycles 做数值对照。槽线方向可用 UV、物体轴投影或三平面，网格没有干净 UV 也能用。11 月 25 日作者补充，原先实例上 ColorFilter 贴图不生效的已知问题已在仓库中处理。",
+      "try_points": [
+        "在 UE 5.9 打开仓库里的 DiffractionGrating.uproject，进入 Content/Diffraction/General/Maps/L_DiffractionDemo，对照推荐的 MI_Hybrid_* 实例。关卡必须有 Sky Light；若开了 Lumen 反射，按原文给后期体积设 Max Roughness To Trace=0.2，且保持低于 SlabRoughness（默认 0.21），否则环境会被算两次",
+        "网格没有可用 UV 时，把 TangentMode 设为 1（物体轴）或 2（三平面）。若不能接受自发光，可改用只有 4 个 Slab 的 M_DiffractionGeneral，但按原文对照会丢掉约三分之二的色彩",
+        "作者尚未给出自己的性能数字，环境分支约每像素 150 次立方体采样，移植到项目前需要在目标硬件上单独测占用"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 Mac 的 WindowedFullscreen 打包版在窗口被压到菜单栏下方后，会以约 3 GB/分钟泄漏 IOSurface",
+      "url": "https://forums.unrealengine.com/t/5-8-mac-metal-drawable-iosurface-leak-after-windowedfullscreen-window-is-resized-below-the-menu-bar/2859186",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-19",
+      "ue_version": "UE 5.8（Launcher 安装版）",
+      "summary": "作者 @lastchanc3saloon 报告：在 macOS 27.0、Apple Silicon、Metal SM6 上，用 UE 5.8 Launcher 版打出的 Mac Shipping 包（FullscreenMode=WindowedFullscreen）中，一旦窗口变成菜单栏下方的 1920×1050（y=30）而不是 1920×1080 全屏，IOSurface 会以约每秒 6–8 个、每个约 7.5 MB 的速度泄漏（约 3 GB/分钟）；即使窗口回到 1920×1080，泄漏也会持续到进程重启。作者用 footprint <pid> | grep IOSurface 观察，空闲启动时计数是平的；按 Alt+Enter 两次（先窗口再回到全屏）并移动鼠标后，窗口变为 1920×1050，计数开始持续上升，20 分钟后见过 38 GB 的 IOSurface。栈采样显示渲染线程堵在 FMetalViewport::GetDrawableInternal → -[CAMetalLayer nextDrawable] → IOSurfaceCreate。作者怀疑 MetalViewport.cpp 里两处问题：GetDrawableInternal（约第 727 行）在 drawable 尺寸与后台缓冲区不一致时，每次调用都会释放后再取 nextDrawable，导致每帧取出多个未呈现的 drawable；单视图 PresentDrawLayers（约第 1031–1032 行）对 LocalDrawable->retain() 在 Mac 上没有对应释放，因为该对象只在非 Mac 的 presentDrawable 路径里使用。Shipping 包使用 WITH_MULTI_VIEW_SLATE_WINDOW_SUPPORT=0，因此会走到单视图分支。发帖时还没有 Epic 答复。",
+      "try_points": [
+        "若 5.8 Mac Shipping（WindowedFullscreen）在 Alt+Enter 或窗口被菜单栏压住后内存持续上涨，先用 footprint <pid> | grep IOSurface 看计数是否在空闲时也持续增加；原文观察到即使窗口回到 1920×1080，泄漏也不会自行停止，需要重启进程",
+        "对照时注意 Shipping 会走单视图 PresentDrawLayers。作者把根因指向 MetalViewport.cpp：尺寸不匹配时反复 nextDrawable，以及 Mac 上 LocalDrawable->retain() 没有释放。这是作者的源码分析和测量，不是官方合入的修复，原文也没有给出可直接改的 CVar"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8.4 的 PCG 运行时 GPU 实例会在全局重建渲染状态时丢失，且不会自动再生",
+      "url": "https://forums.unrealengine.com/t/5-8-4-pcg-runtime-generated-gpu-instances-are-lost-on-any-global-render-state-recreation-and-never-regenerated/2856688",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-16",
+      "ue_version": "UE 5.8.4",
+      "summary": "作者 @potrivaev1 报告：在 UE 5.8.4（Linux）上，PCG 以 Generate At Runtime 并在 GPU 上生成的实例只存在于 GPU Scene（UPCGProceduralISMComponent）。一旦发生全局组件渲染状态重建（FGlobalComponentRecreateRenderStateContext，例如用默认选项构造的 FMaterialUpdateContext），这些实例会被清掉，而且 PCG 收不到通知，因而不会再生；相机周围的运行时植被会消失，直到执行 pcg.RuntimeGeneration.Refresh（编辑器菜单 Tools > PCG Framework > Refresh All Runtime Gen Components）。复现是：关卡里放 Landscape 和 PCG Volume（运行时生成、层级网格 32/64/128 m，图为 Generate Landscape Textures → 自定义 HLSL 点生成 → Static Mesh Spawner，在 GPU 上执行），等植被出现后，打开任意材质资源（不必在关卡中使用）并点 Apply，或用 Python 调用 unreal.MaterialEditingLibrary.recompile_material；实例会立刻消失且不再回来。打开 pcg.RuntimeGeneration.EnableDebugging 1 后，重编译之后没有 [RUNTIMEGEN] 日志，说明调度器不知道实例已经没了。作者称 100% 可复现。UPCGProceduralISMComponent::OnRenderStateDirty 已经处理 MarkRenderStateDirty 这条路径（源码注释写明 GPU Scene 里没有显式持久化实例数据），但全局重建路径不会广播 MarkRenderStateDirtyEvent，该处理器不会被调用。作者还观察到冷启动时，每个材质 shader map 加载完成都会触发整次运行时生成重启，根图在前 15–40 秒可执行 10–16 次，并表现为启动阶段植被闪烁。",
+      "try_points": [
+        "若 5.8.4 在 Apply / 重编译任意材质后，PCG 运行时生成的植被突然消失且不再长回来，先试 pcg.RuntimeGeneration.Refresh，或菜单 Tools > PCG Framework > Refresh All Runtime Gen Components；原文把它作为已验证的变通",
+        "对照时可开 pcg.RuntimeGeneration.EnableDebugging 1，看重编译之后是否完全没有 [RUNTIMEGEN] 日志。这能区分“调度器不知道实例已丢”和普通刷新失败",
+        "这是作者在 Linux 上的 100% 复现和源码分析，不是官方合入的修复。冷启动阶段若看到植被反复闪烁，原文也把它归到同一条渲染状态重建路径"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}

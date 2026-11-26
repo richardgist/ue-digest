@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T09:31+08:00",
+ "updated": "2026-11-26T08:59+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,8 +17,8 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-25T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-26T08:59+08:00",
+   "last_new": 2
   },
   "AMD GPUOpen": {
    "url": "https://gpuopen.com/feed/",
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,8 +35,8 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-25T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-26T08:59+08:00",
+   "last_new": 1
   },
   "Aras Pranckevičius": {
    "url": "https://aras-p.info/atom.xml",
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-25T09:31+08:00",
+   "checked": "2026-11-26T08:59+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-25T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-26T08:59+08:00",
+   "last_new": 1
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-25T09:31+08:00",
-   "last_new": 8
+   "checked": "2026-11-26T08:59+08:00",
+   "last_new": 6
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,11 +107,132 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-25T09:31+08:00",
-   "last_new": 0
+   "checked": "2026-11-26T08:59+08:00",
+   "last_new": 3
   }
  },
  "entries": [
+  {
+   "id": "cbdb3cbc6ee4",
+   "title": "Quoting Scott Aaronson",
+   "link": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
+   "summary": "It’s now obvious that we’ll be getting, not one-off solutions to this or that complexity question, but a whole new continent of mathematical truth, one that we’d previously only glimpsed through fog. Picture van Leeuwenhoek first training a microscope on pondwater, or Galileo first training his telescope on the stars. That might give you some idea of how our resolution into the complexity-theoretic universe, and the whole universe of mathematical truth beyond it, has now improved. — Scott…",
+   "source": "Simon Willison",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-26T07:26+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "b51751b11c31",
+   "title": "How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling",
+   "link": "https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/",
+   "summary": "Attention can be a major bottleneck when serving world foundation models, where long sequences make inference computationally demanding. On NVIDIA Hopper and...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-26T03:30+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "90b56a4f511f",
+   "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+   "link": "https://scottaaronson.blog/?p=10379",
+   "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220 Comments URL: https://news.ycombinator.com/item?id=50646108 Points: 826 # Comments: 684",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50646108",
+   "date": "2026-11-26T03:11+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "e75e0ef6805f",
+   "title": "Where scientists draw the line on AI agents",
+   "link": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-26T02:52+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "8442eed6c910",
+   "title": "1Password Security Incident",
+   "link": "https://1password.com/blog/update-on-nov-2026-security-incident",
+   "summary": "Hacker News 热度:1086 分,467 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50644817",
+   "date": "2026-11-26T01:18+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "3510ce44aea7",
+   "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+   "link": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
+   "summary": "Hacker News 热度:429 分,103 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50643129",
+   "date": "2026-11-25T23:14+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "06e4afb07db2",
+   "title": "Google releases Cogentic papers on integer factorization, discrete logs and more",
+   "link": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+   "summary": "Hacker News 热度:443 分,328 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50642086",
+   "date": "2026-11-25T21:33+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "aab18b7cdc3a",
+   "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+   "link": "https://github.com/xoxorwr/pw-loudness-eq",
+   "summary": "Hacker News 热度:311 分,173 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50641171",
+   "date": "2026-11-25T19:34+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "18ed269c8046",
+   "title": "An Indic Voice Agent with CUGA",
+   "link": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-25T18:22+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "cff87b212508",
+   "title": "Smart people who give a shit use tools",
+   "link": "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools",
+   "summary": "Hacker News 热度:269 分,203 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50639698",
+   "date": "2026-11-25T15:46+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
+  {
+   "id": "f30cab37fe70",
+   "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+   "link": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+   "summary": "",
+   "source": "Hugging Face Blog",
+   "topic": "AI 工具",
+   "comments": null,
+   "date": "2026-11-25T08:00+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
+  },
   {
    "id": "71b6787f7c1a",
    "title": "Three LLM inflection points in twelve months",
@@ -474,6 +595,17 @@
    "comments": "https://news.ycombinator.com/item?id=50609685",
    "date": "2026-11-23T18:06+08:00",
    "first_seen": "2026-11-24T08:58+08:00"
+  },
+  {
+   "id": "2f41f4603e47",
+   "title": "Graphics Programming weekly - Issue 464 - November 23rd, 2026",
+   "link": "https://www.jendrikillner.com/post/graphics-programming-weekly-issue-464/",
+   "summary": "Practical, efficient render graphs walks through building a render graph from scratch based on resource access timelines explains two-level command recording, consecutive read and concurrent-write access grouping, pass batching, pass reordering, and transient memory aliasing includes discussions on memory usage and GPU time savings wayback-archive Siggraph 2026: smolder real-time volumetric effect rendering in glacier & 007 first light (Advances) presents Smolder, a real-time volumetric effect…",
+   "source": "Jendrik Illner(Graphics Programming Weekly)",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-23T12:00+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
   },
   {
    "id": "c9cb73e7d082",
@@ -936,6 +1068,17 @@
    "comments": null,
    "date": "2026-11-20T08:00+08:00",
    "first_seen": "2026-11-21T09:31+08:00"
+  },
+  {
+   "id": "8037befc371f",
+   "title": "Manage Liquid-Cooled AI Factories with NVIDIA Mission Control",
+   "link": "https://developer.nvidia.com/blog/manage-liquid-cooled-ai-factories-with-nvidia-mission-control/",
+   "summary": "Managing AI infrastructure such as NVIDIA Vera Rubin NVL72 requires coordinated operation of compute, power, and cooling systems. In liquid-cooled AI factories,...",
+   "source": "NVIDIA Technical Blog",
+   "topic": "图形渲染",
+   "comments": null,
+   "date": "2026-11-20T06:02+08:00",
+   "first_seen": "2026-11-26T08:59+08:00"
   },
   {
    "id": "397a14fbcc71",
@@ -5017,281 +5160,6 @@
    "comments": null,
    "date": "2026-10-27T08:00+08:00",
    "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "df32ce9eccca",
-   "title": "How does terrain work in video games?",
-   "link": "https://unity.com/blog/video-game-terrain-guide",
-   "summary": "A beginner’s guide to video game terrain: how tiles, heightmaps, voxels, and noise create the ground players walk on, and how to design terrain.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "6d4868fbf874",
-   "title": "Frame rate explained: What is fps in video games?",
-   "link": "https://unity.com/blog/frame-rate-in-video-games-explained",
-   "summary": "Learn what frames per second (fps) means, why 30, 60, and 120 fps are common targets, why steady beats fast, and how to pick a frame rate for your video game.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "1182c7766102",
-   "title": "10 things you need to know before building your first video game",
-   "link": "https://unity.com/blog/things-to-know-before-starting-your-first-game",
-   "summary": "New to video game making? Learn the 10 design decisions to plan before you build – from core loop and scope to physics, camera, controls, and playtesting.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "32bb73aed38e",
-   "title": "How bosses and enemies decide what to do in video games",
-   "link": "https://unity.com/blog/how-enemy-ai-works-video-games",
-   "summary": "A beginner’s guide to how enemy AI works in video games: states, senses, telegraphed attacks, and boss phases, plus how designers keep enemies fair and fun.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "2578516f0256",
-   "title": "Jump, match, build, or explore? How to find your core game loop",
-   "link": "https://unity.com/blog/find-your-core-game-loop",
-   "summary": "Jump, match, build, or explore? Learn how to find your core game loop – the one action players repeat – and use genre to shape the rest of your game.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "631e29f52786",
-   "title": "Start with a feeling: How to define your first video game",
-   "link": "https://unity.com/blog/define-your-video-game",
-   "summary": "Before you list features, name the feeling. Learn how to define what your video game is about with one sentence and three design pillars – no coding needed.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "c9db483b8b0b",
-   "title": "How much story does your video game need?",
-   "link": "https://unity.com/blog/how-much-story-does-your-video-game-need",
-   "summary": "From zero words to a full script: find the right amount of story for your first video game design and learn what each level asks you to plan.",
-   "source": "Unity Blog",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T08:00+08:00",
-   "first_seen": "2026-10-28T09:28+08:00"
-  },
-  {
-   "id": "2c470e0e83d0",
-   "title": "GPT-6.1 Terra",
-   "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
-   "summary": "GPT-6.1 Terra It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing. A significant step up from GPT‑5.6 Terra, it excels at the communication and computer-based tasks that fill the workday, from drafting…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-27T07:53+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "969aee886791",
-   "title": "The Exponential Time Hypothesis Is False [pdf]",
-   "link": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
-   "summary": "See also: Announcing three new discoveries in mathematics, computer science, and physics - https://news.ycombinator.com/item?id=50251344 Comments URL: https://news.ycombinator.com/item?id=50251661 Points: 268 # Comments: 106",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50251661",
-   "date": "2026-10-27T05:59+08:00",
-   "first_seen": "2026-10-27T09:40+08:00"
-  },
-  {
-   "id": "bf03207dadfa",
-   "title": "Announcing three new discoveries in mathematics, computer science, and physics",
-   "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-   "summary": "Related: The Exponential Time Hypothesis Is False [pdf] - https://news.ycombinator.com/item?id=50251661 Comments URL: https://news.ycombinator.com/item?id=50251344 Points: 430 # Comments: 163",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50251344",
-   "date": "2026-10-27T05:35+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "afb61b6cd85c",
-   "title": "Quoting Jason Koebler",
-   "link": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
-   "summary": "Because big tech platforms essentially do not have customer support and make it impossible for their users to contact a human, many people experiencing run-of-the-mill tech problems have turned to ChatGPT. And, increasingly, ChatGPT is telling people that have normal tech support problems that they have discovered something journalistically notable and that 404 Media, specifically, can help them. — Jason Koebler , ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-27T03:00+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "785a0fc3c075",
-   "title": "Xbox reportedly turned down a $500 million deal from Netflix to adapt its video game properties",
-   "link": "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties",
-   "summary": "A new report states that Netflix was looking to adapt a host of Xbox properties for a $500 million deal, but Xbox turned the streaming company down in hopes of upping the number.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T02:45+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "91d3711c7436",
-   "title": "GPT-6.1 Terra",
-   "link": "https://openai.com/index/introducing-gpt-6-1-terra/",
-   "summary": "https://developers.openai.com/api/docs/models/gpt-6.1-terra Comments URL: https://news.ycombinator.com/item?id=50248124 Points: 497 # Comments: 314",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50248124",
-   "date": "2026-10-27T02:01+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "00548a0bdc96",
-   "title": "Oldest GUI application that still runs on Windows 11",
-   "link": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
-   "summary": "Hacker News 热度:287 分,182 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50248055",
-   "date": "2026-10-27T01:56+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "5a59bcacc745",
-   "title": "Xbox's first-ever COO is out after just three months",
-   "link": "https://www.gamedeveloper.com/console/xbox-coo-helen-chiang-leaves-role-shortly-after-its-creation",
-   "summary": "Three months after the role was created, cited by Xbox CEO Asha Sharma as necessary to make Xbox less fragmented, the inaugural Xbox COO is leaving her position with little fanfare.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-27T00:24+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "da24d78ede7a",
-   "title": "webframe: evaluated as a scraper and a sandbox",
-   "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
-   "summary": "Research: webframe: evaluated as a scraper and a sandbox webframe is a neat little project from Jeff Lindsay which lets you \"run a web page like a program\" - you point it at a URL or file and it executes it in a hidden headless web view and outputs console.log() to standard output and any exceptions to standard error. It's written in Go on top of the glaze library, which provides access to a system browser (\"WKWebView on macOS, WebKitGTK on Linux, WebView2 on Windows\") so it doesn't need to…",
-   "source": "Simon Willison",
-   "topic": "AI 工具",
-   "comments": null,
-   "date": "2026-10-27T00:15+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "b59659c65ed6",
-   "title": "How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield",
-   "link": "https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield/",
-   "summary": "AI Factories are some of the most technologically complex operational environments ever created. Hundreds of thousands of GPUs, NVIDIA Spectrum-X Ethernet...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-27T00:00+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "0e6e5dce9d01",
-   "title": "CSS-Tricks has a new owner",
-   "link": "https://css-tricks.com/css-tricks-has-a-new-owner/",
-   "summary": "Hacker News 热度:378 分,90 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50245831",
-   "date": "2026-10-26T23:51+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "779e2e458c40",
-   "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
-   "link": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
-   "summary": "Hacker News 热度:760 分,672 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50245524",
-   "date": "2026-10-26T23:35+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "b2c57da2fec9",
-   "title": "Obituary: Voice actor Eric Bauza has passed away at 46",
-   "link": "https://www.gamedeveloper.com/audio/obituary-voice-actor-eric-bauza-has-passed-away-at-46",
-   "summary": "The voice behind Bugs Bunny, Daffy Duck, and a host of other well-loved characters has passed away suddenly at age 46.",
-   "source": "Game Developer",
-   "topic": "游戏开发",
-   "comments": null,
-   "date": "2026-10-26T23:24+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "d779d8377c72",
-   "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
-   "link": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
-   "summary": "Hacker News 热度:552 分,81 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50245138",
-   "date": "2026-10-26T23:11+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "0e5e89d1e61c",
-   "title": "How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes",
-   "link": "https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes/",
-   "summary": "Training large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resiliency...",
-   "source": "NVIDIA Technical Blog",
-   "topic": "图形渲染",
-   "comments": null,
-   "date": "2026-10-26T23:00+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "21e54eec134e",
-   "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
-   "link": "https://www.circuithub.com/post/unveiling-the-grid",
-   "summary": "Hacker News 热度:405 分,197 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50243060",
-   "date": "2026-10-26T21:13+08:00",
-   "first_seen": "2026-10-29T09:02+08:00"
-  },
-  {
-   "id": "f8fa283aa2f6",
-   "title": "Anthropic S-1",
-   "link": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-   "summary": "Hacker News 热度:1475 分,1446 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50242939",
-   "date": "2026-10-26T21:04+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
-  },
-  {
-   "id": "598d29d50671",
-   "title": "Websites Should Be Printable",
-   "link": "https://brennenputh.me/blog/printable-websites/",
-   "summary": "Hacker News 热度:267 分,175 条评论",
-   "source": "Hacker News 首页(250 分以上)",
-   "topic": "AI 工具",
-   "comments": "https://news.ycombinator.com/item?id=50241664",
-   "date": "2026-10-26T18:32+08:00",
-   "first_seen": "2026-10-27T09:15+08:00"
   },
   {
    "id": "5281c38a83cc",
