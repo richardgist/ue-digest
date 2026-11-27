@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-27",
+  "items": [
+    {
+      "title": "社区教程：用测绘数据在 UE 5.8 里搭建 8 公里开放世界，覆盖 Nanite 地形置换、HLOD 流送与无头 World Partition 构建",
+      "url": "https://dev.epicgames.com/community/learning/tutorials/Le2mo/an-8-km-open-world-from-survey-data-a-technical-guide-for-unreal-engine-developers-artists",
+      "source": "Epic Developer Community",
+      "published": "2026-11-26",
+      "ue_version": "UE 5.8",
+      "summary": "作者 AndrejekBojan 发布了一篇面向开发者与艺术家的社区教程，讲述如何在 Unreal Engine 5.8 中用公开测绘数据搭建一片真实的 8 公里高山谷地。教程摘要写明覆盖内容包括：高程数据、湖与河的雕刻、数据驱动的涂装图层、Nanite 地形置换、Water 插件、PCG 生态系统，以及 HLOD 流送。文中还会讲解无头（headless）World Partition 构建、离线河流拟合、基于概率的散布等可复现流程，并提供相应公式与代码。作者还提到，按教程中的内存、注册与流送建议，可在单机 64 GB 内存的机器上用开放数据搭建大规模世界。Epic 开发者论坛于 2026-11-26 同步发布了该教程的多语言介绍帖，英文原页已核实可访问。本文未能展开阅读教程正文的逐步参数，下面的“值得试的点”只依据这篇官方摘要，不额外编造步骤。",
+      "try_points": [
+        "若你也在 5.8 上用真实地形数据做开放世界，可直接打开这篇教程，按摘要里点名的流程对照：无头 World Partition 构建、HLOD 流送、Nanite 地形置换，以及离线河流拟合和概率散布",
+        "作者明确写了可在单机 64 GB 内存上完成搭建，若你的机器内存接近这一档，可重点看文中关于内存、注册与流送的建议，再决定网格与 HLOD 的规模",
+        "这是社区教程而非官方文档；落地前请以正文中的公式、代码和版本说明为准，不要只根据摘要里的功能清单直接改项目设置"
+      ],
+      "topics": [
+        "HLOD",
+        "渲染"
+      ]
+    },
+    {
+      "title": "论坛：约 1 平方公里密铺开放世界的 World Partition / HLOD 实装：小物件 PLA 进细网格，大体量先做 2K 代理再参与 HLOD 构建",
+      "url": "https://forums.unrealengine.com/t/hlod-world-partition-setup-advice/2873660",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-26",
+      "ue_version": "原文未标注",
+      "summary": "作者 @XilenceX 分享了开放世界 RPG Asterfel 的 World Partition 与 HLOD 配置，目的是减轻因 World Partition 引起的卡顿和低帧率。地图约 1 平方公里、内容密铺。作者自称这套配置的表现大约是“原版 UE5 默认设置”的两倍，但只是把“几乎不能玩”提升到“勉强能接受”，还不够流畅；发帖是为了征求改进意见，发帖时还没有回复。文字里的做法是：小物件一律打进 Packed Level Actor（PLA），并在高级设置里把这些 PLA 的 Runtime Grid 设为 SmallPropsGrid；大体量物件也放进 PLA，但在构建 HLOD 之前先跑 Python 脚本，把它们变成带 2K 贴图的简单代理网格，再用这些代理去生成建筑外立面、山体等的 HLOD。作者还附了 World Settings、HLOD Layer 和关卡里 PLA 的截图。从截图可以读到：Runtime Hash Class 为 WorldPartitionRuntimeHashSet；主网格 MainGrid 的 Cell Size=10000、Loading Range=20000、原点为 -6400，并勾选 Is 2D，Bounds Method 为 Use Min Content Cell Bounds；其下有一个名为 PersistentLevel 的 HLOD 分区，Cell Size=20000、Loading Range=40000，包含图层 HLOD_Ref_Map_HLODO_Instancing；另一条运行时网格 SmallPropsGrid 的 Cell Size=5000、Loading Range=10000。HLOD 图层资产的 Layer Type 为 Instancing，Parent Layer 为 None，HLOD Actor Class 为 WorldPartitionHLOD，Instance Filtering Type 为 No Filtering。这些数字来自作者截图，不是官方推荐值，也没有独立基准测试支撑“快一倍”的说法。",
+      "try_points": [
+        "若开放世界已经卡在 World Partition 流送和远景绘制上，可以对照这套分层：小物件 PLA 走更密、加载范围更短的 SmallPropsGrid（截图为 5000 / 10000），主网格用更大的 10000 / 20000，并把 HLOD 分区放到 20000 / 40000",
+        "大体量建筑和山体不要直接用高模参与 HLOD 构建；可先按作者的做法，在构建前用脚本生成带 2K 贴图的简单代理，再拿代理去打 Instancing 类型的 HLOD",
+        "这是作者正在征求意见的实装，不是 Epic 官方方案。迁移前先在自己的关卡里用 wp.Runtime 相关调试和 HLOD 可视化核对过渡是否可接受，不要把“快一倍”当成可复现的性能承诺"
+      ],
+      "topics": [
+        "HLOD"
+      ]
+    },
+    {
+      "title": "论坛：UE 5.8 在 r.RayTracing.Nanite.Mode=1 下，关卡加载中途创建本地分屏玩家会在 Nanite::FRayTracingManager::AddVisiblePrimitive 断言崩溃",
+      "url": "https://forums.unrealengine.com/t/crash-in-nanite-with-raytracing-and-local-2-player-mode/2873720",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-26",
+      "ue_version": "UE 5.8",
+      "summary": "作者 @SHR3DH3AD 报告：在 UE 5.8、Windows 上开启硬件光线追踪，并把 r.RayTracing.Nanite.Mode 设为 1 后，若关卡中有 Nanite 静态网格，从独立菜单关卡 Open Level 进入该关卡，并在 GameMode 的 BeginPlay 里调用 Create Local Player（Controller Id 1）以便在关卡仍在加载时启用本地双人分屏，编辑器或游戏会在加载过程中或刚加载完时，于后台工作线程触发断言崩溃。断言是 Assertion failed: !AllocationFlags[Index]，文件为 Engine/Source/Runtime/Core/Public/Containers/SparseArray.h 第 100 行。调用栈顶在 Nanite::FRayTracingManager::AddVisiblePrimitive（NaniteRayTracing.cpp:1273），再往下是 RayTracing::GatherRelevantStaticPrimitives，由 UE::Tasks 在工作线程上执行。作者写明：如果等关卡加载完成后再创建第二个本地玩家，崩溃会少得多。预期结果是分屏正常加载并渲染；发帖时还没有 Epic 答复。帖子归类为 Rendering（Graphics / Niagara）错误报告。",
+      "try_points": [
+        "若 5.8 项目同时开了硬件光追和 r.RayTracing.Nanite.Mode=1，并且有本地分屏，不要在目标关卡仍在加载时于 BeginPlay 里 Create Local Player；按作者观察，等加载完成后再创建第二个玩家，崩溃会明显减少",
+        "若仍会崩，可先核对调用栈是否落在 Nanite::FRayTracingManager::AddVisiblePrimitive / SparseArray.h:100 的 !AllocationFlags[Index]，以确认是同一问题",
+        "这是作者的规避方法，不是官方修复。需要稳定分屏光追时，仍应关注后续引擎修复；也可评估在加载完成前临时关掉 r.RayTracing.Nanite.Mode=1，但原文没有验证这条路径"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
