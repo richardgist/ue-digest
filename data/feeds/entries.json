@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T09:13+08:00",
+ "updated": "2026-11-27T09:40+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,7 +80,7 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-27T09:13+08:00",
+   "checked": "2026-11-27T09:40+08:00",
    "last_new": 0
   },
   "Simon Willison": {
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-27T09:13+08:00",
-   "last_new": 5
+   "checked": "2026-11-27T09:40+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-27T09:13+08:00",
-   "last_new": 7
+   "checked": "2026-11-27T09:40+08:00",
+   "last_new": 0
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-27T09:13+08:00",
-   "last_new": 3
+   "checked": "2026-11-27T09:40+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -116,7 +116,7 @@
    "id": "b39aca2571fd",
    "title": "AI made self-hosting fun again",
    "link": "https://janlukas.blog/posts/ai-self-hosting",
-   "summary": "Hacker News 热度:258 分,144 条评论",
+   "summary": "Hacker News 热度:295 分,157 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50660180",
@@ -127,7 +127,7 @@
    "id": "5f86746955ec",
    "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
    "link": "https://github.com/antonpictures/youtube-punisher",
-   "summary": "Hacker News 热度:251 分,321 条评论",
+   "summary": "Hacker News 热度:264 分,335 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50657530",
@@ -138,7 +138,7 @@
    "id": "a1d60a2f72d2",
    "title": "AMD-specific fork of llama.cpp",
    "link": "https://devnull.land/amd-specific-llama-cpp",
-   "summary": "Hacker News 热度:275 分,64 条评论",
+   "summary": "Hacker News 热度:282 分,70 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50657265",
@@ -160,7 +160,7 @@
    "id": "3ce6fc188820",
    "title": "Tell HN: Happy Thanksgiving",
    "link": "https://news.ycombinator.com/item?id=50655664",
-   "summary": "Hopefully it’s a great day spent with your friends and family. And if it’s not, make it a great day anyway! Comments URL: https://news.ycombinator.com/item?id=50655664 Points: 585 # Comments: 135",
+   "summary": "Hopefully it’s a great day spent with your friends and family. And if it’s not, make it a great day anyway! Comments URL: https://news.ycombinator.com/item?id=50655664 Points: 597 # Comments: 136",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50655664",
@@ -171,7 +171,7 @@
    "id": "9ca4b3ecf982",
    "title": "Nextcloud Office Desktop app",
    "link": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
-   "summary": "Hacker News 热度:395 分,201 条评论",
+   "summary": "Hacker News 热度:396 分,203 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50654289",
@@ -193,7 +193,7 @@
    "id": "7ab53e7a2641",
    "title": "Intel One Mono font (2023)",
    "link": "https://github.com/intel/intel-one-mono",
-   "summary": "Hacker News 热度:457 分,236 条评论",
+   "summary": "Hacker News 热度:462 分,238 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50653667",
@@ -204,7 +204,7 @@
    "id": "d6e3540513d1",
    "title": "OpenAI may be in cost control mode",
    "link": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
-   "summary": "Hacker News 热度:261 分,253 条评论",
+   "summary": "Hacker News 热度:272 分,263 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50652527",
@@ -281,7 +281,7 @@
    "id": "90b56a4f511f",
    "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
    "link": "https://scottaaronson.blog/?p=10379",
-   "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220 Comments URL: https://news.ycombinator.com/item?id=50646108 Points: 1981 # Comments: 1806",
+   "summary": "See also The matrix multiplication exponent is nine fourths [pdf] - https://news.ycombinator.com/item?id=50637220 Comments URL: https://news.ycombinator.com/item?id=50646108 Points: 1985 # Comments: 1815",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50646108",
