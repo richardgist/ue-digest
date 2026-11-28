@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T09:00+08:00",
+ "updated": "2026-11-28T09:28+08:00",
  "keep_days": 30,
  "status": {
   "Unreal Engine 官方": {
@@ -8,7 +8,7 @@
    "ok": true,
    "error": null,
    "title": "Unreal Engine - News, Developer Interviews, Spotlights, Tech Blogs",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "NVIDIA Technical Blog": {
@@ -17,7 +17,7 @@
    "ok": true,
    "error": null,
    "title": "NVIDIA Technical Blog",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "AMD GPUOpen": {
@@ -26,7 +26,7 @@
    "ok": true,
    "error": null,
    "title": "AMD GPUOpen",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Jendrik Illner(Graphics Programming Weekly)": {
@@ -35,7 +35,7 @@
    "ok": true,
    "error": null,
    "title": "Jendrik Illner - 3D Programmer on Jendrik Illner - 3D Programmer",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Aras Pranckevičius": {
@@ -44,7 +44,7 @@
    "ok": true,
    "error": null,
    "title": "Aras' website",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Tom Looman(UE 性能与渲染)": {
@@ -53,7 +53,7 @@
    "ok": true,
    "error": null,
    "title": "Tom Looman",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Unity Blog": {
@@ -62,7 +62,7 @@
    "ok": true,
    "error": null,
    "title": "Unity Blog RSS Feed",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Game Developer": {
@@ -71,7 +71,7 @@
    "ok": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "title": "gamedeveloper",
-   "checked": "2026-11-28T09:00+08:00",
+   "checked": "2026-11-28T09:28+08:00",
    "last_new": 0
   },
   "Godot Engine": {
@@ -80,8 +80,8 @@
    "ok": true,
    "error": null,
    "title": "Godot Engine Official",
-   "checked": "2026-11-28T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-11-28T09:28+08:00",
+   "last_new": 0
   },
   "Simon Willison": {
    "url": "https://simonwillison.net/atom/everything/",
@@ -89,8 +89,8 @@
    "ok": true,
    "error": null,
    "title": "Simon Willison's Weblog",
-   "checked": "2026-11-28T09:00+08:00",
-   "last_new": 2
+   "checked": "2026-11-28T09:28+08:00",
+   "last_new": 0
   },
   "Hacker News 首页(250 分以上)": {
    "url": "https://hnrss.org/frontpage?points=250",
@@ -98,8 +98,8 @@
    "ok": true,
    "error": null,
    "title": "Hacker News: Front Page",
-   "checked": "2026-11-28T09:00+08:00",
-   "last_new": 5
+   "checked": "2026-11-28T09:28+08:00",
+   "last_new": 1
   },
   "Hugging Face Blog": {
    "url": "https://huggingface.co/blog/feed.xml",
@@ -107,8 +107,8 @@
    "ok": true,
    "error": null,
    "title": "Hugging Face - Blog",
-   "checked": "2026-11-28T09:00+08:00",
-   "last_new": 1
+   "checked": "2026-11-28T09:28+08:00",
+   "last_new": 0
   }
  },
  "entries": [
@@ -124,10 +124,21 @@
    "first_seen": "2026-11-28T09:00+08:00"
   },
   {
+   "id": "cac03f51ed98",
+   "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+   "link": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+   "summary": "Hacker News 热度:259 分,138 条评论",
+   "source": "Hacker News 首页(250 分以上)",
+   "topic": "AI 工具",
+   "comments": "https://news.ycombinator.com/item?id=50670855",
+   "date": "2026-11-28T03:42+08:00",
+   "first_seen": "2026-11-28T09:28+08:00"
+  },
+  {
    "id": "a7448e8ca3ea",
    "title": "Michael Nielsen took down his book on neural nets",
    "link": "https://neuralnetworksanddeeplearning.com/",
-   "summary": "Hacker News 热度:367 分,243 条评论",
+   "summary": "Hacker News 热度:375 分,251 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50670757",
@@ -138,7 +149,7 @@
    "id": "1a0c89de1b7b",
    "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
    "link": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
-   "summary": "Hacker News 热度:412 分,211 条评论",
+   "summary": "Hacker News 热度:417 分,220 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50668145",
@@ -413,7 +424,7 @@
    "id": "95692f6294d9",
    "title": "GPT 6.2 Astra Solves a Historical Mystery",
    "link": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
-   "summary": "Hacker News 热度:289 分,175 条评论",
+   "summary": "Hacker News 热度:303 分,181 条评论",
    "source": "Hacker News 首页(250 分以上)",
    "topic": "AI 工具",
    "comments": "https://news.ycombinator.com/item?id=50643158",

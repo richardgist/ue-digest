@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-28",
+  "items": [
+    {
+      "title": "MEMO：从多机位动态高斯中按帧提取完整场景网格（论文）",
+      "url": "https://arxiv.org/abs/2611.34939",
+      "source": "arXiv",
+      "published": "2026-11-25",
+      "category": "前沿",
+      "direction": "图形渲染",
+      "summary": "Roy Or-El、Jeong Joon Park 与 Ira Kemelmacher-Shlizerman 的论文 MEMO（a Mesh for Every MOment）于 2026-11-25 挂上 arXiv。方法针对多路同步相机拍摄的完整动态场景，重建几何并在每一帧提取网格。作者指出，现有动态高斯溅射要么只建模外观，要么只处理用前景掩膜切出的单个物体，而且都靠 TSDF 融合或泊松重建出网格，固定网格会限制细节。MEMO 的核心是受高斯过程启发的逐高斯运动模型：把每个高斯的位置与旋转写成时间高斯核的组合，使每个高斯在整段序列中都保持为有效表面元素，并携带动态几何的隐式表示，从而可在任意时刻由高斯定义的场导出网格。针对常见的大幅、快速运动，作者还用基于轨迹的初始化，以闭式解把每个高斯的初始轨迹拟合到点轨迹上。评测包括新基准 Blender-Moments（9 个带动画的场景，每帧有真值网格）以及两个真实数据集。作者称其几何精度在所比的最新方法中最高，新视角合成和训练时间仍有竞争力。项目页为 https://memo-4d.github.io 。几何精度等结论为作者评测，本机未复核。",
+      "why_useful": "若你需要从动态捕捉得到可做交互、重打光或 AR/VR 合成的逐帧网格，这篇把“先优化外观再做 TSDF/泊松”的限制写清楚了，并给出了直接从动态高斯导出网格的做法。",
+      "try_it": "阅读 https://arxiv.org/abs/2611.34939 ，需要演示或对比视频时再看项目页 https://memo-4d.github.io 。文中几何与新视角指标是作者评测，换数据不一定能得到同样结果。"
+    },
+    {
+      "title": "Godot 4.8 RC 1：功能已锁定，自 beta 5 起主要是回归修复，含 Mobile 双精度着色器类型修正",
+      "url": "https://godotengine.org/article/release-candidate-godot-4-8-rc-1/",
+      "source": "Godot Engine",
+      "published": "2026-11-27",
+      "category": "工具",
+      "direction": "游戏开发",
+      "summary": "Thaddeus Crews 于 2026-11-27 宣布 Godot 4.8 进入发布候选，首个构建是 4.8 RC 1。官方称已知的关键回归已处理，本周期计划中的功能已全部锁定，现有项目可以开始集成；同时提醒必须靠社区测试来核实，升级前应备份或使用版本控制。自 4.8 beta 5 以来的改动主要是回归修复，14 名贡献者提交了 22 项修复，其中包括：Mobile 着色器在双精度构建中使用了错误类型（GH-125792）；macOS 虚拟机上强制 HazardTracking 同步模式（GH-125737）；以及 2D 警告误报、AudioStreamPlaybackPolyphonic 音量斜坡、编辑器选中同名文件、PhysicalBone3D 关节约束还原、Windows 全屏透明边框与跨屏偏移等。该构建来自提交 7c97c2977。官方还写明，.NET（mono）构建的最低支持版本从 .NET 8 改为 .NET 10.0。以上摘自官方公告，本机未安装该版本验证。",
+      "why_useful": "若你在跟 4.8，这是功能冻结后的第一份候选版，适合在工程副本上做升级测试，渲染侧也修了 Mobile 双精度着色器的类型问题。",
+      "try_it": "从 https://godotengine.org/article/release-candidate-godot-4-8-rc-1/ 下载 4.8 RC 1，先在项目副本上打开。使用 .NET 构建需要 .NET 10.0 或更新版本。这仍是预发布软件，官方建议频繁备份。本机未安装该版本。"
+    },
+    {
+      "title": "Qwen Code v0.28.7：CLI 改走 Harness 内核，可加载 Claude Code 2.1.332 的 mods，并取消循环与工具次数限制",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
+      "source": "GitHub (QwenLM/qwen-code)",
+      "published": "2026-11-26",
+      "category": "工具",
+      "direction": "AI 工具",
+      "summary": "QwenLM 于 2026-11-26 发布 Qwen Code v0.28.7。亮点包括：Qwen Code CLI 已可在 Harness 内核上使用，默认关闭用量统计，只有把 privacy.usageStatisticsEnabled 设为 true 才会开启；重复工具调用被拒绝时会说明原因，并建议用 /compress 或 /clear 恢复，覆盖 TUI、无头和守护进程会话；Web Shell 在会话启动时就应用所选思考级别，第一条提示不必再发第二次请求；交互式 CLI 会按模型保存推理强度和上下文窗口，切换或重启后恢复；worktree 快照按工作区保留可配置数量，重开时恢复，worktree.maxRetained 设为 0 则不做清理。破坏性变更是不再检测模型循环，也不再限制工具调用次数，工具结果和错误会在所有界面原样传给模型。该版本还可加载为 Claude Code 2.1.332 编写的 mods，会注册其命令并绘制其标识带，无法识别的新 hook 名称会用一行诊断跳过。以上摘自官方 Release notes，本机未安装该版本验证。",
+      "why_useful": "若你在用 Qwen Code，这次可以把已有的 Claude Code mods 直接拿来用，也把思考级别和上下文设置做成了按模型记住；升级时要注意循环检测和工具次数上限已经去掉。",
+      "try_it": "查看 https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7 后升级到 v0.28.7。若依赖旧的循环检测或工具次数上限，需要改用自己的护栏。本机未安装该版本。"
+    },
+    {
+      "title": "Anthropic：把 Messages API 从 Python 迁到 Rust，并用生产流量做校验、派智能体修差异",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "source": "Anthropic",
+      "published": "2026-11-25",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "Anthropic 于 2026-11-25 发表文章，记录把对外的 Messages API（Claude Code 等自家应用也走这条路径）从 Python 迁到 Rust 的过程。官方称，从 2024 年初到 2026 年秋，API 流量约增长 1800 倍；Claude 大约用一周写出了核心请求路径的第一版，但建立对等信任更难：迁移期间 Python 版仍在改，同一请求的模型回复并不确定，且无法阅读客户请求。做法是把生产中的 Messages API 本身变成校验器，在生产流量上对比新旧实现，找出差异后再自动派智能体修复。官方称，最终上线的 Rust 版每请求 CPU 约减少 70%，中位首 token 时间约减少 20%，过程中没有停机，也没有冻结功能开发；面向公众的流量于 2026 年 9 月切到 Rust。CPU 与时延数字为厂商自述，且文中说明 CPU 来自一个区域、时延来自客户 Claude Code 请求的较短窗口，本机未复核。",
+      "why_useful": "这是一篇可对照的“生成容易、校验很难”案例：先定义可自动判定对等的校验器，再让智能体在生产流量差异上循环修复，而不是只看测试套件是否通过。",
+      "try_it": "阅读 https://www.anthropic.com/research/migrating-api-to-rust 。文中 70% CPU 和 20% 首 token 时间是官方自述，适用条件和统计窗口以原文图表说明为准。"
+    },
+    {
+      "title": "Hugging Face：训练多智能体时要用同等预算对比，并给出可复现的四人小队示例",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "source": "Hugging Face Blog",
+      "published": "2026-11-26",
+      "category": "效率",
+      "direction": "AI 工具",
+      "summary": "ben burtenshaw 与 Kashif Rasul 于 2026-11-26 在 Hugging Face 博客开始一组关于构建、训练和评测多智能体系统的系列。核心问题是：智能体相互通信是否真的有帮助，还是只是花了更多算力。文章建议把公平对比放在同等预算下：四个智能体若各分到总 token 的四分之一，还能否胜过独占全部预算的单个智能体。第一篇示例用四个共享策略的智能体做一个可核验任务，每名智能体只掌握部分信息，必须靠通信才能凑出完整答案；成功时按占用的生成 token 打折奖励。作者称，原实验在 75 次更新中，训练成功率从前后五个更新窗口的 6.6% 升到 82.3%，checkpoint 75 在 32 道留出题上解对 26 道（81.25%）；每队生成 token 约从 13k 降到 8k（降幅 37.4%），同时广播次数从 2.38 升到 5.73。可在 Hugging Face Jobs 上复现的较短流程约为两块 H200、五小时、约 50 美元；文中还写 TRL 示例在两块 H100 上跑了约 4.8 小时，checkpoint 50 的留出成功率为 60.9%。以上数字均为作者实验，本机未复现。",
+      "why_useful": "若你在搭多智能体工作流，这篇提醒不要把“多一次尝试”当成合作的效果，并给出了可核对答案、同时记录成功率与 token 消耗的小规模训练示例。",
+      "try_it": "阅读 https://huggingface.co/blog/training-swarms ，需要复现时再按文中的 hf jobs run（两块 H200、约 50 次更新）走一遍。文中成功率和耗时是作者在特定任务与硬件上的测量，换任务或模型不一定能得到同样曲线。"
+    }
+  ]
+}
