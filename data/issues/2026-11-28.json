@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-28",
+  "items": [
+    {
+      "title": "论坛：UE 5.8.4 编辑器冷启动第 4 帧，Nanite VSM 剔除与异步 Lumen Screen Probe Gather 竞态并 GPU hang（RTX 4070）",
+      "url": "https://forums.unrealengine.com/t/ue-5-8-4-dxgi-error-device-hung-at-frame-4-of-editor-cold-start-nanite-vsm-culling-lumen-screen-probe-gather-on-async-compute-rtx-4070/2874052",
+      "source": "Epic Developer Community Forums",
+      "published": "2026-11-27",
+      "ue_version": "UE 5.8.4（Launcher，5.8.4-58902052+++UE5+Release-5.8）",
+      "summary": "作者 @MK28101996 报告：在 UE 5.8.4、D3D12、桌面 Deferred（Lumen、Nanite、VSM、TSR；已装 DLSS 插件但用 -slnodlssg 未加载帧生成）上，用冷启动打开一张 World Partition 地图时，大约每 5 次有 1 次会在第 4 个渲染帧出现 DXGI_ERROR_DEVICE_HUNG。对照硬件为 RTX 4070 12 GB（驱动 621.24，2026-11-07），CPU 为 Ryzen 7 5700X3D，Windows 11 26H2。地图含一块大 Landscape、约 520 个 Actor、Nanite 静态网格（远处网格跨度约 85 km），以及天空大气和体积云。Graphics 队列面包屑停在 Frame 4 的 RenderVirtualShadowMaps(Nanite) → Nanite::DrawGeometry → MainPass → InstanceCulling → NodeAndClusterCull；同一时刻异步计算队列正跑 LumenScreenProbeGather → UpdateWorldRadianceCaches。Nsight Aftermath 写到 MMU fault，发生在 compute shader，故障地址看起来像被符号扩展的 32 位索引。当天稍后把驱动升到 621.40（2026-11-24 发布）后，作者仍带着变通启动，编辑器能干净打开，但还没有在 621.40 上去掉变通再试冷启动。发帖时没有 Epic 答复。这与 11 月 25 日已收录的 NodeAndClusterCull hang 是同一类故障、不同报告：本次明确发生在编辑器冷启动的第 4 帧，异步侧指向 Screen Probe Gather，而不是关卡加载后的前几帧。",
+      "try_points": [
+        "若 5.8.4 编辑器冷启动打开 World Partition 地图时，在第 4 帧出现 DXGI_ERROR_DEVICE_HUNG，且面包屑停在 Nanite VSM 的 NodeAndClusterCull、异步队列同时在 LumenScreenProbeGather / UpdateWorldRadianceCaches，可按原文在首次启动就加 -dpcvars=r.Lumen.DiffuseIndirect.AsyncCompute=0，确保第一帧前就关闭 Lumen 漫反射异步计算，再对照 hang 是否消失。作者在改用该参数后连续两次冷启动都干净，但自己也写明次数太少、还不能单独当作充分证明",
+        "原文还提到，另有公开报告称 r.RDG.AsyncCompute=0 也能挡住这类 hang。这是启动前关闭异步计算的变通，不是官方合入的修复；5.8.4 仍被列为受影响。不要把它和 11 月 25 日那条“关卡加载后前几帧、先关再开回 AsyncCompute”的报告当成同一帖，但排查时可一并对照"
+      ],
+      "topics": [
+        "渲染"
+      ]
+    }
+  ]
+}
